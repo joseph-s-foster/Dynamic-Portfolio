@@ -116,9 +116,8 @@ nav a:hover {
   padding-top: 48px;
 }
 
-
-#Languages:target,
-#Projects:target {
+#Projects:target,
+#Languages:target {
   padding-top: 48px;
 }
 
@@ -308,8 +307,8 @@ p {
   #Languages {
     padding-top: 72px;
   }
-  #Languages:target,
-  #Projects:target {
+  #Projects:target,
+  #Languages:target {
     padding-top: 72px;
   }
 }
@@ -328,8 +327,8 @@ p {
   #Languages {
     padding-top: 160px;
   }
-  #Languages:target,
-  #Projects:target {
+  #Projects:target,
+  #Languages:target {
     padding-top: 160px;
   }
 }
@@ -346,8 +345,8 @@ p {
   #Languages {
     padding-top: 192px;
   }
-  #Languages:target,
-  #Projects:target {
+  #Projects:target,
+  #Languages:target {
     padding-top: 192px;
   }
 }
