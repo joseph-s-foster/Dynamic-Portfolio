@@ -1,19 +1,34 @@
-export default function Portfolio() {
+import Project from "../components/Project";
+
+function Portfolio() {
+  // fill in the required data, image file should be in the assets/projects folder and name should match the "default as " statment in index.js
+  const projects = [
+    {
+      name: "project 1 test",
+      description: "HTML/JS/CSS",
+      link: "https://heroku.com",
+      repo: "https://github.com/femke77",
+      image: "flow",
+    },
+    {
+      name: "project 2 test",
+      description: "NRG Stack",
+      link: "https://heroku.com/",
+      repo: "https://github.com/femke77",
+      image: "angles",
+    },
+  ];
+
+  // for each project, use the Project component to build a project
   return (
     <div>
-      <h1>Portfolio</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
-        velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
-        ac dui fermentum, sed luctus urna tincidunt. Etiam ut feugiat ex. Cras
-        non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna imperdiet
-        ac. Sed nec nulla aliquam, bibendum odio eget, vestibulum tortor. Cras
-        rutrum ligula in tincidunt commodo. Morbi sit amet mollis orci, in
-        tristique ex. Donec nec ornare elit. Donec blandit est sed risus feugiat
-        porttitor. Vestibulum molestie hendrerit massa non consequat. Vestibulum
-        vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus.
-      </p>
+      <div className="d-flex">
+        {projects.map((project) => (
+          <Project project={project} key={"project-" + project.name} />
+        ))}
+      </div>
     </div>
   );
 }
+
+export default Portfolio;
