@@ -20,15 +20,15 @@ function Portfolio() {
     {
       name: "Password Generator",
       description: "Generate a random password up to 128 characters in length.",
-      link: "https://heroku.com",
-      repo: "https://github.com/femke77",
+      link: "https://github.com/joseph-s-foster/Password-Generator",
+      repo: "https://joseph-s-foster.github.io/Password-Generator/",
       image: "screen",
     },
     {
       name: "Mischeif Managed",
       description: "A Harry Potter book series tracker with milestone-based trivia content.",
-      link: "https://heroku.com/",
-      repo: "https://github.com/femke77",
+      link: "https://github.com/joseph-s-foster/Mischief-Managed",
+      repo: "https://github.com/joseph-s-foster/Mischief-Managed",
       image: "angles",
     }
   ];
