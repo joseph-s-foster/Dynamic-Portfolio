@@ -13,8 +13,8 @@ function Portfolio() {
     {
       name: "Coding Quiz",
       description: "Test your Javascript knowledge.",
-      link: "https://heroku.com/",
-      repo: "https://github.com/femke77",
+      link: "https://joseph-s-foster.github.io/Coding-Quiz/",
+      repo: "https://github.com/joseph-s-foster/Coding-Quiz",
       image: "motion",
     },
     {
