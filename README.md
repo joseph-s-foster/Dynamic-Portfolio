@@ -10,4 +10,4 @@
 
 ## Screenshot
 
-![screenshot of webpage](./assets/images/screenshot.png)
+![screenshot of webpage](./src/assets/project/ss.png)
