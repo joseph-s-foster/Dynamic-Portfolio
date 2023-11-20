@@ -22,7 +22,7 @@ body, #root {
 
 
 .nav-link {
-  font-size: .9rem;
+  font-size: .85rem;
   color: white !important; /* Set the link color to white */
   text-decoration: none; /* Remove the default underline */
   border: none; /* Remove the border around the links */
@@ -54,7 +54,7 @@ a:hover {
 .footer {
   background-color: black;
   color: white;
-  font-size: 1rem;
+  font-size: .85rem;
   position: fixed;
   bottom: 0;
   left: 0;
