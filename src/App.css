@@ -15,7 +15,6 @@ body, #root {
 /* Add these styles to your CSS file */
 .header {
   position: relative;
-  text-align: left; /* Align the text to the right */
 }
 
 .nav-link {
@@ -42,7 +41,9 @@ body, #root {
   background-color: white; /* Adjust the color as needed */
 }
 
-/* Project.css */
+img {
+  border-radius: 5px;
+}
 
 a {
   color: white;

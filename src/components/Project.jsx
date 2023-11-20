@@ -10,7 +10,7 @@ function Project({ project }) {
           src={projects[image]}
           alt={name}
           className="p-img img-fluid"
-          style={{ maxWidth: '300px', height: 'auto' }}
+          style={{ maxWidth: '336px', height: 'auto' }}
         />
         <div className="mt-3">
           <h1>
