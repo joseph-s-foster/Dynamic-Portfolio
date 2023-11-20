@@ -20,8 +20,8 @@ function Portfolio() {
     {
       name: "Password Generator",
       description: "Generate a random password",
-      link: "https://github.com/joseph-s-foster/Password-Generator",
-      repo: "https://joseph-s-foster.github.io/Password-Generator/",
+      link: "https://joseph-s-foster.github.io/Password-Generator/",
+      repo: "https://github.com/joseph-s-foster/Password-Generator",
       image: "sign",
     },
     {
