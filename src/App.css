@@ -22,6 +22,7 @@ body, #root {
 
 
 .nav-link {
+  font-size: .9rem;
   color: white !important; /* Set the link color to white */
   text-decoration: none; /* Remove the default underline */
   border: none; /* Remove the border around the links */
