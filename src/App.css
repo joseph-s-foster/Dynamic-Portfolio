@@ -42,6 +42,18 @@ body, #root {
   background-color: white; /* Adjust the color as needed */
 }
 
+/* Project.css */
+
+a {
+  color: white;
+  text-decoration: none; /* Remove underlines from links */
+}
+
+a:hover {
+  text-decoration: underline; /* Change link color on hover if desired */
+}
+
+
 .footer {
   background-color: black;
   color: white;
