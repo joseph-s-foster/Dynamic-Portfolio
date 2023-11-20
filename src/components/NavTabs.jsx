@@ -5,16 +5,12 @@ function NavTabs() {
 
   return (
     <header className="header d-flex align-items-center justify-content-center flex-column">
-      <h1 className="mb-0">Joe Foster</h1>
+      <h1 className="mb-0">
+        <Link to="/" className="nav-link-header">
+          Joe Foster
+        </Link>
+      </h1>
       <ul className="nav nav-tabs">
-        <li className="nav-item">
-          <Link
-            to="/"
-            className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
-          >
-            Home
-          </Link>
-        </li>
         <li className="nav-item">
           <Link
             to="/Portfolio"

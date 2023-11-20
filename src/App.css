@@ -20,16 +20,24 @@ body, #root {
   padding: 15px; /* Adjust the padding as needed */
 }
 
+.nav-link-header {
+  font-size: 3rem;
+  color: white !important; /* Set the link color to white */
+  text-decoration: none;
+  border: none;
+}
+
+.nav-link-header:hover {
+  text-decoration: none;
+}
 
 .nav-link {
-  font-size: .85rem;
+  font-size: 1rem;
   color: white !important; /* Set the link color to white */
   text-decoration: none; /* Remove the default underline */
-  border: none; /* Remove the border around the links */
 }
 
 .nav-link:hover {
-  /* color: white; Change the link color on hover */
   text-decoration: underline; /* Underline the text on hover */
 }
 
@@ -54,7 +62,7 @@ a:hover {
 .footer {
   background-color: black;
   color: white;
-  font-size: .85rem;
+  font-size: 1rem;
   position: fixed;
   bottom: 0;
   left: 0;
