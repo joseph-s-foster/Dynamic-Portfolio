@@ -1,4 +1,5 @@
 import React from "react";
+import * as projectImages from "../assets/index.js";
 
 function Footer() {
   return (
@@ -10,7 +11,7 @@ function Footer() {
         rel="noopener noreferrer"
       >
         <img
-          src="dist\assets\github-60d03f0f.png"
+          src={projectImages.github}
           alt="GitHub Logo"
           className="footer-icon"
         />
