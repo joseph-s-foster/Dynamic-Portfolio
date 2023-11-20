@@ -10,7 +10,7 @@ function Footer() {
         rel="noopener noreferrer"
       >
         <img
-          src="/src/assets/project/github.png"
+          src="dist\assets\github-60d03f0f.png"
           alt="GitHub Logo"
           className="footer-icon"
         />
