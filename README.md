@@ -7,6 +7,7 @@
 - Web-based portfolio using React, HTML, CSS, JavaScript and more!
 
   ## Table of Contents
+
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contributing](#contributing)
@@ -14,24 +15,29 @@
   - [Link](#link-to-site)
 
   ## Installation
+
   - bootstrap
   - react
   - vite
 
   ## Usage
-  Available on Netlify. See link below.
+
+  - Available on Netlify. See link below.
 
   ## Contributing
-  Contribution unavailable at this time
+
+  - Contribution unavailable at this time.
 
   ## Questions
-  Please email questions to joseph.s.foster@icloud.com.
-  For additional works, please visit [https://github.com/joseph-s-foster]
 
-## Link to site
+  - Please email questions to joseph.s.foster@icloud.com.
+  
+  - For additional works, please visit [https://github.com/joseph-s-foster]
 
-- https://stunning-fox-4500e5.netlify.app
+  ## Link to site
 
-## Screenshot
+  - https://stunning-fox-4500e5.netlify.app
 
-![screenshot of webpage](./src/assets/project/ss.png)
+  ## Screenshot
+
+  ![screenshot of webpage](./src/assets/project/ss.png)
