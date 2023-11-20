@@ -2,7 +2,7 @@
 
 ## Description
 
-- Web-based portfolio using HTML, CSS, JavaScript.
+- Web-based portfolio using React, HTML, CSS, JavaScript and more!
 
 ## Link to site
 
