@@ -63,6 +63,16 @@ a:hover {
   padding: 10px;
 }
 
+/* Add this to your CSS or in a separate stylesheet */
+.footer-icon {
+  width: 1.67em; /* Adjust the size as needed */
+  height: 1.67em; /* Adjust the size as needed */
+  vertical-align: middle;
+  margin-left: 8px;
+  margin-bottom: 2px; /* Adjust the margin as needed */
+}
+
+
 .logo {
   height: 6em;
   padding: 1.5em;
