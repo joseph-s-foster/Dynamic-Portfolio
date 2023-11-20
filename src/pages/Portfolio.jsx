@@ -22,6 +22,13 @@ function Portfolio() {
       description: "Generate a random password up to 128 characters in length.",
       link: "https://github.com/joseph-s-foster/Password-Generator",
       repo: "https://joseph-s-foster.github.io/Password-Generator/",
+      image: "sign",
+    },
+    {
+      name: "Coming Soon",
+      description: "A React application in the making.",
+      link: "https://github.com/",
+      repo: "https://github.com/",
       image: "screen",
     },
     {
@@ -30,6 +37,13 @@ function Portfolio() {
       link: "https://github.com/joseph-s-foster/Mischief-Managed",
       repo: "https://github.com/joseph-s-foster/Mischief-Managed",
       image: "angles",
+    },
+    {
+      name: "Birdwatching Tennessee",
+      description: "Discover birds in the state of Tennessee",
+      link: "https://github.com/joseph-s-foster/Birdwatching-Tennessee",
+      repo: "https://github.com/joseph-s-foster/Birdwatching-Tennessee",
+      image: "twist",
     }
   ];
 
