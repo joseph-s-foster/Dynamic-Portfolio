@@ -5,7 +5,7 @@ function Portfolio() {
   const projects = [
     {
       name: "Weather Dashboard",
-      description: "Search weather forecasts for a given location.",
+      description: "Search weather forecasts in a given location.",
       link: "https://joseph-s-foster.github.io/Weather-Dashboard/",
       repo: "https://github.com/joseph-s-foster/Weather-Dashboard",
       image: "flow",
@@ -49,11 +49,13 @@ function Portfolio() {
 
   // for each project, use the Project component to build a project
   return (
-    <div>
-      <h1>Projects</h1>
-      <div className="d-flex">
+    <div className="container">
+      <h1 className="text-center mb-4">Projects</h1>
+      <div className="row">
         {projects.map((project) => (
-          <Project project={project} key={"project-" + project.name} />
+          <div key={"project-" + project.name} className="col-md-6 col-lg-4 mb-4">
+            <Project project={project} />
+          </div>
         ))}
       </div>
     </div>
