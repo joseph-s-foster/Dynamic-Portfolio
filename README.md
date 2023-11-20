@@ -31,7 +31,7 @@
   ## Questions
 
   - Please email questions to joseph.s.foster@icloud.com.
-  
+
   - For additional works, please visit [https://github.com/joseph-s-foster]
 
   ## Link to site
