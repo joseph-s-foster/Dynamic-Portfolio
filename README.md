@@ -6,7 +6,7 @@
 
 ## Link to site
 
-- Coming Soon!
+- https://stunning-fox-4500e5.netlify.app
 
 ## Screenshot
 
