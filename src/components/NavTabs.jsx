@@ -1,8 +1,19 @@
+import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import '../NavTabs.css'
+import '../NavTabs.css';
 
 function NavTabs() {
   const currentPage = useLocation().pathname;
+
+  useEffect(() => {
+    // Conditionally set or remove overflow: hidden based on the current page
+    document.body.style.overflow = currentPage === '/Portfolio' ? 'visible' : 'hidden';
+
+    // Clean up the effect by setting overflow back to hidden when the component unmounts or the user navigates away from the Portfolio page
+    return () => {
+      document.body.style.overflow = 'hidden';
+    };
+  }, [currentPage]);
 
   return (
     <header className="header d-flex align-items-center justify-content-center flex-column">
@@ -38,7 +49,10 @@ function NavTabs() {
           </Link>
         </li>
       </ul>
-      <div className="white-line" style={{ width: '80vw', height: '1px', backgroundColor: 'white' }}></div>
+      <div
+        className="white-line"
+        style={{ width: '80vw', height: '1px', backgroundColor: 'white' }}
+      ></div>
     </header>
   );
 }
