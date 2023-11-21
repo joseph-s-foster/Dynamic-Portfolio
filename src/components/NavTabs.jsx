@@ -10,7 +10,8 @@ function NavTabs() {
           Joe Foster
         </Link>
       </h1>
-      <ul className="nav nav-tabs">
+      {/* nav-tabs */}
+      <ul className="nav">
         <li className="nav-item">
           <Link
             to="/Portfolio"
@@ -36,7 +37,7 @@ function NavTabs() {
           </Link>
         </li>
       </ul>
-      <div className="white-line"></div>
+      <div className="white-line" style={{ width: '98%', height: '1px', backgroundColor: 'white', marginTop: '4px' }}></div>
     </header>
   );
 }

@@ -4,7 +4,7 @@ function Resume() {
   const projects = [
     {
       name: "Coming Soon",
-      description: "Resume",
+      description: "",
       link: "https://joseph-s-foster.github.io/Coding-Quiz/",
       image: "waves",
     },
