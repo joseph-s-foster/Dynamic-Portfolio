@@ -1,0 +1,37 @@
+.images {
+  max-width: 336px;
+  border-radius: 5px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+  .images {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 767.5px) {
+  .images {
+    max-width: 336px;
+  }
+}
+
+@media screen and (max-width: 672px) {
+  .images {
+    max-width: 336px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .images {
+    max-width: 260px;
+  }
+}

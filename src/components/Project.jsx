@@ -1,4 +1,5 @@
 import * as projects from '../assets';
+import '../Portfolio.css'
 
 function Project({ project }) {
   const { name, repo, link, description, image } = project;
@@ -9,8 +10,7 @@ function Project({ project }) {
         <img
           src={projects[image]}
           alt={name}
-          className="p-img img-fluid"
-          style={{ maxWidth: '336px', height: 'auto' }}
+          className="images"
         />
         <div className="mt-3">
           <h1>
