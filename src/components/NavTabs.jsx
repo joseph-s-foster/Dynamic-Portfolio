@@ -1,17 +1,25 @@
-import React, { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import '../NavTabs.css';
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import "../NavTabs.css";
 
 function NavTabs() {
   const currentPage = useLocation().pathname;
 
   useEffect(() => {
-    // Conditionally set or remove overflow: hidden based on the current page
-    document.body.style.overflow = currentPage === '/Portfolio' ? 'visible' : 'hidden';
+    document.body.style.overflow =
+      currentPage === "/Portfolio" ? "visible" : "hidden";
 
-    // Clean up the effect by setting overflow back to hidden when the component unmounts or the user navigates away from the Portfolio page
+    const footer = document.querySelector(".footer");
+    if (footer) {
+      footer.style.position =
+        currentPage === "/Portfolio" ? "relative" : "fixed";
+    }
+
     return () => {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
+      if (footer) {
+        footer.style.position = "fixed";
+      }
     };
   }, [currentPage]);
 
@@ -27,7 +35,9 @@ function NavTabs() {
         <li className="nav-item">
           <Link
             to="/Portfolio"
-            className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}
+            className={
+              currentPage === "/Portfolio" ? "nav-link active" : "nav-link"
+            }
           >
             Portfolio
           </Link>
@@ -35,7 +45,9 @@ function NavTabs() {
         <li className="nav-item">
           <Link
             to="/Resume"
-            className={currentPage === '/Resume' ? 'nav-link active' : 'nav-link'}
+            className={
+              currentPage === "/Resume" ? "nav-link active" : "nav-link"
+            }
           >
             Resume
           </Link>
@@ -43,7 +55,9 @@ function NavTabs() {
         <li className="nav-item">
           <Link
             to="/Contact"
-            className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}
+            className={
+              currentPage === "/Contact" ? "nav-link active" : "nav-link"
+            }
           >
             Contact
           </Link>
@@ -51,7 +65,7 @@ function NavTabs() {
       </ul>
       <div
         className="white-line"
-        style={{ width: '80vw', height: '1px', backgroundColor: 'white' }}
+        style={{ width: "80vw", height: "1px", backgroundColor: "white" }}
       ></div>
     </header>
   );
