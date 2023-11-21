@@ -1,8 +1,11 @@
 body, #root {
   margin: 0;
   padding: 0;
-  background-color: black; /* Set the background color to black for both body and #root */
-  color: white; /* Set the font color to white */
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 #root {
@@ -10,19 +13,20 @@ body, #root {
   margin: 0 auto;
   /* padding: 2rem; */
   text-align: center;
+  flex: 1;
 }
 
 .header {
   position: sticky;
   top: 0;
-  z-index: 1000; /* Adjust the z-index as needed */
+  z-index: 1000; 
   background-color: black;
-  padding: 15px; /* Adjust the padding as needed */
+  padding: 16px;
 }
 
 .nav-link-header {
   font-size: 3rem;
-  color: white !important; /* Set the link color to white */
+  color: white !important;
   text-decoration: none;
   border: none;
 }
@@ -33,16 +37,16 @@ body, #root {
 
 .nav-link {
   font-size: 1rem;
-  color: white !important; /* Set the link color to white */
-  text-decoration: none; /* Remove the default underline */
+  color: white !important;
+  text-decoration: none;
 }
 
 .nav-link:hover {
-  text-decoration: underline; /* Underline the text on hover */
+  text-decoration: underline;
 }
 
 .nav-link.active {
-  background-color: transparent !important; /* Remove background color for active link */
+  background-color: transparent !important;
 }
 
 
@@ -52,34 +56,32 @@ img {
 
 a {
   color: white;
-  text-decoration: none; /* Remove underlines from links */
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline; /* Change link color on hover if desired */
+  text-decoration: underline;
 }
 
 .footer {
   background-color: black;
   color: white;
   font-size: 1rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   text-align: center;
   padding: 10px;
+  box-sizing: border-box;
+  margin-top: auto;
 }
 
-/* Add this to your CSS or in a separate stylesheet */
 .footer-icon {
-  width: 1.67em; /* Adjust the size as needed */
-  height: 1.67em; /* Adjust the size as needed */
+  width: 1.67em;
+  height: 1.67em;
   vertical-align: middle;
   margin-left: 8px;
-  margin-bottom: 2px; /* Adjust the margin as needed */
+  margin-bottom: 2px;
 }
-
 
 .logo {
   height: 6em;

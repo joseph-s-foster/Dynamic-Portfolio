@@ -50,7 +50,7 @@ export default function Contact() {
 
   const formContainerStyles = {
     width: '100%',
-    maxWidth: '350px', // Adjust the max-width as needed
+    maxWidth: '336px', // Adjust the max-width as needed
   };
 
   return (
