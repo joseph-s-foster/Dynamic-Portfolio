@@ -6,50 +6,12 @@ body, #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-#root {
   max-width: 1280px;
   margin: 0 auto;
   /* padding: 2rem; */
   text-align: center;
   flex: 1;
 }
-
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 1000; 
-  background-color: black;
-  padding: 16px;
-  padding-bottom: 0;
-}
-
-.nav-link-header {
-  font-size: 3rem;
-  color: white !important;
-  text-decoration: none;
-  border: none;
-}
-
-.nav-link-header:hover {
-  text-decoration: none;
-}
-
-.nav-link {
-  font-size: 1rem;
-  color: white !important;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  text-decoration: underline;
-}
-
-.nav-link.active {
-  background-color: transparent !important;
-}
-
 
 img {
   border-radius: 5px;
@@ -62,62 +24,4 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-.footer {
-  background-color: black;
-  color: white;
-  font-size: 1rem;
-  position: relative;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  box-sizing: border-box;
-  margin-top: auto;
-}
-
-.footer-icon {
-  width: 1.67em;
-  height: 1.67em;
-  vertical-align: middle;
-  margin-left: 8px;
-  margin-bottom: 2px;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

@@ -1,0 +1,33 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    background-color: black;
+    padding: 16px;
+    padding-bottom: 0;
+  }
+  
+  .nav-link-header {
+    font-size: 3rem;
+    color: white !important;
+    text-decoration: none;
+    border: none;
+  }
+  
+  .nav-link-header:hover {
+    text-decoration: none;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    color: white !important;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  .nav-link.active {
+    background-color: transparent !important;
+  }
