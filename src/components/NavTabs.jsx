@@ -37,7 +37,7 @@ function NavTabs() {
           </Link>
         </li>
       </ul>
-      <div className="white-line" style={{ width: '80vw', height: '1px', backgroundColor: 'white', marginTop: '4px' }}></div>
+      <div className="white-line" style={{ width: '80vw', height: '1px', backgroundColor: 'white' }}></div>
     </header>
   );
 }
