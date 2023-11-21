@@ -9,6 +9,7 @@ function Footer() {
         href="https://github.com/joseph-s-foster"
         target="_blank"
         rel="noopener noreferrer"
+        className="cat"
       >
         <img
           src={projectImages.github}
