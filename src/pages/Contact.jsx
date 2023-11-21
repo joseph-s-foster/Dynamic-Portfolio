@@ -46,7 +46,6 @@ export default function Contact() {
     justifyContent: 'center',
     alignItems: 'center',
     margin: '24px', // Adjust the height as needed
-    overflow: 'hidden', // Added overflow: hidden
   };
 
   const formContainerStyles = {

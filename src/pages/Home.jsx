@@ -9,7 +9,7 @@ function Home() {
   ];
 
   return (
-    <div className="container d-flex justify-content-center align-items-center flex-column vh-50" style={{ overflow: 'hidden' }}>
+    <div className="container d-flex justify-content-center align-items-center flex-column vh-50">
       {projects.map((project, index) => (
         <div key={"project-" + index} className="col-md-6 col-lg-4 mb-4">
           <Project project={project} className="mx-auto" />
