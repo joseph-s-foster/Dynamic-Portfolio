@@ -15,9 +15,9 @@ body,
   /* overflow: hidden; */
 }
 
-/* @media screen and (max-width: 767.5px) {
+@media screen and (max-width: 767.5px) {
   body,
   #root {
-    min-height: 92vh;
+    min-height: 90vh;
   }
-} */
+}
