@@ -5,22 +5,23 @@ import "../NavTabs.css";
 function NavTabs() {
   const currentPage = useLocation().pathname;
 
-  // useEffect(() => {
-  //   document.body.style.overflow =
-  //     currentPage === "/Portfolio" ? "visible" : "hidden";
+  useEffect(() => {
+    document.body.style.overflow =
+      currentPage === "/Portfolio" ? "visible" : "hidden";
 
-  //   const footer = document.querySelector(".footer");
-  //   if (footer) {
-  //     footer.style.position =
-  //       currentPage === "/Portfolio" ? "relative" : "fixed";
-  //   }
-  //   return () => {
-  //     document.body.style.overflow = "hidden";
-  //     if (footer) {
-  //       footer.style.position = "fixed";
-  //     }
-  //   };
-  // }, [currentPage]);
+    const footer = document.querySelector(".footer");
+    if (footer) {
+      footer.style.position =
+        currentPage === "/Portfolio" ? "relative" : "fixed";
+    }
+
+    return () => {
+      document.body.style.overflow = "hidden";
+      if (footer) {
+        footer.style.position = "fixed";
+      }
+    };
+  }, [currentPage]);
 
   return (
     <header className="header d-flex align-items-center justify-content-center flex-column">
