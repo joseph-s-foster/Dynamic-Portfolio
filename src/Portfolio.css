@@ -2,21 +2,112 @@
   padding-top: 16px;
 }
 
-.images {
-  max-width: 336px;
-  border-radius: 5px;
+#project-flow {
+  background-image: url(
+    './assets/project/flow.png'
+  );
+  object-fit: contain;
+  background-size: 100%;
 }
 
-a {
+#project-angles {
+  background-image: url(
+    './assets/project/angles.png'
+  );
+  object-fit: contain;
+  background-size: 100%;
+}
+
+#project-motion {
+  background-image: url(
+    './assets/project/motion.png'
+  );
+  object-fit: contain;
+  background-size: 100%;
+}
+
+#project-twist {
+  background-image: url(
+    './assets/project/twist.png'
+  );
+  object-fit: contain;
+  background-size: 100%;
+}
+
+#project-screen {
+  background-image: url(
+    './assets/project/screen.png'
+  );
+  object-fit: contain;
+  background-size: 100%;
+}
+
+#project-sign {
+  background-image: url(
+    './assets/project/sign.png'
+  );
+  object-fit: contain;
+  background-size: 100%;
+}
+
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tile {
+  flex-basis: 29%;
+  height: 0;
+  padding-bottom: 29%; /* 1:1 aspect ratio for perfect squares */
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 12px;
+}
+
+.project-link {
+  display: block;
+  height: 100%;
   color: white;
   text-decoration: none;
 }
 
-a:hover {
+.project-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: left; /* Align items vertically in the middle */
+}
+
+.project-info h1 {
+  font-size: 1.5rem;
+}
+
+.github-link {
+  color: white;
+  text-decoration: none;
+}
+
+.github-link:hover {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
   .images {
     max-width: 300px;
   }
@@ -38,4 +129,4 @@ a:hover {
   .images {
     max-width: 260px;
   }
-}
+} */

@@ -5,27 +5,23 @@ function Project({ project }) {
   const { name, repo, link, description, image } = project;
 
   return (
-    <div className="container mx-auto p-3 col-md-6 col-lg-4 d-flex justify-content-center">
-      <div className="mx-auto">
-        <img
-          src={projects[image]}
-          alt={name}
-          className="images"
-        />
-        <div className="mt-3">
-          <h1>
-            <a href={link} style={{ fontSize: '1.5rem', color: 'white' }}>
-              {name}
-            </a>{' '}
+    <a href={link} className="project-link">
+      <div className="">
+        <div className="project-content">
+          <div className="project-info">
+            <h1>
+            {name}
+            </h1>
+          </div>
+          <div className="github-link">
             <a href={repo}>
               <i className="fab fa-github"></i>
             </a>
-          </h1>
-          <p>{description}</p>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    </a>
+  );  
 }
 
 export default Project;

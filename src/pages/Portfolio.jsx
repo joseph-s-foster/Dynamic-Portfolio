@@ -52,9 +52,9 @@ function Portfolio() {
   return (
     <div className="container">
       <h1 className="text-center mb-4">Projects</h1>
-      <div className="row">
+      <div className="tiles">
         {projects.map((project) => (
-          <div key={"project-" + project.name} className="col-md-6 col-lg-4 mb-4">
+          <div key={"project-" + project.name} id={"project-" + project.image} className="tile">
             <Project project={project} />
           </div>
         ))}
