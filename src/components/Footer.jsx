@@ -17,7 +17,7 @@ function Footer() {
           className="footer-icon"
         />
       </a>
-      &copy; Joe Foster 2023
+      &copy; 2023
     </footer>
   );
 }

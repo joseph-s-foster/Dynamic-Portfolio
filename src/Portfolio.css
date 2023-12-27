@@ -26,22 +26,6 @@
   background-size: 100%;
 }
 
-#project-twist {
-  background-image: url(
-    './assets/project/twist.png'
-  );
-  object-fit: contain;
-  background-size: 100%;
-}
-
-#project-screen {
-  background-image: url(
-    './assets/project/screen.png'
-  );
-  object-fit: contain;
-  background-size: 100%;
-}
-
 #project-sign {
   background-image: url(
     './assets/project/sign.png'
@@ -53,17 +37,24 @@
 .tiles {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between; /* Distribute tiles evenly */
 }
 
 .tile {
-  flex-basis: 29%;
+  flex-basis: calc(25% - 24px); /* 4 tiles in a row, with margins */
   height: 0;
-  padding-bottom: 29%; /* 1:1 aspect ratio for perfect squares */
+  padding-bottom: calc(25% - 24px); /* 1:1 aspect ratio for perfect squares with margins */
   position: relative;
-  /* overflow: hidden; */
-  border-radius: 5px;
   margin: 12px;
+  border-radius: 5px;
+}
+
+/* Responsive styling for small screens */
+@media screen and (max-width: 1280px) {
+  .tile {
+    flex-basis: calc(50% - 24px); /* 2 tiles in a row on small screens */
+    padding-bottom: calc(50% - 24px);
+  }
 }
 
 .project-link {
