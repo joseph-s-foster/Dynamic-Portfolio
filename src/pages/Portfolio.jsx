@@ -7,29 +7,25 @@ function Portfolio() {
     {
       name: "Would You Rather?",
       description: "Real-time polls",
-      link: "https://github.com/",
-      // repo: "https://github.com/",
+      link: "https://wyr-3b5b304bab70.herokuapp.com/",
       image: "angles",
     },
     {
       name: "Weather Dashboard",
       description: "Search weather forecasts",
       link: "https://joseph-s-foster.github.io/Weather-Dashboard/",
-      // repo: "https://github.com/joseph-s-foster/Weather-Dashboard",
       image: "flow",
     },
     {
       name: "Coding Quiz",
       description: "Test your Javascript knowledge",
       link: "https://joseph-s-foster.github.io/Coding-Quiz/",
-      // repo: "https://github.com/joseph-s-foster/Coding-Quiz",
       image: "motion",
     },
     {
       name: "Password Generator",
       description: "Generate a random password",
       link: "https://joseph-s-foster.github.io/Password-Generator/",
-      // repo: "https://github.com/joseph-s-foster/Password-Generator",
       image: "sign",
     },
   ];

@@ -1,7 +1,7 @@
 import "../Portfolio.css";
 
 function Project({ project }) {
-  const { name, link, description} = project;
+  const { name, link, description, image} = project;
 
   return (
     <a href={link} className="project-link">

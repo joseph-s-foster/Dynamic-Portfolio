@@ -5,7 +5,6 @@ import "../Footer.css";
 function Footer() {
   const location = useLocation();
   const footerRef = useRef(null);
-  const isHomePage = location.pathname === "/";
   const [isOverflow, setIsOverflow] = useState(false);
 
   useEffect(() => {
@@ -25,7 +24,7 @@ function Footer() {
   }, [location.pathname]);
 
   const footerStyle = {
-    position: isOverflow || !isHomePage ? "relative" : "fixed"
+    position: isOverflow ? "relative" : "fixed"
   };
 
   return (
@@ -39,7 +38,7 @@ function Footer() {
             <a href="https://github.com/joseph-s-foster">GitHub</a>
           </li>
           <li className="footer-links">
-            <a href="/">Home</a>
+            <a href="/">LinkedIn</a>
           </li>
           <li>
             <p>&copy; 2023-2024</p>

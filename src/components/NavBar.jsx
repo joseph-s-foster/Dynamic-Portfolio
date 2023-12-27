@@ -47,14 +47,15 @@ export default function Navigation() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                  <div className="navbar-link flex space-x-4">
                     {navigation.map((item) => (
                       <NavLink
                         key={item.name}
                         to={item.to}
                         className={classNames(
-                          "text-black-300 hover:bg-black-700 hover:text-white text-sm px-3",
-                          { "text-white": location.pathname === item.to }
+                          "text-black-300 hover:bg-black-700 hover:text-white text-lg px-3", // Increased font size to 1.5rem (1.5 * 16px)
+                          { "text-white": location.pathname === item.to },
+                          "hover:underline" // Added hover underline
                         )}
                       >
                         {item.name}
@@ -84,11 +85,12 @@ export default function Navigation() {
                     as={Link}
                     to={item.to}
                     className={classNames(
-                      "text-black-300 hover:bg-black-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium",
+                      "text-black-300 hover:bg-black-700 hover:text-white block rounded-md px-3 py-2 text-lg", // Increased font size to 1.5rem (1.5 * 16px)
                       {
                         "bg-black-900 text-white":
                           location.pathname === item.to,
-                      }
+                      },
+                      "hover:underline" // Added hover underline
                     )}
                     onClick={closeMobileMenu}
                   >
