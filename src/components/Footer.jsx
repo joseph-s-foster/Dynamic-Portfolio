@@ -5,6 +5,7 @@ import "../Footer.css";
 function Footer() {
   const location = useLocation();
   const footerRef = useRef(null);
+  const isHomePage = location.pathname === "/";
   const [isOverflow, setIsOverflow] = useState(false);
 
   useEffect(() => {
@@ -24,7 +25,7 @@ function Footer() {
   }, [location.pathname]);
 
   const footerStyle = {
-    position: isOverflow ? "relative" : "fixed"
+    position: isOverflow || !isHomePage ? "relative" : "fixed"
   };
 
   return (
