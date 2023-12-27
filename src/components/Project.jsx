@@ -10,11 +10,6 @@ function Project({ project }) {
           <h1>{name}</h1>
           <div className="project-description">{description}</div>
         </div>
-        {/* <div className="github-link">
-            <a href={repo}>
-              <i className="fab fa-github"></i>
-            </a>
-          </div> */}
       </div>
     </a>
   );

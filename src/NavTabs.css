@@ -1,5 +1,5 @@
 .header {
-  position: sticky;
+  position:absolute;
   top: 0;
   z-index: 1000;
   background-color: black;
@@ -32,10 +32,6 @@
   background-color: transparent !important;
 }
 
-.images {
-  max-width: 336px;
-  border-radius: 5px;
-}
 
 a {
   color: white;
