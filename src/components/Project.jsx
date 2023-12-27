@@ -12,13 +12,13 @@ function Project({ project }) {
             <h1>
             {name}
             </h1>
-            <div>{description}</div>
+            <div className='project-description'>{description}</div>
           </div>
-          <div className="github-link">
+          {/* <div className="github-link">
             <a href={repo}>
               <i className="fab fa-github"></i>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </a>
