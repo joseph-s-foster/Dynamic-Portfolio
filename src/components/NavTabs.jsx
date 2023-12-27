@@ -3,25 +3,25 @@ import { Link, useLocation } from "react-router-dom";
 import "../NavTabs.css";
 
 function NavTabs() {
-  const currentPage = useLocation().pathname;
+  // const currentPage = useLocation().pathname;
 
-  useEffect(() => {
-    document.body.style.overflow =
-      currentPage === "/Portfolio" ? "visible" : "hidden";
+  // useEffect(() => {
+  //   document.body.style.overflow =
+  //     currentPage === "/Portfolio" ? "visible" : "hidden";
 
-    const footer = document.querySelector(".footer");
-    if (footer) {
-      footer.style.position =
-        currentPage === "/Portfolio" ? "relative" : "fixed";
-    }
+  //   const footer = document.querySelector(".footer");
+  //   if (footer) {
+  //     footer.style.position =
+  //       currentPage === "/Portfolio" ? "relative" : "fixed";
+  //   }
 
-    return () => {
-      document.body.style.overflow = "hidden";
-      if (footer) {
-        footer.style.position = "fixed";
-      }
-    };
-  }, [currentPage]);
+  //   return () => {
+  //     document.body.style.overflow = "hidden";
+  //     if (footer) {
+  //       footer.style.position = "fixed";
+  //     }
+  //   };
+  // }, [currentPage]);
 
   return (
     <header className="header d-flex align-items-center justify-content-center flex-column">
@@ -42,7 +42,7 @@ function NavTabs() {
             Portfolio
           </Link>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <Link
             to="/Resume"
             className={
@@ -51,7 +51,7 @@ function NavTabs() {
           >
             Resume
           </Link>
-        </li>
+        </li> */}
         <li className="nav-item">
           <Link
             to="/Contact"

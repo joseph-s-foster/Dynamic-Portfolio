@@ -12,6 +12,7 @@ function Project({ project }) {
             <h1>
             {name}
             </h1>
+            <div>{description}</div>
           </div>
           <div className="github-link">
             <a href={repo}>

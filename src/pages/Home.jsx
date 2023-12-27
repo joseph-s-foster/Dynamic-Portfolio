@@ -1,20 +1,18 @@
-import Project from "../components/Project";
+import React from "react";
 
 function Home() {
-  const projects = [
-    {
-      description: "Full-Stack Developer",
-      image: "avatar",
-    },
-  ];
-
   return (
-    <div className="container d-flex justify-content-center align-items-center flex-column vh-50">
-      {projects.map((project, index) => (
-        <div key={"project-" + index} className="col-md-6 col-lg-4 mb-4">
-          <Project project={project} className="mx-auto" />
-        </div>
-      ))}
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "80vh",
+      }}
+    >
+      <h1 style={{ fontSize: "3rem" }}>Joe Foster</h1>
+      <h2 style={{ fontSize: "1.33rem" }}>Full-Stack Developer</h2>
     </div>
   );
 }

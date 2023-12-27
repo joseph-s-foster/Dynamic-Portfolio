@@ -5,7 +5,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 
 const navigation = [
   { name: "Home", to: "/", current: false },
-  { name: "Resume", to: "/Resume", current: false },
+  // { name: "Resume", to: "/Resume", current: false },
   { name: "Portfolio", to: "/Portfolio", current: false },
   { name: "Contact", to: "/Contact", current: false },
 ];

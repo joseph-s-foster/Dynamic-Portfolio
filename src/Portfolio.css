@@ -61,7 +61,7 @@
   height: 0;
   padding-bottom: 29%; /* 1:1 aspect ratio for perfect squares */
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: 5px;
   margin: 12px;
 }
