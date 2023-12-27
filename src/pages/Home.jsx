@@ -18,11 +18,12 @@ function Home() {
   return (
     <div
       style={{
+        overflow: "hidden",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "80vh",
+        height: "60vh",
       }}
     >
       <h1 style={{ fontSize: "4rem" }}>Joe Foster</h1>
