@@ -11,7 +11,7 @@ function Portfolio() {
       document.body.style.overflow = "hidden";
     };
   }, []);
-  
+
   // fill in the required data, image file should be in the assets/projects folder and name should match the "default as " statement in index.js
   const projects = [
     {
@@ -42,9 +42,10 @@ function Portfolio() {
 
   // for each project, use the Project component to build a project
   return (
-    <div className="container" style={{overflow:"scroll"}}>
-      <h1 className="text-center mb-4"
-      style={{fontSize: "2rem"}}>Projects</h1>
+    <div className="container">
+      <h1 className="text-center mb-4" style={{ fontSize: "2rem" }}>
+        Projects
+      </h1>
       <div className="tiles">
         {projects.map((project) => (
           <div key={"project-" + project.name} id={"project-" + project.image} className="tile">
