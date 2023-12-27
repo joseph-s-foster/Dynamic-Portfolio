@@ -14,5 +14,6 @@ body,
   color: white;
   min-height: 100vh;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
