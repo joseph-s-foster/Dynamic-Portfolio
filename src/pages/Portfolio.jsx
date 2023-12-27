@@ -1,6 +1,16 @@
 import Project from "../components/Project";
+import { useEffect } from "react";
 
 function Portfolio() {
+  useEffect(() => {
+    // Remove overflow hidden when the component mounts
+    document.body.style.overflow = "auto";
+
+    // Reapply overflow hidden when the component unmounts (cleanup)
+    return () => {
+      document.body.style.overflow = "hidden";
+    };
+  }, []);
   
   // fill in the required data, image file should be in the assets/projects folder and name should match the "default as " statement in index.js
   const projects = [
@@ -32,7 +42,7 @@ function Portfolio() {
 
   // for each project, use the Project component to build a project
   return (
-    <div className="container">
+    <div className="container" style={{overflow:"scroll"}}>
       <h1 className="text-center mb-4"
       style={{fontSize: "2rem"}}>Projects</h1>
       <div className="tiles">

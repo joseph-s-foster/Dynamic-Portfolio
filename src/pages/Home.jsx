@@ -18,7 +18,6 @@ function Home() {
   return (
     <div
       style={{
-        overflow: "hidden",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
