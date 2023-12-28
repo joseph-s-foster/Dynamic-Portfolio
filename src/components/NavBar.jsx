@@ -36,8 +36,6 @@ export default function Navigation() {
                   className="relative inline-flex items-center justify-center rounded-md p-2"
                   onClick={handleMobileMenuToggle}
                 >
-                  
-                 
                   {open ? (
                     <XMarkIcon className="block h-7 w-8" aria-hidden="true" />
                   ) : (
@@ -85,11 +83,11 @@ export default function Navigation() {
                     as={Link}
                     to={item.to}
                     className={classNames(
-                      "block px-3 py-1 text-lg", // Increased font size to 1.5rem (1.5 * 16px)
-                     
+                      "block px-3 py-1 text-lg",
                       "hover:underline"
                     )}
                     onClick={closeMobileMenu}
+                    style={{ outline: "none" }} // Add this line to remove the blue border
                   >
                     {item.name}
                   </Disclosure.Button>
