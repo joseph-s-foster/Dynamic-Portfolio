@@ -3,8 +3,8 @@
   flex-direction: column;
   align-items: left;
   position: fixed;
-  background-color: #121212;
-  color: #eeeeee;
+  background-color: #0b0b0b;
+  color: #cccccc;
   font-size: 0.85rem;
   width: 100%;
   bottom: 0;
@@ -23,10 +23,14 @@
 }
 
 .footer-links {
-  color: #eeeeee;
+  color: #cccccc;
   justify-content: left;
   align-items: left;
   padding-bottom: 4px;
   margin-left: 24px;
   margin-right: 24px;
+}
+
+.footer-links:hover {
+  text-decoration: underline;
 }

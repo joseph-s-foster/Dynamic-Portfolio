@@ -1,4 +1,6 @@
+import React from "react";
 import "../Portfolio.css";
+import caret from "../assets/project/caret.svg";  // Update the path to your caret.svg file
 
 function Project({ project }) {
   const { name, link, description, image } = project;
@@ -9,9 +11,14 @@ function Project({ project }) {
         <h1>{name}</h1>
         <div className="project-description">{description}</div>
       </div>
+   
       <a href={link} className="project-link" target="_blank" rel="noopener noreferrer">
-        Explore ›
+        <div className="cta">
+        Explore
+        <img src={caret} alt="caret" className="caret-icon" />
+        </div>
       </a>
+      
     </div>
   );
 }
