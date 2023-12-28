@@ -31,7 +31,7 @@ function Footer() {
     <footer className="footer" style={footerStyle} ref={footerRef}>
       <nav>
         <ul>
-          <li className="footer-links" style={{textDecoration: "none"}}>
+          <li className="footer-links" style={{ textDecoration: "none" }}>
             <h2 style={{ fontSize: "1.5rem" }}>Connect</h2>
           </li>
           <li className="footer-links">
@@ -43,8 +43,20 @@ function Footer() {
           <li className="footer-links">
             <a href="/">LinkedIn</a>
           </li>
-          <li>
-          <p className="footer-links text-center" style={{ justifyContent: "center", alignItems: "center", textDecoration: "none"}}>&copy; 2024</p>
+          <li className="footer-links" style={{ marginBottom: "8px" }}>
+            <a href="#top">Back to Top</a>
+          </li>
+          <li
+            className="footer-links text-center"
+            style={{
+              justifyContent: "center",
+              alignItems: "center",
+              textDecoration: "none",
+            }}
+          >
+            <p className="border-top" style={{ paddingTop: "8px" }}>
+              &copy; 2024
+            </p>
           </li>
         </ul>
       </nav>
