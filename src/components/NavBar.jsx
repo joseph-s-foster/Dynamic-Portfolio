@@ -26,18 +26,18 @@ export default function Navigation() {
   };
 
   return (
-    <Disclosure as="nav" className="bg-black-800">
+    <Disclosure as="nav">
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-2 lg:px-2">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <Disclosure.Button
-                  className="relative inline-flex items-center justify-center rounded-md p-2 text-black-400 hover:bg-black-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  className="relative inline-flex items-center justify-center rounded-md p-2"
                   onClick={handleMobileMenuToggle}
                 >
-                  <span className="absolute -inset-0.5" />
-                  <span className="sr-only">Open main menu</span>
+                  
+                 
                   {open ? (
                     <XMarkIcon className="block h-7 w-8" aria-hidden="true" />
                   ) : (
@@ -53,7 +53,7 @@ export default function Navigation() {
                         key={item.name}
                         to={item.to}
                         className={classNames(
-                          "text-black-300 hover:bg-black-700 text-lg px-3", // Increased font size to 1.5rem (1.5 * 16px)
+                          " text-lg px-3", // Increased font size to 1.5rem (1.5 * 16px)
                           { "text-white": location.pathname === item.to },
                           "hover:underline" // Added hover underline
                         )}
@@ -85,12 +85,9 @@ export default function Navigation() {
                     as={Link}
                     to={item.to}
                     className={classNames(
-                      "text-black-300 hover:bg-black-700 hover:text-white block rounded-md px-3 py-2 text-lg", // Increased font size to 1.5rem (1.5 * 16px)
-                      {
-                        "bg-black-900 text-white":
-                          location.pathname === item.to,
-                      },
-                      "hover:underline" // Added hover underline
+                      "block px-3 py-1 text-lg", // Increased font size to 1.5rem (1.5 * 16px)
+                     
+                      "hover:underline"
                     )}
                     onClick={closeMobileMenu}
                   >
