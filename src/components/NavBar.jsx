@@ -29,7 +29,7 @@ export default function Navigation() {
     <Disclosure as="nav" className="bg-black-800">
       {({ open }) => (
         <>
-          <div className="mx-auto px-4 sm:px-4 lg:px-4">
+          <div className="mx-auto px-2 sm:px-2 lg:px-2">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <Disclosure.Button
@@ -39,15 +39,15 @@ export default function Navigation() {
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                    <XMarkIcon className="block h-7 w-8" aria-hidden="true" />
                   ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                    <Bars3Icon className="block h-7 w-8" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="navbar-link flex space-x-4">
+                <div className="hidden sm:block">
+                  <div className="navbar-link flex space-x-2">
                     {navigation.map((item) => (
                       <NavLink
                         key={item.name}

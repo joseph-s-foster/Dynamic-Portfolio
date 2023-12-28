@@ -24,13 +24,16 @@ function Footer() {
   }, [location.pathname]);
 
   const footerStyle = {
-    position: isOverflow ? "relative" : "fixed"
+    position: isOverflow ? "relative" : "fixed",
   };
 
   return (
-    <footer className="footer text-center" style={footerStyle} ref={footerRef}>
-      <nav className="footer-nav">
+    <footer className="footer" style={footerStyle} ref={footerRef}>
+      <nav>
         <ul>
+          <li className="footer-links" style={{textDecoration: "none"}}>
+            <h2 style={{ fontSize: "1.5rem" }}>Connect</h2>
+          </li>
           <li className="footer-links">
             <a href="mailto:joseph.s.foster@icloud.com">Email</a>
           </li>
@@ -41,7 +44,7 @@ function Footer() {
             <a href="/">LinkedIn</a>
           </li>
           <li>
-            <p>&copy; 2023-2024</p>
+          <p className="footer-links text-center" style={{ justifyContent: "center", alignItems: "center", textDecoration: "none"}}>&copy; 2024</p>
           </li>
         </ul>
       </nav>
