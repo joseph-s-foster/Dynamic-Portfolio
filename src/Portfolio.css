@@ -1,35 +1,27 @@
 .container {
-  padding-top: 16px;
+  padding: 1%;
 }
 
 #project-flow {
-  background-image: url(
-    './assets/project/flow.png'
-  );
+  background-image: url("./assets/project/flow.png");
   object-fit: contain;
   background-size: 100%;
 }
 
 #project-angles {
-  background-image: url(
-    './assets/project/angles.png'
-  );
+  background-image: url("./assets/project/angles.png");
   object-fit: contain;
   background-size: 100%;
 }
 
 #project-motion {
-  background-image: url(
-    './assets/project/motion.png'
-  );
+  background-image: url("./assets/project/motion.png");
   object-fit: contain;
   background-size: 100%;
 }
 
 #project-sign {
-  background-image: url(
-    './assets/project/sign.png'
-  );
+  background-image: url("./assets/project/sign.png");
   object-fit: contain;
   background-size: 100%;
 }
@@ -43,11 +35,14 @@
 .tile {
   flex-basis: calc(25% - 24px); /* 4 tiles in a row, with margins */
   height: 0;
-  padding-bottom: calc(25% - 24px); /* 1:1 aspect ratio for perfect squares with margins */
+  padding-bottom: calc(
+    25% - 24px
+  ); /* 1:1 aspect ratio for perfect squares with margins */
   position: relative;
   margin: 12px;
   border-radius: 5px;
 }
+
 
 /* Responsive styling for small screens */
 @media screen and (max-width: 1280px) {
@@ -63,38 +58,40 @@
   }
 }
 
-.project-link {
-  display: block;
-  height: 25%;
-  color: #eeeeee;
-  text-decoration: none;
-}
-
-.project-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 75%;
-}
-
 .project-content {
+  text-decoration: none;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   padding: 12px;
-  background: rgba(0, 0, 0, 0.666);
+  background: rgb(0, 0, 0, 0.7);
   border-radius: 0 0 5px 5px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: left; /* Align items vertically in the middle */
 }
 
 .project-info h1 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .project-description {
-  font-size: 1rem;
+  font-size: 0.75rem;
+}
+
+.project-link {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #eeeeee;
+  text-decoration: none;
+  padding: 2%;
+  background-color: black;
+  text-decoration: none;
+  border-radius: 5px;
 }

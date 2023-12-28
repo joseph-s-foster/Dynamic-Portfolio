@@ -15,7 +15,7 @@ function Portfolio() {
   // fill in the required data, image file should be in the assets/projects folder and name should match the "default as " statement in index.js
   const projects = [
     {
-      name: "Would You Rather?",
+      name: "Would You Rather",
       description: "Real-time polls",
       link: "https://wyr-3b5b304bab70.herokuapp.com/",
       image: "angles",
