@@ -24,7 +24,7 @@ function Footer() {
   }, [location.pathname]);
 
   const footerStyle = {
-    position: isOverflow ? "relative" : "fixed",
+    position: isOverflow ? "relative" : "absolute",
   };
 
   return (
