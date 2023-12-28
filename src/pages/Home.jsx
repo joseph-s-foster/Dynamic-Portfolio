@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 function Home() {
   const [typedText, setTypedText] = useState("");
-  const textToType = "Creating mobile-first experiences";
+  const textToType = "Full-Stack Web Developer";
 
   useEffect(() => {
     const typeText = async () => {
@@ -22,11 +22,12 @@ function Home() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "70vh",
+        marginTop: "240px"
+        // height: "70vh",
       }}
     >
-      <h1 style={{ fontSize: "2rem" }}>Joe Foster</h1>
-      <h2 style={{ fontSize: ".75rem" }}>{typedText}</h2>
+      <h1 style={{ fontSize: "2.5rem" }}>Joe Foster</h1>
+      <h2 style={{ fontSize: "16px" }}>{typedText}</h2>
     </div>
   );
 }

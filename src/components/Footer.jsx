@@ -32,7 +32,7 @@ function Footer() {
       <nav>
         <ul>
           <li className="footer-links" style={{ textDecoration: "none" }}>
-            <h2 style={{ fontSize: "1.5rem" }}>Connect</h2>
+            <p>CONNECT</p>
           </li>
           <li className="footer-links">
             <a href="mailto:joseph.s.foster@icloud.com">Email</a>
@@ -54,7 +54,7 @@ function Footer() {
               textDecoration: "none",
             }}
           >
-            <p className="border-top" style={{ paddingTop: "8px" }}>
+            <p className="border-top" style={{paddingTop: "8px" }}>
               &copy; 2024
             </p>
           </li>
