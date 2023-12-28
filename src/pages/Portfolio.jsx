@@ -16,7 +16,7 @@ function Portfolio() {
   const projects = [
     {
       name: "Would You Rather",
-      description: "Real-time polls",
+      description: "View and create real-time polls",
       link: "https://wyr-3b5b304bab70.herokuapp.com/",
       image: "angles",
     },
@@ -27,8 +27,8 @@ function Portfolio() {
       image: "flow",
     },
     {
-      name: "Timed Coding Quiz",
-      description: "Test JS knowledge",
+      name: "Timed JavaScript Quiz",
+      description: "Top the local leaderboard",
       link: "https://joseph-s-foster.github.io/Coding-Quiz/",
       image: "motion",
     },
