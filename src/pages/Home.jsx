@@ -25,8 +25,8 @@ function Home() {
         height: "50vh",
       }}
     >
-      <h1 style={{ fontSize: "4rem" }}>Joe Foster</h1>
-      <h2 style={{ fontSize: "1.1rem" }}>{typedText}</h2>
+      <h1 style={{ fontSize: "2rem" }}>Joe Foster</h1>
+      <h2 style={{ fontSize: ".75rem" }}>{typedText}</h2>
     </div>
   );
 }

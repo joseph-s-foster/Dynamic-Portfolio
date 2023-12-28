@@ -12,7 +12,7 @@ function Languages() {
         height: "50vh",
       }}
     >
-      <h1 style={{ fontSize: "3rem" }}>Coming Soon</h1>
+      <h1 style={{ fontSize: "2rem" }}>Coming Soon</h1>
     </div>
   );
 }

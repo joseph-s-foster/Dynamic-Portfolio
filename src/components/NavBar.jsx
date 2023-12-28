@@ -53,7 +53,7 @@ export default function Navigation() {
                         key={item.name}
                         to={item.to}
                         className={classNames(
-                          "text-black-300 hover:bg-black-700 hover:text-white text-lg px-3", // Increased font size to 1.5rem (1.5 * 16px)
+                          "text-black-300 hover:bg-black-700 text-lg px-3", // Increased font size to 1.5rem (1.5 * 16px)
                           { "text-white": location.pathname === item.to },
                           "hover:underline" // Added hover underline
                         )}
