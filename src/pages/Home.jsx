@@ -22,7 +22,7 @@ function Home() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "50vh",
+        height: "75vh",
       }}
     >
       <h1 style={{ fontSize: "2rem" }}>Joe Foster</h1>
