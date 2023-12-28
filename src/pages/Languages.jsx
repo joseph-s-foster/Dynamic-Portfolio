@@ -9,7 +9,7 @@ function Languages() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "60vh",
+        height: "57vh",
       }}
     >
       <h1 style={{ fontSize: "2.5rem" }}>Coming Soon</h1>
