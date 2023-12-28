@@ -31,7 +31,7 @@ function Footer() {
     <footer className="footer" style={footerStyle} ref={footerRef}>
       <nav>
         <ul>
-          <li className="footer-links" style={{ textDecoration: "none" }}>
+          <li className="footer-static" style={{ textDecoration: "none" }}>
             <p>CONNECT</p>
           </li>
           <li className="footer-links">
@@ -47,7 +47,7 @@ function Footer() {
             <a href="#top">Back to Top</a>
           </li>
           <li
-            className="footer-links text-center"
+            className="footer-static text-center"
             style={{
               justifyContent: "center",
               alignItems: "center",
