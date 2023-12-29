@@ -28,7 +28,7 @@ function Home() {
         await new Promise((resolve) => setTimeout(resolve, 100));
       }
 
-      await new Promise((resolve) => setTimeout(resolve, 400));
+      await new Promise((resolve) => setTimeout(resolve, 600));
 
       // Clear the interval to stop flashing when not needed
       clearInterval(cursorFlashInterval);
