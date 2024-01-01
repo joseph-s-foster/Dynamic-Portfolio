@@ -31,7 +31,7 @@
 }
 
 #project-sign::before {
-  background-image: url("./assets/project/sign.png");
+  background-image: url("./assets/project/wave.png");
 }
 
 #project-flow:hover::before,

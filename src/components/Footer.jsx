@@ -32,7 +32,7 @@ function Footer() {
       <nav>
         <ul>
           <li className="footer-static" style={{ textDecoration: "none" }}>
-            <p>CONNECT</p>
+            <p style={{fontSize: "1ren", marginTop: ".255rem"}}>CONNECT</p>
           </li>
           <li className="footer-links">
             <a href="mailto:joseph.s.foster@icloud.com">Email</a>
