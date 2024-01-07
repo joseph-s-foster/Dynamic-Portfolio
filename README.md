@@ -9,7 +9,7 @@
   ## Table of Contents
 
   - [Installation](#installation)
-  - [Usage](#usage)
+  - [User Story](#user-story)
   - [Contributing](#contributing)
   - [Questions](#questions)
   - [Link](#link-to-site)
@@ -20,9 +20,13 @@
   - react
   - vite
 
-  ## Usage
+  ## User Story
 
-  - Available on Netlify. See link below.
+  - Objective:
+    As a user, I want to develop an application that showcases projects and proficiences using a variety of coding languages.
+
+  - Acceptance Criteria:
+    This is done when the application performs as expected on any device (including mobile) without any page element or URL issues. 
 
   ## Contributing
 
