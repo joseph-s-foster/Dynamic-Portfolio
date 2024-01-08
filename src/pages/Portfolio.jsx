@@ -1,5 +1,5 @@
+import React, { useEffect } from "react";
 import Project from "../components/Project";
-import { useEffect } from "react";
 
 function Portfolio() {
   useEffect(() => {
@@ -16,26 +16,26 @@ function Portfolio() {
   const projects = [
     {
       name: "Would You Rather",
-      description: "View and create real-time polls",
+      description: "A MERN stack polling application",
       link: "https://wyr-3b5b304bab70.herokuapp.com/",
       image: "angles",
     },
     {
-      name: "Weather Dashboard",
-      description: "Search 5-day forecasts",
-      link: "https://joseph-s-foster.github.io/Weather-Dashboard/",
+      name: "Python Pulse",
+      description: "A Python CRUD/REST newsfeed",
+      link: "https://python-pulse-a33bae0b4181.herokuapp.com/",
       image: "flow",
     },
     {
-      name: "Timed JavaScript Quiz",
-      description: "Top the local leaderboard",
-      link: "https://joseph-s-foster.github.io/Coding-Quiz/",
+      name: "Weather Dashboard",
+      description: "Search forecasts via weather API",
+      link: "https://joseph-s-foster.github.io/Weather-Dashboard/",
       image: "motion",
     },
     {
-      name: "Random Password Generator",
-      description: "Set password length and character type",
-      link: "https://joseph-s-foster.github.io/Password-Generator/",
+      name: "Timed JavaScript Quiz",
+      description: "Data manipulation and localStorage coalesce",
+      link: "https://joseph-s-foster.github.io/Coding-Quiz/",
       image: "sign",
     },
   ];
@@ -43,13 +43,19 @@ function Portfolio() {
   // for each project, use the Project component to build a project
   return (
     <div className="container">
-      <h1 className="text-center mb-4" style={{ fontSize: "2rem" }}>
+      <h1 className="text-center mb-4" style={{ fontSize: "2.5rem" }}>
         Projects
       </h1>
       <div className="tiles">
         {projects.map((project) => (
           <div key={"project-" + project.name} id={"project-" + project.image} className="tile">
             <Project project={project} />
+            <img
+              loading="lazy" // Enable lazy loading
+              src={`/assets/projects/${project.image}.jpg`} // Assuming the images are in the assets/projects folder and are in JPG format
+              alt={project.name}
+              style={{ display: "none" }} // Hide the images initially to avoid flickering
+            />
           </div>
         ))}
       </div>

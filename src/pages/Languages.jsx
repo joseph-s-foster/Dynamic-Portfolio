@@ -13,6 +13,9 @@ function Languages() {
       }}
     >
       <h1 style={{ fontSize: "2.5rem" }}>Coming Soon</h1>
+      <h2 style={{ fontSize: "16px", position: "relative" }}>
+        &nbsp;
+      </h2>
     </div>
   );
 }

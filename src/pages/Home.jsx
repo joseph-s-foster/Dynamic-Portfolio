@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 function Home() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
-  const textToType = "edX Full-Stack";
-  const texttoType2 = "UX-driven";
-  // const texttoType3 = "AWS";
+  const textToType = "UX-Driven";
+  const texttoType2 = "Mobile-Friendly";
+  const texttoType3 = "Full-Stack Developer";
 
   useEffect(() => {
     const typeAndBackspace = async () => {
@@ -47,22 +47,22 @@ function Home() {
         await new Promise((resolve) => setTimeout(resolve, 100));
       }
 
-      // await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // // Type out
-      // for (let i = 0; i < texttoType3.length; i++) {
-      //   setTypedText((prevText) => prevText + texttoType3[i]);
-      //   await new Promise((resolve) => setTimeout(resolve, 100));
-      // }
+      // Type out
+      for (let i = 0; i < texttoType3.length; i++) {
+        setTypedText((prevText) => prevText + texttoType3[i]);
+        await new Promise((resolve) => setTimeout(resolve, 100));
+      }
 
-      // // Wait for a moment before backspacing
-      // await new Promise((resolve) => setTimeout(resolve, 1000));
+      // Wait for a moment before backspacing
+      await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // // Backspace
-      // for (let i = texttoType3.length; i >= 0; i--) {
-      //   setTypedText((prevText) => prevText.slice(0, -1));
-      //   await new Promise((resolve) => setTimeout(resolve, 100));
-      // }
+      // Backspace
+      for (let i = texttoType3.length; i >= 0; i--) {
+        setTypedText((prevText) => prevText.slice(0, -1));
+        await new Promise((resolve) => setTimeout(resolve, 100));
+      }
 
       // Clear the interval to stop flashing when not needed
       clearInterval(cursorFlashInterval);
