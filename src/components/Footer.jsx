@@ -41,7 +41,7 @@ function Footer() {
             <a href="https://github.com/joseph-s-foster">GitHub</a>
           </li>
           <li className="footer-links">
-            <a href="/">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/joseph-foster/">LinkedIn</a>
           </li>
           <li className="footer-links" style={{ marginBottom: "8px" }}>
             <a href="#top">Back to Top</a>
