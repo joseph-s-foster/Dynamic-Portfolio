@@ -81,31 +81,30 @@ function Home() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "70vh",
-        backgroundImage: "url('./src/assets/background.png')",
-        backgroundSize: "cover", // Cover the entire container with the background image
-        backgroundPosition: "center",
+        height: "67vh",
+        // backgroundImage: "url('./src/assets/background.png')",
+        // backgroundSize: "cover",
+        // backgroundPosition: "center",
       }}
     >
-      <h1 style={{
-        fontSize: "4rem",
-        position: "absolute",
-        left: "23px",
-        bottom: "356px"
-      }}>Joe Foster</h1>
-      <h2 style={{ 
-        fontSize: "2rem",
-        position: "absolute",
-        left: "12px",
-        bottom: "320px",
-        }}>
+      <h1
+        style={{
+          fontSize: "2.5rem",
+        }}
+      >
+        Joe Foster
+      </h1>
+      <h2
+        style={{
+          fontSize: "16px",
+        }}
+      >
         &nbsp;{typedText}
         <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
         &nbsp;
       </h2>
     </div>
   );
-  
 }
 
 export default Home;
