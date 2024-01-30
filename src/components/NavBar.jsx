@@ -68,15 +68,15 @@ export default function Navigation() {
           <Transition
             show={mobileMenuOpen}
             as={Fragment}
-            enter="duration-200 ease-out"
-            enterFrom="opacity-0 scale-95"
+            enter="duration-200 ease-in"
+            enterFrom="opacity-0 scale-100"
             enterTo="opacity-100 scale-100"
-            leave="duration-100 ease-in"
+            leave="duration-200 ease-out"
             leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-95"
+            leaveTo="opacity-0 scale-100"
           >
-            <Disclosure.Panel className="sm:hidden absolute top-16 inset-x-0 z-10 bg-black">
-              <div className="space-y-1 px-2 pb-3 pt-2">
+            <Disclosure.Panel className="sm:hidden absolute top-12 inset-x-0 z-10">
+              <div className="space-y-1 px-1">
                 {navigation.map((item) => (
                   <Disclosure.Button
                     key={item.name}

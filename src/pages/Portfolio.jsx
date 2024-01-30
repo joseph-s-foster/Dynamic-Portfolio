@@ -43,7 +43,7 @@ function Portfolio() {
   // for each project, use the Project component to build a project
   return (
     <div className="container">
-      <h1 className="text-center mb-4" style={{ fontSize: "2.5rem" }}>
+      <h1 className="text-center mb-5" style={{ fontSize: "2.5rem" }}>
         Projects
       </h1>
       <div className="tiles">
