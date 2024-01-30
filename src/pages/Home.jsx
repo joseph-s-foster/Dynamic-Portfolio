@@ -81,7 +81,7 @@ function Home() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "67vh",
+        height: "57vh",
         // backgroundImage: "url('./src/assets/background.png')",
         // backgroundSize: "cover",
         // backgroundPosition: "center",
