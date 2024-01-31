@@ -75,35 +75,46 @@ function Home() {
   }, [textToType]);
 
   return (
+    <>
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "57vh",
-        // backgroundImage: "url('./src/assets/background.png')",
-        // backgroundSize: "cover",
-        // backgroundPosition: "center",
+        backgroundImage: "url('./src/assets/background2.png')",
+        backgroundSize: "240px",
+        position: "absolute",
+        height: "240px",
+        width: "240px",
+        bottom: "180px",
+        left: "41%",
       }}
-    >
-      <h1
+    ></div>
+      <div
         style={{
-          fontSize: "2.5rem",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "left",
+          position: "absolute",
+          left: "24px",
+          top: "45%",
+          height: "57vh",
         }}
       >
-        Joe Foster
-      </h1>
-      <h2
-        style={{
-          fontSize: "16px",
-        }}
-      >
-        &nbsp;{typedText}
-        <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
-        &nbsp;
-      </h2>
-    </div>
+        <h1
+          style={{
+            fontSize: "2.5rem",
+          }}
+        >
+          Joe Foster
+        </h1>
+        <h2
+          style={{
+            fontSize: "",
+          }}
+        >
+          {typedText}
+          <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+        </h2>
+      </div>
+      </>
   );
 }
 
