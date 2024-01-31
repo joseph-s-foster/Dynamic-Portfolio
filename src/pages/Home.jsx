@@ -78,15 +78,13 @@ function Home() {
     <>
     <div
       style={{
-        backgroundImage: "url('./src/assets/background2.png')",
-        backgroundSize: "240px",
         position: "absolute",
         height: "240px",
         width: "240px",
         bottom: "180px",
         left: "41%",
       }}
-    ></div>
+    ><img src="./src/assets/background2.png"/></div>
       <div
         style={{
           display: "flex",
