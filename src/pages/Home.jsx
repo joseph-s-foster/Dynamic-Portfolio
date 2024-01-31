@@ -75,44 +75,44 @@ function Home() {
   }, [textToType]);
 
   return (
-    <>
     <div
       style={{
-        position: "absolute",
-        height: "240px",
-        width: "240px",
-        bottom: "180px",
-        left: "41%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "57vh",
+        position: "relative", // Add position relative to allow absolute positioning of the image
       }}
-    ><img src="./src/assets/background2.png"/></div>
-      <div
+    >
+      <h1
         style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "left",
-          position: "absolute",
-          left: "24px",
-          top: "45%",
-          height: "57vh",
+          fontSize: "2.5rem",
         }}
       >
-        <h1
-          style={{
-            fontSize: "2.5rem",
-          }}
-        >
-          Joe Foster
-        </h1>
-        <h2
-          style={{
-            fontSize: "",
-          }}
-        >
-          {typedText}
-          <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
-        </h2>
-      </div>
-      </>
+        Joe Foster
+      </h1>
+      <h2
+        style={{
+          fontSize: "16px",
+          position: "relative", // Add position relative to allow absolute positioning of the image
+        }}
+      >
+        &nbsp;{typedText}
+        <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+        &nbsp;
+      </h2>
+      <img
+        src="./src/assets/background2.png" // Replace with the actual path to your image
+        alt="Background Image"
+        className="fox"
+        style={{
+          width: "240px",
+          position: "absolute", // Set to absolute for free positioning
+          left: "43%", // Adjust left position as needed
+        }}
+      />
+    </div>
   );
 }
 
