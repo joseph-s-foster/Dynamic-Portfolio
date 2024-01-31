@@ -82,7 +82,9 @@ function Home() {
         alignItems: "center",
         justifyContent: "center",
         height: "57vh",
-        position: "relative", // Add position relative to allow absolute positioning of the image
+        // backgroundImage: "url('./src/assets/background.png')",
+        // backgroundSize: "cover",
+        // backgroundPosition: "center",
       }}
     >
       <h1
@@ -95,23 +97,12 @@ function Home() {
       <h2
         style={{
           fontSize: "16px",
-          position: "relative", // Add position relative to allow absolute positioning of the image
         }}
       >
         &nbsp;{typedText}
         <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
         &nbsp;
       </h2>
-      <img
-        src="./src/assets/background2.png" // Replace with the actual path to your image
-        alt="Background Image"
-        className="fox"
-        style={{
-          width: "240px",
-          position: "absolute", // Set to absolute for free positioning
-          left: "43%", // Adjust left position as needed
-        }}
-      />
     </div>
   );
 }
