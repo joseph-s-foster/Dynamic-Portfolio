@@ -75,6 +75,7 @@ function Home() {
   }, [textToType]);
 
   return (
+    <>
     <div
       style={{
         display: "flex",
@@ -104,6 +105,14 @@ function Home() {
         &nbsp;
       </h2>
     </div>
+    <img src="./src/assets/project/background2.png" alt="a fox drinking coffee" style={{
+      width: "240px",
+      position: "absolute",
+      bottom: "180px",
+      left: "41%",
+
+    }}/>
+    </>
   );
 }
 

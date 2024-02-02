@@ -51,8 +51,8 @@ function Portfolio() {
           <div key={"project-" + project.name} id={"project-" + project.image} className="tile">
             <Project project={project} />
             <img
-              loading="lazy" // Enable lazy loading
-              src={`/assets/projects/${project.image}.jpg`} // Assuming the images are in the assets/projects folder and are in JPG format
+              loading="lazy"
+              src={`/assets/projects/${project.image}.png`}
               alt={project.name}
               style={{ display: "none" }} // Hide the images initially to avoid flickering
             />
