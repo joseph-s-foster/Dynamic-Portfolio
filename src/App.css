@@ -17,13 +17,3 @@ body,
   box-sizing: border-box;
   overflow: hidden;
 }
-
-#project-background2::before {
-  background-image: url("./assets/project/background2.png");
-}
-
-
-/* a:hover {
-  text-decoration: underline;
-} */
-

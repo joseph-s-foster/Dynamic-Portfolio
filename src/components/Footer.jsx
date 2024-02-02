@@ -32,7 +32,7 @@ function Footer() {
       <nav>
         <ul>
           <li className="footer-static" style={{ textDecoration: "none" }}>
-            <p style={{fontSize: "1ren", marginTop: ".255rem"}}>CONNECT</p>
+            <p style={{ fontSize: "1ren", marginTop: ".255rem" }}>CONNECT</p>
           </li>
           <li className="footer-links">
             <a href="mailto:joseph.s.foster@icloud.com">Email</a>
@@ -54,8 +54,8 @@ function Footer() {
               textDecoration: "none",
             }}
           >
-            <p className="border-top" style={{paddingTop: "8px" }}>
-              &copy; 2024
+            <p className="border-top" style={{ paddingTop: "8px" }}>
+              Made with ❤️ by Joe Foster &copy; 2024
             </p>
           </li>
         </ul>
