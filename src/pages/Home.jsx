@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import background2 from "../assets/project/background2.png";
 
 function Home() {
   const [typedText, setTypedText] = useState("");
@@ -105,12 +106,11 @@ function Home() {
         &nbsp;
       </h2>
     </div>
-    <img src="./src/assets/project/background2.png" alt="a fox drinking coffee" style={{
+    <img src={background2} alt="a fox drinking coffee" style={{
       width: "240px",
       position: "absolute",
       bottom: "180px",
       left: "41%",
-
     }}/>
     </>
   );

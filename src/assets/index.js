@@ -5,3 +5,4 @@ export {default as motion} from './project/motion.png'
 export {default as sign} from './project/sign.png'
 export {default as caret} from './project/caret.svg'
 export {default as wave} from './project/wave.png'
+export {default as background2} from "./project/background2.png"
