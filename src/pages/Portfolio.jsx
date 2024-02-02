@@ -45,7 +45,7 @@ function Portfolio() {
               loading="lazy"
               src={`/assets/projects/${project.image}.png`}
               alt={project.name}
-              style={{ display: "none" }} // Hide the images initially to avoid flickering
+              style={{ display: "none" }}
             />
           </div>
         ))}

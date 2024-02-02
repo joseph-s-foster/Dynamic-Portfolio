@@ -1,6 +1,6 @@
 import React from "react";
 import "../Portfolio.css";
-import caret from "../assets/project/caret.svg";  // Update the path to your caret.svg file
+import caret from "../assets/project/caret.svg";
 
 function Project({ project }) {
   const { name, link, description, image } = project;
