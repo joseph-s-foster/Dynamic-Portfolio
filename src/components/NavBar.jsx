@@ -37,9 +37,9 @@ export default function Navigation() {
                   onClick={handleMobileMenuToggle}
                 >
                   {open ? (
-                    <XMarkIcon className="block h-7 w-8" aria-hidden="true" />
+                    <XMarkIcon className="block h-8 w-8" aria-hidden="true" />
                   ) : (
-                    <Bars3Icon className="block h-7 w-8" aria-hidden="true" />
+                    <Bars3Icon className="block h-8 w-8" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
@@ -76,14 +76,14 @@ export default function Navigation() {
             leaveTo="opacity-0 scale-100"
           >
             <Disclosure.Panel className="absolute top-12 inset-x-0 z-10">
-              <div className="space-y-1 px-2">
+              <div className="space-y-2 mt-2 px-1">
                 {navigation.map((item) => (
                   <Disclosure.Button
                     key={item.name}
                     as={Link}
                     to={item.to}
                     className={classNames(
-                      "block px-3 py-1 text-lg",
+                      "block px-3 py-2 text-xl",
                       "hover:underline"
                     )}
                     onClick={closeMobileMenu}

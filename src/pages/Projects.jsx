@@ -59,7 +59,8 @@ function Projects() {
             fontSize: "2.5rem",
           }}
         >
-          Continue scrolling <br />to explore.
+          Continue scrolling 
+          <br />to explore.
         </h1>
         <h2 style={{ fontSize: "1.5rem" }}>&nbsp;</h2>
       </div>
