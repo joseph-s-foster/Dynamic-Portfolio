@@ -29,7 +29,7 @@ export default function Navigation() {
     <Disclosure as="nav" className="bg-transparent">
       {({ open }) => (
         <>
-          <div className="mx-auto px-2 sm:px-2 lg:px-">
+          <div className="mx-auto px-2 sm:px-2 lg:px-2">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center">
                 <Disclosure.Button
@@ -37,9 +37,9 @@ export default function Navigation() {
                   onClick={handleMobileMenuToggle}
                 >
                   {open ? (
-                    <XMarkIcon className="block h-12 w-10" aria-hidden="true" />
+                    <XMarkIcon className="block h-7 w-8" aria-hidden="true" />
                   ) : (
-                    <Bars3Icon className="block h-12 w-10" aria-hidden="true" />
+                    <Bars3Icon className="block h-7 w-8" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
@@ -83,7 +83,7 @@ export default function Navigation() {
                     as={Link}
                     to={item.to}
                     className={classNames(
-                      "block px-3 py-1.5 text-xl",
+                      "block px-3 py-1 text-lg",
                       "hover:underline"
                     )}
                     onClick={closeMobileMenu}
