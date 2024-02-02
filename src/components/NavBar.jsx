@@ -30,8 +30,8 @@ export default function Navigation() {
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-2 lg:px-2">
-            <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center">
+            <div className="relative flex items-center justify-between">
+              <div className="absolute inset-y-8 left-0 flex items-center">
                 <Disclosure.Button
                   className="relative inline-flex items-center justify-center rounded-md p-2"
                   onClick={handleMobileMenuToggle}
