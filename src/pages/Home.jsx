@@ -91,7 +91,7 @@ function Home() {
       <div
         style={{
           position: "absolute",
-          bottom: "320px",
+          bottom: "40%",
           left: "12%",
         }}
       >
