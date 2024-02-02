@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 import App from './App';
 import Error from './pages/Error';
-import Portfolio from './pages/Portfolio';
+import Projects from './pages/Projects';
 import Languages from './pages/Languages';
 import Home from './pages/Home';
 
@@ -22,8 +22,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/portfolio',
-        element: <Portfolio />,
+        path: '/projects',
+        element: <Projects />,
       },
       {
         path: '/languages',

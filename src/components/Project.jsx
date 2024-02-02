@@ -1,5 +1,5 @@
 import React from "react";
-import "../Portfolio.css";
+import "../Projects.css";
 import caret from "../assets/project/caret.svg";
 
 function Project({ project }) {

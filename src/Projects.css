@@ -41,6 +41,7 @@
   transform: scale(1.05); /* Zoom in by 1.2 on hover */
 }
 
+
 .tiles {
   display: flex;
   flex-wrap: wrap;
