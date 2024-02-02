@@ -3,32 +3,11 @@ import { useLocation } from "react-router-dom";
 import "../Footer.css";
 
 function Footer() {
-  const location = useLocation();
-  const footerRef = useRef(null);
-  const [isOverflow, setIsOverflow] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      const body = document.body;
-      const hasOverflow = body.scrollHeight > window.innerHeight;
-      setIsOverflow(hasOverflow);
-    };
 
-    handleResize(); // Initial check
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [location.pathname]);
-
-  const footerStyle = {
-    position: isOverflow ? "relative" : "fixed",
-  };
 
   return (
-    <footer className="footer" style={footerStyle} ref={footerRef}>
+    <footer className="footer">
       <nav>
         <ul>
           <li className="footer-static" style={{ textDecoration: "none" }}>
