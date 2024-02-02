@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import background2 from "../assets/project/background2.png";
-import background3 from "../assets/project/background3.png";
+import background from "../assets/project/background.png"
+
 
 function Home() {
   const [typedText, setTypedText] = useState("");
@@ -77,43 +77,41 @@ function Home() {
   }, [textToType]);
 
   return (
-    <div>
-      <div
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "67vh",
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div style={{
+        position: "absolute",
+        bottom: "320px",
+        left: "12%",
+      }}>
+      <h1
         style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "35vh",
+          fontSize: "2.5rem",
         }}
       >
-        <h1
-          style={{
-            fontSize: "2.5rem",
-          }}
-        >
-          Joe Foster
-        </h1>
-        <h2
-          style={{
-            fontSize: "16px",
-          }}
-        >
-          &nbsp;{typedText}
-          <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
-          &nbsp;
-        </h2>
-      </div>
-      <div
+        Joe Foster
+      </h1>
+      <h2
         style={{
-          backgroundImage: `url(${background2})`,
-          alt: "a fox drinking coffee",
-          height: "32vh",
-          backgroundSize: "240px",
-          backgroundPosition: "bottom",
-          backgroundRepeat: "no-repeat",
+          marginLeft: "-8px",
+          fontSize: "1.5rem",
         }}
-      ></div>
+      >
+        &nbsp;{typedText}
+        <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+        &nbsp;
+      </h2>
+      </div>
     </div>
   );
 }
