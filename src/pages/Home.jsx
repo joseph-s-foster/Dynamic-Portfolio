@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import background from "../assets/project/background.png"
-
+import background from "../assets/project/background.png";
 
 function Home() {
   const [typedText, setTypedText] = useState("");
@@ -83,34 +82,34 @@ function Home() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "67vh",
+        height: "100vh",
         backgroundImage: `url(${background})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div style={{
-        position: "absolute",
-        bottom: "320px",
-        left: "12%",
-      }}>
-      <h1
+      <div
         style={{
-          fontSize: "2.5rem",
+          position: "absolute",
+          bottom: "320px",
+          left: "12%",
         }}
       >
-        Joe Foster
-      </h1>
-      <h2
-        style={{
-          marginLeft: "-8px",
-          fontSize: "1.5rem",
-        }}
-      >
-        &nbsp;{typedText}
-        <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
-        &nbsp;
-      </h2>
+        <h1
+          style={{
+            fontSize: "2.5rem",
+          }}
+        >
+          Joe Foster
+        </h1>
+        <h2
+          style={{
+            fontSize: "1.5rem",
+          }}
+        >
+          {typedText}
+          <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+        </h2>
       </div>
     </div>
   );

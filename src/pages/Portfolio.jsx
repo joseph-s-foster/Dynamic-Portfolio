@@ -2,15 +2,6 @@ import React, { useEffect } from "react";
 import Project from "../components/Project";
 
 function Portfolio() {
-  useEffect(() => {
-    // Remove overflow hidden when the component mounts
-    document.body.style.overflow = "auto";
-
-    // Reapply overflow hidden when the component unmounts (cleanup)
-    return () => {
-      document.body.style.overflow = "hidden";
-    };
-  }, []);
 
   // fill in the required data, image file should be in the assets/projects folder and name should match the "default as " statement in index.js
   const projects = [
