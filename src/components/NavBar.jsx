@@ -26,24 +26,24 @@ export default function Navigation() {
   };
 
   return (
-    <Disclosure as="nav">
+    <Disclosure as="nav" className="bg-transparent">
       {({ open }) => (
         <>
-          <div className="mx-auto px-2 sm:px-2 lg:px-2">
+          <div className="mx-auto px-2 sm:px-2 lg:px-">
             <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 left-0 flex items-center">
                 <Disclosure.Button
                   className="relative inline-flex items-center justify-center rounded-md p-2"
                   onClick={handleMobileMenuToggle}
                 >
                   {open ? (
-                    <XMarkIcon className="block h-7 w-8" aria-hidden="true" />
+                    <XMarkIcon className="block h-12 w-10" aria-hidden="true" />
                   ) : (
-                    <Bars3Icon className="block h-7 w-8" aria-hidden="true" />
+                    <Bars3Icon className="block h-12 w-10" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              {/* <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="hidden sm:block">
                   <div className="navbar-link flex space-x-2">
                     {navigation.map((item) => (
@@ -61,7 +61,7 @@ export default function Navigation() {
                     ))}
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -75,19 +75,19 @@ export default function Navigation() {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-100"
           >
-            <Disclosure.Panel className="sm:hidden absolute top-12 inset-x-0 z-10">
-              <div className="space-y-1 px-1">
+            <Disclosure.Panel className="absolute top-12 inset-x-0 z-10">
+              <div className="space-y-1 px-2">
                 {navigation.map((item) => (
                   <Disclosure.Button
                     key={item.name}
                     as={Link}
                     to={item.to}
                     className={classNames(
-                      "block px-3 py-1 text-lg",
+                      "block px-3 py-1.5 text-xl",
                       "hover:underline"
                     )}
                     onClick={closeMobileMenu}
-                    style={{ outline: "none" }} // Add this line to remove the blue border
+                    style={{ outline: "none" }}
                   >
                     {item.name}
                   </Disclosure.Button>
@@ -100,3 +100,4 @@ export default function Navigation() {
     </Disclosure>
   );
 }
+
