@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Project from "../components/Project";
 import background from "../assets/project/background.png";
-import caret90 from "../assets/project/caret90.svg";
+import caret from "../assets/project/caret.svg";
 
 const Component = ({ projects }) => {
   const handleScroll = (event) => {
@@ -46,9 +46,10 @@ const Component = ({ projects }) => {
             projects
             <a href="#projects" onClick={handleScroll}>
               <img
-                src={caret90}
+                src={caret}
                 alt="downward caret"
                 style={{
+                  transform: 'rotate(90deg)',
                   margin: "8px",
                   height: "42px",
                   width: "42px",
