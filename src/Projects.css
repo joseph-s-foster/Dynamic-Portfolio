@@ -66,7 +66,7 @@
   margin: 12px;
   border-radius: 12px;
   overflow: hidden;
-  transition: box-shadow 0.3s ease-in-out; /* Optional: Add transition property for box-shadow */
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 /* Responsive styling for small screens */
