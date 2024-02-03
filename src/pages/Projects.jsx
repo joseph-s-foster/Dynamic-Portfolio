@@ -47,7 +47,7 @@ const Component = ({ projects }) => {
             <a href="#projects" onClick={handleScroll}>
               <img
                 src={caret90}
-                alt="caret"
+                alt="downward caret"
                 style={{
                   margin: "8px",
                   height: "42px",
