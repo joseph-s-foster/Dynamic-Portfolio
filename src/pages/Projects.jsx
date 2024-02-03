@@ -50,7 +50,7 @@ const Component = ({ projects }) => {
                 alt="downward caret"
                 style={{
                   transform: 'rotate(90deg)',
-                  margin: "7px",
+                  margin: "6px",
                   height: "42px",
                   width: "42px",
                 }}
@@ -88,25 +88,37 @@ function Projects() {
       name: "Would You Rather",
       description: "A MERN stack polling application",
       link: "https://wyr-3b5b304bab70.herokuapp.com/",
-      image: "angles",
+      image: "wyr",
     },
     {
       name: "Python Pulse",
-      description: "A Python CRUD/REST newsfeed",
+      description: "A Python CRUD/Rest newsfeed",
       link: "https://python-pulse-a33bae0b4181.herokuapp.com/",
-      image: "flow",
+      image: "pulse",
+    },
+    {
+      name: "Salient Solutions",
+      description: "A C# employee badge generator",
+      link: "https://github.com/joseph-s-foster/CSharp-Badge-Maker",
+      image: "coffee",
+    },
+    {
+      name: "Password Generator",
+      description: "Create a password using specified parameters",
+      link: "https://joseph-s-foster.github.io/Password-Generator/",
+      image: "password",
     },
     {
       name: "Weather Dashboard",
       description: "Search forecasts via weather API",
       link: "https://joseph-s-foster.github.io/Weather-Dashboard/",
-      image: "motion",
+      image: "weather",
     },
     {
       name: "Timed JavaScript Quiz",
       description: "Data manipulation and localStorage coalesce",
       link: "https://joseph-s-foster.github.io/Coding-Quiz/",
-      image: "sign",
+      image: "quiz",
     },
   ];
 

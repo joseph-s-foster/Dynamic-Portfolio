@@ -2,11 +2,13 @@
   padding: 1%;
 }
 
-#project-flow::before,
-#project-angles::before,
-#project-motion::before,
-#project-sign::before {
-  content: '';
+#project-coffee::before,
+#project-pulse::before,
+#project-wyr::before,
+#project-password::before,
+#project-quiz::before,
+#project-weather::before {
+  content: "";
   display: block;
   position: absolute;
   top: 0;
@@ -18,29 +20,38 @@
   transition: transform 0.3s ease-in-out; /* Add transition property */
 }
 
-#project-flow::before {
-  background-image: url("./assets/project/flow.png");
+#project-coffee::before {
+  background-image: url("./assets/project/coffee.png");
 }
 
-#project-angles::before {
-  background-image: url("./assets/project/angles.png");
+#project-pulse::before {
+  background-image: url("./assets/project/pulse.png");
 }
 
-#project-motion::before {
-  background-image: url("./assets/project/motion.png");
+#project-password::before {
+  background-image: url("./assets/project/password.png");
 }
 
-#project-sign::before {
-  background-image: url("./assets/project/wave.png");
+#project-quiz::before {
+  background-image: url("./assets/project/quiz.png");
 }
 
-#project-flow:hover::before,
-#project-angles:hover::before,
-#project-motion:hover::before,
-#project-sign:hover::before {
+#project-weather::before {
+  background-image: url("./assets/project/weather.png");
+}
+
+#project-wyr::before {
+  background-image: url("./assets/project/wyr.png");
+}
+
+#project-coffee:hover:before,
+#project-pulse:hover::before,
+#project-wyr:hover::before,
+#project-password:hover::before,
+#project-quiz:hover::before,
+#project-weather:hover::before {
   transform: scale(1.05); /* Zoom in by 1.2 on hover */
 }
-
 
 .tiles {
   display: flex;
@@ -49,9 +60,8 @@
 }
 
 .tile {
-  flex-basis: calc(25% - 24px);
-  height: 0;
-  padding-bottom: calc(25% - 24px);
+  flex-basis: calc(33% - 24px);
+  padding-bottom: calc(33% - 24px);
   position: relative;
   margin: 12px;
   border-radius: 12px;
