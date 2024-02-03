@@ -50,7 +50,7 @@ const Component = ({ projects }) => {
                 alt="downward caret"
                 style={{
                   transform: 'rotate(90deg)',
-                  margin: "8px",
+                  margin: "7px",
                   height: "42px",
                   width: "42px",
                 }}
