@@ -3,8 +3,16 @@ import { useLocation } from "react-router-dom";
 import "../Footer.css";
 
 function Footer() {
+  const location = useLocation();
 
+  const handleScroll = (event) => {
+    event.preventDefault();
 
+    const topContainer = document.getElementById("top");
+    if (topContainer) {
+      topContainer.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <footer className="footer">
@@ -23,7 +31,9 @@ function Footer() {
             <a href="https://www.linkedin.com/in/joseph-foster/">LinkedIn</a>
           </li>
           <li className="footer-links" style={{ marginBottom: "8px" }}>
-            <a href="#top">Back to Top</a>
+            <a href="#top" onClick={handleScroll}>
+              Back to Top
+            </a>
           </li>
           <li
             className="footer-static text-center"
