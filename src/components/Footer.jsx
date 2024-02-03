@@ -18,8 +18,8 @@ function Footer() {
     <footer className="footer">
       <nav>
         <ul>
-          <li className="footer-static" style={{ textDecoration: "none" }}>
-            <p style={{ fontSize: "1ren", marginTop: ".255rem" }}>CONNECT</p>
+          <li className="footer-links" style={{ textDecoration: "none" }}>
+            <p style={{ fontSize: "1rem", marginTop: "16px" }}>CONNECT</p>
           </li>
           <li className="footer-links">
             <a href="mailto:joseph.s.foster@icloud.com">Email</a>
@@ -30,20 +30,19 @@ function Footer() {
           <li className="footer-links">
             <a href="https://www.linkedin.com/in/joseph-foster/">LinkedIn</a>
           </li>
-          <li className="footer-links" style={{ marginBottom: "8px" }}>
+          <li className="footer-links" style={{ marginBottom: "16px" }}>
             <a href="#top" onClick={handleScroll}>
               Back to Top
             </a>
           </li>
           <li
-            className="footer-static text-center"
+            className="footer-links text-center"
             style={{
-              justifyContent: "center",
-              alignItems: "center",
+              
               textDecoration: "none",
             }}
           >
-            <p className="border-top" style={{ paddingTop: "8px" }}>
+            <p className="border-top" style={{ paddingTop: "36px" }}>
               Made with ❤️ by Joe Foster &copy; 2024
             </p>
           </li>
