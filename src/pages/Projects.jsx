@@ -39,7 +39,8 @@ const Component = ({ projects }) => {
               fontSize: "2.5rem",
             }}
           >
-            Explore individual and collaborative
+            Explore individual 
+            <br />and collaborative
           </h1>
           <h2 style={{ fontSize: "2.5rem" }} className="cta">
             projects
