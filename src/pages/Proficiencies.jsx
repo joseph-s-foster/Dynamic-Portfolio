@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import '../Proficiencies.css' 
 import background from "../assets/project/background.png";
+<<<<<<< HEAD
 import caret from "../assets/project/caret.svg";
 import html from "../assets/project/html.svg";
 import css from "../assets/project/css.svg";
@@ -25,10 +26,15 @@ function Proficiencies() {
     }
   };
 
+=======
+
+function Proficiences() {
+>>>>>>> parent of 1cc9e0b (setting up proficiencies content)
   return (
     <>
       <div
         style={{
+<<<<<<< HEAD
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -38,6 +44,11 @@ function Proficiencies() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           position: "relative", // Make sure it's positioned relative
+=======
+          position: "absolute",
+          bottom: "40%",
+          left: "12%",
+>>>>>>> parent of 1cc9e0b (setting up proficiencies content)
         }}
       >
         <div
@@ -47,6 +58,7 @@ function Proficiencies() {
             left: "12%",
           }}
         >
+<<<<<<< HEAD
           <h1
             style={{
               fontSize: "2.5rem",
@@ -71,6 +83,11 @@ function Proficiencies() {
             </a>
           </h2>
         </div>
+=======
+          Coming Soon
+        </h1>
+        <h2 style={{ fontSize: "1.5rem" }}>&nbsp;</h2>
+>>>>>>> parent of 1cc9e0b (setting up proficiencies content)
       </div>
       <div className="icons" id="icons">
         <img src={html} alt="HTML" />

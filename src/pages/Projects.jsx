@@ -59,9 +59,10 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
           </h2>
         </div>
       </div>
-      <div className="container" id="projects" style={{
+      <div style={{
         paddingTop: "2%",
-      }}>
+      }}></div>
+      <div className="container" id="projects">
       <h1 className="tags">Versatile</h1>
       <h2 className="tags2">Exercising a myriad of proficiencies through multilple languages.</h2>
         <div className="tiles">
