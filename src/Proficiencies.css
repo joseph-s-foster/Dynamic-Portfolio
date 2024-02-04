@@ -1,0 +1,17 @@
+.icons {
+  padding: 3%;
+  width: 96%;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto; 
+}
+
+.icons img {
+  flex-basis: calc(16.66% - 24px);
+  margin: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+}
