@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import App from './App';
 import Error from './pages/Error';
 import Projects from './pages/Projects';
-import Languages from './pages/Languages';
+import Proficiencies from './pages/Proficiencies';
 import Home from './pages/Home';
 
 // Define the accessible routes, and which components respond to which URL
@@ -26,8 +26,8 @@ const router = createBrowserRouter([
         element: <Projects />,
       },
       {
-        path: '/languages',
-        element: <Languages />,
+        path: '/proficiencies',
+        element: <Proficiencies />,
       },
     ],
   },

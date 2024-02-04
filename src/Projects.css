@@ -91,7 +91,7 @@
   }
 } */
 
-@media screen and (max-width: 639.9px) {
+@media screen and (max-width: 770px) {
   .tile {
     flex-basis: calc(100% - 24px);
     padding-bottom: calc(100% - 24px);

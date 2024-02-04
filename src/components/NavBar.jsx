@@ -6,7 +6,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 const navigation = [
   { name: "Home", to: "/", current: false },
   { name: "Projects", to: "/projects", current: false },
-  { name: "Languages", to: "/languages", current: false },
+  { name: "Proficiencies", to: "/proficiencies", current: false },
 ];
 
 function classNames(...classes) {

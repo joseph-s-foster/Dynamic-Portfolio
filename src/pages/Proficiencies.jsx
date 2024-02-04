@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import background from "../assets/project/background.png";
 
-function Languages() {
+function Proficiences() {
   return (
     <div
       style={{
@@ -35,4 +35,4 @@ function Languages() {
   );
 }
 
-export default Languages;
+export default Proficiences;

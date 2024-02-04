@@ -126,7 +126,7 @@ function Projects() {
     },
     {
       name: "Salient Solutions",
-      description: "A C# employee badge generator",
+      description: "A C# employee badge maker",
       link: "https://github.com/joseph-s-foster/CSharp-Badge-Maker",
       image: "coffee",
     },
@@ -135,19 +135,19 @@ function Projects() {
   const projectsGroup2 = [
     {
       name: "Password Generator",
-      description: "Create a random password using specified parameters",
+      description: "Create random passwords",
       link: "https://joseph-s-foster.github.io/Password-Generator/",
       image: "password",
     },
     {
       name: "Weather Dashboard",
-      description: "Search forecasts via weather API",
+      description: "Search forecasts",
       link: "https://joseph-s-foster.github.io/Weather-Dashboard/",
       image: "weather",
     },
     {
       name: "Timed JavaScript Quiz",
-      description: "Data manipulation and localStorage coalesce",
+      description: "Test your knowledge",
       link: "https://joseph-s-foster.github.io/Coding-Quiz/",
       image: "quiz",
     },
