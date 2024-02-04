@@ -16,7 +16,7 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <nav>
+      <nav className="container">
         <ul>
           <li className="footer-links" style={{ textDecoration: "none" }}>
             <p style={{ fontSize: "1rem", marginTop: "16px" }}>CONNECT</p>
@@ -30,24 +30,29 @@ function Footer() {
           <li className="footer-links">
             <a href="https://www.linkedin.com/in/joseph-foster/">LinkedIn</a>
           </li>
-          <li className="footer-links" style={{ marginBottom: "16px" }}>
+        </ul>
+        <ul>
+          <li className="footer-links" style={{ textDecoration: "none" }}>
+            <p style={{ fontSize: "1rem", marginTop: "16px" }}>USEFUL LINKS</p>
+          </li>
+          <li className="footer-links">
+            <a href="./">Home</a>
+          </li>
+          <li className="footer-links" style={{ marginBottom: "4px" }}>
             <a href="#top" onClick={handleScroll}>
               Back to Top
             </a>
           </li>
-          <li
-            className="footer-links text-center"
-            style={{
-              
-              textDecoration: "none",
-            }}
-          >
-            <p className="divider" style={{ paddingTop: "36px" }}>
-              Copyright &copy; 2024 - All rights reserved <br />Joe Foster
-            </p>
-          </li>
         </ul>
       </nav>
+      <div className="container">
+      <p
+        className="divider footer-links text-center"
+        style={{ paddingTop: "36px" }}
+      >
+        Copyright &copy; 2024 Joe Foster
+      </p>
+      </div>
     </footer>
   );
 }

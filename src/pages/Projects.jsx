@@ -83,7 +83,7 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
           ))}
         </div>
       </div>
-      <div className="container" id="projects">
+      <div className="container">
       <h1 className="tags">Dynamic</h1>
       <h2 className="tags2">Providing real-time updates and user interactivity.</h2>
         <div className="tiles">
@@ -104,8 +104,10 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
           ))}
         </div>
       </div>
+      <div className="container">
       <h1 className="tags">Responsive</h1>
       <h2 className="tags2">Ensuring consistent experiences across numerous devices and viewports.</h2>
+      </div>
     </>
   );
 };

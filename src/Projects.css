@@ -54,14 +54,14 @@
 }
 
 .tags {
-  text-align: center;
+  text-align: left;
   margin-top: 3%;
   padding: 12px;
   font-size: 2rem;
 }
 
 .tags2 {
-  text-align: center;
+  text-align: left;
   padding: 12px;
   margin-bottom: 6%;
   font-size: 1.25rem;

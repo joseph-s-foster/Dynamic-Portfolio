@@ -19,7 +19,7 @@
   color: grey;
   justify-content: left;
   align-items: left;
-  padding-bottom: 8px;
+  padding-bottom: 12px;
   margin-left: 12px;
   margin-right: 12px;
 }
@@ -31,3 +31,4 @@
 .divider {
   border-top: solid grey 1px;
 }
+
