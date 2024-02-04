@@ -3,35 +3,6 @@ import '../Proficiencies.css'
 import background from "../assets/project/background.png";
 
 function Proficiences() {
-<<<<<<< HEAD
-import caret from "../assets/project/caret.svg";
-import html from "../assets/project/html.svg";
-import css from "../assets/project/css.svg";
-import javascript from "../assets/project/javascript.svg";
-import jquery from "../assets/project/jquery.svg";
-import node from "../assets/project/node.svg";
-import express from "../assets/project/express.svg";
-import mysql from "../assets/project/mysql.svg";
-import handlebars from "../assets/project/handlebars.svg";
-import mongodb from "../assets/project/mongodb.svg";
-import react from "../assets/project/react.svg";
-import graphql from "../assets/project/graphql.svg";
-import python from "../assets/project/python.svg";
-
-function Proficiencies() {
-  const handleScroll = (event) => {
-    event.preventDefault();
-
-    const iconsContainer = document.getElementById("icons");
-    if (iconsContainer) {
-      iconsContainer.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-=======
-
-function Proficiences() {
->>>>>>> parent of 1cc9e0b (setting up proficiencies content)
   return (
     <>
       <div
@@ -60,7 +31,6 @@ function Proficiences() {
             left: "12%",
           }}
         >
-<<<<<<< HEAD
           <h1
             style={{
               fontSize: "2.5rem",
@@ -85,11 +55,6 @@ function Proficiences() {
             </a>
           </h2>
         </div>
-=======
-          Coming Soon
-        </h1>
-        <h2 style={{ fontSize: "1.5rem" }}>&nbsp;</h2>
->>>>>>> parent of 1cc9e0b (setting up proficiencies content)
       </div>
       <div className="icons" id="icons">
         <img src={html} alt="HTML" />
