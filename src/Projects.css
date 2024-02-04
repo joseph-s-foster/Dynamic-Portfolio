@@ -50,7 +50,21 @@
 #project-password:hover::before,
 #project-quiz:hover::before,
 #project-weather:hover::before {
-  transform: scale(1.05); /* Zoom in by 1.2 on hover */
+  transform: scale(1.05);
+}
+
+.tags {
+  text-align: center;
+  margin-top: 36px;
+  padding: 12px;
+  font-size: 2rem;
+}
+
+.tags2 {
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 5%;
+  font-size: 1.25rem;
 }
 
 .tiles {
@@ -81,6 +95,9 @@
   .tile {
     flex-basis: calc(100% - 24px);
     padding-bottom: calc(100% - 24px);
+  }
+  .tags, .tags2 {
+    text-align: left;
   }
 }
 

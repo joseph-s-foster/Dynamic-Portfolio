@@ -25,6 +25,7 @@ function Languages() {
         <h1
           style={{
             fontSize: "2.5rem",
+            fontWeight: "bolder",
           }}
         >
           Coming Soon

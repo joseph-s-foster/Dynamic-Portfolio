@@ -45,7 +45,3 @@
   ## Screenshot
 
   ![screenshot of webpage](./src/assets/project/ss.png)
-
-  ## Credits
-
-  - Getty Images

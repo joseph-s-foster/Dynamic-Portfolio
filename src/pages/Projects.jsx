@@ -3,7 +3,7 @@ import Project from "../components/Project";
 import background from "../assets/project/background.png";
 import caret from "../assets/project/caret.svg";
 
-const Component = ({ projects }) => {
+const Component = ({ projectsGroup1, projectsGroup2 }) => {
   const handleScroll = (event) => {
     event.preventDefault();
 
@@ -32,6 +32,7 @@ const Component = ({ projects }) => {
             position: "absolute",
             bottom: "35%",
             left: "12%",
+            fontWeight: "bolder",
           }}
         >
           <h1
@@ -59,9 +60,14 @@ const Component = ({ projects }) => {
           </h2>
         </div>
       </div>
+      <div style={{
+        paddingTop: "2%",
+      }}></div>
       <div className="container" id="projects">
+      <h1 className="tags">Versatile</h1>
+      <h2 className="tags2">Demonstrating a myriad of proficiencies through multilple languages.</h2>
         <div className="tiles">
-          {projects.map((project) => (
+          {projectsGroup1.map((project) => (
             <div
               key={"project-" + project.name}
               id={"project-" + project.image}
@@ -78,12 +84,35 @@ const Component = ({ projects }) => {
           ))}
         </div>
       </div>
+      <div className="container" id="projects">
+      <h1 className="tags">Dynamic</h1>
+      <h2 className="tags2">Providing real-time updates and user interactivity.</h2>
+        <div className="tiles">
+        {projectsGroup2.map((project) => (
+            <div
+              key={"project-" + project.name}
+              id={"project-" + project.image}
+              className="tile"
+            >
+              <Project project={project} />
+              <img
+                loading="lazy"
+                src={`/assets/projects/${project.image}.png`}
+                alt={project.name}
+                style={{ display: "none" }}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      <h1 className="tags">Responsive</h1>
+      <h2 className="tags2">Creating consistent experiences across multiple devices and viewports.</h2>
     </>
   );
 };
 
 function Projects() {
-  const projects = [
+  const projectsGroup1 = [
     {
       name: "Would You Rather",
       description: "A MERN stack polling application",
@@ -102,6 +131,9 @@ function Projects() {
       link: "https://github.com/joseph-s-foster/CSharp-Badge-Maker",
       image: "coffee",
     },
+  ];
+
+  const projectsGroup2 = [
     {
       name: "Password Generator",
       description: "Create a password using specified parameters",
@@ -122,8 +154,7 @@ function Projects() {
     },
   ];
 
-  // for each project, use the Project component to build a project
-  return <Component projects={projects} />;
+  return <Component projectsGroup1={projectsGroup1} projectsGroup2={projectsGroup2} />;
 }
 
 export default Projects;

@@ -97,14 +97,16 @@ function Home() {
       >
         <h1
           style={{
-            fontSize: "3rem",
+            fontSize: "2.5rem",
+            fontWeight: "bolder",
+            paddingBottom: "4px",
           }}
         >
           Joe Foster
         </h1>
         <h2
           style={{
-            fontSize: "1.75rem",
+            fontSize: "1.25rem",
           }}
         >
           {typedText}
