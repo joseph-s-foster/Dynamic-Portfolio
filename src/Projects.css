@@ -84,12 +84,12 @@
 }
 
 /* Responsive styling for small screens */
-@media screen and (max-width: 1280px) {
+/* @media screen and (max-width: 1280px) {
   .tile {
     flex-basis: calc(50% - 24px);
     padding-bottom: calc(50% - 24px);
   }
-}
+} */
 
 @media screen and (max-width: 639.9px) {
   .tile {

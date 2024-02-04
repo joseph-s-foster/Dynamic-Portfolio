@@ -105,7 +105,7 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
         </div>
       </div>
       <h1 className="tags">Responsive</h1>
-      <h2 className="tags2">Ensuring consistent experiences across multiple devices and viewports.</h2>
+      <h2 className="tags2">Ensuring consistent experiences across numerous devices and viewports.</h2>
     </>
   );
 };
