@@ -13,17 +13,17 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navigation() {
+export default function Navigation({ mobileMenuOpen, setMobileMenuOpen }) {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleMobileMenuToggle = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
-
+  
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
-  };
+  }; 
 
   return (
     <Disclosure as="nav" className="bg-transparent">
