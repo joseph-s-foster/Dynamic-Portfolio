@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import '../Proficiencies.css' 
 import background from "../assets/project/background.png";
+
+function Proficiences() {
 <<<<<<< HEAD
 import caret from "../assets/project/caret.svg";
 import html from "../assets/project/html.svg";
