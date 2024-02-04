@@ -24,6 +24,10 @@
   margin-right: 12px;
 }
 
-.footer-links:hover {
+.footer-links a:hover {
   text-decoration: underline;
+}
+
+.divider {
+  border-top: solid grey 1px;
 }

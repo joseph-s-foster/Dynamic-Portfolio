@@ -32,7 +32,6 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
             position: "absolute",
             bottom: "35%",
             left: "12%",
-            fontWeight: "bolder",
           }}
         >
           <h1
@@ -65,7 +64,7 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
       }}></div>
       <div className="container" id="projects">
       <h1 className="tags">Versatile</h1>
-      <h2 className="tags2">Demonstrating a myriad of proficiencies through multilple languages.</h2>
+      <h2 className="tags2">Exercising a myriad of proficiencies through multilple languages.</h2>
         <div className="tiles">
           {projectsGroup1.map((project) => (
             <div
@@ -106,7 +105,7 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
         </div>
       </div>
       <h1 className="tags">Responsive</h1>
-      <h2 className="tags2">Creating consistent experiences across multiple devices and viewports.</h2>
+      <h2 className="tags2">Ensuring consistent experiences across multiple devices and viewports.</h2>
     </>
   );
 };
@@ -136,7 +135,7 @@ function Projects() {
   const projectsGroup2 = [
     {
       name: "Password Generator",
-      description: "Create a password using specified parameters",
+      description: "Create a random password using specified parameters",
       link: "https://joseph-s-foster.github.io/Password-Generator/",
       image: "password",
     },

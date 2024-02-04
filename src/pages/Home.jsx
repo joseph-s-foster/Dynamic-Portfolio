@@ -98,7 +98,6 @@ function Home() {
         <h1
           style={{
             fontSize: "2.5rem",
-            fontWeight: "bolder",
             paddingBottom: "4px",
           }}
         >

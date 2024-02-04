@@ -42,7 +42,7 @@ function Footer() {
               textDecoration: "none",
             }}
           >
-            <p className="border-top" style={{ paddingTop: "36px" }}>
+            <p className="divider" style={{ paddingTop: "36px" }}>
               Copyright &copy; 2024 - All rights reserved <br />Joe Foster
             </p>
           </li>
