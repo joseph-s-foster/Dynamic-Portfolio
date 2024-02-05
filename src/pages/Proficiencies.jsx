@@ -20,7 +20,7 @@ function Proficiences() {
   const handleScroll = (event) => {
     event.preventDefault();
 
-    const projectsContainer = document.getElementById("projects");
+    const projectsContainer = document.getElementById("icons");
     if (projectsContainer) {
       projectsContainer.scrollIntoView({ behavior: "smooth" });
     }
