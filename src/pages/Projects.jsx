@@ -75,7 +75,7 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
               <img
                 loading="lazy"
                 src={`/assets/projects/${project.image}.png`}
-                alt={project.name}
+                alt={project.description}
                 style={{ display: "none" }}
               />
             </div>
@@ -96,7 +96,7 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
               <img
                 loading="lazy"
                 src={`/assets/projects/${project.image}.png`}
-                alt={project.name}
+                alt={project.description}
                 style={{ display: "none" }}
               />
             </div>

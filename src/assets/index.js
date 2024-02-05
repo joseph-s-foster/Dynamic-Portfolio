@@ -1,3 +1,4 @@
+//tiles, background, and caret
 export {default as password} from './project/password.png'
 export {default as caret} from './project/caret.svg'
 export {default as weather} from './project/weather.png'
@@ -6,6 +7,8 @@ export {default as pulse} from './project/pulse.png'
 export {default as coffee} from './project/coffee.png'
 export {default as quiz} from './project/quiz.pmg'
 
+
+//icons
 export {default as html} from './project/html.svg'
 export {default as css} from './project/css.svg'
 export {default as javascript} from './project/javascript.svg'

@@ -16,7 +16,11 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 900px) {
+.icons img:hover {
+  filter: brightness(1.5)
+}
+
+@media screen and (max-width: 1000px) {
   .icons img {
     padding: 0;
     margin: 12px;
@@ -29,5 +33,13 @@
     padding: 0;
     margin: 12px;
     flex-basis: calc(33% - 24px);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .icons img {
+    padding: 0;
+    margin: 12px;
+    flex-basis: calc(50% - 24px);
   }
 }

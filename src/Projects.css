@@ -83,14 +83,6 @@
   transition: box-shadow 0.3s ease-in-out;
 }
 
-/* Responsive styling for small screens */
-/* @media screen and (max-width: 1280px) {
-  .tile {
-    flex-basis: calc(50% - 24px);
-    padding-bottom: calc(50% - 24px);
-  }
-} */
-
 @media screen and (max-width: 770px) {
   .tile {
     flex-basis: calc(100% - 24px);
