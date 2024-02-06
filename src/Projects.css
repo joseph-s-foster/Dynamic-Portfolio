@@ -16,7 +16,7 @@
   right: 0;
   bottom: 0;
   background-size: 100%;
-  opacity: 0.75;
+  opacity: 0.8;
   transition: transform 0.3s ease-in-out; /* Add transition property */
 }
 
@@ -50,22 +50,22 @@
 #project-password:hover::before,
 #project-quiz:hover::before,
 #project-weather:hover::before {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .tags {
-  text-align: left;
-  margin-top: 3%;
-  padding: 12px;
-  font-size: 2rem;
+  text-align: center;
+  margin: 6%;
+  padding-bottom: 24px;
+  font-size: 2.5rem;
 }
 
-.tags2 {
+/* .tags2 {
   text-align: left;
   padding: 12px;
   margin-bottom: 6%;
   font-size: 1.25rem;
-}
+} */
 
 .tiles {
   display: flex;
@@ -83,7 +83,7 @@
   transition: box-shadow 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 755px) {
   .tile {
     flex-basis: calc(100% - 24px);
     padding-bottom: calc(100% - 24px);
@@ -109,25 +109,26 @@
 
 .project-info h1 {
   color: #eeeeee;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .project-description {
   color: #eeeeee;
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 .project-link {
+  font-size: 1rem;
   margin-top: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 92px;
+  width: 100px;
   color: #eeeeee;
   text-decoration: none;
   padding: 2%;
-  background-color: #0b0b0b;
+  background-color: black;
   border-radius: 6px;
 }
 

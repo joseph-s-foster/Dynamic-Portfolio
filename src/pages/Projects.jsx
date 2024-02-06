@@ -59,11 +59,13 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
           </h2>
         </div>
       </div>
-      <div className="container" id="projects" style={{
-        paddingTop: "2%",
+      <div id="projects" style={{
+        paddingTop: "24px",
+        paddingLeft: "1%",
+        paddingRight: "1%",
       }}>
       <h1 className="tags">Versatile</h1>
-      <h2 className="tags2">Exercising a myriad of proficiencies through multilple languages.</h2>
+      {/* <h2 className="tags2">Exercising a myriad of proficiencies through multilple languages.</h2> */}
         <div className="tiles">
           {projectsGroup1.map((project) => (
             <div
@@ -82,9 +84,12 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
           ))}
         </div>
       </div>
-      <div className="container">
+      <div style={{
+        paddingLeft: "1%",
+        paddingRight: "1%",
+      }}>
       <h1 className="tags">Dynamic</h1>
-      <h2 className="tags2">Providing real-time updates and user interactivity.</h2>
+      {/* <h2 className="tags2">Providing real-time updates and user interactivity.</h2> */}
         <div className="tiles">
         {projectsGroup2.map((project) => (
             <div
@@ -103,9 +108,12 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
           ))}
         </div>
       </div>
-      <div className="container">
+      <div style={{
+        paddingLeft: "1%",
+        paddingRight: "1%",
+      }}>
       <h1 className="tags">Responsive</h1>
-      <h2 className="tags2">Ensuring consistent experiences across numerous devices and viewports.</h2>
+      {/* <h2 className="tags2">Ensuring consistent experiences across numerous devices and viewports.</h2> */}
       </div>
     </>
   );
@@ -136,7 +144,7 @@ function Projects() {
   const projectsGroup2 = [
     {
       name: "Password Generator",
-      description: "Create random passwords",
+      description: "Generate random strings",
       link: "https://joseph-s-foster.github.io/Password-Generator/",
       image: "password",
     },

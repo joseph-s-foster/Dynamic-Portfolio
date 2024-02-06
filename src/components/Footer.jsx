@@ -16,7 +16,7 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <nav className="container">
+      <nav>
         <ul>
           <li className="footer-links" style={{ textDecoration: "none" }}>
             <p style={{ fontSize: "1rem", marginTop: "16px" }}>CONNECT</p>
@@ -45,7 +45,7 @@ function Footer() {
           </li>
         </ul>
       </nav>
-      <div className="container">
+      <div>
       <p
         className="divider footer-links text-center"
         style={{ paddingTop: "36px" }}

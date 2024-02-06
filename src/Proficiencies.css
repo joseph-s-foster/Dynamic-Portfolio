@@ -16,9 +16,9 @@
   overflow: hidden;
 }
 
-.icons img:hover {
+/* .icons img:hover {
   filter: brightness(1.5)
-}
+} */
 
 @media screen and (max-width: 1000px) {
   .icons img {
