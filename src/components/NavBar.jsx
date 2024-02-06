@@ -83,11 +83,11 @@ export default function Navigation() {
                     as={Link}
                     to={item.to}
                     className={classNames(
-                      "block px-3 py-2 text-xl",
+                      "block mx-3 py-2 text-xl",
                       "hover:underline"
                     )}
                     onClick={closeMobileMenu}
-                    style={{ outline: "none" }}
+                    style={{ outline: "none", width: "1%", }}
                   >
                     {item.name}
                   </Disclosure.Button>
