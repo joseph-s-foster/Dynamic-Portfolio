@@ -55,7 +55,8 @@
 
 .tags {
   text-align: center;
-  margin: 6%;
+  margin-top: 6%;
+  margin-bottom: 6%;
   padding-bottom: 24px;
   font-size: 2.5rem;
 }
