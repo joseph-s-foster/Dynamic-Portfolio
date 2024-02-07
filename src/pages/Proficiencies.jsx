@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import '../Proficiencies.css'
+import "../Proficiencies.css";
 import background from "../assets/project/background.png";
 import caret from "../assets/project/caret.svg";
 import html from "../assets/project/html.svg";
@@ -27,51 +27,45 @@ function Proficiences() {
 
   return (
     <>
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "100vh",
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
       <div
         style={{
-          position: "absolute",
-          bottom: "35%",
-          left: "12%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+          backgroundImage: `url(${background})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
-        <h1
-          style={{
-            fontSize: "2.5rem",
-          }}
-        >
-          Explore client <br />
-          and server-side <br />
-        </h1>
-        <h2 style={{ fontSize: "2.5rem" }} className="cta">
-          capabilities
-          <a href="#projects" onClick={handleScroll}>
-            <img
-              src={caret}
-              alt="downward caret"
-              style={{
-                transform: "rotate(90deg)",
-                margin: "6px",
-                height: "42px",
-                width: "42px",
-              }}
-            />
-          </a>
-        </h2>
+        <div className="interact2">
+          <h1
+            style={{
+              fontSize: "2.5rem",
+            }}
+          >
+            Explore client <br />
+            and server-side <br />
+          </h1>
+          <h2 style={{ fontSize: "2.5rem" }} className="cta">
+            capabilities
+            <a href="#projects" onClick={handleScroll}>
+              <img
+                src={caret}
+                alt="downward caret"
+                style={{
+                  transform: "rotate(90deg)",
+                  margin: "6px",
+                  height: "42px",
+                  width: "42px",
+                }}
+              />
+            </a>
+          </h2>
+        </div>
       </div>
-    </div>
-    <div className="icons" id="icons">
+      <div className="icons" id="icons">
         <img src={html} alt="HTML" />
         <img src={css} alt="CSS" />
         <img src={javascript} alt="JavaScript" />
@@ -85,7 +79,7 @@ function Proficiences() {
         <img src={graphql} alt="GraphQL" />
         <img src={python} alt="Python" />
       </div>
-      </>
+    </>
   );
 }
 

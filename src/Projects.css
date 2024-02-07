@@ -61,6 +61,12 @@
   font-size: 1.5rem;
 }
 
+@media screen and (max-height: 560px){
+.tags {
+  margin-top: 64px;
+}
+}
+
 /* .tags2 {
   text-align: left;
   padding: 12px;

@@ -27,20 +27,15 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
           backgroundPosition: "center",
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            bottom: "35%",
-            left: "12%",
-          }}
-        >
+        <div className="interact2">
           <h1
             style={{
               fontSize: "2.5rem",
             }}
           >
-            Explore individual 
-            <br />and collaborative
+            Explore individual
+            <br />
+            and collaborative
           </h1>
           <h2 style={{ fontSize: "2.5rem" }} className="cta">
             projects
@@ -49,7 +44,7 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
                 src={caret}
                 alt="downward caret"
                 style={{
-                  transform: 'rotate(90deg)',
+                  transform: "rotate(90deg)",
                   margin: "6px",
                   height: "42px",
                   width: "42px",
@@ -59,13 +54,19 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
           </h2>
         </div>
       </div>
-      <div id="projects" style={{
-        paddingTop: "24px",
-        paddingLeft: "1%",
-        paddingRight: "1%",
-      }}>
-      <h1 className="tags"><div style={{fontSize: "2rem", display: "inline-block",}}>|</div> VERSATILE</h1>
-      {/* <h2 className="tags2">Exercising a myriad of proficiencies through multilple languages.</h2> */}
+      <div
+        id="projects"
+        style={{
+          paddingTop: "24px",
+          paddingLeft: "1%",
+          paddingRight: "1%",
+        }}
+      >
+        <h1 className="tags">
+          <div style={{ fontSize: "2rem", display: "inline-block" }}>|</div>{" "}
+          VERSATILE
+        </h1>
+        {/* <h2 className="tags2">Exercising a myriad of proficiencies through multilple languages.</h2> */}
         <div className="tiles">
           {projectsGroup1.map((project) => (
             <div
@@ -84,14 +85,19 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
           ))}
         </div>
       </div>
-      <div style={{
-        paddingLeft: "1%",
-        paddingRight: "1%",
-      }}>
-      <h1 className="tags"><div style={{fontSize: "2rem", display: "inline-block",}}>|</div> RESPONSIVE</h1>
-      {/* <h2 className="tags2">Providing real-time updates and user interactivity.</h2> */}
+      <div
+        style={{
+          paddingLeft: "1%",
+          paddingRight: "1%",
+        }}
+      >
+        <h1 className="tags">
+          <div style={{ fontSize: "2rem", display: "inline-block" }}>|</div>{" "}
+          RESPONSIVE
+        </h1>
+        {/* <h2 className="tags2">Providing real-time updates and user interactivity.</h2> */}
         <div className="tiles">
-        {projectsGroup2.map((project) => (
+          {projectsGroup2.map((project) => (
             <div
               key={"project-" + project.name}
               id={"project-" + project.image}
@@ -108,7 +114,7 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
           ))}
         </div>
       </div>
-      <div style={{paddingBottom: "1%",}}></div>
+      <div style={{ paddingBottom: "1%" }}></div>
       {/* <div style={{
         paddingLeft: "1%",
         paddingRight: "1%",
@@ -163,7 +169,12 @@ function Projects() {
     },
   ];
 
-  return <Component projectsGroup1={projectsGroup1} projectsGroup2={projectsGroup2} />;
+  return (
+    <Component
+      projectsGroup1={projectsGroup1}
+      projectsGroup2={projectsGroup2}
+    />
+  );
 }
 
 export default Projects;

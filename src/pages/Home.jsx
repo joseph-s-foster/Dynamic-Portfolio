@@ -88,13 +88,7 @@ function Home() {
         backgroundPosition: "center",
       }}
     >
-      <div
-        style={{
-          position: "absolute",
-          bottom: "40%",
-          left: "12%",
-        }}
-      >
+      <div className="interact1">
         <h1
           style={{
             fontSize: "2.5rem",

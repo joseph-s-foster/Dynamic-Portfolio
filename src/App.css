@@ -16,3 +16,22 @@ body,
   min-height: 100vh;
   box-sizing: border-box;
 }
+
+.interact1 {
+  position: absolute;
+  bottom: 40%;
+  left: 12%;
+}
+
+.interact2 {
+  position: absolute;
+  bottom: 35%;
+  left: 12%;
+}
+
+@media screen and (max-height: 560px) {
+  .interact1, .interact2 {
+    left: 20%;
+  }
+  
+}
