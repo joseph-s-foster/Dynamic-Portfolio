@@ -68,10 +68,10 @@ export default function Navigation() {
           <Transition
             show={mobileMenuOpen}
             as={Fragment}
-            enter="duration-200 ease-in"
+            enter="duration-050 ease-in"
             enterFrom="opacity-0 scale-100"
             enterTo="opacity-100 scale-100"
-            leave="duration-200 ease-out"
+            leave="duration-050 ease-out"
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-100"
           >
