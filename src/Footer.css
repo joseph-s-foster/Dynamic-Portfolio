@@ -19,9 +19,11 @@
   color: grey;
   justify-content: left;
   align-items: left;
+  padding-left: 1%;
+  padding-right: 1%;
   padding-bottom: 12px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .footer-links a:hover {
@@ -29,6 +31,8 @@
 }
 
 .divider {
+  margin-left: 16px;
+  margin-right: 16px;
   border-top: solid grey 1px;
 }
 

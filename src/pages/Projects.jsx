@@ -64,7 +64,7 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
         paddingLeft: "1%",
         paddingRight: "1%",
       }}>
-      <h1 className="tags">Versatile</h1>
+      <h1 className="tags"><div style={{fontSize: "2rem", display: "inline-block",}}>|</div> VERSATILE</h1>
       {/* <h2 className="tags2">Exercising a myriad of proficiencies through multilple languages.</h2> */}
         <div className="tiles">
           {projectsGroup1.map((project) => (
@@ -88,7 +88,7 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
         paddingLeft: "1%",
         paddingRight: "1%",
       }}>
-      <h1 className="tags">Dynamic</h1>
+      <h1 className="tags"><div style={{fontSize: "2rem", display: "inline-block",}}>|</div> RESPONSIVE</h1>
       {/* <h2 className="tags2">Providing real-time updates and user interactivity.</h2> */}
         <div className="tiles">
         {projectsGroup2.map((project) => (
@@ -108,13 +108,14 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
           ))}
         </div>
       </div>
-      <div style={{
+      <div style={{paddingBottom: "1%",}}></div>
+      {/* <div style={{
         paddingLeft: "1%",
         paddingRight: "1%",
-      }}>
-      <h1 className="tags">Responsive</h1>
+      }}> */}
+      {/* <h1 className="tags">DYNAMIC</h1> */}
       {/* <h2 className="tags2">Ensuring consistent experiences across numerous devices and viewports.</h2> */}
-      </div>
+      {/* </div> */}
     </>
   );
 };

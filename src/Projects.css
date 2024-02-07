@@ -54,11 +54,11 @@
 }
 
 .tags {
-  text-align: center;
-  margin-top: 6%;
-  margin-bottom: 6%;
-  padding-bottom: 24px;
-  font-size: 2.5rem;
+  text-align: left;
+  margin-top: 144px;
+  margin-left: 12px;
+  padding-bottom: 12px;
+  font-size: 1.5rem;
 }
 
 /* .tags2 {
@@ -75,23 +75,19 @@
 }
 
 .tile {
-  flex-basis: calc(33% - 24px);
-  padding-bottom: calc(33% - 24px);
+  flex-basis: calc(33.333% - 24px);
+  padding-bottom: calc(33.333% - 24px);
   position: relative;
   margin: 12px;
   border-radius: 12px;
   overflow: hidden;
-  transition: box-shadow 0.3s ease-in-out;
+  /* transition: box-shadow 0.3s ease-in-out; */
 }
 
 @media screen and (max-width: 755px) {
   .tile {
     flex-basis: calc(100% - 24px);
     padding-bottom: calc(100% - 24px);
-  }
-  .tags, .tags2 {
-    text-align: left;
-    padding-left: 3%;
   }
 }
 
