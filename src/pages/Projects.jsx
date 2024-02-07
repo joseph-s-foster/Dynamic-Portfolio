@@ -155,17 +155,17 @@ function Projects() {
       link: "https://joseph-s-foster.github.io/Password-Generator/",
       image: "password",
     },
+        {
+      name: "Timed JavaScript Quiz",
+      description: "Test your knowledge",
+      link: "https://joseph-s-foster.github.io/Coding-Quiz/",
+      image: "quiz",
+    },
     {
       name: "Weather Dashboard",
       description: "Search forecasts",
       link: "https://joseph-s-foster.github.io/Weather-Dashboard/",
       image: "weather",
-    },
-    {
-      name: "Timed JavaScript Quiz",
-      description: "Test your knowledge",
-      link: "https://joseph-s-foster.github.io/Coding-Quiz/",
-      image: "quiz",
     },
   ];
 
