@@ -1,11 +1,15 @@
-//tiles, background, and caret
+//tiles and caret
 export {default as password} from './project/password.png'
 export {default as caret} from './project/caret.svg'
 export {default as weather} from './project/weather.png'
-export {default as background} from './project/background.png'
 export {default as pulse} from './project/pulse.png'
 export {default as coffee} from './project/coffee.png'
 export {default as quiz} from './project/quiz.pmg'
+
+//backgrounds
+export {default as background} from './project/background.png'
+export {default as background2} from './project/background2.png'
+export {default as background3} from './project/background3.png'
 
 
 //icons

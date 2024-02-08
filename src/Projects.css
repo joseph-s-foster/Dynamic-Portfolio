@@ -16,7 +16,7 @@
   right: 0;
   bottom: 0;
   background-size: 100%;
-  opacity: 0.8;
+  opacity: 0.6;
   transition: transform 0.3s ease-in-out; /* Add transition property */
 }
 
@@ -55,24 +55,12 @@
 
 .tags {
   text-align: left;
-  margin-top: 144px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   margin-left: 12px;
   padding-bottom: 12px;
   font-size: 1.5rem;
 }
-
-@media screen and (max-height: 560px){
-.tags {
-  margin-top: 64px;
-}
-}
-
-/* .tags2 {
-  text-align: left;
-  padding: 12px;
-  margin-bottom: 6%;
-  font-size: 1.25rem;
-} */
 
 .tiles {
   display: flex;
@@ -81,19 +69,21 @@
 }
 
 .tile {
-  flex-basis: calc(33.333% - 24px);
-  padding-bottom: calc(33.333% - 24px);
+  flex-basis: calc(50% - 24px);
+  padding-bottom: calc(25% - 24px);
   position: relative;
-  margin: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 60px;
   border-radius: 12px;
   overflow: hidden;
   /* transition: box-shadow 0.3s ease-in-out; */
 }
 
-@media screen and (max-width: 755px) {
+@media screen and (max-width: 800px) {
   .tile {
     flex-basis: calc(100% - 24px);
-    padding-bottom: calc(100% - 24px);
+    padding-bottom: calc(50% - 24px);
   }
 }
 
@@ -123,15 +113,18 @@
 
 .project-link {
   font-size: 1rem;
-  margin-top: 8px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 12px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100px;
   color: #eeeeee;
   text-decoration: none;
-  padding: 2%;
+  padding: 1%;
   background-color: black;
   border-radius: 6px;
 }

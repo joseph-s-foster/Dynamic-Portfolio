@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import Project from "../components/Project";
 import background from "../assets/project/background.png";
+import background2 from "../assets/project/background2.png";
+import background3 from "../assets/project/background3.png";
 import caret from "../assets/project/caret.svg";
 
-const Component = ({ projectsGroup1, projectsGroup2 }) => {
+const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
   const handleScroll = (event) => {
     event.preventDefault();
 
@@ -57,7 +59,6 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
       <div
         id="projects"
         style={{
-          paddingTop: "24px",
           paddingLeft: "1%",
           paddingRight: "1%",
         }}
@@ -86,6 +87,20 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
         </div>
       </div>
       <div
+      style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+          backgroundImage: `url(${background2})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: ".6",
+        }}>
+       </div>
+
+      <div
         style={{
           paddingLeft: "1%",
           paddingRight: "1%",
@@ -93,7 +108,7 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
       >
         <h1 className="tags">
           <div style={{ fontSize: "2rem", display: "inline-block" }}>|</div>{" "}
-          RESPONSIVE
+          DYNAMIC
         </h1>
         {/* <h2 className="tags2">Providing real-time updates and user interactivity.</h2> */}
         <div className="tiles">
@@ -114,14 +129,57 @@ const Component = ({ projectsGroup1, projectsGroup2 }) => {
           ))}
         </div>
       </div>
+      <div
+      style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+          backgroundImage: `url(${background3})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: ".6",
+        }}>
+       </div>
       <div style={{ paddingBottom: "1%" }}></div>
-      {/* <div style={{
-        paddingLeft: "1%",
-        paddingRight: "1%",
-      }}> */}
-      {/* <h1 className="tags">DYNAMIC</h1> */}
-      {/* <h2 className="tags2">Ensuring consistent experiences across numerous devices and viewports.</h2> */}
-      {/* </div> */}
+      <div
+        style={{
+          paddingLeft: "1%",
+          paddingRight: "1%",
+        }}
+      >
+        <h1 className="tags">
+          <div style={{ fontSize: "2rem", display: "inline-block" }}>|</div>{" "}
+          RESPONSIVE
+        </h1>
+        {/* <h2 className="tags2">Providing real-time updates and user interactivity.</h2> */}
+        <div className="tiles">
+          {projectsGroup3.map((project) => (
+            <div
+              key={"project-" + project.name}
+              id={"project-" + project.image}
+              className="tile"
+            >
+              <Project project={project} />
+              <img
+                loading="lazy"
+                src={`/assets/projects/${project.image}.png`}
+                alt={project.description}
+                style={{ display: "none" }}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div style={{ paddingBottom: "1%" }}></div>
+      <div
+        style={{
+          paddingLeft: "1%",
+          paddingRight: "1%",
+        }}
+      >
+      </div>
     </>
   );
 };
@@ -135,12 +193,6 @@ function Projects() {
       image: "wyr",
     },
     {
-      name: "Python Pulse",
-      description: "A Python CRUD/Rest newsfeed",
-      link: "https://python-pulse-a33bae0b4181.herokuapp.com/",
-      image: "pulse",
-    },
-    {
       name: "Salient Solutions",
       description: "A C# employee badge maker",
       link: "https://github.com/joseph-s-foster/CSharp-Badge-Maker",
@@ -150,16 +202,10 @@ function Projects() {
 
   const projectsGroup2 = [
     {
-      name: "Password Generator",
-      description: "Generate random strings",
-      link: "https://joseph-s-foster.github.io/Password-Generator/",
-      image: "password",
-    },
-        {
-      name: "Timed JavaScript Quiz",
-      description: "Test your knowledge",
-      link: "https://joseph-s-foster.github.io/Coding-Quiz/",
-      image: "quiz",
+      name: "Python Pulse",
+      description: "A Python CRUD/Rest newsfeed",
+      link: "https://python-pulse-a33bae0b4181.herokuapp.com/",
+      image: "pulse",
     },
     {
       name: "Weather Dashboard",
@@ -169,10 +215,26 @@ function Projects() {
     },
   ];
 
+  const projectsGroup3 = [
+    {
+      name: "Timed JavaScript Quiz",
+      description: "Test your knowledge",
+      link: "https://joseph-s-foster.github.io/Coding-Quiz/",
+      image: "quiz",
+    },
+    {
+      name: "Password Generator",
+      description: "Generate random strings",
+      link: "https://joseph-s-foster.github.io/Password-Generator/",
+      image: "password",
+    },
+  ];
+
   return (
     <Component
       projectsGroup1={projectsGroup1}
       projectsGroup2={projectsGroup2}
+      projectsGroup3={projectsGroup3}
     />
   );
 }
