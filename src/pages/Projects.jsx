@@ -56,8 +56,8 @@ const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
           </h2>
         </div>
       </div>
+      <div id="projects"></div>
       <div
-        id="projects"
         style={{
           paddingLeft: "1%",
           paddingRight: "1%",
@@ -67,7 +67,6 @@ const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
           <div style={{ fontSize: "2rem", display: "inline-block" }}>|</div>{" "}
           VERSATILE
         </h1>
-        {/* <h2 className="tags2">Exercising a myriad of proficiencies through multilple languages.</h2> */}
         <div className="tiles">
           {projectsGroup1.map((project) => (
             <div
@@ -110,7 +109,6 @@ const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
           <div style={{ fontSize: "2rem", display: "inline-block" }}>|</div>{" "}
           DYNAMIC
         </h1>
-        {/* <h2 className="tags2">Providing real-time updates and user interactivity.</h2> */}
         <div className="tiles">
           {projectsGroup2.map((project) => (
             <div
@@ -153,7 +151,6 @@ const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
           <div style={{ fontSize: "2rem", display: "inline-block" }}>|</div>{" "}
           RESPONSIVE
         </h1>
-        {/* <h2 className="tags2">Providing real-time updates and user interactivity.</h2> */}
         <div className="tiles">
           {projectsGroup3.map((project) => (
             <div

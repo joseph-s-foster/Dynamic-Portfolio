@@ -70,7 +70,7 @@
 
 .tile {
   flex-basis: calc(50% - 24px);
-  padding-bottom: calc(25% - 24px);
+  padding-bottom: calc(28.125% - 24px);
   position: relative;
   margin-left: 12px;
   margin-right: 12px;
@@ -83,7 +83,7 @@
 @media screen and (max-width: 800px) {
   .tile {
     flex-basis: calc(100% - 24px);
-    padding-bottom: calc(50% - 24px);
+    padding-bottom: calc(56.25% - 24px);
   }
 }
 
