@@ -33,8 +33,10 @@ export default function Navigation() {
             <div className="relative flex items-center justify-between">
               <div className="absolute inset-y-8 left-0 flex items-center">
                 <Disclosure.Button
+                  id="menu"
                   className="relative inline-flex items-center justify-center rounded-md p-2"
                   onClick={handleMobileMenuToggle}
+                  aria-label={open ? "Close menu" : "Open menu"}
                 >
                   {open ? (
                     <XMarkIcon className="block h-8 w-8" aria-hidden="true" />
@@ -79,6 +81,7 @@ export default function Navigation() {
               <div className="space-y-2 mt-2 px-1">
                 {navigation.map((item) => (
                   <Disclosure.Button
+                    id="menu"
                     key={item.name}
                     as={Link}
                     to={item.to}
@@ -87,7 +90,8 @@ export default function Navigation() {
                       "hover:underline"
                     )}
                     onClick={closeMobileMenu}
-                    style={{ outline: "none", width: "1%", }}
+                    style={{ outline: "none", width: "1%" }}
+                    aria-label={`Go to ${item.name}`}
                   >
                     {item.name}
                   </Disclosure.Button>
