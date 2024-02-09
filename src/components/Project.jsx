@@ -14,7 +14,6 @@ function Project({ project }) {
    
       <a href={link} className="project-link" target="_blank" rel="noopener noreferrer">
         <div className="cta">
-        Explore
         <img src={caret} alt="caret" className="caret-icon" />
         </div>
       </a>

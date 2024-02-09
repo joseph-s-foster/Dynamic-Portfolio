@@ -137,7 +137,7 @@ const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
           backgroundImage: `url(${background3})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          opacity: ".6",
+          opacity: ".5",
         }}>
        </div>
       <div style={{ paddingBottom: "1%" }}></div>

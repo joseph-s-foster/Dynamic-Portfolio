@@ -16,7 +16,7 @@
   right: 0;
   bottom: 0;
   background-size: 100%;
-  opacity: 0.6;
+  opacity: 0.5;
   transition: transform 0.3s ease-in-out; /* Add transition property */
 }
 
@@ -93,7 +93,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 12px;
+  padding: 16px;
   border-radius: 0 0 5px 5px;
   display: flex;
   flex-direction: column;
@@ -116,12 +116,12 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  margin: 12px;
+  margin: 16px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: 48px;
   color: #eeeeee;
   text-decoration: none;
   padding: 1%;
@@ -130,10 +130,10 @@
 }
 
 .caret-icon {
-  margin-top: 5px;
-  margin-left: 4px;
-  height: 16px;
-  width: 16px;
+  /* margin-top: 5px;
+  margin-left: 4px; */
+  height: 24px;
+  width: 24px;
 }
 
 .cta {
