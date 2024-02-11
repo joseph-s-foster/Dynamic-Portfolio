@@ -4,7 +4,7 @@ export {default as caret} from './project/caret.svg'
 export {default as weather} from './project/weather.png'
 export {default as pulse} from './project/pulse.png'
 export {default as coffee} from './project/coffee.png'
-export {default as quiz} from './project/quiz.pmg'
+export {default as quiz} from './project/quiz.png'
 
 //backgrounds
 export {default as background} from './project/background.png'
