@@ -218,7 +218,7 @@ function Projects() {
     },
     {
       name: "Mischief Managed",
-      description: "Experience user session handling",
+      description: "Experience session handling",
       link: "https://github.com/joseph-s-foster/Mischief-Managed",
       image: "tech",
     },
