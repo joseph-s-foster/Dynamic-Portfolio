@@ -86,18 +86,18 @@ const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
         </div>
       </div>
       <div
-      style={{
+        style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           height: "100vh",
-          backgroundImage: `url(${background2})`,
+          backgroundImage: `url(${background3})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           opacity: ".6",
-        }}>
-       </div>
+        }}
+      ></div>
 
       <div
         style={{
@@ -114,7 +114,7 @@ const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
             <div
               key={"project-" + project.name}
               id={"project-" + project.image}
-              className="tile"
+              className="tile2"
             >
               <Project project={project} />
               <img
@@ -127,7 +127,7 @@ const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
           ))}
         </div>
       </div>
-      <div
+      {/* <div
       style={{
           display: "flex",
           flexDirection: "column",
@@ -137,21 +137,21 @@ const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
           backgroundImage: `url(${background3})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          opacity: ".5",
+          opacity: ".6",
         }}>
-       </div>
+       </div> */}
       <div style={{ paddingBottom: "1%" }}></div>
-      <div
+      {/* <div
         style={{
           paddingLeft: "1%",
           paddingRight: "1%",
         }}
-      >
-        <h1 className="tags">
+      > */}
+      {/* <h1 className="tags">
           <div style={{ fontSize: "2rem", display: "inline-block" }}>|</div>{" "}
           RESPONSIVE
-        </h1>
-        <div className="tiles">
+        </h1> */}
+      {/* <div className="tiles">
           {projectsGroup3.map((project) => (
             <div
               key={"project-" + project.name}
@@ -167,16 +167,16 @@ const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
               />
             </div>
           ))}
-        </div>
-      </div>
-      <div style={{ paddingBottom: "1%" }}></div>
-      <div
+        </div> */}
+      {/* </div> */}
+      {/* <div style={{ paddingBottom: "1%" }}></div> */}
+      {/* <div
         style={{
           paddingLeft: "1%",
           paddingRight: "1%",
         }}
       >
-      </div>
+      </div> */}
     </>
   );
 };
@@ -185,9 +185,21 @@ function Projects() {
   const projectsGroup1 = [
     {
       name: "Would You Rather",
-      description: "A MERN stack polling application",
+      description: "A MERN stack application",
       link: "https://wyr-3b5b304bab70.herokuapp.com/",
       image: "wyr",
+    },
+    {
+      name: "Tech Blog",
+      description: "A JavaScript CRUD ops weblog",
+      link: "https://t3ch-bl0g-5d6f38a434db.herokuapp.com/",
+      image: "blog",
+    },
+    {
+      name: "Python Pulse",
+      description: "A Python CRUD ops newsfeed",
+      link: "https://python-pulse-a33bae0b4181.herokuapp.com/",
+      image: "pulse",
     },
     {
       name: "Salient Solutions",
@@ -199,25 +211,16 @@ function Projects() {
 
   const projectsGroup2 = [
     {
-      name: "Python Pulse",
-      description: "A Python CRUD/Rest newsfeed",
-      link: "https://python-pulse-a33bae0b4181.herokuapp.com/",
-      image: "pulse",
-    },
-    {
-      name: "Weather Dashboard",
-      description: "Search forecasts",
-      link: "https://joseph-s-foster.github.io/Weather-Dashboard/",
-      image: "weather",
-    },
-  ];
-
-  const projectsGroup3 = [
-    {
       name: "Timed JavaScript Quiz",
       description: "Test your knowledge",
       link: "https://joseph-s-foster.github.io/Coding-Quiz/",
       image: "quiz",
+    },
+    {
+      name: "Mischief Managed",
+      description: "Browse front-end session handling",
+      link: "https://github.com/joseph-s-foster/Mischief-Managed",
+      image: "tech",
     },
     {
       name: "Password Generator",
@@ -225,13 +228,34 @@ function Projects() {
       link: "https://joseph-s-foster.github.io/Password-Generator/",
       image: "password",
     },
+    {
+      name: "Weather Dashboard",
+      description: "Search third-party API forecasts",
+      link: "https://joseph-s-foster.github.io/Weather-Dashboard/",
+      image: "weather",
+    },
   ];
+
+  // const projectsGroup3 = [
+  //   {
+  //     name: "Timed JavaScript Quiz",
+  //     description: "Test your knowledge",
+  //     link: "https://joseph-s-foster.github.io/Coding-Quiz/",
+  //     image: "quiz",
+  //   },
+  //   {
+  //     name: "Password Generator",
+  //     description: "Generate random strings",
+  //     link: "https://joseph-s-foster.github.io/Password-Generator/",
+  //     image: "password",
+  //   },
+  // ];
 
   return (
     <Component
       projectsGroup1={projectsGroup1}
       projectsGroup2={projectsGroup2}
-      projectsGroup3={projectsGroup3}
+      // projectsGroup3={projectsGroup3}
     />
   );
 }

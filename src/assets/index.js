@@ -5,6 +5,8 @@ export {default as weather} from './project/weather.png'
 export {default as pulse} from './project/pulse.png'
 export {default as coffee} from './project/coffee.png'
 export {default as quiz} from './project/quiz.png'
+export {default as tech} from './project/tech.png'
+export {default as blog} from './project/blog.png'
 
 //backgrounds
 export {default as background} from './project/background.png'
