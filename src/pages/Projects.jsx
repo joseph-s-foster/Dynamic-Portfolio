@@ -218,7 +218,7 @@ function Projects() {
     },
     {
       name: "Mischief Managed",
-      description: "Browse front-end session handling",
+      description: "Experience user session handling",
       link: "https://github.com/joseph-s-foster/Mischief-Managed",
       image: "tech",
     },
@@ -230,7 +230,7 @@ function Projects() {
     },
     {
       name: "Weather Dashboard",
-      description: "Search third-party API forecasts",
+      description: "Search API forecasts",
       link: "https://joseph-s-foster.github.io/Weather-Dashboard/",
       image: "weather",
     },
