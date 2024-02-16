@@ -48,7 +48,7 @@ const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
                 style={{
                   padding: "12px",
                   fontSize: "1.25rem",
-                  border: "solid white 2px",
+                  border: "solid #dddddd 2px",
                   borderRadius: "6px",
                 }}
                 className="explore"
