@@ -214,7 +214,7 @@ function Projects() {
 
   const projectsGroup2 = [
     {
-      name: "Timed JavaScript Quiz",
+      name: "JavaScript Quiz",
       description: "Test your knowledge",
       link: "https://joseph-s-foster.github.io/Coding-Quiz/",
       image: "quiz",
