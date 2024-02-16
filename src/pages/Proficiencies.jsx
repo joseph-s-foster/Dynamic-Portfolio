@@ -58,7 +58,7 @@ function Proficiences() {
                 style={{
                   padding: "12px",
                   fontSize: "1.25rem",
-                  border: "solid white 2px",
+                  border: "solid #dddddd 2px",
                   borderRadius: "6px",
                 }}
                 className="explore"
