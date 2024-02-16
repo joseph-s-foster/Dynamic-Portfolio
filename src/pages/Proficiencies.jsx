@@ -42,27 +42,31 @@ function Proficiences() {
         <div className="interact2">
           <h1
             style={{
-              fontSize: "2.5rem",
+              fontSize: "3rem",
             }}
           >
-            Explore client <br />
-            and server-side <br />
-          </h1>
-          <h2 style={{ fontSize: "2.5rem" }} className="cta">
-            capabilities
+            <div style={{ marginBottom: "12px" }}>
+              Client and
+              <br />
+              server-side
+              <br />
+              capabilites
+              <br />
+            </div>
             <a href="#projects" onClick={handleScroll}>
-              <img
-                src={caret}
-                alt="downward caret"
+              <span
                 style={{
-                  transform: "rotate(90deg)",
-                  margin: "6px",
-                  height: "42px",
-                  width: "42px",
+                  padding: "12px",
+                  fontSize: "1.25rem",
+                  border: "solid white 2px",
+                  borderRadius: "6px",
                 }}
-              />
+                className="explore"
+              >
+                Explore
+              </span>
             </a>
-          </h2>
+          </h1>
         </div>
       </div>
       <div className="icons" id="icons">

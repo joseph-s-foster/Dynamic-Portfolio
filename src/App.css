@@ -29,7 +29,7 @@ body,
   left: 12%;
 }
 
-@media screen and (max-height: 560px) {
+@media screen and (max-height: 680px) {
   .interact1,
   .interact2 {
     left: 160px;
@@ -40,6 +40,6 @@ body,
   }
 
   .interact2 {
-    bottom: 20%;
+    bottom: 24%;
   }
 }

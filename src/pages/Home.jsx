@@ -91,7 +91,7 @@ function Home() {
       <div className="interact1">
         <h1
           style={{
-            fontSize: "2.5rem",
+            fontSize: "3rem",
             paddingBottom: "4px",
           }}
         >
@@ -99,7 +99,7 @@ function Home() {
         </h1>
         <h2
           style={{
-            fontSize: "1.25rem",
+            fontSize: "1.5rem",
           }}
         >
           {typedText}

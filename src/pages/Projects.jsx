@@ -32,28 +32,31 @@ const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
         <div className="interact2">
           <h1
             style={{
-              fontSize: "2.5rem",
+              fontSize: "3rem",
             }}
           >
-            Explore individual
+            <div style={{marginBottom: "12px"}}>
+            Versatile
+            <br/>
+            Dynamic
+            <br/>
+            Reponsive
             <br />
-            and collaborative
-          </h1>
-          <h2 style={{ fontSize: "2.5rem" }} className="cta">
-            projects
+            </div>
             <a href="#projects" onClick={handleScroll}>
-              <img
-                src={caret}
-                alt="downward caret"
+              <span
                 style={{
-                  transform: "rotate(90deg)",
-                  margin: "6px",
-                  height: "42px",
-                  width: "42px",
+                  padding: "12px",
+                  fontSize: "1.25rem",
+                  border: "solid white 2px",
+                  borderRadius: "6px",
                 }}
-              />
+                className="explore"
+              >
+                Explore
+              </span>
             </a>
-          </h2>
+          </h1>
         </div>
       </div>
       <div id="projects"></div>
