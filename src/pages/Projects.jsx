@@ -220,6 +220,12 @@ function Projects() {
       image: "quiz",
     },
     {
+      name: "Weather Dashboard",
+      description: "Search API forecasts",
+      link: "https://joseph-s-foster.github.io/Weather-Dashboard/",
+      image: "weather",
+    },
+    {
       name: "Mischief Managed",
       description: "Experience session handling",
       link: "https://github.com/joseph-s-foster/Mischief-Managed",
@@ -230,12 +236,6 @@ function Projects() {
       description: "Generate random strings",
       link: "https://joseph-s-foster.github.io/Password-Generator/",
       image: "password",
-    },
-    {
-      name: "Weather Dashboard",
-      description: "Search API forecasts",
-      link: "https://joseph-s-foster.github.io/Weather-Dashboard/",
-      image: "weather",
     },
   ];
 
