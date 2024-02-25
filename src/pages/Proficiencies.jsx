@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../Proficiencies.css";
 import background from "../assets/project/background.png";
-import caret from "../assets/project/caret.svg";
 import html from "../assets/project/html.svg";
 import css from "../assets/project/css.svg";
 import javascript from "../assets/project/javascript.svg";

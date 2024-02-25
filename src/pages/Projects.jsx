@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Project from "../components/Project";
 import background from "../assets/project/background.png";
-import background2 from "../assets/project/background2.png";
 import background3 from "../assets/project/background3.png";
-import caret from "../assets/project/caret.svg";
 
 const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
   const handleScroll = (event) => {
