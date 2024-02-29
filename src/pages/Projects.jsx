@@ -185,7 +185,7 @@ function Projects() {
   const projectsGroup1 = [
     {
       name: "Would You Rather",
-      description: "A MERN stack polling application",
+      description: "A MERN stack polling app",
       link: "https://wyr-3b5b304bab70.herokuapp.com/",
       image: "wyr",
     },
