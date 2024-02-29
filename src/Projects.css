@@ -18,8 +18,12 @@
   right: 0;
   bottom: 0;
   background-size: 100%;
-  opacity: 0.6;
+  opacity: 0.7;
   transition: transform 0.3s ease-in-out;
+}
+
+.line {
+  color: #252525;
 }
 
 #project-coffee::before {
@@ -73,11 +77,11 @@
 
 .tags {
   text-align: left;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 48px;
+  margin-bottom: 48px;
   margin-left: 12px;
   padding-bottom: 12px;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .tiles {

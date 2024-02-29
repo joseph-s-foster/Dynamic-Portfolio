@@ -40,7 +40,7 @@
 
   ## Link to site
 
-  - https://stunning-fox-4500e5.netlify.app
+  - https://joseph-foster.netlify.app
 
   ## Screenshot
 

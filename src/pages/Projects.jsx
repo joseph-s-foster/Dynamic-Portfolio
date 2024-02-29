@@ -1,7 +1,6 @@
 import React from "react";
-import Project from "../components/Project";
 import background from "../assets/project/background.png";
-import background3 from "../assets/project/background3.png";
+import Project from "../components/Project";
 
 const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
   const handleScroll = (event) => {
@@ -65,8 +64,8 @@ const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
         }}
       >
         <h1 className="tags">
-          <div style={{ fontSize: "2rem", display: "inline-block" }}>|</div>{" "}
-          VERSATILE
+          {/* <div style={{ fontSize: "2rem", display: "inline-block" }}>|</div>{" "} */}
+          PROJECTS
         </h1>
         <div className="tiles">
           {projectsGroup1.map((project) => (
@@ -86,21 +85,21 @@ const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
           ))}
         </div>
       </div>
-      <div
+      {/* <div
         style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           height: "100vh",
-          backgroundImage: `url(${background3})`,
+          backgroundColor: "black",
           backgroundSize: "cover",
           backgroundPosition: "center",
           opacity: ".6",
         }}
-      ></div>
+      ></div> */}
 
-      <div
+      {/* <div
         style={{
           paddingLeft: "1%",
           paddingRight: "1%",
@@ -127,7 +126,7 @@ const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
       {/* <div
       style={{
           display: "flex",
@@ -186,7 +185,7 @@ function Projects() {
   const projectsGroup1 = [
     {
       name: "Would You Rather",
-      description: "A MERN stack application",
+      description: "A MERN stack polling application",
       link: "https://wyr-3b5b304bab70.herokuapp.com/",
       image: "wyr",
     },
@@ -210,32 +209,32 @@ function Projects() {
     },
   ];
 
-  const projectsGroup2 = [
-    {
-      name: "JavaScript Quiz",
-      description: "Test your knowledge",
-      link: "https://joseph-s-foster.github.io/Coding-Quiz/",
-      image: "quiz",
-    },
-    {
-      name: "Weather Dashboard",
-      description: "Search API forecasts",
-      link: "https://joseph-s-foster.github.io/Weather-Dashboard/",
-      image: "weather",
-    },
-    {
-      name: "Mischief Managed",
-      description: "Experience session handling",
-      link: "https://github.com/joseph-s-foster/Mischief-Managed",
-      image: "tech",
-    },
-    {
-      name: "Password Generator",
-      description: "Generate random strings",
-      link: "https://joseph-s-foster.github.io/Password-Generator/",
-      image: "password",
-    },
-  ];
+  // const projectsGroup2 = [
+  //   {
+  //     name: "JavaScript Quiz",
+  //     description: "Test your knowledge",
+  //     link: "https://joseph-s-foster.github.io/Coding-Quiz/",
+  //     image: "quiz",
+  //   },
+  //   {
+  //     name: "Weather Dashboard",
+  //     description: "Search API forecasts",
+  //     link: "https://joseph-s-foster.github.io/Weather-Dashboard/",
+  //     image: "weather",
+  //   },
+  //   {
+  //     name: "Mischief Managed",
+  //     description: "Experience session handling",
+  //     link: "https://github.com/joseph-s-foster/Mischief-Managed",
+  //     image: "tech",
+  //   },
+  //   {
+  //     name: "Password Generator",
+  //     description: "Generate random strings",
+  //     link: "https://joseph-s-foster.github.io/Password-Generator/",
+  //     image: "password",
+  //   },
+  // ];
 
   // const projectsGroup3 = [
   //   {
@@ -255,7 +254,7 @@ function Projects() {
   return (
     <Component
       projectsGroup1={projectsGroup1}
-      projectsGroup2={projectsGroup2}
+      // projectsGroup2={projectsGroup2}
       // projectsGroup3={projectsGroup3}
     />
   );

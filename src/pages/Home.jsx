@@ -95,7 +95,7 @@ function Home() {
             paddingBottom: "4px",
           }}
         >
-          Joe Foster
+          Joseph Foster
         </h1>
         <h2
           style={{
