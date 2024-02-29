@@ -65,7 +65,7 @@ const Component = ({ projectsGroup1, projectsGroup2, projectsGroup3 }) => {
       >
         <h1 className="tags">
           {/* <div style={{ fontSize: "2rem", display: "inline-block" }}>|</div>{" "} */}
-          PROJECTS
+          Projects
         </h1>
         <div className="tiles">
           {projectsGroup1.map((project) => (
