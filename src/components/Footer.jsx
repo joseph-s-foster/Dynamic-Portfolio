@@ -50,7 +50,7 @@ function Footer() {
         className="divider footer-links text-center"
         style={{ paddingTop: "36px" }}
       >
-        Copyright &copy; 2024 Joe Foster
+        Copyright &copy; 2024 Joseph Foster
       </p>
       </div>
     </footer>
