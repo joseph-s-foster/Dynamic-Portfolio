@@ -30,16 +30,18 @@ body,
 }
 
 @media screen and (max-height: 680px) {
-  .interact1,
-  .interact2 {
-    left: 160px;
-  }
-
   .interact1 {
     bottom: 30%;
   }
 
   .interact2 {
     bottom: 15%;
+  }
+}
+
+@media screen and (max-height: 480px) {
+   .interact1,
+  .interact2 {
+    left: 160px;
   }
 }
