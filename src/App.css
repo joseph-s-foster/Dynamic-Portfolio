@@ -39,7 +39,7 @@ body,
   }
 }
 
-@media screen and (max-height: 480px) {
+@media screen and (max-height: 512px) {
    .interact1,
   .interact2 {
     left: 160px;
