@@ -86,7 +86,7 @@ function Home() {
 
   const handleViewProjectsClick = () => {
     window.location.href = "/projects";
-  };
+  };  
 
   return (
     <>
