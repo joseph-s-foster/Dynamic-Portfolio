@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import background from "../assets/project/background.png";
 import Trending from "../components/Trending";
 
@@ -8,6 +9,13 @@ function Home() {
   const textToType = "UX-Driven";
   const texttoType2 = "Mobile-Friendly";
   const texttoType3 = "Full Stack Web Developer";
+
+  const location = useLocation();
+
+  // Scroll to top when the location changes (i.e., route changes)
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   useEffect(() => {
     const typeAndBackspace = async () => {
@@ -76,6 +84,10 @@ function Home() {
     typeAndBackspace();
   }, [textToType]);
 
+  const handleViewProjectsClick = () => {
+    window.location.href = "/projects";
+  };
+
   return (
     <>
       <div
@@ -123,19 +135,20 @@ function Home() {
             API calls and sorting algorithms generate top weekly results.
           </h3>
           <div style={{ marginTop: "32px" }}>
-            <a href="/projects">
-              <span
-                style={{
-                  padding: "12px",
-                  fontSize: "1.25rem",
-                  border: "solid #dddddd 2px",
-                  borderRadius: "6px",
-                }}
-                className="explore"
-              >
-                View more projects
-              </span>
-            </a>
+            {/* Updated Link to use react-router-dom */}
+            <span
+              onClick={handleViewProjectsClick}
+              style={{
+                padding: "12px",
+                fontSize: "1.25rem",
+                border: "solid #dddddd 2px",
+                borderRadius: "6px",
+                cursor: "pointer",
+              }}
+              className="explore"
+            >
+              View more projects
+            </span>
           </div>
         </div>
       </div>
