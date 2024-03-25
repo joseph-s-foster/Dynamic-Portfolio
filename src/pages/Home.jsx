@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import background from "../assets/project/background.png";
+import Trending from "../components/Trending";
 
 function Home() {
   const [typedText, setTypedText] = useState("");
@@ -76,37 +77,69 @@ function Home() {
   }, [textToType]);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "100vh",
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="interact1">
-        <h1
-          style={{
-            fontSize: "3rem",
-            paddingBottom: "4px",
-          }}
-        >
-          Joseph Foster
-        </h1>
-        <h2
-          style={{
-            fontSize: "1.5rem",
-          }}
-        >
-          {typedText}
-          <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
-        </h2>
+    <>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+          backgroundImage: `url(${background})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="interact1">
+          <h1
+            style={{
+              fontSize: "3rem",
+              paddingBottom: "4px",
+            }}
+          >
+            Joseph Foster
+          </h1>
+          <h2
+            style={{
+              fontSize: "1.5rem",
+            }}
+          >
+            {typedText}
+            <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+          </h2>
+        </div>
       </div>
-    </div>
+      <div className="api">
+        {/* Trending Component Container */}
+        <div className="apiresults">
+          <div>
+            <Trending />
+          </div>
+        </div>
+
+        {/* Container for h3 */}
+        <div className="apidesc">
+          <h3>
+            API calls and sorting algorithms generate top weekly results.
+          </h3>
+          <div style={{ marginTop: "32px" }}>
+            <a href="/projects">
+              <span
+                style={{
+                  padding: "12px",
+                  fontSize: "1.25rem",
+                  border: "solid #dddddd 2px",
+                  borderRadius: "6px",
+                }}
+                className="explore"
+              >
+                View more projects
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 

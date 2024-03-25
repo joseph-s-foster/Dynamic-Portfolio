@@ -1,0 +1,25 @@
+.numbers {
+  text-align: right;
+}
+
+.articles:hover {
+    text-decoration: underline;
+}
+
+.apitrend {
+  margin-top: 48px;
+  margin-left: 22%;
+  font-size: 2.5rem;
+}
+
+.apitrend li {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 1044px) {
+  .apitrend {
+margin-left: 12%;
+}
+}

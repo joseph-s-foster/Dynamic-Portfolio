@@ -69,11 +69,18 @@
   transform: scale(1.04);
 }
 
-.explore:hover {
-  transition: transform, opacity 0.25s ease-in-out;
-  opacity: .5;
-  
+.explore {
+  transition: background-color 0.33s ease-in-out, color 0.33s ease-in-out;
+  background-color: #000;
+  color: #dddddd;
 }
+
+.explore:hover {
+  background-color: #dddddd;
+  color: #000;
+}
+
+
 
 .tags {
   text-align: left;
