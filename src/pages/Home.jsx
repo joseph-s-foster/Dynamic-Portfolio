@@ -121,7 +121,7 @@ function Home() {
           </h2>
         </div>
       </div>
-      <div className="api">
+      <div id="api" className="api">
         {/* Trending Component Container */}
         <div className="apiresults">
           <div>
