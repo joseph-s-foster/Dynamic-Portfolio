@@ -8,14 +8,12 @@
 
 .apitrend {
   margin-top: 48px;
-  margin-left: 22%;
+  margin-left: 24%;
   font-size: 2.5rem;
 }
 
 .apitrend li {
-  margin-top: 16px;
-  margin-bottom: 16px;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 
 @media screen and (max-width: 1044px) {

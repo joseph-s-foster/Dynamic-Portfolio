@@ -99,7 +99,7 @@ function Trending() {
       }}
       className="apitrend"
     >
-      <h3 style={{ paddingBottom: "12px" }}>Trending Now</h3>
+      <h3>Trending Now</h3>
       <ul>
         {topArticles.map((article, index) => (
           <li key={index}>
