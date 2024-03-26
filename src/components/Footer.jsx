@@ -25,10 +25,10 @@ function Footer() {
             <a href="mailto:joseph.s.foster@icloud.com">Email</a>
           </li>
           <li className="footer-links">
-            <a href="https://github.com/joseph-s-foster">GitHub</a>
+            <a href="https://github.com/joseph-s-foster" target="_blank" rel="noopener noreferrer">GitHub</a>
           </li>
           <li className="footer-links">
-            <a href="https://www.linkedin.com/in/joseph-foster/">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/joseph-foster/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </li>
         </ul>
         <ul>

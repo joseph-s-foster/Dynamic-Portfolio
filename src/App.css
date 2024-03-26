@@ -29,6 +29,12 @@ body,
   left: 12%;
 }
 
+.caret90 {
+  position: absolute;
+  width: 36px;
+  bottom: 2%;
+}
+
 .api {
   display: flex;
   flex-direction: row;
@@ -48,7 +54,7 @@ body,
   min-width: 0;
   max-width: 50%;
   box-sizing: border-box;
-  margin-bottom: 24px;
+  margin-bottom: 60px;
 }
 
 .apidesc h3 {

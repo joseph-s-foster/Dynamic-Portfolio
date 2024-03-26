@@ -66,11 +66,13 @@ async function sortTopHits() {
       (article) =>
         article.article !== "Main_Page" &&
         article.article !== "Special:Search" &&
-        article.article !== "Wikipedia:Featured_pictures"
+        article.article !== "Wikipedia:Featured_pictures" &&
+        article.article !== "Pornhub" &&
+        article.article !== "Porno_y_helado"
     );
 
-    // Take top 10 articles after filtering
-    const top10Articles = filteredArticles.slice(0, 3);
+    // Take top 5 articles after filtering
+    const top10Articles = filteredArticles.slice(0, 5);
 
     return top10Articles;
   } catch (error) {

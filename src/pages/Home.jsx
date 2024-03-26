@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import background from "../assets/project/background.png";
+import caret90 from "../assets/project/caret90.svg";
 import Trending from "../components/Trending";
 
 function Home() {
@@ -84,9 +85,18 @@ function Home() {
     typeAndBackspace();
   }, [textToType]);
 
+  const handleScroll = (event) => {
+    event.preventDefault();
+
+    const projectsContainer = document.getElementById("api");
+    if (projectsContainer) {
+      projectsContainer.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleViewProjectsClick = () => {
     window.location.href = "/projects";
-  };  
+  };
 
   return (
     <>
@@ -120,6 +130,9 @@ function Home() {
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
           </h2>
         </div>
+        <a className="caret90" href="#api" onClick={handleScroll}>
+          <img src={caret90} alt="caret icon" />
+        </a>
       </div>
       <div id="api" className="api">
         {/* Trending Component Container */}
@@ -131,9 +144,7 @@ function Home() {
 
         {/* Container for h3 */}
         <div className="apidesc">
-          <h3>
-            API calls and sorting algorithms generate top weekly results.
-          </h3>
+          <h3>API calls and sorting algorithms generate top weekly results.</h3>
           <div style={{ marginTop: "32px" }}>
             {/* Updated Link to use react-router-dom */}
             <span
