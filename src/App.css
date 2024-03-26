@@ -30,6 +30,7 @@ body,
 }
 
 .caret90 {
+  transform: rotate(90deg);
   position: absolute;
   width: 36px;
   bottom: 2%;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import background from "../assets/project/background.png";
-import caret90 from "../assets/project/caret90.svg";
+import caret from "../assets/project/caret.svg";
 import Trending from "../components/Trending";
 
 function Home() {
@@ -131,7 +131,7 @@ function Home() {
           </h2>
         </div>
         <a className="caret90" href="#api" onClick={handleScroll}>
-          <img src={caret90} alt="caret icon" />
+          <img src={caret} alt="caret icon" />
         </a>
       </div>
       <div id="api" className="api">
