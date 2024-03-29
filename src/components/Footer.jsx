@@ -62,7 +62,7 @@ function Footer() {
           className="divider footer-links text-center"
           style={{
             paddingTop: "32px",
-            paddingBottom: "32px",
+            paddingBottom: "16px",
           }}
         >
           Copyright &copy; 2024 Joseph Foster

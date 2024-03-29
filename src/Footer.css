@@ -37,3 +37,14 @@
   border-top: solid grey 1px;
 }
 
+@media screen and (max-width: 712px) {
+  .footer-links {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .divider {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
+

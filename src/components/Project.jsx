@@ -5,17 +5,14 @@ function Project({ project }) {
   const { name, link, description, image } = project;
 
   return (
-   
-      <a href={link} target="_blank" rel="noopener noreferrer">
-   <div className="project-content">
-      <div className="project-info">
-        <h1>{name}</h1>
-        <div className="project-description">{description}</div>
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <div className="project-content">
+        <div className="project-info">
+          <h1>{name}</h1>
+          <div className="project-description">{description}</div>
+        </div>
       </div>
-      </div>
-      </a>
-      
- 
+    </a>
   );
 }
 
