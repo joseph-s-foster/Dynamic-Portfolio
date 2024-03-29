@@ -8,7 +8,7 @@ async function sortTopHits() {
   const today = dayjs();
   const promises = [];
 
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < 4; i++) {
     const date = today.subtract(i, "day");
     const year = date.format("YYYY");
     const month = date.format("MM");
@@ -93,6 +93,10 @@ function Trending() {
     fetchTopArticles();
   }, []);
 
+  const removeParentheses = (str) => {
+    return str.replace(/\([^()]*\)/g, "").trim();
+  };
+
   return (
     <div
       style={{
@@ -114,7 +118,7 @@ function Trending() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {article.article.replace(/_/g, " ")}
+              {removeParentheses(article.article.replace(/_/g, " "))}
             </a>
           </li>
         ))}

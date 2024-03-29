@@ -144,7 +144,7 @@ function Home() {
 
         {/* Container for h3 */}
         <div className="apidesc">
-          <h3>API calls and sorting algorithms generate top weekly results.</h3>
+          <h3>API calls and sorting algorithms generate trending articles.</h3>
           <div style={{ marginTop: "32px" }}>
             {/* Updated Link to use react-router-dom */}
             <span
@@ -152,7 +152,7 @@ function Home() {
               style={{
                 padding: "12px",
                 fontSize: "1.25rem",
-                border: "solid #dddddd 2px",
+                border: "solid #eeeeee 2px",
                 borderRadius: "6px",
                 cursor: "pointer",
               }}

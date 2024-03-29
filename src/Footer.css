@@ -22,8 +22,8 @@
   padding-left: 1%;
   padding-right: 1%;
   padding-bottom: 12px;
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-left: 11%;
+  margin-right: 11%;
 }
 
 .footer-links a:hover {
@@ -31,8 +31,9 @@
 }
 
 .divider {
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-left: 12%;
+  margin-right: 12%;
+  margin-top: 24px;
   border-top: solid grey 1px;
 }
 

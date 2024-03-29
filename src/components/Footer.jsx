@@ -19,16 +19,28 @@ function Footer() {
       <nav>
         <ul>
           <li className="footer-links" style={{ textDecoration: "none" }}>
-            <p style={{ fontSize: "1rem", marginTop: "16px" }}>CONNECT</p>
+            <p style={{ fontSize: "1rem", marginTop: "24px" }}>CONNECT</p>
           </li>
           <li className="footer-links">
             <a href="mailto:joseph.s.foster@icloud.com">Email</a>
           </li>
           <li className="footer-links">
-            <a href="https://github.com/joseph-s-foster" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a
+              href="https://github.com/joseph-s-foster"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
           </li>
           <li className="footer-links">
-            <a href="https://www.linkedin.com/in/joseph-foster/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a
+              href="https://www.linkedin.com/in/joseph-foster/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
           </li>
         </ul>
         <ul>
@@ -38,7 +50,7 @@ function Footer() {
           <li className="footer-links">
             <a href="./">Home</a>
           </li>
-          <li className="footer-links" style={{ marginBottom: "4px" }}>
+          <li className="footer-links">
             <a href="#top" onClick={handleScroll}>
               Back to Top
             </a>
@@ -46,12 +58,15 @@ function Footer() {
         </ul>
       </nav>
       <div>
-      <p
-        className="divider footer-links text-center"
-        style={{ paddingTop: "36px" }}
-      >
-        Copyright &copy; 2024 Joseph Foster
-      </p>
+        <p
+          className="divider footer-links text-center"
+          style={{
+            paddingTop: "32px",
+            paddingBottom: "32px",
+          }}
+        >
+          Copyright &copy; 2024 Joseph Foster
+        </p>
       </div>
     </footer>
   );
