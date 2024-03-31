@@ -1,9 +1,7 @@
 import React from "react";
 import "../Projects.css";
 
-function Project({ project }) {
-  const { name, link, description, image } = project;
-
+function Project({ project: { name, link, description, image } }) {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
       <div className="project-content">

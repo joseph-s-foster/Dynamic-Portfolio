@@ -5,10 +5,6 @@
 #project-coffee::before,
 #project-pulse::before,
 #project-wyr::before,
-#project-password::before,
-#project-quiz::before,
-#project-weather::before,
-#project-tech::before,
 #project-blog::before {
   content: "";
   display: block;
@@ -34,25 +30,10 @@
   background-image: url("./assets/project/pulse.png");
 }
 
-#project-password::before {
-  background-image: url("./assets/project/password.png");
-}
-
-#project-quiz::before {
-  background-image: url("./assets/project/quiz.png");
-}
-
-#project-weather::before {
-  background-image: url("./assets/project/weather.png");
-}
-
 #project-wyr::before {
   background-image: url("./assets/project/wyr.png");
 }
 
-#project-tech::before {
-  background-image: url("./assets/project/tech.png");
-}
 
 #project-blog::before {
   background-image: url("./assets/project/blog.png");
@@ -61,10 +42,6 @@
 #project-coffee:hover:before,
 #project-pulse:hover::before,
 #project-wyr:hover::before,
-#project-password:hover::before,
-#project-quiz:hover::before,
-#project-weather:hover::before,
-#project-tech:hover::before,
 #project-blog:hover::before {
   transform: scale(1.04);
 }
@@ -107,17 +84,6 @@
   /* transition: box-shadow 0.3s ease-in-out; */
 }
 
-/* .tile2 {
-  flex-basis: calc(25% - 24px);
-  padding-bottom: calc(25% - 24px);
-  position: relative;
-  margin-left: 12px;
-  margin-right: 12px;
-  margin-bottom: 24px;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease-in-out;
-} */
 
 @media screen and (max-width: 1428px) {
   .tile {
@@ -158,6 +124,7 @@
 }
 
 .project-info h1 {
+  margin-top: 100%;
   color: #eeeeee;
   font-size: 1.75rem;
 }
