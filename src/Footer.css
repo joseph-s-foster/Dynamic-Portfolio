@@ -37,7 +37,7 @@
   border-top: solid grey 1px;
 }
 
-@media screen and (max-width: 712px) {
+@media screen and (max-width: 724px) {
   .footer-links {
     margin-left: 3%;
     margin-right: 3%;
