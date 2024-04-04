@@ -39,8 +39,8 @@ body,
 .api {
   display: flex;
   flex-direction: row;
-  margin-top: 48px;
-  margin-bottom: 48px;
+  margin-top: 36px;
+  margin-bottom: 36px;
 }
 
 .apiresults {
@@ -55,13 +55,13 @@ body,
   min-width: 0;
   max-width: 50%;
   box-sizing: border-box;
- padding-left: 12%;
+  padding-left: 1%;
   margin-bottom: 60px;
 }
 
 .apidesc h3 {
-  margin-top: 48px;
-  margin-right: 22%;
+  margin-top: 36px;
+  margin-right: 23%;
   font-size: 2.5rem;
 }
 
@@ -74,12 +74,17 @@ body,
   }
   .apidesc {
     max-width: 100%;
+    margin-left: 11%;
   }
 }
 
 @media screen and (max-width: 724px) {
+  .api {
+    margin-top: 24px;
+  }
+
   .apidesc {
-    padding-left: 4%;
+    margin-left: 3%;
   }
 }
 

@@ -103,9 +103,8 @@ function Trending() {
         paddingLeft: "1%",
         paddingRight: "1%",
       }}
-      className="apitrend"
+      className="apiarticles"
     >
-      <h3>Trending Now</h3>
       <ul>
         {topArticles.map((article, index) => (
           <li key={index}>
