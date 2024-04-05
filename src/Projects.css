@@ -18,10 +18,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.line {
-  color: #252525;
-}
-
 #project-coffee::before {
   background-image: url("./assets/project/coffee.png");
 }
@@ -104,8 +100,8 @@
     margin-bottom: 48px;
   }
   .tiles {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 4%;
+    margin-right: 4%;
   }
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 import background from "../assets/project/background.png";
 import Project from "../components/Project";
 
-const Component = ({ projectsGroup1}) => {
+const Component = ({ projectsGroup1 }) => {
   const handleScroll = (event) => {
     event.preventDefault();
 

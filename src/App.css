@@ -36,10 +36,6 @@ body,
   bottom: 2%;
 }
 
-.black {
-  height: 100vh;
-}
-
 .api {
   display: flex;
   flex-direction: row;
@@ -63,6 +59,10 @@ body,
   margin-bottom: 4%;
 }
 
+.apidesc2{
+  display: none;
+}
+
 .apidesc h3 {
   margin-right: 23%;
   font-size: 2.5rem;
@@ -75,10 +75,24 @@ body,
   .apiresults {
     max-width: 100%;
   }
+
   .apidesc {
-    max-width: 100%;
-    margin-left: 11%;
+    display: none;
   }
+
+  .apidesc2 {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-top: 4%;
+    margin-bottom: 6%;
+    font-size: 2.5rem;
+    display: inline;
+  }
+
 }
 
 @media screen and (max-width: 724px) {
@@ -87,10 +101,10 @@ body,
     margin-bottom: 6%;
   }
 
-  .apidesc {
-    margin-top: 6%;
-    margin-bottom: 6%;
-    margin-left: 3%;
+  .apidesc2 {
+    margin-top: 4%;
+    margin-bottom: 12%;
+    margin-left: 4%;
   }
 }
 

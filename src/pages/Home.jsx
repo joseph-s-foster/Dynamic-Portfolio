@@ -134,17 +134,15 @@ function Home() {
           <img src={caret} alt="caret icon" />
         </a>
       </div>
-      <div className="black"
+      <div
+        // className="black"
         id="api"
         style={{
           display: "flex",
           flexDirection: "column",
-          // alignItems: "center",
-          // justifyContent: "center",
-          
-          backgroundColor: "black",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          // backgroundColor: "black",
+          // backgroundSize: "cover",
+          // backgroundPosition: "center",
         }}
       >
         <div className="api">
@@ -179,8 +177,29 @@ function Home() {
           </div>
         </div>
         <div>
-          <Trending/>
+          <Trending />
         </div>
+        <div className="apidesc2">
+            <h3>
+              API calls and sorting algorithms generate trending articles.
+            </h3>
+            <div style={{ marginTop: "8px" }}>
+              <span
+                onClick={handleViewProjectsClick}
+                style={{
+                  padding: "12px",
+                  fontSize: "1.25rem",
+                  border: "solid #eeeeee 2px",
+                  borderRadius: "6px",
+                  cursor: "pointer",
+                }}
+                className="explore"
+              >
+                View more projects
+              </span>
+            </div>
+          </div>
+          
       </div>
     </>
   );

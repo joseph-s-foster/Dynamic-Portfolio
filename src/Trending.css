@@ -7,7 +7,7 @@
 }
 
 .apitrend {
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   margin-left: 24%;
   font-size: 2.5rem;
 }
@@ -15,7 +15,8 @@
 .apiarticles {
   margin-left: 11%;
   margin-right: 11%;
-  margin-bottom: 48px;
+  margin-bottom: 4%;
+  
 }
 
 .apiarticles li {
@@ -27,18 +28,23 @@
 
 @media screen and (max-width: 1120px) {
   .apitrend {
+    margin-top: 16px;
     margin-left: 12%;
+  }
+  .apiarticles {
+    margin-bottom: 0;
   }
 }
 
 @media screen and (max-width: 724px) {
   .apitrend {
-    margin-bottom: 6%;
+    margin-bottom: 4%;
     margin-left: 4%;
   }
 
   .apiarticles {
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
   }
 }
