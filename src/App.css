@@ -36,6 +36,10 @@ body,
   bottom: 2%;
 }
 
+.black {
+  height: 100vh;
+}
+
 .api {
   display: flex;
   flex-direction: row;
@@ -78,7 +82,7 @@ body,
 }
 
 @media screen and (max-width: 724px) {
-  .api{
+  .api {
     margin-top: 6%;
     margin-bottom: 6%;
   }
@@ -97,6 +101,9 @@ body,
 
   .interact2 {
     bottom: 15%;
+  }
+  .black{
+    height: 680px;
   }
 }
 
