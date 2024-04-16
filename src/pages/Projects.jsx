@@ -91,9 +91,9 @@ function Projects() {
       image: "wyr",
     },
     {
-      name: "Tech Blog",
-      description: "A JavaScript CRUD ops weblog",
-      link: "https://t3ch-bl0g-5d6f38a434db.herokuapp.com/",
+      name: "Coding Quiz",
+      description: "A timed JavaScript exercise",
+      link: "https://joseph-s-foster.github.io/Coding-Quiz/",
       image: "blog",
     },
     {
