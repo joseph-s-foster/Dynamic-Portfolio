@@ -18,7 +18,7 @@ function Proficiences() {
   const handleScroll = (event) => {
     event.preventDefault();
 
-    const projectsContainer = document.getElementById("icons");
+    const projectsContainer = document.getElementById("proficiencies");
     if (projectsContainer) {
       projectsContainer.scrollIntoView({ behavior: "smooth" });
     }
@@ -52,7 +52,7 @@ function Proficiences() {
               capabilites
               <br />
             </div>
-            <a href="#projects" onClick={handleScroll}>
+            <a href="#proficiencies" onClick={handleScroll}>
               <span
                 style={{
                   padding: "12px",
@@ -68,7 +68,17 @@ function Proficiences() {
           </h1>
         </div>
       </div>
-      <div className="icons" id="icons">
+      <div id="proficiencies"></div>
+      <h1
+        className="tags"
+        style={{
+          paddingLeft: "1%",
+          paddingRight: "1%",
+        }}
+      >
+        Proficiencies
+      </h1>
+      <div className="icons">
         <img src={html} alt="HTML" />
         <img src={css} alt="CSS" />
         <img src={javascript} alt="JavaScript" />

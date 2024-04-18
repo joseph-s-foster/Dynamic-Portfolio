@@ -80,12 +80,24 @@
   /* transition: box-shadow 0.3s ease-in-out; */
 }
 
+.profdesc {
+  margin-left: 11%;
+  font-size: 2.5rem;
+  width: 43%;
+  margin-top: 48px;
+  padding-bottom: 1%;
+  margin-bottom: 48px;
+}
 
 @media screen and (max-width: 1428px) {
   .tile {
     flex-basis: calc(50% - 24px);
     padding-bottom: calc(50% - 24px);
     margin-bottom: 48px;
+  }
+
+  .profdesc {
+    width: 66%;
   }
 }
 
@@ -102,6 +114,13 @@
   .tiles {
     margin-left: 4%;
     margin-right: 4%;
+  }
+
+  .profdesc {
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 95%;
+    margin-top: 32px;
   }
 }
 

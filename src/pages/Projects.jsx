@@ -12,6 +12,10 @@ const Component = ({ projectsGroup1 }) => {
     }
   };
 
+  const handleViewProficienciesClick = () => {
+    window.location.href = "/proficiencies";
+  };
+
   return (
     <>
       <div
@@ -74,6 +78,25 @@ const Component = ({ projectsGroup1 }) => {
               <Project project={project} />
             </div>
           ))}
+        </div>
+        <div className="profdesc">
+          <h3>Numerous competencies coalesce across multiple languages.</h3>
+          <div style={{ marginTop: "32px" }}>
+            {/* Updated Link to use react-router-dom */}
+            <span
+              onClick={handleViewProficienciesClick}
+              style={{
+                padding: "12px",
+                fontSize: "1.25rem",
+                border: "solid #eeeeee 2px",
+                borderRadius: "6px",
+                cursor: "pointer",
+              }}
+              className="explore"
+            >
+              View proficiencies
+            </span>
+          </div>
         </div>
       </div>
 
