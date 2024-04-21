@@ -30,7 +30,6 @@
   background-image: url("./assets/project/wyr.png");
 }
 
-
 #project-blog::before {
   background-image: url("./assets/project/blog.png");
 }
@@ -84,7 +83,7 @@
   margin-left: 11%;
   font-size: 2.5rem;
   width: 43%;
-  margin-top: 48px;
+  margin-top: 32px;
   padding-bottom: 1%;
   margin-bottom: 48px;
 }
@@ -98,6 +97,7 @@
 
   .profdesc {
     width: 66%;
+    margin-top: 8px;
   }
 }
 
@@ -120,7 +120,6 @@
     margin-left: 3%;
     margin-right: 3%;
     width: 95%;
-    margin-top: 32px;
   }
 }
 
