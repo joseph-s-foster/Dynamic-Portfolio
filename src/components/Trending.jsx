@@ -72,7 +72,7 @@ async function sortTopHits() {
     );
 
     // Take top 5 articles after filtering
-    const top10Articles = filteredArticles.slice(0, 5);
+    const top10Articles = filteredArticles.slice(0, 10);
 
     return top10Articles;
   } catch (error) {
@@ -94,7 +94,7 @@ function Trending() {
   }, []);
 
   const removeParentheses = (str) => {
-    return str.replace(/\([^()]*\)/g, "").trim();
+    return str
   };
 
   return (
