@@ -152,29 +152,6 @@ function Home() {
               <h3>Trending Now</h3>
             </div>
           </div>
-
-          {/* Container for h3 */}
-          <div className="apidesc">
-            <h3>
-              API calls and sorting algorithms generate trending articles.
-            </h3>
-            <div style={{ marginTop: "32px" }}>
-              {/* Updated Link to use react-router-dom */}
-              <span
-                onClick={handleViewProjectsClick}
-                style={{
-                  padding: "12px",
-                  fontSize: "1.25rem",
-                  border: "solid #eeeeee 2px",
-                  borderRadius: "6px",
-                  cursor: "pointer",
-                }}
-                className="explore"
-              >
-                View more projects
-              </span>
-            </div>
-          </div>
         </div>
         <div>
           <Trending />
