@@ -53,7 +53,7 @@ body,
 .apidesc2 {
   flex: 1;
   min-width: 0;
-  max-width: 55%;
+  max-width: 43%;
   box-sizing: border-box;
   margin-left: 12%;
   margin-right: 12%;
@@ -94,7 +94,7 @@ body,
   }
 
   .apidesc2 {
-    max-width: 100%;
+    max-width: 95%;
     margin-right: 4%;
     margin-left: 4%;
   }
