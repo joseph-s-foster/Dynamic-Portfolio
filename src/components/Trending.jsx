@@ -13,7 +13,7 @@ async function fetchTopHitsForDate(baseUrl, date) {
     const response = await fetch(url);
     if (!response.ok) {
       if (response.status === 404) {
-        console.warn(`Data not found for ${date.format("YYYY-MM-DD")}`);
+        console.warn(`Data unavailable for ${date.format("YYYY-MM-DD")}`);
         return null;
       } else {
         throw new Error(`Error fetching data: ${response.statusText}`);
