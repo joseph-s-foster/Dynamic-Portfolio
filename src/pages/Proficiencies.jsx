@@ -1,5 +1,6 @@
 import React from "react";
 import "../Proficiencies.css";
+import caret from "../assets/project/caret.svg";
 import background from "../assets/project/background.png";
 import html from "../assets/project/html.svg";
 import css from "../assets/project/css.svg";
@@ -45,21 +46,11 @@ function Proficiences() {
             }}
           >
             <div>Proficiencies</div>
-            <a href="#proficiencies" onClick={handleScroll}>
-              <span
-                style={{
-                  padding: "12px",
-                  fontSize: "1.25rem",
-                  border: "solid #dddddd 2px",
-                  borderRadius: "6px",
-                }}
-                className="explore"
-              >
-                Explore
-              </span>
-            </a>
           </h1>
         </div>
+        <a className="caret90" href="#proficiencies" onClick={handleScroll}>
+          <img src={caret} alt="caret icon" />
+        </a>
       </div>
       <div id="proficiencies"></div>
       {/* <h1

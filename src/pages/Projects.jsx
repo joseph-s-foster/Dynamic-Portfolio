@@ -1,6 +1,7 @@
 import React from "react";
 import background from "../assets/project/background.png";
 import Project from "../components/Project";
+import caret from "../assets/project/caret.svg";
 
 const Component = ({ projectsGroup1 }) => {
   const handleScroll = (event) => {
@@ -36,23 +37,12 @@ const Component = ({ projectsGroup1 }) => {
               fontSize: "3rem",
             }}
           >
-            <div>Projects</div>
-            <a href="#projects" onClick={handleScroll}>
-              <span
-                style={{
-                  backgroundColor: "none",
-                  padding: "12px",
-                  fontSize: "1.25rem",
-                  border: "solid #dddddd 2px",
-                  borderRadius: "6px",
-                }}
-                className="explore"
-              >
-                Explore
-              </span>
-            </a>
+            Projects
           </h1>
         </div>
+        <a className="caret90" href="#projects" onClick={handleScroll}>
+          <img src={caret} alt="caret icon" />
+        </a>
       </div>
       <div id="projects"></div>
       <div
