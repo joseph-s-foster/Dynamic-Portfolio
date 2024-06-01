@@ -44,9 +44,7 @@ function Proficiences() {
               fontSize: "3rem",
             }}
           >
-            <div>
-              Proficiencies
-            </div>
+            <div>Proficiencies</div>
             <a href="#proficiencies" onClick={handleScroll}>
               <span
                 style={{
@@ -64,19 +62,19 @@ function Proficiences() {
         </div>
       </div>
       <div id="proficiencies"></div>
-      <h1
+      {/* <h1
         className="tags"
         style={{
           paddingLeft: "1%",
           paddingRight: "1%",
         }}
       >
-        Client and Server-Side
-      </h1>
+      </h1> */}
       <div className="icons">
         <img src={html} alt="HTML" />
         <img src={css} alt="CSS" />
         <img src={javascript} alt="JavaScript" />
+        <img src={python} alt="Python" />
         <img src={jquery} alt="jQuery" />
         <img src={node} alt="Node.js" />
         <img src={express} alt="Express.js" />
@@ -85,7 +83,6 @@ function Proficiences() {
         <img src={mongodb} alt="MongoDB" />
         <img src={react} alt="React" />
         <img src={graphql} alt="GraphQL" />
-        <img src={python} alt="Python" />
       </div>
     </>
   );

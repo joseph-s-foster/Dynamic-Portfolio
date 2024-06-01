@@ -158,7 +158,7 @@ function Home() {
         </div>
         <div className="apidesc2">
           <h3>APIs and algorithms generate trending articles.</h3>
-          <div style={{ marginTop: "8px" }}>
+          <div>
             <span
               onClick={handleViewProjectsClick}
               style={{

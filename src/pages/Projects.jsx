@@ -61,7 +61,7 @@ const Component = ({ projectsGroup1 }) => {
           paddingRight: "1%",
         }}
       >
-        <h1 className="tags">Full Stack and More</h1>
+        {/* <h1 className="tags">Full Stack and More</h1> */}
         <div className="tiles">
           {projectsGroup1.map((project) => (
             <div
@@ -75,7 +75,7 @@ const Component = ({ projectsGroup1 }) => {
         </div>
         <div className="profdesc">
           <h3>Skills in multiple languages.</h3>
-          <div style={{ marginTop: "32px" }}>
+          <div>
             {/* Updated Link to use react-router-dom */}
             <span
               onClick={handleViewProficienciesClick}
