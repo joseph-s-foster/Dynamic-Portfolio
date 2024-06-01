@@ -34,7 +34,7 @@ async function sortTopHits() {
   const promises = [];
 
   // Fetch data for the past 7 days
-  for (let i = 0; i < 7; i++) {
+  for (let i = 1; i < 7; i++) {
     const date = today.subtract(i, "day");
     promises.push(fetchTopHitsForDate(baseUrl, date));
   }
@@ -96,7 +96,8 @@ async function sortTopHits() {
         article.article !== "Special:Search" &&
         article.article !== "Wikipedia:Featured_pictures" &&
         article.article !== "Pornhub" &&
-        article.article !== "Porno_y_helado"
+        article.article !== "Porno_y_helado" &&
+        article.article !== ".xxx"
     );
 
     // Take top 10 articles after filtering

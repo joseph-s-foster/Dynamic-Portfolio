@@ -88,6 +88,15 @@ body,
 }
 
 @media screen and (max-width: 724px) {
+  .interact1,
+  .interact2 {
+    display: flex;
+    position: static;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
   .api {
     margin-top: 6%;
     margin-bottom: 6%;
