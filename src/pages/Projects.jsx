@@ -36,17 +36,11 @@ const Component = ({ projectsGroup1 }) => {
               fontSize: "3rem",
             }}
           >
-            <div style={{ marginBottom: "12px" }}>
-              Versatile
-              <br />
-              Dynamic
-              <br />
-              Reponsive
-              <br />
-            </div>
+            <div>Projects</div>
             <a href="#projects" onClick={handleScroll}>
               <span
                 style={{
+                  backgroundColor: "none",
                   padding: "12px",
                   fontSize: "1.25rem",
                   border: "solid #dddddd 2px",
@@ -67,7 +61,7 @@ const Component = ({ projectsGroup1 }) => {
           paddingRight: "1%",
         }}
       >
-        <h1 className="tags">Projects</h1>
+        <h1 className="tags">Full Stack and More</h1>
         <div className="tiles">
           {projectsGroup1.map((project) => (
             <div
@@ -80,7 +74,7 @@ const Component = ({ projectsGroup1 }) => {
           ))}
         </div>
         <div className="profdesc">
-          <h3>Numerous competencies coalesce across multiple languages.</h3>
+          <h3>Skills in multiple languages.</h3>
           <div style={{ marginTop: "32px" }}>
             {/* Updated Link to use react-router-dom */}
             <span

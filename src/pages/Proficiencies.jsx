@@ -44,13 +44,8 @@ function Proficiences() {
               fontSize: "3rem",
             }}
           >
-            <div style={{ marginBottom: "12px" }}>
-              Client and
-              <br />
-              server-side
-              <br />
-              capabilites
-              <br />
+            <div>
+              Proficiencies
             </div>
             <a href="#proficiencies" onClick={handleScroll}>
               <span
@@ -76,7 +71,7 @@ function Proficiences() {
           paddingRight: "1%",
         }}
       >
-        Proficiencies
+        Client and Server-Side
       </h1>
       <div className="icons">
         <img src={html} alt="HTML" />

@@ -157,26 +157,23 @@ function Home() {
           <Trending />
         </div>
         <div className="apidesc2">
-            <h3>
-              API calls and sorting algorithms generate trending articles.
-            </h3>
-            <div style={{ marginTop: "8px" }}>
-              <span
-                onClick={handleViewProjectsClick}
-                style={{
-                  padding: "12px",
-                  fontSize: "1.25rem",
-                  border: "solid #eeeeee 2px",
-                  borderRadius: "6px",
-                  cursor: "pointer",
-                }}
-                className="explore"
-              >
-                View more projects
-              </span>
-            </div>
+          <h3>APIs and algorithms generate trending articles.</h3>
+          <div style={{ marginTop: "8px" }}>
+            <span
+              onClick={handleViewProjectsClick}
+              style={{
+                padding: "12px",
+                fontSize: "1.25rem",
+                border: "solid #eeeeee 2px",
+                borderRadius: "6px",
+                cursor: "pointer",
+              }}
+              className="explore"
+            >
+              View more projects
+            </span>
           </div>
-          
+        </div>
       </div>
     </>
   );

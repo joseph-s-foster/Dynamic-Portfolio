@@ -109,6 +109,14 @@ body,
   }
 }
 
+.explore {
+  padding: "12px";
+  font-size: "1.25rem";
+  border: "solid #eeeeee 2px";
+  border-radius: "6px";
+  cursor: "pointer";
+}
+
 @media screen and (max-height: 680px) {
   .interact1 {
     bottom: 30%;
