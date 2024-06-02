@@ -46,10 +46,10 @@ const Component = ({ projectsGroup1 }) => {
       </div>
       <div id="projects"></div>
       <div
-        style={{
-          paddingLeft: "1%",
-          paddingRight: "1%",
-        }}
+        // style={{
+        //   paddingLeft: "1%",
+        //   paddingRight: "1%",
+        // }}
       >
         {/* <h1 className="tags">Full Stack and More</h1> */}
         <div className="tiles">

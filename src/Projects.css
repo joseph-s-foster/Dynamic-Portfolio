@@ -82,7 +82,6 @@
   font-size: 2.5rem;
   width: 43%;
   margin-top: 32px;
-  padding-bottom: 1%;
   margin-bottom: 48px;
 }
 
@@ -100,26 +99,20 @@
 }
 
 @media screen and (max-width: 724px) {
-  .tags {
-    font-size: 2.25rem;
-    /* text-align: center; */
-    margin-left: 12px;
-    margin-right: 12px;
-  }
   .tile {
     flex-basis: calc(100%);
     padding-bottom: calc(100%);
     margin-bottom: 48px;
   }
   .tiles {
-    margin-left: 4%;
-    margin-right: 4%;
+    margin-left: 24px;
+    margin-right: 24px;
   }
 
   .profdesc {
-    margin-left: 3%;
-    margin-right: 3%;
-    width: 95%;
+    margin-left: 24px;
+    margin-right: 24px;
+    width: 100%;
   }
 }
 

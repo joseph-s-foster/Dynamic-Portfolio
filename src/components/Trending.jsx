@@ -129,10 +129,6 @@ function Trending() {
 
   return (
     <div
-      style={{
-        paddingLeft: "1%",
-        paddingRight: "1%",
-      }}
       className="apiarticles"
     >
       <ul>

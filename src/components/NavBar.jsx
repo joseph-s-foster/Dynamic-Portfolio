@@ -34,14 +34,14 @@ export default function Navigation() {
               <div className="absolute inset-y-8 left-0 flex items-center">
                 <Disclosure.Button
                   id="menu"
-                  className="relative inline-flex items-center justify-center rounded-md p-2"
+                  className="relative inline-flex items-center justify-center rounded-md p-2.5"
                   onClick={handleMobileMenuToggle}
                   aria-label={open ? "Close menu" : "Open menu"}
                 >
                   {open ? (
-                    <XMarkIcon className="block h-8 w-8" aria-hidden="true" />
+                    <XMarkIcon className="block h-10 w-10" aria-hidden="true" />
                   ) : (
-                    <Bars3Icon className="block h-8 w-8" aria-hidden="true" />
+                    <Bars3Icon className="block h-10 w-10" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
@@ -78,7 +78,7 @@ export default function Navigation() {
             leaveTo="opacity-0 scale-100"
           >
             <Disclosure.Panel className="absolute top-12 inset-x-0 z-10">
-              <div className="space-y-2 mt-2 px-1">
+              <div className="space-y-2 mt-2 px-2">
                 {navigation.map((item) => (
                   <Disclosure.Button
                     id="menu"
