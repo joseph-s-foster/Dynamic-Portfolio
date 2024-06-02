@@ -117,22 +117,17 @@ body,
   cursor: "pointer";
 }
 
-@media screen and (max-height: 680px) {
-  .interact1 {
-    bottom: 30%;
-  }
-
-  .interact2 {
-    bottom: 15%;
-  }
-  .black {
-    height: 680px;
-  }
-}
-
 @media screen and (max-height: 512px) {
-  .interact1,
-  .interact2 {
-    left: 160px;
+  .interact1, .interact2 {
+    display: flex;
+    position: static;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
+  /* .black {
+    height: 680px;
+  } */
 }
+
