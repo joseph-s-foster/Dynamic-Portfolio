@@ -1,7 +1,7 @@
 import React from "react";
 import background from "../assets/project/background.png";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Project from "../components/Project";
-import caret from "../assets/project/caret.svg";
 
 const Component = ({ projectsGroup1 }) => {
   const handleScroll = (event) => {
@@ -40,18 +40,12 @@ const Component = ({ projectsGroup1 }) => {
             Projects
           </h1>
         </div>
-        <a className="caret90" href="#projects" onClick={handleScroll}>
-          <img src={caret} alt="caret icon" />
+        <a className="caret" href="#api" onClick={handleScroll}>
+          <ChevronDownIcon className="w-10" aria-hidden="true" />
         </a>
       </div>
       <div id="projects"></div>
-      <div
-        // style={{
-        //   paddingLeft: "1%",
-        //   paddingRight: "1%",
-        // }}
-      >
-        {/* <h1 className="tags">Full Stack and More</h1> */}
+      <div>
         <div className="tiles">
           {projectsGroup1.map((project) => (
             <div
@@ -64,7 +58,13 @@ const Component = ({ projectsGroup1 }) => {
           ))}
         </div>
         <div className="profdesc">
-          <h3>Skills in multiple languages.</h3>
+          <h3
+            style={{
+              marginBottom: "4px",
+            }}
+          >
+            Skills in multiple languages.
+          </h3>
           <div>
             {/* Updated Link to use react-router-dom */}
             <span

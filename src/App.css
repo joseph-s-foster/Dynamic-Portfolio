@@ -30,18 +30,16 @@ body,
   left: 11%;
 }
 
-.caret90 {
-  transform: rotate(90deg);
+.caret {
   position: absolute;
-  width: 48px;
   bottom: 2%;
 }
 
 .api {
   display: flex;
   flex-direction: row;
-  margin-top: 4%;
-  margin-bottom: 36px;
+  margin-top: 40px;
+  margin-bottom: 24px;
 }
 
 .apiresults {
@@ -54,19 +52,14 @@ body,
 .apidesc2 {
   flex: 1;
   min-width: 0;
-  max-width: 43%;
+  max-width: 100%;
   box-sizing: border-box;
   margin-left: 11%;
   margin-right: 11%;
   margin-top: 32px;
-  padding-bottom: 1%;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
   font-size: 2.5rem;
   display: inline;
-}
-
-.apidesc h3 {
-  font-size: 2.5rem;
 }
 
 @media screen and (max-width: 1120px) {
@@ -76,16 +69,8 @@ body,
   .apiresults {
     max-width: 100%;
   }
-  .apidesc2 {
-    max-width: 65%;
-  }
 }
 
-@media screen and (max-width: 875px) {
-  .apidesc2 {
-    max-width: 55%;
-  }
-}
 
 @media screen and (max-width: 724px) {
   .interact1,
@@ -97,14 +82,14 @@ body,
     align-items: center;
     text-align: center;
   }
+
   .api {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin-top: 18px;
   }
 
   .apidesc2 {
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
     max-width: 100%;
   }
 }
@@ -118,7 +103,8 @@ body,
 }
 
 @media screen and (max-height: 512px) {
-  .interact1, .interact2 {
+  .interact1,
+  .interact2 {
     display: flex;
     position: static;
     flex-direction: column;
@@ -126,8 +112,4 @@ body,
     align-items: center;
     text-align: center;
   }
-  /* .black {
-    height: 680px;
-  } */
 }
-

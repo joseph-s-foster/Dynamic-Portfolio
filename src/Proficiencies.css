@@ -1,6 +1,6 @@
 .icons {
-  padding: 2%;
-  width: 83.5%;
+  padding: 16px;
+  width: 82.5%;
   flex: 1;
   display: flex;
   flex-wrap: wrap;
@@ -12,7 +12,6 @@
 .icons img {
   flex-basis: calc(16.66% - 24px);
   margin: 12px;
-  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -27,8 +26,8 @@
 @media screen and (max-width: 724px) {
   .icons {
     width: 100%;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .icons img {
     margin: 12px;
@@ -39,7 +38,6 @@
 @media screen and (max-width: 400px) {
   .icons img {
     padding: 0;
-  
     flex-basis: calc(50% - 24px);
   }
 }

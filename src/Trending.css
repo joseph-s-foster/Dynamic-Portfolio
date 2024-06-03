@@ -23,20 +23,47 @@
   border-top: solid 1px #eeeeee;
   font-size: 1.25rem;
 }
+/* 
+.trend-icon-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+} */
+
+.trend-icon {
+  display: inline-flex;
+  align-items: right;
+  position: absolute;
+  padding-top: 2px;
+  right: 12%;
+  width: 24px;
+  height: 24px;
+}
+
+.trend-icon.up {
+  color: green;
+}
+
+.trend-icon.down {
+  color: red;
+}
 
 @media screen and (max-width: 1120px) {
   .apitrend {
-    margin-top: 16px;
     margin-left: 11%;
   }
 }
 
 @media screen and (max-width: 724px) {
   .apitrend {
-    margin: 24px;
+    margin: 24px 16px 24px 16px;
   }
 
   .apiarticles {
-    margin: 0 24px 0 24px;
+    margin: 0 16px 0 16px;
+  }
+
+  .trend-icon {
+    right: 8px;
   }
 }

@@ -1,4 +1,8 @@
 import { useState, useEffect } from "react";
+import {
+  ArrowTrendingDownIcon,
+  ArrowTrendingUpIcon,
+} from "@heroicons/react/24/outline";
 import dayjs from "dayjs";
 import "../Trending.css";
 
@@ -22,18 +26,22 @@ async function fetchTopHitsForDate(baseUrl, date) {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error(`Error fetching Wikipedia data for ${date.format("YYYY-MM-DD")}:`, error);
+    console.error(
+      `Error fetching Wikipedia data for ${date.format("YYYY-MM-DD")}:`,
+      error
+    );
     return null;
   }
 }
 
 // Function to sort top hits
 async function sortTopHits() {
-  const baseUrl = "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/";
+  const baseUrl =
+    "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/";
   const today = dayjs();
   const promises = [];
 
-  // Fetch data for the past 7 days
+  // Fetch data for the past week
   for (let i = 1; i < 7; i++) {
     const date = today.subtract(i, "day");
     promises.push(fetchTopHitsForDate(baseUrl, date));
@@ -48,7 +56,7 @@ async function sortTopHits() {
     const articlesMap = new Map();
 
     // Process valid results
-    validResults.forEach((dayData) => {
+    validResults.forEach((dayData, dayIndex) => {
       if (dayData.items && dayData.items[0] && dayData.items[0].articles) {
         dayData.items[0].articles.forEach((article) => {
           const { article: articleName, rank } = article;
@@ -57,6 +65,7 @@ async function sortTopHits() {
               totalRank: rank,
               count: 1,
               daysInTop1000: 1,
+              previousRank: { [dayIndex]: rank },
             });
           } else {
             const existing = articlesMap.get(articleName);
@@ -64,6 +73,7 @@ async function sortTopHits() {
               totalRank: existing.totalRank + rank,
               count: existing.count + 1,
               daysInTop1000: existing.daysInTop1000 + 1,
+              previousRank: { ...existing.previousRank, [dayIndex]: rank },
             });
           }
         });
@@ -73,10 +83,11 @@ async function sortTopHits() {
     // Convert map to array and calculate average rank
     const articlesArray = Array.from(
       articlesMap,
-      ([articleName, { totalRank, count, daysInTop1000 }]) => ({
+      ([articleName, { totalRank, count, daysInTop1000, previousRank }]) => ({
         article: articleName,
         averageRank: totalRank / count,
         daysInTop1000: daysInTop1000,
+        previousRank: previousRank,
       })
     );
 
@@ -127,14 +138,33 @@ function Trending() {
     return str.replace(/\(.*?\)/g, "");
   };
 
+  const getTrendIcon = (article) => {
+    const yesterdayIndex = 0;
+    const todayIndex = 1;
+
+    // Trend icon logic
+    if (
+      article.previousRank[yesterdayIndex] &&
+      article.previousRank[todayIndex]
+    ) {
+      const yesterdayRank = article.previousRank[yesterdayIndex];
+      const todayRank = article.previousRank[todayIndex];
+
+      if (todayRank < yesterdayRank) {
+        return <ArrowTrendingUpIcon className="trend-icon up" />;
+      } else if (todayRank > yesterdayRank) {
+        return <ArrowTrendingDownIcon className="trend-icon down" />;
+      }
+    }
+    return null;
+  };
+
   return (
-    <div
-      className="apiarticles"
-    >
+    <div className="apiarticles">
       <ul>
         {topArticles.map((article, index) => (
           <li key={index}>
-            <span className="numbers">{index + 1}. </span>
+            {/* <span className="numbers">{index + 1}. </span> */}
             <a
               href={`https://en.wikipedia.org/wiki/${encodeURIComponent(
                 article.article
@@ -145,6 +175,7 @@ function Trending() {
             >
               {removeParentheses(article.article.replace(/_/g, " "))}
             </a>
+            <span className="trend-icon">{getTrendIcon(article)}</span>
           </li>
         ))}
       </ul>

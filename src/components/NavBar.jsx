@@ -1,6 +1,6 @@
 import { Fragment, useState } from "react";
 import { Disclosure, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
 const navigation = [
@@ -39,9 +39,9 @@ export default function Navigation() {
                   aria-label={open ? "Close menu" : "Open menu"}
                 >
                   {open ? (
-                    <XMarkIcon className="block h-10 w-10" aria-hidden="true" />
+                    <XMarkIcon className="block h-8 w-8" aria-hidden="true" />
                   ) : (
-                    <Bars3Icon className="block h-10 w-10" aria-hidden="true" />
+                    <Bars2Icon className="block h-8 w-8" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>

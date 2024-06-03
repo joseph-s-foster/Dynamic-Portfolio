@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import background from "../assets/project/background.png";
-import caret from "../assets/project/caret.svg";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Trending from "../components/Trending";
 
 function Home() {
@@ -130,8 +130,8 @@ function Home() {
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
           </h2>
         </div>
-        <a className="caret90" href="#api" onClick={handleScroll}>
-          <img src={caret} alt="caret icon" />
+        <a className="caret" href="#api" onClick={handleScroll}>
+          <ChevronDownIcon className="w-10" aria-hidden="true" />
         </a>
       </div>
       <div
@@ -157,7 +157,13 @@ function Home() {
           <Trending />
         </div>
         <div className="apidesc2">
-          <h3>APIs and algorithms generate trending articles.</h3>
+          <h3
+            style={{
+              marginBottom: "4px",
+            }}
+          >
+            APIs and algorithms generate trending articles.
+          </h3>
           <div>
             <span
               onClick={handleViewProjectsClick}

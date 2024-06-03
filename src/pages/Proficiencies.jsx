@@ -1,7 +1,7 @@
 import React from "react";
 import "../Proficiencies.css";
-import caret from "../assets/project/caret.svg";
 import background from "../assets/project/background.png";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import html from "../assets/project/html.svg";
 import css from "../assets/project/css.svg";
 import javascript from "../assets/project/javascript.svg";
@@ -45,11 +45,11 @@ function Proficiences() {
               fontSize: "3rem",
             }}
           >
-            <div>Proficiencies</div>
+            Proficiencies
           </h1>
         </div>
-        <a className="caret90" href="#proficiencies" onClick={handleScroll}>
-          <img src={caret} alt="caret icon" />
+        <a className="caret" href="#api" onClick={handleScroll}>
+          <ChevronDownIcon className="w-10" aria-hidden="true" />
         </a>
       </div>
       <div id="proficiencies"></div>
