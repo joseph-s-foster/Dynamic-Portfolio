@@ -32,11 +32,11 @@
 }
 
 .trend-icon.up {
-  color: green;
+  color: #4CAF50;
 }
 
 .trend-icon.down {
-  color: red;
+  color: #F44336;
 }
 
 @media screen and (max-width: 1120px) {

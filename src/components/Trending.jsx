@@ -138,11 +138,12 @@ function Trending() {
     return str.replace(/\(.*?\)/g, "");
   };
 
+
+  // Trend icon logic
   const getTrendIcon = (article) => {
-    const yesterdayIndex = 0;
+    const yesterdayIndex = 2;
     const todayIndex = 1;
 
-    // Trend icon logic
     if (
       article.previousRank[yesterdayIndex] &&
       article.previousRank[todayIndex]
