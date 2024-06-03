@@ -41,8 +41,8 @@ async function sortTopHits() {
   const today = dayjs();
   const promises = [];
 
-  // Fetch data for the past week
-  for (let i = 1; i < 7; i++) {
+  // Fetch data for the past 72hrs
+  for (let i = 1; i < 4; i++) {
     const date = today.subtract(i, "day");
     promises.push(fetchTopHitsForDate(baseUrl, date));
   }

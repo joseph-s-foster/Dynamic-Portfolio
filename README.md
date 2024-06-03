@@ -4,7 +4,7 @@
 
 ## Description
 
-- Web-based portfolio using React, HTML, CSS, JavaScript and more!
+- Web-based portfolio using React, HTML5, CSS3, JavaScript and more!
 
   ## Table of Contents
 
@@ -13,20 +13,36 @@
   - [Contributing](#contributing)
   - [Questions](#questions)
   - [Link](#link-to-site)
+  - [Screenshot](#screenshot)
 
   ## Installation
 
   - bootstrap
   - react
   - vite
+  - dayjs
 
   ## User Story
 
   - Objective:
-    As a user, I want to develop a web application that showcases projects, languages, and proficiences.
+
+    Create a dynamic and visually appealing static web application that highlights front-end development skills, showcases various projects, and demonstrates technical capabilities.
 
   - Acceptance Criteria:
-    This is done when the application is dynamic and responsive and performs as expected without any page element or URL issues. 
+
+    1. Responsiveness: The application must perform seamlessly across multiple devices, including desktops, tablets, and smartphones.
+
+    2. Cross-Browser Compatibility: Ensure consistent functionality and appearance across all major web browsers (Chrome, Firefox, Safari, Edge).
+
+    3. Performance: The application should load quickly and efficiently, optimizing for both speed and resource usage.
+    
+    4. Accessibility: Follow accessibility best practices to make the application usable for people with disabilities.
+
+    5. Usability: The application should be easy to navigate, with intuitive UI/UX design.
+    
+    6. Content Presentation: Projects and skillsets should be clearly organized and presented, with engaging visuals and interactive elements.
+    
+    7. Code Quality: Maintain clean, well-documented, and maintainable code throughout the project.
 
   ## Contributing
 
