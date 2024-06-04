@@ -31,7 +31,7 @@ const fetchTopHitsForDate = async (date) => {
 // Sort top hits
 const sortTopHits = async () => {
   const today = dayjs();
-  const dates = [1, 2, 3].map((i) => today.subtract(i, "day"));
+  const dates = [1, 2].map((i) => today.subtract(i, "day"));
   const results = await Promise.all(dates.map(fetchTopHitsForDate));
 
   const articlesMap = new Map();
@@ -97,7 +97,7 @@ function Trending() {
     const previousRankVal = previousRank[previousDay];
     const recentRankVal = previousRank[recentDay];
 
-    if (index === 0 && recentRankVal >= previousRankVal) return null; // Top article shouldn't have a down arrow
+    if (index === 0) return <ArrowTrendingUpIcon className="trend-icon up" />; // Top article always shows up arrow
 
     if (recentRankVal < previousRankVal) {
       return <ArrowTrendingUpIcon className="trend-icon up" />;
