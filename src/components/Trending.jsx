@@ -6,13 +6,11 @@ import {
 import dayjs from "dayjs";
 import "../Trending.css";
 
-// Function to fetch data for a single date
-async function fetchTopHitsForDate(baseUrl, date) {
-  const year = date.format("YYYY");
-  const month = date.format("MM");
-  const day = date.format("DD");
+const BASE_URL = "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/";
 
-  const url = `${baseUrl}${year}/${month}/${day}`;
+// Fetch data for a single date
+const fetchTopHitsForDate = async (date) => {
+  const url = `${BASE_URL}${date.format("YYYY/MM/DD")}`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -23,103 +21,56 @@ async function fetchTopHitsForDate(baseUrl, date) {
         throw new Error(`Error fetching data: ${response.statusText}`);
       }
     }
-    const data = await response.json();
-    return data;
+    return await response.json();
   } catch (error) {
-    console.error(
-      `Error fetching Wikipedia data for ${date.format("YYYY-MM-DD")}:`,
-      error
-    );
+    console.error(`Error fetching Wikipedia data for ${date.format("YYYY-MM-DD")}:`, error);
     return null;
   }
-}
+};
 
-// Function to sort top hits
-async function sortTopHits() {
-  const baseUrl =
-    "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/";
+// Sort top hits
+const sortTopHits = async () => {
   const today = dayjs();
-  const promises = [];
+  const dates = [1, 2, 3].map((i) => today.subtract(i, "day"));
+  const results = await Promise.all(dates.map(fetchTopHitsForDate));
 
-  // Fetch data for the past 72hrs
-  for (let i = 1; i < 4; i++) {
-    const date = today.subtract(i, "day");
-    promises.push(fetchTopHitsForDate(baseUrl, date));
-  }
+  const articlesMap = new Map();
+  results.filter(Boolean).forEach((dayData, dayIndex) => {
+    if (dayData?.items?.[0]?.articles) {
+      dayData.items[0].articles.forEach(({ article, rank }) => {
+        if (!articlesMap.has(article)) {
+          articlesMap.set(article, {
+            totalRank: rank,
+            count: 1,
+            daysInTop1000: 1,
+            previousRank: { [dayIndex]: rank },
+          });
+        } else {
+          const existing = articlesMap.get(article);
+          articlesMap.set(article, {
+            totalRank: existing.totalRank + rank,
+            count: existing.count + 1,
+            daysInTop1000: existing.daysInTop1000 + 1,
+            previousRank: { ...existing.previousRank, [dayIndex]: rank },
+          });
+        }
+      });
+    }
+  });
 
-  try {
-    const results = await Promise.all(promises);
+  const articlesArray = Array.from(articlesMap, ([article, data]) => ({
+    article,
+    averageRank: data.totalRank / data.count,
+    daysInTop1000: data.daysInTop1000,
+    previousRank: data.previousRank,
+  })).filter(({ article }) =>
+    !["Main_Page", "Special:Search", "Wikipedia:Featured_pictures", "Pornhub", "Porno_y_helado", ".xxx"].includes(article)
+  ).sort((a, b) =>
+    b.daysInTop1000 - a.daysInTop1000 || a.averageRank - b.averageRank
+  ).slice(0, 10);
 
-    // Filter out null results
-    const validResults = results.filter((result) => result !== null);
-
-    const articlesMap = new Map();
-
-    // Process valid results
-    validResults.forEach((dayData, dayIndex) => {
-      if (dayData.items && dayData.items[0] && dayData.items[0].articles) {
-        dayData.items[0].articles.forEach((article) => {
-          const { article: articleName, rank } = article;
-          if (!articlesMap.has(articleName)) {
-            articlesMap.set(articleName, {
-              totalRank: rank,
-              count: 1,
-              daysInTop1000: 1,
-              previousRank: { [dayIndex]: rank },
-            });
-          } else {
-            const existing = articlesMap.get(articleName);
-            articlesMap.set(articleName, {
-              totalRank: existing.totalRank + rank,
-              count: existing.count + 1,
-              daysInTop1000: existing.daysInTop1000 + 1,
-              previousRank: { ...existing.previousRank, [dayIndex]: rank },
-            });
-          }
-        });
-      }
-    });
-
-    // Convert map to array and calculate average rank
-    const articlesArray = Array.from(
-      articlesMap,
-      ([articleName, { totalRank, count, daysInTop1000, previousRank }]) => ({
-        article: articleName,
-        averageRank: totalRank / count,
-        daysInTop1000: daysInTop1000,
-        previousRank: previousRank,
-      })
-    );
-
-    // Sort articles
-    articlesArray.sort((a, b) => {
-      if (a.daysInTop1000 !== b.daysInTop1000) {
-        return b.daysInTop1000 - a.daysInTop1000;
-      } else {
-        return a.averageRank - b.averageRank;
-      }
-    });
-
-    // Filter out specific articles
-    const filteredArticles = articlesArray.filter(
-      (article) =>
-        article.article !== "Main_Page" &&
-        article.article !== "Special:Search" &&
-        article.article !== "Wikipedia:Featured_pictures" &&
-        article.article !== "Pornhub" &&
-        article.article !== "Porno_y_helado" &&
-        article.article !== ".xxx"
-    );
-
-    // Take top 10 articles after filtering
-    const top10Articles = filteredArticles.slice(0, 10);
-
-    return top10Articles;
-  } catch (error) {
-    console.error("Error processing Wikipedia data:", error);
-    return null;
-  }
-}
+  return articlesArray;
+};
 
 // Trending component
 function Trending() {
@@ -134,28 +85,24 @@ function Trending() {
     fetchTopArticles();
   }, []);
 
-  const removeParentheses = (str) => {
-    return str.replace(/\(.*?\)/g, "");
-  };
-
+  const removeParentheses = (str) => str.replace(/\(.*?\)/g, "");
 
   // Trend icon logic
-  const getTrendIcon = (article) => {
-    const yesterdayIndex = 2;
-    const todayIndex = 1;
+  const getTrendIcon = (article, index) => {
+    const { previousRank } = article;
+    const rankKeys = Object.keys(previousRank);
+    if (rankKeys.length < 2) return null; // Not enough data to compare
 
-    if (
-      article.previousRank[yesterdayIndex] &&
-      article.previousRank[todayIndex]
-    ) {
-      const yesterdayRank = article.previousRank[yesterdayIndex];
-      const todayRank = article.previousRank[todayIndex];
+    const [previousDay, recentDay] = rankKeys.map(Number).sort((a, b) => a - b);
+    const previousRankVal = previousRank[previousDay];
+    const recentRankVal = previousRank[recentDay];
 
-      if (todayRank < yesterdayRank) {
-        return <ArrowTrendingUpIcon className="trend-icon up" />;
-      } else if (todayRank > yesterdayRank) {
-        return <ArrowTrendingDownIcon className="trend-icon down" />;
-      }
+    if (index === 0 && recentRankVal >= previousRankVal) return null; // Top article shouldn't have a down arrow
+
+    if (recentRankVal < previousRankVal) {
+      return <ArrowTrendingUpIcon className="trend-icon up" />;
+    } else if (recentRankVal > previousRankVal) {
+      return <ArrowTrendingDownIcon className="trend-icon down" />;
     }
     return null;
   };
@@ -165,18 +112,15 @@ function Trending() {
       <ul>
         {topArticles.map((article, index) => (
           <li key={index}>
-            {/* <span className="numbers">{index + 1}. </span> */}
             <a
-              href={`https://en.wikipedia.org/wiki/${encodeURIComponent(
-                article.article
-              )}`}
+              href={`https://en.wikipedia.org/wiki/${encodeURIComponent(article.article)}`}
               className="articles"
               target="_blank"
               rel="noopener noreferrer"
             >
               {removeParentheses(article.article.replace(/_/g, " "))}
             </a>
-            <span className="trend-icon">{getTrendIcon(article)}</span>
+            <span className="trend-icon">{getTrendIcon(article, index)}</span>
           </li>
         ))}
       </ul>
