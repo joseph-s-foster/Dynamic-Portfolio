@@ -37,16 +37,10 @@ body,
 
 .api {
   display: flex;
-  flex-direction: row;
-  margin-top: 40px;
-  margin-bottom: 24px;
 }
 
 .apiresults {
   flex: 1;
-  min-width: 0;
-  max-width: 50%;
-  box-sizing: border-box;
 }
 
 .apidesc2 {
@@ -56,21 +50,11 @@ body,
   box-sizing: border-box;
   margin-left: 11%;
   margin-right: 11%;
-  margin-top: 32px;
+  margin-top: 24px;
   margin-bottom: 56px;
   font-size: 2rem;
   display: inline;
 }
-
-@media screen and (max-width: 1120px) {
-  .api {
-    flex-direction: column;
-  }
-  .apiresults {
-    max-width: 100%;
-  }
-}
-
 
 @media screen and (max-width: 724px) {
   .interact1,
@@ -83,14 +67,9 @@ body,
     text-align: center;
   }
 
-  .api {
-    margin-top: 18px;
-  }
-
   .apidesc2 {
     margin-left: 16px;
     margin-right: 16px;
-    max-width: 100%;
   }
 }
 

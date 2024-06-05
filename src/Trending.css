@@ -3,8 +3,9 @@
 }
 
 .apitrend {
-  margin-bottom: 24px;
-  margin-left: 22%;
+  margin-top: 32px;
+  margin-bottom: 36px;
+  margin-left: 11%;
   font-size: 2rem;
 }
 
@@ -37,15 +38,9 @@
   color: #F44336;
 }
 
-@media screen and (max-width: 1120px) {
-  .apitrend {
-    margin-left: 11%;
-  }
-}
-
 @media screen and (max-width: 724px) {
   .apitrend {
-    margin: 24px 16px 24px 16px;
+    margin: 32px 16px 36px 16px;
   }
 
   .apiarticles {

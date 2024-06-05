@@ -135,14 +135,10 @@ function Home() {
         </a>
       </div>
       <div
-        // className="black"
         id="api"
         style={{
           display: "flex",
           flexDirection: "column",
-          // backgroundColor: "black",
-          // backgroundSize: "cover",
-          // backgroundPosition: "center",
         }}
       >
         <div className="api">
