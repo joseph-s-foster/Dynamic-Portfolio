@@ -15,15 +15,15 @@
 }
 
 .apiarticles li {
-  padding-top: 15px;
+  padding-top: 16px;
   padding-bottom: 16px;
   border-top: solid 1px #eeeeee;
   font-size: 1.25rem;
+  padding-right: 48px;
 }
 
 .trend-icon {
   display: inline-flex;
-  align-items: right;
   position: absolute;
   padding-top: 2px;
   right: 11%;
