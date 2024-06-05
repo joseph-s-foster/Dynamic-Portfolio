@@ -60,7 +60,7 @@ const Component = ({ projectsGroup1 }) => {
         <div className="profdesc">
           <h3
             style={{
-              marginBottom: "4px",
+              marginBottom: "8px",
             }}
           >
             Skills in multiple languages.

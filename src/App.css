@@ -18,6 +18,24 @@ body,
   box-sizing: border-box;
 }
 
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.25rem;
+}
+
+.main-container {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
 .interact1 {
   position: absolute;
   bottom: 31%;

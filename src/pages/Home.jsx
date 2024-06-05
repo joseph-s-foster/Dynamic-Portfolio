@@ -155,7 +155,7 @@ function Home() {
         <div className="apidesc2">
           <h3
             style={{
-              marginBottom: "4px",
+              marginBottom: "8px",
             }}
           >
             APIs and algorithms generate trending articles.
