@@ -71,7 +71,7 @@ const Component = ({ projectsGroup1 }) => {
               onClick={handleViewProficienciesClick}
               style={{
                 padding: "12px",
-                fontSize: "1.25rem",
+                fontSize: "1rem",
                 border: "solid #eeeeee 2px",
                 borderRadius: "6px",
                 cursor: "pointer",

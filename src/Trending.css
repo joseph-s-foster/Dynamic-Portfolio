@@ -5,7 +5,7 @@
 .apitrend {
   margin-bottom: 24px;
   margin-left: 22%;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .apiarticles {
@@ -18,17 +18,15 @@
   padding-top: 16px;
   padding-bottom: 16px;
   border-top: solid 1px #eeeeee;
-  font-size: 1.25rem;
-  padding-right: 48px;
+  font-size: 1rem;
 }
 
 .trend-icon {
-  display: inline-flex;
   position: absolute;
   padding-top: 2px;
   right: 11%;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .trend-icon.up {

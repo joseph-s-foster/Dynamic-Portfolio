@@ -169,7 +169,7 @@ function Home() {
               onClick={handleViewProjectsClick}
               style={{
                 padding: "12px",
-                fontSize: "1.25rem",
+                fontSize: "1rem",
                 border: "solid #eeeeee 2px",
                 borderRadius: "6px",
                 cursor: "pointer",

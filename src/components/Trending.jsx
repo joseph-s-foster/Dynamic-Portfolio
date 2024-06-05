@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArrowTrendingDownIcon, ArrowTrendingUpIcon,} from "@heroicons/react/24/outline";
+import { ArrowTrendingDownIcon, ArrowTrendingUpIcon } from "@heroicons/react/24/outline";
 import dayjs from "dayjs";
 import "../Trending.css";
 
@@ -84,9 +84,17 @@ const sortTopHits = async () => {
   return articlesArray;
 };
 
+// Helper function to truncate titles
+const truncateTitle = (title) => {
+  const cleanTitle = title.replace(/\(.*?\)/g, "").replace(/_/g, " ");
+  let truncated = cleanTitle.slice(0, 36).trimEnd();
+  return cleanTitle.length > 30 ? `${truncated}...` : cleanTitle;
+};
+
 // Trending component
 function Trending() {
   const [topArticles, setTopArticles] = useState([]);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 724);
 
   useEffect(() => {
     const fetchTopArticles = async () => {
@@ -95,6 +103,13 @@ function Trending() {
     };
 
     fetchTopArticles();
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 724);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   // Trend icon logic
@@ -107,18 +122,16 @@ function Trending() {
     // show up arrow if article is higher in rank than the day before
     if (rank < previousRank || previousRank === null) {
       return <ArrowTrendingUpIcon className="trend-icon up" />;
+    }
 
-    // show down arrow if the article is still the top 10 but lower in rank than the day before  
-    } else if (rank > previousRank) {
+    // show down arrow if the article is still the top 10 but lower in rank than the day before
+    if (rank > previousRank) {
       return <ArrowTrendingDownIcon className="trend-icon down" />;
     }
 
     // return null if the conditions above are not met
     return null;
   };
-
-  // removes parentheses from article titles
-  const removeParentheses = (str) => str.replace(/\(.*?\)/g, "");
 
   // displays article data and trend arrows as html elements with links to each article
   return (
@@ -127,14 +140,12 @@ function Trending() {
         {topArticles.map((article, index) => (
           <li key={index}>
             <a
-              href={`https://en.wikipedia.org/wiki/${encodeURIComponent(
-                article.article
-              )}`}
+              href={`https://en.wikipedia.org/wiki/${encodeURIComponent(article.article)}`}
               className="articles"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {removeParentheses(article.article.replace(/_/g, " "))}
+              {isMobile ? truncateTitle(article.article) : article.article.replace(/_/g, " ")}
             </a>
             <span className="trend-icon">{getTrendIcon(article)}</span>
           </li>
