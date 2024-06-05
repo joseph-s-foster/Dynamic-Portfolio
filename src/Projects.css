@@ -64,7 +64,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 3% 11% 3% 11%;
+  margin: 36px 11% 0 11%;
 }
 
 .tile {
@@ -74,27 +74,21 @@
   margin-bottom: 24px;
   border-radius: 12px;
   overflow: hidden;
-  /* transition: box-shadow 0.3s ease-in-out; */
 }
 
 .profdesc {
+  flex: 1;
   margin-left: 11%;
+  margin-right: 11%;
+  margin-top: 24px;
+  margin-bottom: 56px;
   font-size: 2rem;
-  width: 43%;
-  margin-top: 32px;
-  margin-bottom: 48px;
 }
 
 @media screen and (max-width: 1428px) {
   .tile {
     flex-basis: calc(50% - 24px);
     padding-bottom: calc(50% - 24px);
-    margin-bottom: 48px;
-  }
-
-  .profdesc {
-    width: 66%;
-    margin-top: 0;
   }
 }
 
@@ -102,7 +96,6 @@
   .tile {
     flex-basis: calc(100%);
     padding-bottom: calc(100%);
-    margin-bottom: 48px;
   }
   .tiles {
     margin-left: 16px;
@@ -112,7 +105,6 @@
   .profdesc {
     margin-left: 16px;
     margin-right: 16px;
-    width: 100%;
   }
 }
 

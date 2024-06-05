@@ -3,7 +3,7 @@
 }
 
 .apitrend {
-  margin-top: 32px;
+  margin-top: 36px;
   margin-bottom: 36px;
   margin-left: 11%;
   font-size: 2rem;
@@ -40,7 +40,7 @@
 
 @media screen and (max-width: 724px) {
   .apitrend {
-    margin: 32px 16px 36px 16px;
+    margin: 36px 16px 36px 16px;
   }
 
   .apiarticles {

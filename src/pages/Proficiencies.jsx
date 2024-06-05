@@ -53,14 +53,6 @@ function Proficiences() {
         </a>
       </div>
       <div id="proficiencies"></div>
-      {/* <h1
-        className="tags"
-        style={{
-          paddingLeft: "1%",
-          paddingRight: "1%",
-        }}
-      >
-      </h1> */}
       <div className="icons">
         <img src={html} alt="HTML" />
         <img src={css} alt="CSS" />
