@@ -12,39 +12,33 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    // stores page data locally to conditionally render loading useEffect
     const visitedPages = JSON.parse(localStorage.getItem("visitedPages")) || {};
     const currentPage = location.pathname;
 
     if (!visitedPages[currentPage]) {
       visitedPages[currentPage] = true;
       localStorage.setItem("visitedPages", JSON.stringify(visitedPages));
-
-      setLoading(true);
-      setFadeIn(false);
-
-      const timer = setTimeout(() => {
-        setLoading(false);
-        setTimeout(() => setFadeIn(true));
-      }, 2000);
-
-      // Cleanup the timer on component unmount
-      return () => clearTimeout(timer);
-    } else {
-      setLoading(false);
-      setFadeIn(true);
     }
-  }, [location]);
 
-  if (loading) {
-    return <h2 className="loading animate-fade">Loading...</h2>;
-  }
+    // Mark loading as false after initial render
+    setLoading(false);
+    // Set fade-in effect after initial render
+    setFadeIn(true);
+
+    // No need to set a timer, as we want the loading animation to show immediately
+
+  }, [location]);
 
   return (
     <div className={`main-container ${fadeIn ? "fade-in" : ""}`}>
-      <Nav />
-      <Outlet />
-      <Footer />
+      {loading && <h2 className="loading animate-fade">Loading...</h2>}
+      {!loading && (
+        <>
+          <Nav />
+          <Outlet />
+          <Footer />
+        </>
+      )}
     </div>
   );
 }
