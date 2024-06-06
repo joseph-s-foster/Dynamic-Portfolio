@@ -26,7 +26,7 @@ function App() {
       const timer = setTimeout(() => {
         setLoading(false);
         setTimeout(() => setFadeIn(true));
-      }, 1000);
+      }, 2000);
 
       // Cleanup the timer on component unmount
       return () => clearTimeout(timer);
@@ -37,7 +37,7 @@ function App() {
   }, [location]);
 
   if (loading) {
-    return <h2 className="loading">Loading...</h2>;
+    return <h2 className="loading animate-fade">Loading...</h2>;
   }
 
   return (
