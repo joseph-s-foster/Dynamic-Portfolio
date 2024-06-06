@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className={`main-container ${fadeIn ? "fade-in" : ""}`}>
-      {!imagesLoaded && <h2 className="loading animate-fade">Loading...</h2>}
+      {!imagesLoaded && <h2 className="loading">Loading...</h2>}
       {imagesLoaded && (
         <>
           <Nav />
