@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
-import { ArrowTrendingDownIcon, ArrowTrendingUpIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowTrendingDownIcon,
+  ArrowTrendingUpIcon,
+} from "@heroicons/react/24/outline";
 import dayjs from "dayjs";
 import "../Trending.css";
 
-const BASE_URL = "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/";
+const BASE_URL =
+  "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/";
 
 // Fetch data for a single date
 const fetchTopHitsForDate = async (date) => {
@@ -84,11 +88,15 @@ const sortTopHits = async () => {
   return articlesArray;
 };
 
+// Helper function to clean titles
+const cleanTitle = (title) => {
+  return title.replace(/\(.*?\)/g, "").replace(/_/g, " ");
+};
+
 // Helper function to truncate titles
-const truncateTitle = (title) => {
-  const cleanTitle = title.replace(/\(.*?\)/g, "").replace(/_/g, " ");
-  let truncated = cleanTitle.slice(0, 36).trimEnd();
-  return cleanTitle.length > 30 ? `${truncated}...` : cleanTitle;
+const truncateTitle = (title, length) => {
+  let truncated = title.slice(0, length).trimEnd();
+  return title.length > length ? `${truncated}...` : title;
 };
 
 // Trending component
@@ -133,23 +141,31 @@ function Trending() {
     return null;
   };
 
-  // displays article data and trend arrows as html elements with links to each article
   return (
     <div className="apiarticles">
       <ul>
-        {topArticles.map((article, index) => (
-          <li key={index}>
-            <a
-              href={`https://en.wikipedia.org/wiki/${encodeURIComponent(article.article)}`}
-              className="articles"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {isMobile ? truncateTitle(article.article) : article.article.replace(/_/g, " ")}
-            </a>
-            <span className="trend-icon">{getTrendIcon(article)}</span>
-          </li>
-        ))}
+        {topArticles.map((article, index) => {
+          const cleanedTitle = cleanTitle(article.article);
+          const displayTitle = isMobile
+            ? truncateTitle(cleanedTitle, 32)
+            : cleanedTitle;
+
+          return (
+            <li key={index}>
+              <a
+                href={`https://en.wikipedia.org/wiki/${encodeURIComponent(
+                  article.article
+                )}`}
+                className="articles"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {displayTitle}
+              </a>
+              <span className="trend-icon">{getTrendIcon(article)}</span>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

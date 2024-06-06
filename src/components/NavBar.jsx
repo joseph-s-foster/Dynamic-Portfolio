@@ -31,19 +31,19 @@ export default function Navigation() {
         <>
           <div className="mx-auto px-2 sm:px-2 lg:px-2">
             <div className="relative flex items-center justify-between">
-              <div className="absolute inset-y-8 left-0 flex items-center">
+              <div className="absolute inset-y-7 left-0 flex items-center">
                 <Disclosure.Button
                   id="menu"
-                  className="relative inline-flex items-center justify-center rounded-md p-2.5"
+                  className="relative inline-flex items-center justify-center rounded-md p-2"
                   onClick={handleMobileMenuToggle}
                   aria-label={open ? "Close menu" : "Open menu"}
                 >
                   {open ? (
-                    <XMarkIcon className="block h-8 w-8" aria-hidden="true" />
+                    <XMarkIcon className="block h-7 w-7" aria-hidden="true" />
                   ) : (
-                    <Bars2Icon className="block h-8 w-8" aria-hidden="true" />
+                    <Bars2Icon className="block h-7 w-7" aria-hidden="true" />
                   )}
-                </Disclosure.Button>
+                </Disclosure.Button>MENU
               </div>
               {/* <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="hidden sm:block">

@@ -131,7 +131,7 @@ function Home() {
           </h2>
         </div>
         <a className="caret" href="#api" onClick={handleScroll}>
-          <ChevronDownIcon className="w-10" aria-hidden="true" />
+          <ChevronDownIcon className="w-8" aria-hidden="true" />
         </a>
       </div>
       <div
