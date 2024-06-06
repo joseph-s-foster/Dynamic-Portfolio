@@ -12,6 +12,7 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
+    // stores page data locally to conditionally render loading useEffect
     const visitedPages = JSON.parse(localStorage.getItem("visitedPages")) || {};
     const currentPage = location.pathname;
 
@@ -24,8 +25,8 @@ function App() {
 
       const timer = setTimeout(() => {
         setLoading(false);
-        setTimeout(() => setFadeIn(true), 10); // Add slight delay to trigger fade-in
-      }, 500); // Simulate a 1-second loading time
+        setTimeout(() => setFadeIn(true));
+      }, 1000);
 
       // Cleanup the timer on component unmount
       return () => clearTimeout(timer);
