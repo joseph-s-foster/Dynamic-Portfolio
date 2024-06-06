@@ -43,7 +43,7 @@ export default function Navigation() {
                   ) : (
                     <Bars2Icon className="block h-7 w-7" aria-hidden="true" />
                   )}
-                </Disclosure.Button>MENU
+                </Disclosure.Button>
               </div>
               {/* <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="hidden sm:block">

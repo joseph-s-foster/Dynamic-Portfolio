@@ -129,12 +129,12 @@ function Trending() {
 
     // show up arrow if article is higher in rank than the day before
     if (rank < previousRank || previousRank === null) {
-      return <ArrowTrendingUpIcon className="trend-icon up" />;
+      return <ArrowTrendingUpIcon className="trend-icon up" aria-hidden="true"/>;
     }
 
     // show down arrow if the article is still the top 10 but lower in rank than the day before
     if (rank > previousRank) {
-      return <ArrowTrendingDownIcon className="trend-icon down" />;
+      return <ArrowTrendingDownIcon className="trend-icon down" aria-hidden="true"/>;
     }
 
     // return null if the conditions above are not met
