@@ -32,18 +32,19 @@ function App() {
     }
   }, [location, imagesLoaded]);
 
-  return (
-    <div className={`main-container ${fadeIn ? "fade-in" : ""}`}>
-      {!imagesLoaded && <h2 className="loading">Loading...</h2>}
-      {imagesLoaded && (
-        <>
-          <Nav />
-          <Outlet />
-          <Footer />
-        </>
-      )}
-    </div>
-  );
+return (
+  <div className={`main-container ${fadeIn ? "fade-in" : ""}`}>
+    {imagesLoaded ? (
+      <>
+        <Nav />
+        <Outlet />
+        <Footer />
+      </>
+    ) : (
+      <h2 className="loading">Loading...</h2>
+    )}
+  </div>
+);
 }  
 
 export default App;
