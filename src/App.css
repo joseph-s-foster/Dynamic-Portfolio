@@ -28,15 +28,6 @@ body,
   font-size: 1.5rem;
 }
 
-/* @keyframes fade {
-  0%, 100% {
-    color: black;
-  }
-  50% {
-    color: #dddddd;
-  }
-} */
-
 @keyframes fadeOut {
   from {
     opacity: 0;

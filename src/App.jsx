@@ -11,10 +11,12 @@ function App() {
   const [fadeIn, setFadeIn] = useState(false);
   const location = useLocation();
 
+  // store data locally
   useEffect(() => {
     const visitedPages = JSON.parse(localStorage.getItem("visitedPages")) || {};
     const currentPage = location.pathname;
-
+    
+    // conditionally renders loading useEffect on first page visit only
     if (!visitedPages[currentPage]) {
       visitedPages[currentPage] = true;
       localStorage.setItem("visitedPages", JSON.stringify(visitedPages));
@@ -24,9 +26,6 @@ function App() {
     setLoading(false);
     // Set fade-in effect after initial render
     setFadeIn(true);
-
-    // No need to set a timer, as we want the loading animation to show immediately
-
   }, [location]);
 
   return (
