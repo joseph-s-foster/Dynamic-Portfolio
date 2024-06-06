@@ -37,7 +37,6 @@ body,
   }
 } */
 
-
 @keyframes fadeOut {
   from {
     opacity: 0;
@@ -58,6 +57,7 @@ body,
 
 .animate-fade {
   animation: fadeIn 1s, fadeOut 1s infinite alternate;
+  -webkit-animation: fadeIn 1s, fadeOut 1s infinite alternate; /* Safari */
 }
 
 .main-container {
