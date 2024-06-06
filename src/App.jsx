@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Nav from "./components/NavBar";
 import Footer from "./components/Footer";
-import useImagesLoaded from "./hooks/loading"; // import custom hook
+import useImagesLoaded from "./hooks/loading";
+import background from "./assets/project/background.png";
+import wyr from "./assets/project/wyr.png";
+import blog from "./assets/project/blog.png";
+import pulse from "./assets/project/pulse.png";
+import coffee from "./assets/project/coffee.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "./App.css";
@@ -10,17 +15,7 @@ import "./App.css";
 function App() {
   const [fadeIn, setFadeIn] = useState(false);
   const location = useLocation();
-
-  // Dummy image URLs for example; replace with actual URLs used in your project
-  const imageUrls = [
-    "./src/assets/project/background.png",
-    "./src/assets/project/wyr.png",
-    "./src/assets/project/blog.png",
-    "./src/assets/project/pulse.png",
-    "./src/assets/project/coffee.png",
-    // Add all the image URLs that need to be loaded
-  ];
-
+  const imageUrls = [background, wyr, blog, pulse, coffee];
   const imagesLoaded = useImagesLoaded(imageUrls);
 
   useEffect(() => {
