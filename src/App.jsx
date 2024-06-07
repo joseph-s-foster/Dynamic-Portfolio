@@ -10,20 +10,10 @@ function App() {
   const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
-    const visitedBefore = localStorage.getItem("visitedBefore");
-
-    if (!visitedBefore) {
-      // First visit, set fadeIn to true and mark as visited
-      localStorage.setItem("visitedBefore", "true");
+    // Triggering a re-render after a short delay to apply the fade-in effect
+    setTimeout(() => {
       setFadeIn(true);
-    } else {
-      // Subsequent visits, set fadeIn to true after a delay
-      const timeout = setTimeout(() => {
-        setFadeIn(true);
-      }, 500); // Adjust the delay time as needed
-
-      return () => clearTimeout(timeout); // Cleanup the timeout
-    }
+    }, 500);
   }, []);
 
   return (
