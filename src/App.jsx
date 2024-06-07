@@ -44,7 +44,9 @@ function App() {
           <Footer />
         </>
       ) : (
-        <h2 className="loading">Loading assets...</h2>
+        <div className="loading">
+          <h2>Loading assets...</h2>
+        </div>
       )}
     </div>
   );
