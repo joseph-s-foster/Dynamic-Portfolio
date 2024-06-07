@@ -72,7 +72,7 @@ const Component = ({ projectsGroup1 }) => {
               style={{
                 padding: "12px",
                 fontSize: "1rem",
-                border: "solid #eeeeee 2px",
+                border: "solid #dddddd 1px",
                 borderRadius: "6px",
                 cursor: "pointer",
               }}
