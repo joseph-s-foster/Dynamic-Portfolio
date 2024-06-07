@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Nav from "./components/NavBar";
 import Footer from "./components/Footer";
+import Loading from "./components/Loading";
 import loading from "./hooks/loading";
 import background from "./assets/project/background.png";
 import wyr from "./assets/project/wyr.png";
@@ -76,7 +77,7 @@ function App() {
           <Footer /> {/* Footer component */}
         </>
       ) : (
-        <h2 className="loading">Loading assets...</h2> // Loading message
+        <Loading />
       )}
     </div>
   );
