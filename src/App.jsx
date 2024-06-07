@@ -13,7 +13,7 @@ function App() {
     // Triggering a re-render after a short delay to apply the fade-in effect
     setTimeout(() => {
       setFadeIn(true);
-    }, 500);
+    }, 250);
   }, []);
 
   return (
