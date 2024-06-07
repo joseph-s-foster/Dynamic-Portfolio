@@ -158,7 +158,7 @@ function Home() {
               marginBottom: "8px",
             }}
           >
-            APIs and algorithms generate trending articles.
+            APIs and algorithms display trending articles.
           </h3>
           <div>
             <span
@@ -167,7 +167,7 @@ function Home() {
                 padding: "12px",
                 fontSize: "1rem",
                 border: "solid #dddddd 1px",
-                borderRadius: "4px",
+                borderRadius: "2px",
                 cursor: "pointer",
               }}
               className="explore"
