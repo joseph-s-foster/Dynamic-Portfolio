@@ -72,8 +72,8 @@ const Component = ({ projectsGroup1 }) => {
               style={{
                 padding: "12px",
                 fontSize: "1rem",
-                border: "solid #dddddd 1px",
-                borderRadius: "2px",
+                border: "solid #dddddd 2px",
+                borderRadius: "4px",
                 cursor: "pointer",
               }}
               className="explore"
