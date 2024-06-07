@@ -86,7 +86,7 @@ export default function Navigation() {
                     as={Link}
                     to={item.to}
                     className={classNames(
-                      "block mx-3 py-2 text-xl",
+                      "block ml-3 py-2 text-lg",
                       "hover:underline"
                     )}
                     onClick={closeMobileMenu}
