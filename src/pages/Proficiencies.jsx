@@ -1,5 +1,4 @@
 import React from "react";
-import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import html from "../assets/project/html.svg";
@@ -27,7 +26,6 @@ function Proficiencies() {
 
   return (
     <>
-      <Nav />
       <div
         style={{
           display: "flex",
