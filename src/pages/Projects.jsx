@@ -1,4 +1,6 @@
 import React from "react";
+import fadeIn from "../hooks/fadeIn";
+import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Project from "../components/Project";
@@ -19,6 +21,7 @@ const Component = ({ projectsGroup1 }) => {
 
   return (
     <>
+    <Nav />
       <div
         style={{
           display: "flex",
@@ -120,4 +123,4 @@ function Projects() {
   return <Component projectsGroup1={projectsGroup1} />;
 }
 
-export default Projects;
+export default fadeIn(Projects);

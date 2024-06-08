@@ -1,5 +1,6 @@
 import React from "react";
-import "../Proficiencies.css";
+import fadeIn from "../hooks/fadeIn";
+import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import html from "../assets/project/html.svg";
@@ -14,6 +15,7 @@ import mongodb from "../assets/project/mongodb.svg";
 import react from "../assets/project/react.svg";
 import graphql from "../assets/project/graphql.svg";
 import python from "../assets/project/python.svg";
+import "../Proficiencies.css";
 
 function Proficiences() {
   const handleScroll = (event) => {
@@ -27,6 +29,7 @@ function Proficiences() {
 
   return (
     <>
+    <Nav />
       <div
         style={{
           display: "flex",
@@ -71,4 +74,4 @@ function Proficiences() {
   );
 }
 
-export default Proficiences;
+export default fadeIn(Proficiences);

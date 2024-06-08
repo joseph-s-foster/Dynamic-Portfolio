@@ -18,16 +18,16 @@
 .apiarticles li {
   padding-top: 16px;
   padding-bottom: 16px;
-  border-top: solid 2px #dddddd;
+  border-top: solid 2px grey;
   font-size: 1rem;
 }
 
 .trend-icon {
   position: absolute;
-  padding-top: 2px;
+  /* padding-top: 2px; */
   right: 11%;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .trend-icon.up {

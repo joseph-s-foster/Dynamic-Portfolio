@@ -14,7 +14,7 @@ function classNames(...classes) {
 }
 
 export default function Navigation() {
-  const location = useLocation();
+  // const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleMobileMenuToggle = () => {
@@ -45,25 +45,6 @@ export default function Navigation() {
                   )}
                 </Disclosure.Button>
               </div>
-              {/* <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="hidden sm:block">
-                  <div className="navbar-link flex space-x-2">
-                    {navigation.map((item) => (
-                      <NavLink
-                        key={item.name}
-                        to={item.to}
-                        className={classNames(
-                          " text-lg px-3", // Increased font size to 1.5rem (1.5 * 16px)
-                          { "text-white": location.pathname === item.to },
-                          "hover:underline" // Added hover underline
-                        )}
-                      >
-                        {item.name}
-                      </NavLink>
-                    ))}
-                  </div>
-                </div>
-              </div> */}
             </div>
           </div>
 
@@ -104,3 +85,4 @@ export default function Navigation() {
     </Disclosure>
   );
 }
+
