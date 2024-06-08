@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import fadeIn from "../hooks/fadeIn";
 import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
@@ -184,4 +183,4 @@ function Home() {
   );
 }
 
-export default fadeIn(Home);
+export default Home;

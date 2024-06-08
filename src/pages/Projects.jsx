@@ -1,5 +1,4 @@
 import React from "react";
-import fadeIn from "../hooks/fadeIn";
 import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
@@ -123,4 +122,4 @@ function Projects() {
   return <Component projectsGroup1={projectsGroup1} />;
 }
 
-export default fadeIn(Projects);
+export default Projects;

@@ -6,7 +6,6 @@ import "bootstrap/dist/js/bootstrap.bundle";
 import "./App.css";
 
 function App() {
-
   return (
     <div>
       <Outlet />

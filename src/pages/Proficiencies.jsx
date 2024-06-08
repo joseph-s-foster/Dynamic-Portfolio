@@ -1,5 +1,4 @@
 import React from "react";
-import fadeIn from "../hooks/fadeIn";
 import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
@@ -74,4 +73,4 @@ function Proficiences() {
   );
 }
 
-export default fadeIn(Proficiences);
+export default Proficiences;

@@ -18,7 +18,7 @@ body,
   box-sizing: border-box;
 }
 
-.main-container {
+/* .main-container {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -29,7 +29,7 @@ body,
 
 .fade-out {
   opacity: 0;
-}
+} */
 
 .interact1 {
   position: absolute;
