@@ -1,3 +1,4 @@
+// Projects.jsx
 import React, { useState, useEffect } from "react";
 import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
@@ -9,11 +10,7 @@ const Component = ({ projectsGroup1 }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
+    setIsLoading(false);
   }, []);
 
   const handleScroll = (event) => {
