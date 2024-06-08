@@ -21,16 +21,14 @@ const Component = ({ projectsGroup1 }) => {
       return Promise.all(promises);
     };
 
-    const imageSources = projectsGroup1.map((project) => project.image);
-
     const timer = setTimeout(() => {
-      preloadImages([background, ...imageSources.map((image) => `../assets/projects/${image}.png`)])
+      preloadImages([background])
         .then(() => setIsLoading(false))
         .catch(() => setIsLoading(false)); // handle error if necessary
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, [projectsGroup1]);
+  }, []);
 
   const handleScroll = (event) => {
     event.preventDefault();
