@@ -31,7 +31,9 @@ function Home() {
         setIsLoading(false);
       }, 1000);
     } else {
-      setIsLoading(false);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 500);
     }
   }, []);
 
@@ -103,7 +105,7 @@ function Home() {
 
   return (
     <>
-    <div style={{ position: "relative", zIndex: isLoading? 1 : 2 }}>
+    <div style={{ zIndex: isLoading? 1 : 2 }}>
         <Nav />
       </div>
       {isLoading && <LoadingSpinner />}
