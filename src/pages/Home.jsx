@@ -3,10 +3,13 @@ import { useLocation } from "react-router-dom";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Trending from "../components/Trending";
+import LoadingSpinner from "../hooks/LoadingSpinner"; // Adjust the path as necessary
 
 function Home() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
+  const [isLoading, setIsLoading] = useState(false); // Default to false to avoid spinner on subsequent visits
+
   const textToType = "UX-Driven";
   const texttoType2 = "Mobile-Friendly";
   const texttoType3 = "Full Stack Web Developer";
@@ -73,6 +76,21 @@ function Home() {
     typeAndBackspace();
   }, [textToType]);
 
+  useEffect(() => {
+    const hasVisitedBefore = localStorage.getItem("hasVisitedHomePageBefore");
+
+    if (!hasVisitedBefore) {
+      setIsLoading(true);
+      localStorage.setItem("hasVisitedHomePageBefore", "true");
+
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   const handleScroll = (event) => {
     event.preventDefault();
     const projectsContainer = document.getElementById("api");
@@ -87,79 +105,74 @@ function Home() {
 
   return (
     <>
+      {isLoading && <LoadingSpinner />}
       <div
         style={{
-          display: "flex",
+          display: isLoading ? "none" : "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100vh",
-          backgroundImage: `url(${background})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
         }}
       >
-        <div className="interact1">
-          <h1
-            style={{
-              fontSize: "3rem",
-              paddingBottom: "4px",
-            }}
-          >
-            Joseph Foster
-          </h1>
-          <h2
-            style={{
-              fontSize: "1.5rem",
-            }}
-          >
-            {typedText}
-            <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
-          </h2>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100vh",
+            backgroundImage: `url(${background})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="interact1">
+            <h1 style={{ fontSize: "3rem", paddingBottom: "4px" }}>
+              Joseph Foster
+            </h1>
+            <h2 style={{ fontSize: "1.5rem" }}>
+              {typedText}
+              <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+            </h2>
+          </div>
+          <a className="caret" href="#api" onClick={handleScroll}>
+            <ChevronDownIcon className="w-8" aria-hidden="true" />
+          </a>
         </div>
-        <a className="caret" href="#api" onClick={handleScroll}>
-          <ChevronDownIcon className="w-8" aria-hidden="true" />
-        </a>
-      </div>
-      <div
-        id="api"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <div className="api">
-          <div className="apiresults">
-            <div className="apitrend">
-              <h3>Trending Now</h3>
+        <div
+          id="api"
+          style={{
+            display: isLoading ? "none" : "flex",
+            flexDirection: "column",
+          }}
+        >
+          <div className="api">
+            <div className="apiresults">
+              <div className="apitrend">
+                <h3>Trending Now</h3>
+              </div>
             </div>
           </div>
-        </div>
-        <div>
-          <Trending />
-        </div>
-        <div className="apidesc2">
-          <h3
-            style={{
-              marginBottom: "8px",
-            }}
-          >
-            APIs and algorithms display trending articles.
-          </h3>
           <div>
-            <span
-              onClick={handleViewProjectsClick}
-              style={{
-                padding: "12px",
-                fontSize: "1rem",
-                border: "solid #dddddd 2px",
-                borderRadius: "4px",
-                cursor: "pointer",
-              }}
-              className="explore"
-            >
-              View more projects
-            </span>
+            <Trending />
+          </div>
+          <div className="apidesc2">
+            <h3 style={{ marginBottom: "8px" }}>
+              APIs and algorithms display trending articles.
+            </h3>
+            <div>
+              <span
+                onClick={handleViewProjectsClick}
+                style={{
+                  padding: "12px",
+                  fontSize: "1rem",
+                  border: "solid #dddddd 2px",
+                  borderRadius: "4px",
+                  cursor: "pointer",
+                }}
+                className="explore"
+              >
+                View more projects
+              </span>
+            </div>
           </div>
         </div>
       </div>

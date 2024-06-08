@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import LoadingSpinner from "../hooks/LoadingSpinner";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Project from "../components/Project";
 
 const Component = ({ projectsGroup1 }) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const hasVisitedBefore = localStorage.getItem(
+      "hasVisitedProjectsPageBefore"
+    );
+
+    if (!hasVisitedBefore) {
+      setIsLoading(true);
+      localStorage.setItem("hasVisitedProjectsPageBefore", "true");
+
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   const handleScroll = (event) => {
     event.preventDefault();
     const projectsContainer = document.getElementById("projects");
@@ -18,70 +38,78 @@ const Component = ({ projectsGroup1 }) => {
 
   return (
     <>
+      {isLoading && <LoadingSpinner />}
       <div
         style={{
-          display: "flex",
+          display: isLoading ? "none" : "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100vh",
-          backgroundImage: `url(${background})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
         }}
       >
-        <div className="interact2">
-          <h1
-            style={{
-              fontSize: "3rem",
-            }}
-          >
-            Projects
-          </h1>
-        </div>
-        <a className="caret" href="#api" onClick={handleScroll}>
-          <ChevronDownIcon className="w-8" aria-hidden="true" />
-        </a>
-      </div>
-      <div id="projects"></div>
-      <div>
-        <div className="tiles">
-          {projectsGroup1.map((project) => (
-            <div
-              key={"project-" + project.name}
-              id={"project-" + project.image}
-              className="tile"
-            >
-              <Project project={project} />
-            </div>
-          ))}
-        </div>
-        <div className="profdesc">
-          <h3
-            style={{
-              marginBottom: "8px",
-            }}
-          >
-            Skills in multiple languages.
-          </h3>
-          <div>
-            <span
-              onClick={handleViewProficienciesClick}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100vh",
+            backgroundImage: `url(${background})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="interact2">
+            <h1
               style={{
-                padding: "12px",
-                fontSize: "1rem",
-                border: "solid #dddddd 2px",
-                borderRadius: "4px",
-                cursor: "pointer",
+                fontSize: "3rem",
               }}
-              className="explore"
             >
-              View proficiencies
-            </span>
+              Projects
+            </h1>
+          </div>
+          <a className="caret" href="#api" onClick={handleScroll}>
+            <ChevronDownIcon className="w-8" aria-hidden="true" />
+          </a>
+        </div>
+        <div id="projects"></div>
+        <div>
+          <div className="tiles">
+            {projectsGroup1.map((project) => (
+              <div
+                key={"project-" + project.name}
+                id={"project-" + project.image}
+                className="tile"
+              >
+                <Project project={project} />
+              </div>
+            ))}
+          </div>
+          <div className="profdesc">
+            <h3
+              style={{
+                marginBottom: "8px",
+              }}
+            >
+              Skills in multiple languages.
+            </h3>
+            <div>
+              <span
+                onClick={handleViewProficienciesClick}
+                style={{
+                  padding: "12px",
+                  fontSize: "1rem",
+                  border: "solid #dddddd 2px",
+                  borderRadius: "4px",
+                  cursor: "pointer",
+                }}
+                className="explore"
+              >
+                View proficiencies
+              </span>
+            </div>
           </div>
         </div>
+        <div style={{ paddingBottom: "1%" }}></div>
       </div>
-      <div style={{ paddingBottom: "1%" }}></div>
     </>
   );
 };
