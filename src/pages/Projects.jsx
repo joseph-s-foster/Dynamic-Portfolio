@@ -1,4 +1,3 @@
-// Projects.jsx
 import React, { useState, useEffect } from "react";
 import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
@@ -12,7 +11,7 @@ const Component = ({ projectsGroup1 }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // Set loading time to 2 seconds
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);

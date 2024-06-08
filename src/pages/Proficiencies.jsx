@@ -1,4 +1,3 @@
-// Proficiencies.jsx
 import React, { useState, useEffect } from "react";
 import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
