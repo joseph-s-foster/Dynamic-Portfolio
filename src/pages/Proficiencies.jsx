@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import LoadingSpinner from "../hooks/LoadingSpinner";
+import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import html from "../assets/project/html.svg";
@@ -14,25 +15,21 @@ import mongodb from "../assets/project/mongodb.svg";
 import react from "../assets/project/react.svg";
 import graphql from "../assets/project/graphql.svg";
 import python from "../assets/project/python.svg";
+import Footer from "../components/Footer";
 import "../Proficiencies.css";
 
 function Proficiencies() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const hasVisitedBefore = localStorage.getItem(
-      "hasVisitedProficienciesPageBefore"
-    );
-
+    const hasVisitedBefore = localStorage.getItem("hasVisitedProficienciesPageBefore");
     if (!hasVisitedBefore) {
-      setIsLoading(true);
       localStorage.setItem("hasVisitedProficienciesPageBefore", "true");
-
-      const timer = setTimeout(() => {
+      setTimeout(() => {
         setIsLoading(false);
       }, 1000);
-
-      return () => clearTimeout(timer);
+    } else {
+      setIsLoading(false);
     }
   }, []);
 
@@ -47,12 +44,8 @@ function Proficiencies() {
   return (
     <>
       {isLoading && <LoadingSpinner />}
-      <div
-        style={{
-          display: isLoading ? "none" : "flex",
-          flexDirection: "column",
-        }}
-      >
+      <div style={{ display: isLoading ? "none" : "flex", flexDirection: "column" }}>
+        <Nav />
         <div
           style={{
             display: "flex",
@@ -66,11 +59,7 @@ function Proficiencies() {
           }}
         >
           <div className="interact2">
-            <h1
-              style={{
-                fontSize: "3rem",
-              }}
-            >
+            <h1 style={{ fontSize: "3rem" }}>
               Proficiencies
             </h1>
           </div>
@@ -93,6 +82,7 @@ function Proficiencies() {
           <img src={react} alt="React" />
           <img src={graphql} alt="GraphQL" />
         </div>
+        <Footer />
       </div>
     </>
   );

@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
+import LoadingSpinner from "../hooks/LoadingSpinner";
+import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Trending from "../components/Trending";
-import LoadingSpinner from "../hooks/LoadingSpinner"; // Adjust the path as necessary
+import Footer from "../components/Footer";
 
 function Home() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
-  const [isLoading, setIsLoading] = useState(false); // Default to false to avoid spinner on subsequent visits
+  const [isLoading, setIsLoading] = useState(true);
 
   const textToType = "UX-Driven";
   const texttoType2 = "Mobile-Friendly";
@@ -19,6 +21,19 @@ function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+
+  useLayoutEffect(() => {
+    const hasVisitedBefore = localStorage.getItem("hasVisitedHomePageBefore");
+    
+    if (!hasVisitedBefore) {
+      localStorage.setItem("hasVisitedHomePageBefore", "true");
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+    } else {
+      setIsLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
     const typeAndBackspace = async () => {
@@ -69,27 +84,10 @@ function Home() {
       }
 
       clearInterval(cursorFlashInterval);
-
-      typeAndBackspace();
     };
 
     typeAndBackspace();
   }, [textToType]);
-
-  useEffect(() => {
-    const hasVisitedBefore = localStorage.getItem("hasVisitedHomePageBefore");
-
-    if (!hasVisitedBefore) {
-      setIsLoading(true);
-      localStorage.setItem("hasVisitedHomePageBefore", "true");
-
-      const timer = setTimeout(() => {
-        setIsLoading(false);
-      }, 1000);
-
-      return () => clearTimeout(timer);
-    }
-  }, []);
 
   const handleScroll = (event) => {
     event.preventDefault();
@@ -106,12 +104,8 @@ function Home() {
   return (
     <>
       {isLoading && <LoadingSpinner />}
-      <div
-        style={{
-          display: isLoading ? "none" : "flex",
-          flexDirection: "column",
-        }}
-      >
+      <div style={{ display: isLoading ? "none" : "flex", flexDirection: "column" }}>
+        <Nav />
         <div
           style={{
             display: "flex",
@@ -140,7 +134,7 @@ function Home() {
         <div
           id="api"
           style={{
-            display: isLoading ? "none" : "flex",
+            display: "flex",
             flexDirection: "column",
           }}
         >
@@ -159,22 +153,19 @@ function Home() {
               APIs and algorithms display trending articles.
             </h3>
             <div>
-              <span
-                onClick={handleViewProjectsClick}
-                style={{
-                  padding: "12px",
-                  fontSize: "1rem",
-                  border: "solid #dddddd 2px",
-                  borderRadius: "4px",
-                  cursor: "pointer",
-                }}
-                className="explore"
-              >
+              <span onClick={handleViewProjectsClick} style={{
+                padding: "12px",
+                fontSize: "1rem",
+                border: "solid #dddddd 2px",
+                borderRadius: "4px",
+                cursor: "pointer",
+              }} className="explore">
                 View more projects
               </span>
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );
