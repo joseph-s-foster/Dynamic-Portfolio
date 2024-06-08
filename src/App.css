@@ -18,14 +18,6 @@ body,
   box-sizing: border-box;
 }
 
-.hidden {
-  display: none;
-}
-
-.visible {
-  display: block;
-}
-
 .interact1 {
   position: absolute;
   bottom: 31%;

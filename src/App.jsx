@@ -11,10 +11,10 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const handleImagesLoad = () => {
+    const checkImages = () => {
       const images = document.querySelectorAll("img");
       const divsWithBackgrounds = document.querySelectorAll("div[style*='background-image']");
-      
+
       const imagePromises = Array.from(images).map(
         (img) =>
           new Promise((resolve) => {
@@ -39,16 +39,16 @@ function App() {
         }
       );
 
-      Promise.all([...imagePromises, ...backgroundPromises]).then(() => {
+      return Promise.all([...imagePromises, ...backgroundPromises]);
+    };
+
+    const handleLoad = () => {
+      checkImages().then(() => {
         setIsLoading(false);
       });
     };
 
-    window.addEventListener("load", handleImagesLoad);
-
-    return () => {
-      window.removeEventListener("load", handleImagesLoad);
-    };
+    handleLoad();
   }, []);
 
   if (isLoading) {
