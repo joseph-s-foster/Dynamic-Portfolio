@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Nav from "../components/NavBar";
-import LoadingSpinner from "../hooks/LoadingSpinner";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Trending from "../components/Trending";
@@ -9,7 +7,6 @@ import Trending from "../components/Trending";
 function Home() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
   const textToType = "UX-Driven";
   const texttoType2 = "Mobile-Friendly";
   const texttoType3 = "Full Stack Web Developer";
@@ -88,51 +85,8 @@ function Home() {
     window.location.href = "/projects";
   };
 
-  useEffect(() => {
-    const images = document.querySelectorAll("img");
-    const divsWithBackgrounds = document.querySelectorAll("div[style*='background-image']");
-    
-    const imagePromises = Array.from(images).map(
-      (img) =>
-        new Promise((resolve) => {
-          if (img.complete) {
-            resolve();
-          } else {
-            img.onload = resolve;
-            img.onerror = resolve;
-          }
-        })
-    );
-
-    const backgroundPromises = Array.from(divsWithBackgrounds).map(
-      (div) => {
-        const backgroundImage = div.style.backgroundImage.slice(5, -2).replace(/['"]+/g, '');
-        return new Promise((resolve) => {
-          const img = new Image();
-          img.src = backgroundImage;
-          img.onload = resolve;
-          img.onerror = resolve;
-        });
-      }
-    );
-
-    Promise.all([...imagePromises, ...backgroundPromises]).then(() => {
-      setIsLoading(false);
-    });
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div>
-        <Nav />
-        <LoadingSpinner />
-      </div>
-    );
-  }
-
   return (
     <>
-      <Nav />
       <div
         style={{
           display: "flex",

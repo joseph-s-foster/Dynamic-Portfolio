@@ -1,13 +1,63 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
+import Nav from "./components/NavBar";
 import Footer from "./components/Footer";
+import LoadingSpinner from "./hooks/LoadingSpinner";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "./App.css";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleImagesLoad = () => {
+      const images = document.querySelectorAll("img");
+      const divsWithBackgrounds = document.querySelectorAll("div[style*='background-image']");
+      
+      const imagePromises = Array.from(images).map(
+        (img) =>
+          new Promise((resolve) => {
+            if (img.complete) {
+              resolve();
+            } else {
+              img.onload = resolve;
+              img.onerror = resolve;
+            }
+          })
+      );
+
+      const backgroundPromises = Array.from(divsWithBackgrounds).map(
+        (div) => {
+          const backgroundImage = div.style.backgroundImage.slice(5, -2).replace(/['"]+/g, '');
+          return new Promise((resolve) => {
+            const img = new Image();
+            img.src = backgroundImage;
+            img.onload = resolve;
+            img.onerror = resolve;
+          });
+        }
+      );
+
+      Promise.all([...imagePromises, ...backgroundPromises]).then(() => {
+        setIsLoading(false);
+      });
+    };
+
+    window.addEventListener("load", handleImagesLoad);
+
+    return () => {
+      window.removeEventListener("load", handleImagesLoad);
+    };
+  }, []);
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+
   return (
     <div>
+      <Nav />
       <Outlet />
       <Footer />
     </div>

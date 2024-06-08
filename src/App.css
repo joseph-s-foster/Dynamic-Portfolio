@@ -18,18 +18,13 @@ body,
   box-sizing: border-box;
 }
 
-/* .main-container {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+.hidden {
+  display: none;
 }
 
-.fade-in {
-  opacity: 1;
+.visible {
+  display: block;
 }
-
-.fade-out {
-  opacity: 0;
-} */
 
 .interact1 {
   position: absolute;

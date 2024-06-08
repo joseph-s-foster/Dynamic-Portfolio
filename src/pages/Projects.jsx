@@ -1,46 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Project from "../components/Project";
-import LoadingSpinner from "../hooks/LoadingSpinner";
 
 const Component = ({ projectsGroup1 }) => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const images = document.querySelectorAll("img");
-    const divsWithBackgrounds = document.querySelectorAll("div[style*='background-image']");
-    
-    const imagePromises = Array.from(images).map(
-      (img) =>
-        new Promise((resolve) => {
-          if (img.complete) {
-            resolve();
-          } else {
-            img.onload = resolve;
-            img.onerror = resolve;
-          }
-        })
-    );
-
-    const backgroundPromises = Array.from(divsWithBackgrounds).map(
-      (div) => {
-        const backgroundImage = div.style.backgroundImage.slice(5, -2).replace(/['"]+/g, '');
-        return new Promise((resolve) => {
-          const img = new Image();
-          img.src = backgroundImage;
-          img.onload = resolve;
-          img.onerror = resolve;
-        });
-      }
-    );
-
-    Promise.all([...imagePromises, ...backgroundPromises]).then(() => {
-      setIsLoading(false);
-    });
-  }, []);
-
   const handleScroll = (event) => {
     event.preventDefault();
     const projectsContainer = document.getElementById("projects");
@@ -52,15 +16,6 @@ const Component = ({ projectsGroup1 }) => {
   const handleViewProficienciesClick = () => {
     window.location.href = "/proficiencies";
   };
-
-  if (isLoading) {
-    return (
-      <div>
-        <Nav />
-        <LoadingSpinner />
-      </div>
-    );
-  }
 
   return (
     <>

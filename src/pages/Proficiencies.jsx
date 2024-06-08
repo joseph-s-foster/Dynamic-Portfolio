@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
@@ -15,44 +15,8 @@ import react from "../assets/project/react.svg";
 import graphql from "../assets/project/graphql.svg";
 import python from "../assets/project/python.svg";
 import "../Proficiencies.css";
-import LoadingSpinner from "../hooks/LoadingSpinner";
 
 function Proficiencies() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const images = document.querySelectorAll("img");
-    const divsWithBackgrounds = document.querySelectorAll("div[style*='background-image']");
-    
-    const imagePromises = Array.from(images).map(
-      (img) =>
-        new Promise((resolve) => {
-          if (img.complete) {
-            resolve();
-          } else {
-            img.onload = resolve;
-            img.onerror = resolve;
-          }
-        })
-    );
-
-    const backgroundPromises = Array.from(divsWithBackgrounds).map(
-      (div) => {
-        const backgroundImage = div.style.backgroundImage.slice(5, -2).replace(/['"]+/g, '');
-        return new Promise((resolve) => {
-          const img = new Image();
-          img.src = backgroundImage;
-          img.onload = resolve;
-          img.onerror = resolve;
-        });
-      }
-    );
-
-    Promise.all([...imagePromises, ...backgroundPromises]).then(() => {
-      setIsLoading(false);
-    });
-  }, []);
-
   const handleScroll = (event) => {
     event.preventDefault();
     const projectsContainer = document.getElementById("proficiencies");
@@ -60,15 +24,6 @@ function Proficiencies() {
       projectsContainer.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  if (isLoading) {
-    return (
-      <div>
-        <Nav />
-        <LoadingSpinner />
-      </div>
-    );
-  }
 
   return (
     <>
