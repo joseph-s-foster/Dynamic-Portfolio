@@ -24,7 +24,7 @@ function Home() {
 
   useLayoutEffect(() => {
     const hasVisitedBefore = localStorage.getItem("hasVisitedHomePageBefore");
-    
+
     if (!hasVisitedBefore) {
       localStorage.setItem("hasVisitedHomePageBefore", "true");
       setTimeout(() => {
@@ -103,9 +103,11 @@ function Home() {
 
   return (
     <>
-      {isLoading && <LoadingSpinner />}
-      <div style={{ display: isLoading ? "none" : "flex", flexDirection: "column" }}>
+    <div style={{ position: "relative", zIndex: isLoading? 1 : 2 }}>
         <Nav />
+      </div>
+      {isLoading && <LoadingSpinner />}
+      <div>
         <div
           style={{
             display: "flex",
@@ -116,6 +118,7 @@ function Home() {
             backgroundImage: `url(${background})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
+            zIndex: isLoading ? -1 : 1,
           }}
         >
           <div className="interact1">
@@ -136,6 +139,7 @@ function Home() {
           style={{
             display: "flex",
             flexDirection: "column",
+            zIndex: isLoading ? -1 : 1, // Ensure this content is behind the spinner if loading
           }}
         >
           <div className="api">
@@ -153,13 +157,17 @@ function Home() {
               APIs and algorithms display trending articles.
             </h3>
             <div>
-              <span onClick={handleViewProjectsClick} style={{
-                padding: "12px",
-                fontSize: "1rem",
-                border: "solid #dddddd 2px",
-                borderRadius: "4px",
-                cursor: "pointer",
-              }} className="explore">
+              <span
+                onClick={handleViewProjectsClick}
+                style={{
+                  padding: "12px",
+                  fontSize: "1rem",
+                  border: "solid #dddddd 2px",
+                  borderRadius: "4px",
+                  cursor: "pointer",
+                }}
+                className="explore"
+              >
                 View more projects
               </span>
             </div>

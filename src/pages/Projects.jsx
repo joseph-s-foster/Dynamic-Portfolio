@@ -36,10 +36,12 @@ const Component = ({ projectsGroup1 }) => {
 
   return (
     <>
-      {isLoading && <LoadingSpinner />}
-      <div style={{ display: isLoading ? "none" : "flex", flexDirection: "column" }}>
+    <div style={{ position: "relative", zIndex: isLoading? 1 : 2 }}>
         <Nav />
-        <div
+      </div>
+      {isLoading && <LoadingSpinner />}
+      <div>
+      <div
           style={{
             display: "flex",
             flexDirection: "column",
@@ -49,6 +51,7 @@ const Component = ({ projectsGroup1 }) => {
             backgroundImage: `url(${background})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
+            zIndex: isLoading ? -1 : 1,
           }}
         >
           <div className="interact2">
