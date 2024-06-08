@@ -1,4 +1,5 @@
-import React from "react";
+// Proficiencies.jsx
+import React, { useState, useEffect } from "react";
 import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
@@ -15,8 +16,15 @@ import react from "../assets/project/react.svg";
 import graphql from "../assets/project/graphql.svg";
 import python from "../assets/project/python.svg";
 import "../Proficiencies.css";
+import LoadingSpinner from "../hooks/LoadingSpinner";
 
-function Proficiences() {
+function Proficiencies() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
   const handleScroll = (event) => {
     event.preventDefault();
 
@@ -28,49 +36,55 @@ function Proficiences() {
 
   return (
     <>
-    <Nav />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100vh",
-          backgroundImage: `url(${background})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="interact2">
-          <h1
+      <Nav />
+      {isLoading ? (
+        <LoadingSpinner />
+      ) : (
+        <>
+          <div
             style={{
-              fontSize: "3rem",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              height: "100vh",
+              backgroundImage: `url(${background})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
             }}
           >
-            Proficiencies
-          </h1>
-        </div>
-        <a className="caret" href="#api" onClick={handleScroll}>
-          <ChevronDownIcon className="w-8" aria-hidden="true" />
-        </a>
-      </div>
-      <div id="proficiencies"></div>
-      <div className="icons">
-        <img src={html} alt="HTML" />
-        <img src={css} alt="CSS" />
-        <img src={javascript} alt="JavaScript" />
-        <img src={python} alt="Python" />
-        <img src={jquery} alt="jQuery" />
-        <img src={node} alt="Node.js" />
-        <img src={express} alt="Express.js" />
-        <img src={mysql} alt="MySQL" />
-        <img src={handlebars} alt="Handlebars" />
-        <img src={mongodb} alt="MongoDB" />
-        <img src={react} alt="React" />
-        <img src={graphql} alt="GraphQL" />
-      </div>
+            <div className="interact2">
+              <h1
+                style={{
+                  fontSize: "3rem",
+                }}
+              >
+                Proficiencies
+              </h1>
+            </div>
+            <a className="caret" href="#api" onClick={handleScroll}>
+              <ChevronDownIcon className="w-8" aria-hidden="true" />
+            </a>
+          </div>
+          <div id="proficiencies"></div>
+          <div className="icons">
+            <img src={html} alt="HTML" />
+            <img src={css} alt="CSS" />
+            <img src={javascript} alt="JavaScript" />
+            <img src={python} alt="Python" />
+            <img src={jquery} alt="jQuery" />
+            <img src={node} alt="Node.js" />
+            <img src={express} alt="Express.js" />
+            <img src={mysql} alt="MySQL" />
+            <img src={handlebars} alt="Handlebars" />
+            <img src={mongodb} alt="MongoDB" />
+            <img src={react} alt="React" />
+            <img src={graphql} alt="GraphQL" />
+          </div>
+        </>
+      )}
     </>
   );
 }
 
-export default Proficiences;
+export default Proficiencies;

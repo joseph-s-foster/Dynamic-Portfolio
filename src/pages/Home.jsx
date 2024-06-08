@@ -1,6 +1,8 @@
+// Home.jsx
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Nav from "../components/NavBar";
+import LoadingSpinner from "../hooks/LoadingSpinner";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Trending from "../components/Trending";
@@ -8,6 +10,7 @@ import Trending from "../components/Trending";
 function Home() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const textToType = "UX-Driven";
   const texttoType2 = "Mobile-Friendly";
   const texttoType3 = "Full Stack Web Developer";
@@ -86,6 +89,10 @@ function Home() {
     typeAndBackspace();
   }, [textToType]);
 
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
   const handleScroll = (event) => {
     event.preventDefault();
 
@@ -101,41 +108,45 @@ function Home() {
 
   return (
     <>
-    <Nav />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100vh",
-          backgroundImage: `url(${background})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="interact1">
-          <h1
-            style={{
-              fontSize: "3rem",
-              paddingBottom: "4px",
-            }}
-          >
-            Joseph Foster
-          </h1>
-          <h2
-            style={{
-              fontSize: "1.5rem",
-            }}
-          >
-            {typedText}
-            <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
-          </h2>
+      <Nav />
+      {isLoading ? (
+        <LoadingSpinner />
+      ) : (
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100vh",
+            backgroundImage: `url(${background})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="interact1">
+            <h1
+              style={{
+                fontSize: "3rem",
+                paddingBottom: "4px",
+              }}
+            >
+              Joseph Foster
+            </h1>
+            <h2
+              style={{
+                fontSize: "1.5rem",
+              }}
+            >
+              {typedText}
+              <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+            </h2>
+          </div>
+          <a className="caret" href="#api" onClick={handleScroll}>
+            <ChevronDownIcon className="w-8" aria-hidden="true" />
+          </a>
         </div>
-        <a className="caret" href="#api" onClick={handleScroll}>
-          <ChevronDownIcon className="w-8" aria-hidden="true" />
-        </a>
-      </div>
+      )}
       <div
         id="api"
         style={{
