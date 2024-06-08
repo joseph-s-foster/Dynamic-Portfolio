@@ -10,9 +10,23 @@ const Component = ({ projectsGroup1 }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    const preloadImages = (srcs) => {
+      const promises = srcs.map((src) => {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.src = src;
+          img.onload = resolve;
+          img.onerror = reject;
+        });
+      });
+      return Promise.all(promises);
+    };
+
     const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
+      preloadImages([background])
+        .then(() => setIsLoading(false))
+        .catch(() => setIsLoading(false)); // handle error if necessary
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -30,79 +44,83 @@ const Component = ({ projectsGroup1 }) => {
     window.location.href = "/proficiencies";
   };
 
+  if (isLoading) {
+    return (
+      <div>
+        <Nav />
+        <LoadingSpinner />
+      </div>
+    );
+  }
+
   return (
     <>
       <Nav />
-      {isLoading ? (
-        <LoadingSpinner />
-      ) : (
-        <>
-          <div
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+          backgroundImage: `url(${background})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="interact2">
+          <h1
             style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "100vh",
-              backgroundImage: `url(${background})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
+              fontSize: "3rem",
             }}
           >
-            <div className="interact2">
-              <h1
-                style={{
-                  fontSize: "3rem",
-                }}
-              >
-                Projects
-              </h1>
+            Projects
+          </h1>
+        </div>
+        <a className="caret" href="#api" onClick={handleScroll}>
+          <ChevronDownIcon className="w-8" aria-hidden="true" />
+        </a>
+      </div>
+      <div id="projects"></div>
+      <div>
+        <div className="tiles">
+          {projectsGroup1.map((project) => (
+            <div
+              key={"project-" + project.name}
+              id={"project-" + project.image}
+              className="tile"
+            >
+              <Project project={project} />
             </div>
-            <a className="caret" href="#api" onClick={handleScroll}>
-              <ChevronDownIcon className="w-8" aria-hidden="true" />
-            </a>
-          </div>
-          <div id="projects"></div>
+          ))}
+        </div>
+        <div className="profdesc">
+          <h3
+            style={{
+              marginBottom: "8px",
+            }}
+          >
+            Skills in multiple languages.
+          </h3>
           <div>
-            <div className="tiles">
-              {projectsGroup1.map((project) => (
-                <div
-                  key={"project-" + project.name}
-                  id={"project-" + project.image}
-                  className="tile"
-                >
-                  <Project project={project} />
-                </div>
-              ))}
-            </div>
-            <div className="profdesc">
-              <h3
-                style={{
-                  marginBottom: "8px",
-                }}
-              >
-                Skills in multiple languages.
-              </h3>
-              <div>
-                <span
-                  onClick={handleViewProficienciesClick}
-                  style={{
-                    padding: "12px",
-                    fontSize: "1rem",
-                    border: "solid #dddddd 2px",
-                    borderRadius: "4px",
-                    cursor: "pointer",
-                  }}
-                  className="explore"
-                >
-                  View proficiencies
-                </span>
-              </div>
-            </div>
+            <span
+              onClick={handleViewProficienciesClick}
+              style={{
+                padding: "12px",
+                fontSize: "1rem",
+                border: "solid #dddddd 2px",
+                borderRadius: "4px",
+                cursor: "pointer",
+              }}
+              className="explore"
+            >
+              View proficiencies
+            </span>
           </div>
-          <div style={{ paddingBottom: "1%" }}></div>
-        </>
-      )}
+        </div>
+      </div>
+      <div style={{ paddingBottom: "1%" }}></div>
     </>
   );
 };

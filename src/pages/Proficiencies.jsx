@@ -21,8 +21,22 @@ function Proficiencies() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    const preloadImages = (srcs) => {
+      const promises = srcs.map((src) => {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.src = src;
+          img.onload = resolve;
+          img.onerror = reject;
+        });
+      });
+      return Promise.all(promises);
+    };
+
     const timer = setTimeout(() => {
-      setIsLoading(false);
+      preloadImages([background])
+        .then(() => setIsLoading(false))
+        .catch(() => setIsLoading(false)); // handle error if necessary
     }, 500);
 
     return () => clearTimeout(timer);
@@ -37,13 +51,19 @@ function Proficiencies() {
     }
   };
 
+
+  if (isLoading) {
+    return (
+      <div>
+        <Nav />
+        <LoadingSpinner />
+      </div>
+    );
+  } 
+
   return (
     <>
       <Nav />
-      {isLoading ? (
-        <LoadingSpinner />
-      ) : (
-        <>
           <div
             style={{
               display: "flex",
@@ -86,8 +106,5 @@ function Proficiencies() {
           </div>
         </>
       )}
-    </>
-  );
-}
 
 export default Proficiencies;

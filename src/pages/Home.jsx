@@ -17,8 +17,22 @@ function Home() {
   const location = useLocation();
 
   useEffect(() => {
+    const preloadImages = (srcs) => {
+      const promises = srcs.map((src) => {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.src = src;
+          img.onload = resolve;
+          img.onerror = reject;
+        });
+      });
+      return Promise.all(promises);
+    };
+
     const timer = setTimeout(() => {
-      setIsLoading(false);
+      preloadImages([background])
+        .then(() => setIsLoading(false))
+        .catch(() => setIsLoading(false)); // handle error if necessary
     }, 500);
 
     return () => clearTimeout(timer);
@@ -109,47 +123,52 @@ function Home() {
     window.location.href = "/projects";
   };
 
+  if (isLoading) {
+    return (
+      <div>
+        <Nav />
+        <LoadingSpinner />
+      </div>
+    );
+  }  
+
   return (
     <>
       <Nav />
-      {isLoading ? (
-        <LoadingSpinner />
-      ) : (
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            height: "100vh",
-            backgroundImage: `url(${background})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="interact1">
-            <h1
-              style={{
-                fontSize: "3rem",
-                paddingBottom: "4px",
-              }}
-            >
-              Joseph Foster
-            </h1>
-            <h2
-              style={{
-                fontSize: "1.5rem",
-              }}
-            >
-              {typedText}
-              <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
-            </h2>
-          </div>
-          <a className="caret" href="#api" onClick={handleScroll}>
-            <ChevronDownIcon className="w-8" aria-hidden="true" />
-          </a>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+          backgroundImage: `url(${background})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="interact1">
+          <h1
+            style={{
+              fontSize: "3rem",
+              paddingBottom: "4px",
+            }}
+          >
+            Joseph Foster
+          </h1>
+          <h2
+            style={{
+              fontSize: "1.5rem",
+            }}
+          >
+            {typedText}
+            <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+          </h2>
         </div>
-      )}
+        <a className="caret" href="#api" onClick={handleScroll}>
+          <ChevronDownIcon className="w-8" aria-hidden="true" />
+        </a>
+      </div>
       <div
         id="api"
         style={{
