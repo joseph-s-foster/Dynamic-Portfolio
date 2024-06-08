@@ -1,3 +1,4 @@
+// Projects.jsx
 import React, { useState, useEffect } from "react";
 import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
@@ -9,30 +10,40 @@ const Component = ({ projectsGroup1 }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const preloadImages = (srcs) => {
-      const promises = srcs.map((src) => {
-        return new Promise((resolve, reject) => {
+    const images = document.querySelectorAll("img");
+    const divsWithBackgrounds = document.querySelectorAll("div[style*='background-image']");
+    
+    const imagePromises = Array.from(images).map(
+      (img) =>
+        new Promise((resolve) => {
+          if (img.complete) {
+            resolve();
+          } else {
+            img.onload = resolve;
+            img.onerror = resolve;
+          }
+        })
+    );
+
+    const backgroundPromises = Array.from(divsWithBackgrounds).map(
+      (div) => {
+        const backgroundImage = div.style.backgroundImage.slice(5, -2);
+        return new Promise((resolve) => {
           const img = new Image();
-          img.src = src;
+          img.src = backgroundImage;
           img.onload = resolve;
-          img.onerror = reject;
+          img.onerror = resolve;
         });
-      });
-      return Promise.all(promises);
-    };
+      }
+    );
 
-    const timer = setTimeout(() => {
-      preloadImages([background])
-        .then(() => setIsLoading(false))
-        .catch(() => setIsLoading(false)); // handle error if necessary
-    }, 1000);
-
-    return () => clearTimeout(timer);
+    Promise.all([...imagePromises, ...backgroundPromises]).then(() => {
+      setIsLoading(false);
+    });
   }, []);
 
   const handleScroll = (event) => {
     event.preventDefault();
-
     const projectsContainer = document.getElementById("projects");
     if (projectsContainer) {
       projectsContainer.scrollIntoView({ behavior: "smooth" });
@@ -55,7 +66,6 @@ const Component = ({ projectsGroup1 }) => {
   return (
     <>
       <Nav />
-
       <div
         style={{
           display: "flex",

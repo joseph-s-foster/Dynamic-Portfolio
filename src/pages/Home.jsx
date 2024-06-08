@@ -1,3 +1,4 @@
+// Home.jsx
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Nav from "../components/NavBar";
@@ -17,29 +18,6 @@ function Home() {
   const location = useLocation();
 
   useEffect(() => {
-    const preloadImages = (srcs) => {
-      const promises = srcs.map((src) => {
-        return new Promise((resolve, reject) => {
-          const img = new Image();
-          img.src = src;
-          img.onload = resolve;
-          img.onerror = reject;
-        });
-      });
-      return Promise.all(promises);
-    };
-
-    const timer = setTimeout(() => {
-      preloadImages([background])
-        .then(() => setIsLoading(false))
-        .catch(() => setIsLoading(false)); // handle error if necessary
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Scroll to top when the location changes (i.e., route changes)
-  useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
@@ -47,20 +25,17 @@ function Home() {
     const typeAndBackspace = async () => {
       const cursorFlashInterval = setInterval(() => {
         setShowCursor((prev) => !prev);
-      }, 500); // Flash interval in milliseconds
+      }, 500);
 
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // Type out
       for (let i = 0; i < textToType.length; i++) {
         setTypedText((prevText) => prevText + textToType[i]);
         await new Promise((resolve) => setTimeout(resolve, 100));
       }
 
-      // Wait for a moment before backspacing
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // Backspace
       for (let i = textToType.length; i >= 0; i--) {
         setTypedText((prevText) => prevText.slice(0, -1));
         await new Promise((resolve) => setTimeout(resolve, 100));
@@ -68,16 +43,13 @@ function Home() {
 
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // Type out
       for (let i = 0; i < texttoType2.length; i++) {
         setTypedText((prevText) => prevText + texttoType2[i]);
         await new Promise((resolve) => setTimeout(resolve, 100));
       }
 
-      // Wait for a moment before backspacing
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // Backspace
       for (let i = texttoType2.length; i >= 0; i--) {
         setTypedText((prevText) => prevText.slice(0, -1));
         await new Promise((resolve) => setTimeout(resolve, 100));
@@ -85,25 +57,20 @@ function Home() {
 
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // Type out
       for (let i = 0; i < texttoType3.length; i++) {
         setTypedText((prevText) => prevText + texttoType3[i]);
         await new Promise((resolve) => setTimeout(resolve, 100));
       }
 
-      // Wait for a moment before backspacing
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // Backspace
       for (let i = texttoType3.length; i >= 0; i--) {
         setTypedText((prevText) => prevText.slice(0, -1));
         await new Promise((resolve) => setTimeout(resolve, 100));
       }
 
-      // Clear the interval to stop flashing when not needed
       clearInterval(cursorFlashInterval);
 
-      // Repeat the process
       typeAndBackspace();
     };
 
@@ -112,7 +79,6 @@ function Home() {
 
   const handleScroll = (event) => {
     event.preventDefault();
-
     const projectsContainer = document.getElementById("api");
     if (projectsContainer) {
       projectsContainer.scrollIntoView({ behavior: "smooth" });
@@ -123,6 +89,39 @@ function Home() {
     window.location.href = "/projects";
   };
 
+  useEffect(() => {
+    const images = document.querySelectorAll("img");
+    const divsWithBackgrounds = document.querySelectorAll("div[style*='background-image']");
+    
+    const imagePromises = Array.from(images).map(
+      (img) =>
+        new Promise((resolve) => {
+          if (img.complete) {
+            resolve();
+          } else {
+            img.onload = resolve;
+            img.onerror = resolve;
+          }
+        })
+    );
+
+    const backgroundPromises = Array.from(divsWithBackgrounds).map(
+      (div) => {
+        const backgroundImage = div.style.backgroundImage.slice(5, -2);
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.src = backgroundImage;
+          img.onload = resolve;
+          img.onerror = resolve;
+        });
+      }
+    );
+
+    Promise.all([...imagePromises, ...backgroundPromises]).then(() => {
+      setIsLoading(false);
+    });
+  }, []);
+
   if (isLoading) {
     return (
       <div>
@@ -130,7 +129,7 @@ function Home() {
         <LoadingSpinner />
       </div>
     );
-  }  
+  }
 
   return (
     <>
@@ -177,7 +176,6 @@ function Home() {
         }}
       >
         <div className="api">
-          {/* Trending Component Container */}
           <div className="apiresults">
             <div className="apitrend">
               <h3>Trending Now</h3>
