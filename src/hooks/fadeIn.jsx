@@ -4,24 +4,22 @@ import { useLocation } from "react-router-dom";
 const fadeIn = (WrappedComponent) => {
   return (props) => {
     const location = useLocation();
-    const [fadeClass, setFadeClass] = useState("main-container");
+    const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
-      // Check if it's the initial render
-      const isFirstRender = fadeClass === "main-container";
+      setIsMounted(true);
+    }, []);
 
-      // If it's the first render, trigger fade-in immediately
-      if (isFirstRender) {
-        setFadeClass("main-container fade-in");
-      } else {
-        // For subsequent renders, trigger fade-in on location change
-        setFadeClass("main-container");
-        setTimeout(() => setFadeClass("main-container fade-in"), 0);
+    useEffect(() => {
+      if (isMounted) {
+        // Trigger fade-in effect after a slight delay
+        setTimeout(() => {
+          setFadeClass("main-container fade-in");
+        }, 100);
       }
+    }, [isMounted, location]);
 
-      // Clean up by resetting the class when the component unmounts
-      return () => setFadeClass("main-container");
-    }, [location]);
+    const [fadeClass, setFadeClass] = useState("main-container fade-out");
 
     return (
       <div className={fadeClass}>
