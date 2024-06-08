@@ -1,4 +1,3 @@
-// Home.jsx
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Nav from "../components/NavBar";
@@ -16,6 +15,14 @@ function Home() {
   const texttoType3 = "Full Stack Web Developer";
 
   const location = useLocation();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   // Scroll to top when the location changes (i.e., route changes)
   useEffect(() => {
@@ -88,10 +95,6 @@ function Home() {
 
     typeAndBackspace();
   }, [textToType]);
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
 
   const handleScroll = (event) => {
     event.preventDefault();
