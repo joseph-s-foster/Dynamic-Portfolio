@@ -10,7 +10,11 @@ const Component = ({ projectsGroup1 }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsLoading(false);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Set loading time to 2 seconds
+
+    return () => clearTimeout(timer);
   }, []);
 
   const handleScroll = (event) => {
