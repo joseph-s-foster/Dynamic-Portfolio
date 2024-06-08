@@ -1,4 +1,3 @@
-// Projects.jsx
 import React, { useState, useEffect } from "react";
 import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
@@ -22,14 +21,16 @@ const Component = ({ projectsGroup1 }) => {
       return Promise.all(promises);
     };
 
+    const imageSources = projectsGroup1.map((project) => project.image);
+
     const timer = setTimeout(() => {
-      preloadImages([background])
+      preloadImages([background, ...imageSources.map((image) => `../assets/projects/${image}.png`)])
         .then(() => setIsLoading(false))
         .catch(() => setIsLoading(false)); // handle error if necessary
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [projectsGroup1]);
 
   const handleScroll = (event) => {
     event.preventDefault();
