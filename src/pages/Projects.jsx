@@ -1,4 +1,3 @@
-// Projects.jsx
 import React, { useState, useEffect } from "react";
 import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
@@ -27,7 +26,7 @@ const Component = ({ projectsGroup1 }) => {
 
     const backgroundPromises = Array.from(divsWithBackgrounds).map(
       (div) => {
-        const backgroundImage = div.style.backgroundImage.slice(5, -2);
+        const backgroundImage = div.style.backgroundImage.slice(5, -2).replace(/['"]+/g, '');
         return new Promise((resolve) => {
           const img = new Image();
           img.src = backgroundImage;

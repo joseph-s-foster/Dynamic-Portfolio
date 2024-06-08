@@ -1,4 +1,3 @@
-// Home.jsx
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Nav from "../components/NavBar";
@@ -107,7 +106,7 @@ function Home() {
 
     const backgroundPromises = Array.from(divsWithBackgrounds).map(
       (div) => {
-        const backgroundImage = div.style.backgroundImage.slice(5, -2);
+        const backgroundImage = div.style.backgroundImage.slice(5, -2).replace(/['"]+/g, '');
         return new Promise((resolve) => {
           const img = new Image();
           img.src = backgroundImage;
