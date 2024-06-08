@@ -12,10 +12,9 @@ const fadeIn = (WrappedComponent) => {
 
     useEffect(() => {
       if (isMounted) {
-        // Trigger fade-in effect after a slight delay
         setTimeout(() => {
           setFadeClass("main-container fade-in");
-        }, 100);
+        }, 10);
       }
     }, [isMounted, location]);
 
