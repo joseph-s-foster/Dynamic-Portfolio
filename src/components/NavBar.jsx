@@ -34,7 +34,7 @@ export default function Navigation() {
               <div className="absolute inset-y-7 left-0 flex items-center">
                 <Disclosure.Button
                   id="menu"
-                  className="relative inline-flex items-center justify-center rounded-md p-2"
+                  className="relative inline-flex items-center justify-center rounded-md p-1"
                   onClick={handleMobileMenuToggle}
                   aria-label={open ? "Close menu" : "Open menu"}
                 >
@@ -59,7 +59,7 @@ export default function Navigation() {
             leaveTo="opacity-0 scale-100"
           >
             <Disclosure.Panel className="absolute top-12 inset-x-0 z-10">
-              <div className="space-y-2 mt-2 px-2">
+              <div className="space-y-2 mt-2 px-1">
                 {navigation.map((item) => (
                   <Disclosure.Button
                     id="menu"

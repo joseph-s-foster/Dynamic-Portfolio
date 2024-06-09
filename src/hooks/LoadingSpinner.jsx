@@ -3,29 +3,40 @@ import { PuffLoader } from "react-spinners";
 
 const LoadingSpinner = () => {
   useEffect(() => {
-    // disables overflow on small screens and mobile devices
     const handleResize = () => {
+      const metaThemeColor = document.querySelector("meta[name=theme-color]");
       if (window.innerWidth < 724) {
         document.body.style.overflow = "hidden";
+        if (!metaThemeColor) {
+          const meta = document.createElement("meta");
+          meta.name = "theme-color";
+          meta.content = "#000000";
+          document.head.appendChild(meta);
+        } else {
+          metaThemeColor.content = "#000000";
+        }
       } else {
         document.body.style.overflow = "";
+        if (metaThemeColor) {
+          metaThemeColor.remove(); // Remove the meta tag to revert to default behavior
+        }
       }
     };
 
-    // applies the correct overflow setting when the component mounts
     handleResize();
 
-    // checks and updates the overflow setting when the window is resized
     window.addEventListener("resize", handleResize);
 
-    // resets overflow, prevents memory leaks, and ensures that the event listener does not continue to execute after the component is unmounted
     return () => {
       window.removeEventListener("resize", handleResize);
       document.body.style.overflow = "";
+      const metaThemeColor = document.querySelector("meta[name=theme-color]");
+      if (metaThemeColor) {
+        metaThemeColor.remove(); // Clean up by removing the meta tag
+      }
     };
   }, []);
 
-  // centers the loader on all viewports
   return (
     <div
       className="puffLoader"
