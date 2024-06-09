@@ -141,7 +141,7 @@ function Home() {
           style={{
             display: "flex",
             flexDirection: "column",
-            zIndex: isLoading ? -1 : 1, // Ensure this content is behind the spinner if loading
+            zIndex: isLoading ? -1 : 1,
           }}
         >
           <div className="api">
