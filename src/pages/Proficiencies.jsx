@@ -22,7 +22,9 @@ function Proficiencies() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const hasVisitedBefore = localStorage.getItem("hasVisitedProficienciesPageBefore");
+    const hasVisitedBefore = localStorage.getItem(
+      "hasVisitedProficienciesPageBefore"
+    );
     if (!hasVisitedBefore) {
       localStorage.setItem("hasVisitedProficienciesPageBefore", "true");
       setTimeout(() => {
@@ -45,12 +47,12 @@ function Proficiencies() {
 
   return (
     <>
-    <div style={{ zIndex: isLoading? 1 : 2 }}>
+      <div>
         <Nav />
       </div>
       {isLoading && <LoadingSpinner />}
       <div>
-      <div
+        <div
           style={{
             display: "flex",
             flexDirection: "column",
@@ -60,13 +62,10 @@ function Proficiencies() {
             backgroundImage: `url(${background})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            zIndex: isLoading ? -1 : 1,
           }}
         >
           <div className="interact2">
-            <h1 style={{ fontSize: "3rem" }}>
-              Proficiencies
-            </h1>
+            <h1 style={{ fontSize: "3rem" }}>Proficiencies</h1>
           </div>
           <a className="caret" href="#api" onClick={handleScroll}>
             <ChevronDownIcon className="w-8" aria-hidden="true" />

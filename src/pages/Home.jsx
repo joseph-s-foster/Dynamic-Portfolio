@@ -105,7 +105,7 @@ function Home() {
 
   return (
     <>
-    <div style={{ zIndex: isLoading? 1 : 2 }}>
+    <div>
         <Nav />
       </div>
       {isLoading && <LoadingSpinner />}
@@ -120,7 +120,6 @@ function Home() {
             backgroundImage: `url(${background})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            zIndex: isLoading ? -1 : 1,
           }}
         >
           <div className="interact1">
