@@ -33,6 +33,7 @@ const LoadingSpinner = () => {
         position: "fixed",
         top: 0,
         left: 0,
+        width: "100%",
         height: "100vh",
         zIndex: 1000,
         display: "flex",
