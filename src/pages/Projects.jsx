@@ -10,9 +10,7 @@ const Component = ({ projectsGroup1 }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const hasVisitedBefore = localStorage.getItem(
-      "hasVisitedProjectsPageBefore"
-    );
+    const hasVisitedBefore = localStorage.getItem("hasVisitedProjectsPageBefore");
 
     if (!hasVisitedBefore) {
       localStorage.setItem("hasVisitedProjectsPageBefore", "true");
@@ -40,12 +38,12 @@ const Component = ({ projectsGroup1 }) => {
 
   return (
     <>
-      <div>
+    <div>
         <Nav />
       </div>
       {isLoading && <LoadingSpinner />}
       <div>
-        <div
+      <div
           style={{
             display: "flex",
             flexDirection: "column",
@@ -68,31 +66,21 @@ const Component = ({ projectsGroup1 }) => {
         <div>
           <div className="tiles">
             {projectsGroup1.map((project) => (
-              <div
-                key={"project-" + project.name}
-                id={"project-" + project.image}
-                className="tile"
-              >
+              <div key={"project-" + project.name} id={"project-" + project.image} className="tile">
                 <Project project={project} />
               </div>
             ))}
           </div>
           <div className="profdesc">
-            <h3 style={{ marginBottom: "8px" }}>
-              Skills in multiple languages.
-            </h3>
+            <h3 style={{ marginBottom: "8px" }}>Skills in multiple languages.</h3>
             <div>
-              <span
-                onClick={handleViewProficienciesClick}
-                style={{
-                  padding: "12px",
-                  fontSize: "1rem",
-                  border: "solid #dddddd 2px",
-                  borderRadius: "4px",
-                  cursor: "pointer",
-                }}
-                className="explore"
-              >
+              <span onClick={handleViewProficienciesClick} style={{
+                padding: "12px",
+                fontSize: "1rem",
+                border: "solid #dddddd 2px",
+                borderRadius: "4px",
+                cursor: "pointer",
+              }} className="explore">
                 View proficiencies
               </span>
             </div>
