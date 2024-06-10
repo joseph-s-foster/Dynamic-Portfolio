@@ -86,7 +86,10 @@ function Home() {
       }
 
       clearInterval(cursorFlashInterval);
-    };
+      
+        // Repeat the process
+        typeAndBackspace();
+      };
 
     typeAndBackspace();
   }, [textToType]);
