@@ -12,9 +12,9 @@ function Home() {
   const [showCursor, setShowCursor] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
 
-  const textToType = "UX-Driven";
-  const texttoType2 = "Mobile-Friendly";
-  const texttoType3 = "Full Stack Web Developer";
+  const tag1 = "UX-Driven";
+  const tag2 = "Mobile-Friendly";
+  const tag3 = "Full Stack Web Developer";
 
   const location = useLocation();
 
@@ -45,54 +45,54 @@ function Home() {
 
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      for (let i = 0; i < textToType.length; i++) {
-        setTypedText((prevText) => prevText + textToType[i]);
+      for (let i = 0; i < tag1.length; i++) {
+        setTypedText((prevText) => prevText + tag1[i]);
         await new Promise((resolve) => setTimeout(resolve, 100));
       }
 
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      for (let i = textToType.length; i >= 0; i--) {
+      for (let i = tag1.length; i >= 0; i--) {
         setTypedText((prevText) => prevText.slice(0, -1));
         await new Promise((resolve) => setTimeout(resolve, 100));
       }
 
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      for (let i = 0; i < texttoType2.length; i++) {
-        setTypedText((prevText) => prevText + texttoType2[i]);
+      for (let i = 0; i < tag2.length; i++) {
+        setTypedText((prevText) => prevText + tag2[i]);
         await new Promise((resolve) => setTimeout(resolve, 100));
       }
 
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      for (let i = texttoType2.length; i >= 0; i--) {
+      for (let i = tag2.length; i >= 0; i--) {
         setTypedText((prevText) => prevText.slice(0, -1));
         await new Promise((resolve) => setTimeout(resolve, 100));
       }
 
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      for (let i = 0; i < texttoType3.length; i++) {
-        setTypedText((prevText) => prevText + texttoType3[i]);
+      for (let i = 0; i < tag3.length; i++) {
+        setTypedText((prevText) => prevText + tag3[i]);
         await new Promise((resolve) => setTimeout(resolve, 100));
       }
 
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      for (let i = texttoType3.length; i >= 0; i--) {
+      for (let i = tag3.length; i >= 0; i--) {
         setTypedText((prevText) => prevText.slice(0, -1));
         await new Promise((resolve) => setTimeout(resolve, 100));
       }
 
       clearInterval(cursorFlashInterval);
-      
+
         // Repeat the process
         typeAndBackspace();
       };
 
     typeAndBackspace();
-  }, [textToType]);
+  }, [tag1]);
 
   const handleScroll = (event) => {
     event.preventDefault();
