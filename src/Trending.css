@@ -16,6 +16,10 @@
 }
 
 .apiarticles li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 16px;
   padding-bottom: 16px;
   border-top: solid 1px #dddddd;
@@ -23,11 +27,9 @@
 }
 
 .trend-icon {
-  position: absolute;
-  padding-top: 4px;
   right: 11%;
   width: 16px;
-  height: 16px;
+  height: 12px;
 }
 
 .trend-icon.up {
