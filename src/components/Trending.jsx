@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
-import {
-  ArrowTrendingDownIcon,
-  ArrowTrendingUpIcon,
-} from "@heroicons/react/24/outline";
 import dayjs from "dayjs";
+import green from "../assets/project/green.svg";
+import red from "../assets/project/red.svg";
 import "../Trending.css";
 
 const BASE_URL =
@@ -68,7 +66,7 @@ const sortTopHits = async () => {
     previousRank: data.previousRank,
   }))
 
-    // removes unwanted articles form results
+    // removes unwanted articles from results
     .filter(
       ({ article }) =>
         ![
@@ -129,12 +127,12 @@ function Trending() {
 
     // show up arrow if article is higher in rank than the day before
     if (rank < previousRank || previousRank === null) {
-      return <ArrowTrendingUpIcon className="trend-icon up" aria-hidden="true"/>;
+      return <img src={green} className="trend-icon up" aria-hidden="true" />;
     }
 
     // show down arrow if the article is still the top 10 but lower in rank than the day before
     if (rank > previousRank) {
-      return <ArrowTrendingDownIcon className="trend-icon down" aria-hidden="true"/>;
+      return <img src={red} className="trend-icon down" aria-hidden="true" />;
     }
 
     // return null if the conditions above are not met
