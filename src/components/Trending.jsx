@@ -119,7 +119,7 @@ function Trending() {
   }, []);
 
   // Trend icon logic
-  const getTrendIcon = (article) => {
+  const getTrendIcon = (article, index) => {
     const { rank, previousRank } = article;
 
     // show no arrow if rank remains the same
@@ -131,7 +131,7 @@ function Trending() {
     }
 
     // show down arrow if the article is still the top 10 but lower in rank than the day before
-    if (rank > previousRank) {
+    if (rank > previousRank && index !== 0) {
       return <img src={red} className="trend-icon down" aria-hidden="true" />;
     }
 
@@ -160,7 +160,7 @@ function Trending() {
               >
                 {displayTitle}
               </a>
-              <span className="trend-icon">{getTrendIcon(article)}</span>
+              <span className="trend-icon">{getTrendIcon(article, index)}</span>
             </li>
           );
         })}
