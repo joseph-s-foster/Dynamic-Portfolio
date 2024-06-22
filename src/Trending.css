@@ -32,6 +32,10 @@
   height: 12px;
 }
 
+.trend-icon.hold {
+  color: grey;
+}
+
 .trend-icon.up {
   color: #4CAF50;
 }

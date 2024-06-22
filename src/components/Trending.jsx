@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { MinusIcon } from "@heroicons/react/24/outline";
 import dayjs from "dayjs";
 import green from "../assets/project/green.svg";
 import red from "../assets/project/red.svg";
@@ -118,24 +119,26 @@ function Trending() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Trend icon logic
+  // trend icon logic
   const getTrendIcon = (article, index) => {
     const { rank, previousRank } = article;
 
-    // show no arrow if rank remains the same
-    if (rank === previousRank) return null;
-
-    // show up arrow if article is higher in rank than the day before
+    // show up arrow if rank is higher than the day before
     if (rank < previousRank || previousRank === null) {
       return <img src={green} className="trend-icon up" aria-hidden="true" />;
     }
 
-    // show down arrow if the article is still the top 10 but lower in rank than the day before
-    if (rank > previousRank && index !== 0) {
+    // show minus if rank remains unchanged between days
+    if ((rank > previousRank && index === 0) || (rank === previousRank)) {
+      return <MinusIcon className="trend-icon hold" aria-hidden="true" />;
+    }
+
+    // show down arrow if rank is lower than the day before
+    if (rank > previousRank) {
       return <img src={red} className="trend-icon down" aria-hidden="true" />;
     }
 
-    // return null if the conditions above are not met
+    // default case
     return null;
   };
 
