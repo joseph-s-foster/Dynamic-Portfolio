@@ -20,8 +20,11 @@
 
 - bootstrap
 - react
+- react-spinners
+- @heroicons/react
 - vite
 - dayjs
+- scrollreveal
 
 ## User Story
 
