@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ScrollReveal from "scrollreveal";
+import useScrollReveal from "../hooks/reveal.js";
 import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
@@ -8,6 +8,9 @@ import Project from "../components/Project";
 import Footer from "../components/Footer";
 
 const Component = ({ projectsGroup1 }) => {
+
+  useScrollReveal();
+
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -25,18 +28,6 @@ const Component = ({ projectsGroup1 }) => {
         setIsLoading(false);
       }, 500);
     }
-  }, []);
-
-  useEffect(() => {
-    ScrollReveal().reveal(".reveal", {
-      delay: 333,
-      distance: "32px",
-      duration: 666,
-      easing: "ease-in-out",
-      origin: "left",
-      // interval: window.innerWidth > 724 ? "0" : "333",
-      reset: false,
-    });
   }, []);
 
   const handleScroll = (event) => {
