@@ -96,15 +96,19 @@
   .tile {
     flex-basis: calc(100%);
     padding-bottom: calc(100%);
+    border-radius: 0px;
+    margin-bottom: 0px;
   }
   .tiles {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin: 0 !important;
   }
 
   .profdesc {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin: 48px 16px 52px 16px;
+  }
+
+  .project-content {
+    margin-left: 4px;
   }
 }
 
