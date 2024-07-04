@@ -8,7 +8,7 @@ const useScrollReveal = () => {
       distance: "24px",
       duration: 750,
       easing: "ease-in-out",
-      origin: "left",
+      origin: "bottom",
       interval: 375,
       opacity: 0,
       viewFactor: .125,
