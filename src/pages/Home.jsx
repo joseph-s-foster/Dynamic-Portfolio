@@ -9,7 +9,6 @@ import Trending from "../components/Trending";
 import Footer from "../components/Footer";
 
 function Home() {
-
   useScrollReveal();
 
   const [typedText, setTypedText] = useState("");
@@ -91,9 +90,9 @@ function Home() {
 
       clearInterval(cursorFlashInterval);
 
-        // Repeat the process
-        typeAndBackspace();
-      };
+      // Repeat the process
+      typeAndBackspace();
+    };
 
     typeAndBackspace();
   }, [tag1]);
@@ -112,7 +111,7 @@ function Home() {
 
   return (
     <>
-    <div>
+      <div>
         <Nav />
       </div>
       {isLoading && <LoadingSpinner />}
