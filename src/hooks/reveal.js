@@ -12,6 +12,7 @@ const useScrollReveal = () => {
       interval: 375,
       opacity: 0,
       viewFactor: .25,
+      mobile: true,
       reset: false,
     });
   }, []);
