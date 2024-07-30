@@ -4,12 +4,10 @@ import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import useScrollReveal from "../hooks/reveal.js";
 import Trending from "../components/Trending";
 import Footer from "../components/Footer";
 
 function Home() {
-  useScrollReveal();
 
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
@@ -151,15 +149,15 @@ function Home() {
         >
           <div className="api">
             <div className="apiresults">
-              <div className="apitrend reveal">
+              <div className="apitrend">
                 <h3>Trending Now</h3>
               </div>
             </div>
           </div>
-          <div className="reveal">
-            <Trending />
-          </div>
-          <div className="apidesc2 reveal">
+
+          <Trending />
+
+          <div className="apidesc2">
             <h3 style={{ marginBottom: "8px" }}>
               APIs and algorithms display trending articles.
             </h3>
