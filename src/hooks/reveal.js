@@ -20,16 +20,7 @@ const useScrollReveal = () => {
       }
     };
 
-    // Apply on initial render
     applyScrollReveal();
-
-    // Apply on resize
-    window.addEventListener("resize", applyScrollReveal);
-
-    // Cleanup event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", applyScrollReveal);
-    };
   }, []);
 };
 
