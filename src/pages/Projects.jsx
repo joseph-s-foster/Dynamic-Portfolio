@@ -118,9 +118,9 @@ function Projects() {
       image: "wyr",
     },
     {
-      name: "Coding Quiz",
-      description: "A timed JavaScript exercise",
-      link: "https://joseph-s-foster.github.io/Coding-Quiz/",
+      name: "Classic Snake",
+      description: "Mobile gaming nostalgia",
+      link: "https://joseph-s-foster.github.io/Classic-Snake/",
       image: "blog",
     },
     {
