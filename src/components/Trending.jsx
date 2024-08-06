@@ -8,14 +8,14 @@ import "../Trending.css";
 const BASE_URL =
   "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/";
 
-// Fetch data for a single date
+// Fetch data
 const fetchTopHitsForDate = async (date) => {
   const url = `${BASE_URL}${date.format("YYYY/MM/DD")}`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
       if (response.status === 404) {
-        console.warn(`Data unavailable for ${date.format("YYYY-MM-DD")}`);
+        console.warn(`Data unavailable for ${date.format("YYYY-MM-DD")}. Displaying data for ${date.subtract(1, 'day').format("YYYY-MM-DD")}.`);
         return null;
       } else {
         throw new Error(`Error fetching data: ${response.statusText}`);
@@ -33,58 +33,64 @@ const fetchTopHitsForDate = async (date) => {
 
 const sortTopHits = async () => {
   const today = dayjs();
+  
+  // Function to fetch and process data for a date range
+  const getArticlesForDateRange = async (range) => {
+    const dates = range.map((i) => today.subtract(i, "day"));
+    const [yesterdayData, dayBeforeYesterdayData] = await Promise.all(
+      dates.map(fetchTopHitsForDate)
+    );
 
-  // defines data range
-  const dates = [1, 2].map((i) => today.subtract(i, "day"));
-  const [yesterdayData, dayBeforeYesterdayData] = await Promise.all(
-    dates.map(fetchTopHitsForDate)
-  );
+    if (!yesterdayData || !yesterdayData.items?.[0]?.articles) {
+      return null;
+    }
 
-  // returns empty array for unavailable items
-  if (!yesterdayData || !yesterdayData.items?.[0]?.articles) {
-    return [];
+    const articlesMap = new Map();
+
+    if (yesterdayData?.items?.[0]?.articles) {
+      yesterdayData.items[0].articles.forEach(({ article, rank }) => {
+        articlesMap.set(article, { rank, previousRank: null });
+      });
+    }
+
+    if (dayBeforeYesterdayData?.items?.[0]?.articles) {
+      dayBeforeYesterdayData.items[0].articles.forEach(({ article, rank }) => {
+        if (articlesMap.has(article)) {
+          articlesMap.get(article).previousRank = rank;
+        }
+      });
+    }
+
+    const articlesArray = Array.from(articlesMap, ([article, data]) => ({
+      article,
+      rank: data.rank,
+      previousRank: data.previousRank,
+    }))
+      .filter(
+        ({ article }) =>
+          ![
+            "Main_Page",
+            "Special:Search",
+            "Wikipedia:Featured_pictures",
+            "Pornhub",
+            "Porno_y_helado",
+            ".xxx",
+          ].includes(article)
+      )
+      .sort((a, b) => a.rank - b.rank)
+      .slice(0, 10);
+
+    return articlesArray;
+  };
+
+  // Try the primary date range
+  let articles = await getArticlesForDateRange([1, 2]);
+  if (!articles || articles.length === 0) {
+    // Fallback to the secondary date range if primary fails
+    articles = await getArticlesForDateRange([2, 3]);
   }
 
-  const articlesMap = new Map();
-
-  if (yesterdayData?.items?.[0]?.articles) {
-    yesterdayData.items[0].articles.forEach(({ article, rank }) => {
-      articlesMap.set(article, { rank, previousRank: null });
-    });
-  }
-
-  if (dayBeforeYesterdayData?.items?.[0]?.articles) {
-    dayBeforeYesterdayData.items[0].articles.forEach(({ article, rank }) => {
-      if (articlesMap.has(article)) {
-        articlesMap.get(article).previousRank = rank;
-      }
-    });
-  }
-
-  const articlesArray = Array.from(articlesMap, ([article, data]) => ({
-    article,
-    rank: data.rank,
-    previousRank: data.previousRank,
-  }))
-
-    // removes unwanted articles from results
-    .filter(
-      ({ article }) =>
-        ![
-          "Main_Page",
-          "Special:Search",
-          "Wikipedia:Featured_pictures",
-          "Pornhub",
-          "Porno_y_helado",
-          ".xxx",
-        ].includes(article)
-    )
-
-    // sorts articles by rank in descending order for the top 10 results
-    .sort((a, b) => a.rank - b.rank)
-    .slice(0, 10);
-
-  return articlesArray;
+  return articles || [];
 };
 
 // Helper function to clean titles
