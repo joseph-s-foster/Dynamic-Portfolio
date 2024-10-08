@@ -76,6 +76,7 @@ const sortTopHits = async () => {
             "Porno_y_helado",
             ".xxx",
             "XNXX",
+            "wiki.phtml",
           ].includes(article)
       )
       .sort((a, b) => a.rank - b.rank)
