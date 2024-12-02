@@ -22,9 +22,6 @@ function Footer() {
             <p style={{ fontSize: "1rem", marginTop: "24px" }}>CONNECT</p>
           </li>
           <li className="footer-links">
-            <a href="mailto:joseph.s.foster@icloud.com">Email</a>
-          </li>
-          <li className="footer-links">
             <a
               href="https://github.com/joseph-s-foster"
               target="_blank"
@@ -40,6 +37,19 @@ function Footer() {
               rel="noopener noreferrer"
             >
               LinkedIn
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li className="footer-links" style={{ textDecoration: "none" }}>
+            <p style={{ fontSize: "1rem", marginTop: "16px" }}>RESOURCES</p>
+          </li>
+          <li className="footer-links">
+            <a href="https://the-winter.github.io/codingjs/">CodingJS</a>
+          </li>
+          <li className="footer-links">
+            <a href="https://www.w3schools.com/">
+              W3
             </a>
           </li>
         </ul>
@@ -65,7 +75,7 @@ function Footer() {
             paddingBottom: "16px",
           }}
         >
-          Copyright &copy; 2024 Joseph Foster
+          &copy; {new Date().getFullYear()} Joseph Foster
         </p>
       </div>
     </footer>
