@@ -45,10 +45,20 @@ function Footer() {
             <p style={{ fontSize: "1rem", marginTop: "16px" }}>RESOURCES</p>
           </li>
           <li className="footer-links">
-            <a href="https://the-winter.github.io/codingjs/">CodingJS</a>
+            <a
+              href="https://the-winter.github.io/codingjs/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CodingJS
+            </a>
           </li>
           <li className="footer-links">
-            <a href="https://www.w3schools.com/">
+            <a
+              href="https://www.w3schools.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               W3
             </a>
           </li>
