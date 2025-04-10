@@ -58,7 +58,7 @@ function Proficiencies() {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            height: "100vh",
+            height: "100svh",
             backgroundImage: `url(${background})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
