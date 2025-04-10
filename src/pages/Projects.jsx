@@ -112,26 +112,30 @@ const Component = ({ projectsGroup1 }) => {
 function Projects() {
   const projectsGroup1 = [
     {
-      name: "Would You Rather",
-      description: "A MERN stack polling app",
-      link: "https://wyr-3b5b304bab70.herokuapp.com/",
-      image: "wyr",
-    },
-    {
-      name: "Classic Snake",
+      name: "CLASSIC SNAKE",
       description: "Mobile gaming nostalgia",
+      language: ".js",
       link: "https://joseph-s-foster.github.io/Classic-Snake/",
       image: "blog",
     },
     {
-      name: "Python Pulse",
-      description: "A Python CRUD ops newsfeed",
+      name: "WYR",
+      description: "MERN stack polling",
+      language: ".jsx",
+      link: "https://wyr-3b5b304bab70.herokuapp.com/",
+      image: "wyr",
+    },
+    {
+      name: "PYTHON PULSE",
+      description: "CRUD ops newsfeed",
+      language: ".py",
       link: "https://python-pulse-a33bae0b4181.herokuapp.com/",
       image: "pulse",
     },
     {
-      name: "Salient Solutions",
-      description: "A C# employee badge maker",
+      name: "SALIENT SOLUTIONS",
+      description: "ID Generator",
+      language: ".cs",
       link: "https://github.com/joseph-s-foster/CSharp-Badge-Maker",
       image: "coffee",
     },

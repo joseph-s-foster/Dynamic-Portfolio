@@ -7,10 +7,10 @@ const useScrollReveal = () => {
       if (window.matchMedia("(max-width: 724px)").matches) {
         ScrollReveal().reveal(".reveal", {
           delay: 125,
-          distance: "24px",
+          distance: "48px",
           duration: 750,
           easing: "ease-in-out",
-          origin: "bottom",
+          origin: "left",
           interval: 375,
           opacity: 0,
           viewFactor: 0.125,

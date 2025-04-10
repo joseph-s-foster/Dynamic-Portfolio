@@ -59,7 +59,7 @@ export default function Navigation() {
             leaveTo="opacity-0 scale-100"
           >
             <Disclosure.Panel className="absolute top-12 inset-x-0 z-10">
-              <div className="space-y-2 mt-2 px-1">
+              <div className="space-y-1 mt-1 px-1">
                 {navigation.map((item) => (
                   <Disclosure.Button
                     id="menu"
