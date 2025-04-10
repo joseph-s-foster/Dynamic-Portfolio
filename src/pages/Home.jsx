@@ -8,7 +8,6 @@ import Trending from "../components/Trending";
 import Footer from "../components/Footer";
 
 function Home() {
-
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
@@ -30,11 +29,11 @@ function Home() {
       localStorage.setItem("hasVisitedHomePageBefore", "true");
       setTimeout(() => {
         setIsLoading(false);
-      }, 1000);
+      }, 2000);
     } else {
       setTimeout(() => {
         setIsLoading(false);
-      }, 500);
+      }, 1000);
     }
   }, []);
 
@@ -114,18 +113,7 @@ function Home() {
       </div>
       {isLoading && <LoadingSpinner />}
       <div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            height: "100vh",
-            backgroundImage: `url(${background})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
+        <div className="container">
           <div className="interact1">
             <h1 style={{ fontSize: "3rem", paddingBottom: "4px" }}>
               Joseph Foster

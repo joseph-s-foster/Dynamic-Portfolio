@@ -29,11 +29,11 @@ function Proficiencies() {
       localStorage.setItem("hasVisitedProficienciesPageBefore", "true");
       setTimeout(() => {
         setIsLoading(false);
-      }, 1000);
+      }, 2000);
     } else {
       setTimeout(() => {
         setIsLoading(false);
-      }, 500);
+      }, 1000);
     }
   }, []);
 

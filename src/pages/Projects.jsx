@@ -26,7 +26,7 @@ const Component = ({ projectsGroup1 }) => {
     } else {
       setTimeout(() => {
         setIsLoading(false);
-      }, 500);
+      }, 1000);
     }
   }, []);
 

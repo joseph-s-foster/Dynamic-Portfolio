@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { PuffLoader } from "react-spinners";
+import { BarLoader } from "react-spinners";
 
 const LoadingSpinner = () => {
   useEffect(() => {
@@ -28,7 +28,6 @@ const LoadingSpinner = () => {
   // centers the loader on all viewports
   return (
     <div
-      className="puffLoader"
       style={{
         position: "fixed",
         top: 0,
@@ -43,7 +42,7 @@ const LoadingSpinner = () => {
         backgroundColor: "black",
       }}
     >
-      <PuffLoader size={48} color={"#dddddd"} loading={true} />
+      <BarLoader size={48} color={"#dddddd"} loading={true} />
     </div>
   );
 };
