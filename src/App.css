@@ -18,6 +18,26 @@ body,
   box-sizing: border-box;
 }
 
+body.no-scroll {
+  overflow: hidden;
+  height: 100svh;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+}
+
 .interact1,
 .interact2 {
   display: flex;
@@ -30,7 +50,7 @@ body,
 
 .caret {
   position: absolute;
-  bottom: 2%;
+  bottom: 16px;
 }
 
 .api {

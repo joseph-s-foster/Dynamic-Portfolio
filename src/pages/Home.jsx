@@ -22,6 +22,14 @@ function Home() {
     window.scrollTo(0, 0);
   }, [location]);
 
+  useEffect(() => {
+    if (isLoading) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [isLoading]);  
+
   useLayoutEffect(() => {
     const hasVisitedBefore = localStorage.getItem("hasVisitedHomePageBefore");
 

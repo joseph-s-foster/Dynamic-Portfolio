@@ -13,6 +13,14 @@ const Component = ({ projectsGroup1 }) => {
 
   const [isLoading, setIsLoading] = useState(true);
 
+    useEffect(() => {
+      if (isLoading) {
+        document.body.classList.add("no-scroll");
+      } else {
+        document.body.classList.remove("no-scroll");
+      }
+    }, [isLoading]);  
+
   useEffect(() => {
     const hasVisitedBefore = localStorage.getItem(
       "hasVisitedProjectsPageBefore"
