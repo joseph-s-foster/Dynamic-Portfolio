@@ -40,12 +40,49 @@ body.no-scroll {
 
 .interact1,
 .interact2 {
+  position: relative; /* Required for ::before to position absolutely */
   display: flex;
-  position: static;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  z-index: 1;
+}
+
+.interact1::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(
+    ellipse at center,
+    #00ffff98,
+    transparent 70%
+  );
+  filter: blur(32px);
+  border-radius: 50%;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.interact2::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(
+    ellipse at center,
+    #00ffffe4,
+    transparent 70%
+  );
+  filter: blur(30px);
+  border-radius: 50%;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .caret {
