@@ -71,7 +71,7 @@
   }
 
   .skill-card {
-    padding: 12px;
+    padding: 16px;
     margin: 16px 0 0 0;
     flex-basis: calc(100%);
     aspect-ratio: 16 / 9;
