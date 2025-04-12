@@ -8,18 +8,17 @@ import Project from "../components/Project";
 import Footer from "../components/Footer";
 
 const Component = ({ projectsGroup1 }) => {
-
   useScrollReveal();
 
   const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {
-      if (isLoading) {
-        document.body.classList.add("no-scroll");
-      } else {
-        document.body.classList.remove("no-scroll");
-      }
-    }, [isLoading]);  
+  useEffect(() => {
+    if (isLoading) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [isLoading]);
 
   useEffect(() => {
     const hasVisitedBefore = localStorage.getItem(

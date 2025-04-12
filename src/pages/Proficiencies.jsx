@@ -15,8 +15,9 @@ import mongodb from "../assets/project/mongodb.svg";
 import react from "../assets/project/react.svg";
 import graphql from "../assets/project/graphql.svg";
 import python from "../assets/project/python.svg";
+import SkillCards from "../components/SkillCards";
 import Footer from "../components/Footer";
-import "../Proficiencies.css";
+import "../SkillCards.css";
 
 function Proficiencies() {
   const [isLoading, setIsLoading] = useState(true);
@@ -53,6 +54,81 @@ function Proficiencies() {
     }
   };
 
+  const proficiencies = [
+    {
+      src: javascript,
+      alt: "JavaScript",
+      title: "JavaScript",
+      description: "Interactivity and behavior on the front-end and back-end.",
+    },
+    {
+      src: python,
+      alt: "Python",
+      title: "Python",
+      description: "Scripting, data processing, and automation with clarity.",
+    },
+    {
+      src: html,
+      alt: "HTML",
+      title: "HTML",
+      description: "The foundation of web structure using semantic markup.",
+    },
+    {
+      src: css,
+      alt: "CSS",
+      title: "CSS",
+      description: "Styling with flexbox, grid, animations, and media queries.",
+    },
+    {
+      src: react,
+      alt: "React",
+      title: "React",
+      description: "Component-based UI development with virtual DOM.",
+    },
+    // {
+    //   src: jquery,
+    //   alt: "jQuery",
+    //   title: "jQuery",
+    //   description: "Simplified DOM manipulation and AJAX requests.",
+    // },
+    // {
+    //   src: node,
+    //   alt: "Node.js",
+    //   title: "Node.js",
+    //   description: "Server-side JavaScript with event-driven architecture.",
+    // },
+    // {
+    //   src: express,
+    //   alt: "Express.js",
+    //   title: "Express.js",
+    //   description: "Minimalist web framework for Node.js APIs and routing.",
+    // },
+    {
+      src: mysql,
+      alt: "MySQL",
+      title: "MySQL",
+      description: "Relational database with structured queries and joins.",
+    },
+    {
+      src: graphql,
+      alt: "GraphQL",
+      title: "GraphQL",
+      description: "Query language for flexible APIs and data fetching.",
+    },
+    // {
+    //   src: handlebars,
+    //   alt: "Handlebars",
+    //   title: "Handlebars",
+    //   description: "Logic-less templating for dynamic HTML content.",
+    // },
+    {
+      src: mongodb,
+      alt: "MongoDB",
+      title: "MongoDB",
+      description: "NoSQL database using flexible document schemas.",
+    }
+  ];
+
   return (
     <>
       <div>
@@ -80,19 +156,10 @@ function Proficiencies() {
           </a>
         </div>
         <div id="proficiencies"></div>
-        <div className="icons">
-          <img src={html} alt="HTML" />
-          <img src={css} alt="CSS" />
-          <img src={javascript} alt="JavaScript" />
-          <img src={python} alt="Python" />
-          <img src={jquery} alt="jQuery" />
-          <img src={node} alt="Node.js" />
-          <img src={express} alt="Express.js" />
-          <img src={mysql} alt="MySQL" />
-          <img src={handlebars} alt="Handlebars" />
-          <img src={mongodb} alt="MongoDB" />
-          <img src={react} alt="React" />
-          <img src={graphql} alt="GraphQL" />
+        <div id="proficiencies" className="icons">
+          {proficiencies.map((item) => (
+            <SkillCards key={item.alt} src={item.src} alt={item.alt} title={item.title} description={item.description} />
+          ))}
         </div>
         <Footer />
       </div>

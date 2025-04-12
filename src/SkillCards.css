@@ -1,0 +1,99 @@
+.icons {
+  justify-content: space-between;
+  margin: 52px 11% 28px 11%;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-basis: calc(25% - 16px);
+  aspect-ratio: 16 / 9;
+  background-color: #121212;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 24px;
+  color: #eeeeee;
+  text-align: right;
+  transition: transform 0.2s ease-in-out;
+}
+
+.skill-icon {
+  width: 120px;
+  height: 120px;
+  padding: 12px;
+}
+
+.skill-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.skill-title {
+  font-size: 1rem;
+}
+
+.skill-description {
+  font-size: 0.75rem;
+}
+
+/* .icons img {
+  flex-basis: calc(16.66% - 24px);
+  margin: 12px;
+  overflow: hidden;
+} */
+
+@media screen and (max-width: 1428px) {
+  .skill-card {
+    flex-basis: calc(48%);
+    aspect-ratio: 16 / 9;
+    margin-bottom: 4%;
+  }
+
+  .skill-icon {
+    width: 75%;
+    height: 75%;
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 724px) {
+  .icons {
+    margin: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skill-card {
+    padding: 12px;
+    margin: 16px 0 0 0;
+    flex-basis: calc(100%);
+    aspect-ratio: 16 / 9;
+  }
+  
+  .skill-icon {
+    width: 70%;
+    height: 70%;  
+  }
+
+  .skill-text {
+    text-align: left;
+  }
+
+  .skill-title {
+    font-size: 1.5rem;
+  }
+  
+  .skill-description {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+}
