@@ -38,9 +38,9 @@ body.no-scroll {
   overflow: hidden;
 }
 
-.interact1,
+.interact1 h1,
 .interact2 {
-  position: relative; /* Required for ::before to position absolutely */
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,41 +49,32 @@ body.no-scroll {
   z-index: 1;
 }
 
-.interact1::before {
-  content: "";
-  position: absolute;
-  width: 80%;
-  height: 60%;
-  background: radial-gradient(
-    ellipse at center,
-    #00ffff98,
-    transparent 70%
-  );
-  filter: blur(32px);
-  border-radius: 50%;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.interact1 {
+  margin-top: 16px;
 }
 
+.interact2 {
+  margin-bottom: 16px;
+}
+
+.interact1 h2 {
+  text-align: center;
+}
+
+/* .interact1 h1::before,
 .interact2::before {
   content: "";
   position: absolute;
-  width: 80%;
-  height: 60%;
-  background: radial-gradient(
-    ellipse at center,
-    #00ffffe4,
-    transparent 70%
-  );
+  width: 320px;
+  height: 32px;
+  background: radial-gradient(ellipse at center, #00ffd9cd, transparent 70%);
   filter: blur(30px);
   border-radius: 50%;
   z-index: -1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 
 .caret {
   position: absolute;
@@ -107,13 +98,6 @@ body.no-scroll {
   font-size: 2rem;
 }
 
-@media screen and (max-width: 724px) {
-  .apidesc2 {
-    margin-left: 16px;
-    margin-right: 16px;
-  }
-}
-
 .explore {
   padding: "12px";
   font-size: "1rem";
@@ -122,14 +106,9 @@ body.no-scroll {
   cursor: "pointer";
 }
 
-@media screen and (max-height: 512px) {
-  .interact1,
-  .interact2 {
-    display: flex;
-    position: static;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+@media screen and (max-width: 480px) {
+  .apidesc2 {
+    margin-left: 16px;
+    margin-right: 16px;
   }
 }

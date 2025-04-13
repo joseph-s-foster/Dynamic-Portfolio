@@ -5,7 +5,7 @@ const LoadingSpinner = () => {
   useEffect(() => {
     // disables overflow on small screens and mobile devices
     const handleResize = () => {
-      if (window.innerWidth < 724) {
+      if (window.innerWidth < 480) {
         document.body.style.overflow = "hidden";
       } else {
         document.body.style.overflow = "";

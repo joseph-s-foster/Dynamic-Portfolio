@@ -19,7 +19,7 @@ function Footer() {
       <nav>
         <ul>
           <li className="footer-links" style={{ textDecoration: "none" }}>
-            <p style={{ fontSize: "1rem", marginTop: "24px" }}>CONNECT</p>
+            <p style={{ fontSize: "1rem"}}>CONNECT</p>
           </li>
           <li className="footer-links">
             <a

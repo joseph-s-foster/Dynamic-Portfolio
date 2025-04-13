@@ -4,7 +4,7 @@ import { useEffect } from "react";
 const useScrollReveal = () => {
   useEffect(() => {
     const applyScrollReveal = () => {
-      if (window.matchMedia("(max-width: 724px)").matches) {
+      if (window.matchMedia("(max-width: 480px)").matches) {
         ScrollReveal().reveal(".reveal", {
           delay: 125,
           distance: "48px",
@@ -17,7 +17,7 @@ const useScrollReveal = () => {
           mobile: true,
           reset: false,
         });
-      }
+    }
     };
 
     applyScrollReveal();

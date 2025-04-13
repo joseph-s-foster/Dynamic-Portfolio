@@ -109,7 +109,7 @@ const truncateTitle = (title, length) => {
 // Trending component
 function Trending() {
   const [topArticles, setTopArticles] = useState([]);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 724);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 480);
 
   useEffect(() => {
     const fetchTopArticles = async () => {
@@ -120,7 +120,7 @@ function Trending() {
     fetchTopArticles();
 
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 724);
+      setIsMobile(window.innerWidth < 480);
     };
 
     window.addEventListener("resize", handleResize);

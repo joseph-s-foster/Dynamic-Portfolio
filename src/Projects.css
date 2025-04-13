@@ -61,8 +61,8 @@
 }
 
 .tile {
-  flex-basis: calc(25% - 24px);
-  padding-bottom: calc(25% - 24px);
+  flex-basis: calc(33% - 24px);
+  padding-bottom: calc(33% - 24px);
   position: relative;
   margin-bottom: 24px;
   border-radius: 12px;
@@ -116,14 +116,18 @@
   font-size: 2rem;
 }
 
-@media screen and (max-width: 1428px) {
+@media screen and (max-width: 900px) {
   .tile {
-    flex-basis: calc(50% - 12px);
-    padding-bottom: calc(50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-basis: calc(100% - 16px);
+    aspect-ratio: 5 / 3;
   }
 }
 
-@media screen and (max-width: 724px) {
+@media screen and (max-width: 480px) {
   .tile {
     flex-basis: calc(100%);
     padding-bottom: calc(100%);

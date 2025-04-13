@@ -45,7 +45,7 @@
   color: #F44336;
 }
 
-@media screen and (max-width: 724px) {
+@media screen and (max-width: 480px) {
   .apitrend {
     margin: 36px 16px 36px 16px;
   }
