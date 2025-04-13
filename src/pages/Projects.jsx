@@ -139,13 +139,13 @@ function Projects() {
       link: "https://python-pulse-a33bae0b4181.herokuapp.com/",
       image: "pulse",
     },
-    {
-      name: "SALIENT SOLUTIONS",
-      description: "ID Generator",
-      language: ".cs",
-      link: "https://github.com/joseph-s-foster/CSharp-Badge-Maker",
-      image: "coffee",
-    },
+    // {
+    //   name: "SALIENT SOLUTIONS",
+    //   description: "ID Generator",
+    //   language: ".cs",
+    //   link: "https://github.com/joseph-s-foster/CSharp-Badge-Maker",
+    //   image: "coffee",
+    // },
   ];
 
   return <Component projectsGroup1={projectsGroup1} />;

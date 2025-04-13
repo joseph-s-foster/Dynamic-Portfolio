@@ -61,8 +61,8 @@
 }
 
 .tile {
-  flex-basis: calc(25% - 24px);
-  padding-bottom: calc(25% - 24px);
+  flex-basis: calc(33% - 24px);
+  padding-bottom: calc(33% - 24px);
   position: relative;
   margin-bottom: 24px;
   border-radius: 12px;
@@ -117,13 +117,13 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .tile {
+  /* .tile {
     flex-basis: calc(50% - 16px);
     padding-bottom: calc(50%);
-  }
+  } */
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 900px) {
   .tile {
     flex-basis: calc(100%);
     padding-bottom: calc(100%);

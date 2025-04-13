@@ -109,24 +109,24 @@ function Proficiencies() {
       title: "MySQL",
       description: "Relational database with structured queries and joins.",
     },
-    {
-      src: graphql,
-      alt: "GraphQL",
-      title: "GraphQL",
-      description: "Query language for flexible APIs and data fetching.",
-    },
+    // {
+    //   src: graphql,
+    //   alt: "GraphQL",
+    //   title: "GraphQL",
+    //   description: "Query language for flexible APIs and data fetching.",
+    // },
     // {
     //   src: handlebars,
     //   alt: "Handlebars",
     //   title: "Handlebars",
     //   description: "Logic-less templating for dynamic HTML content.",
     // },
-    {
-      src: mongodb,
-      alt: "MongoDB",
-      title: "MongoDB",
-      description: "NoSQL database using flexible document schemas.",
-    }
+    // {
+    //   src: mongodb,
+    //   alt: "MongoDB",
+    //   title: "MongoDB",
+    //   description: "NoSQL database using flexible document schemas.",
+    // }
   ];
 
   return (
