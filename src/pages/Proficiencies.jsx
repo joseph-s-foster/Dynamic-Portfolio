@@ -61,7 +61,7 @@ function Proficiencies() {
       src: javascript,
       alt: "JavaScript",
       title: "JavaScript",
-      description: "Interactivity and behavior on both client and server sides.",
+      description: "Interactivity and behavior on client and server sides.",
     },
     {
       src: python,
