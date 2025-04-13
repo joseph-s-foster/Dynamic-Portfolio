@@ -86,28 +86,28 @@
 
 .project-info h1 {
   /* margin-top: 100%; */
-  color: #dddddd;
+  color: #eeeeee;
   font-size: 1rem;
   font-weight: bold;
 }
 
 .project-description {
-  color: #dddddd;
+  color: #eeeeee;
   font-size: .75rem;
-  font-weight: bold;
 }
 
 .project-language {
-  color: #dddddd;
+  color: #eeeeee;
   font-size: .75rem;
-  font-weight: bold;
+
 }
 
 .project-link {
  position: absolute;
- right: 24px;
- bottom: 24px;
- height: 32px;
+ right: 20px;
+ bottom: 20px;
+ height: 40px;
+ color: #eeeeee;
 }
 
 .profdesc {
