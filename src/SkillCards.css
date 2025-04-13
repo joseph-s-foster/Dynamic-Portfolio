@@ -41,6 +41,7 @@
 
 .skill-description {
   font-size: 1rem;
+  color: grey;
 }
 
 /* .icons img {
@@ -91,6 +92,5 @@
   
   .skill-description {
     font-size: 1rem;
-    color: grey;
   }
 }
