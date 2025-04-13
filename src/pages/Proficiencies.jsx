@@ -3,18 +3,20 @@ import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import html from "../assets/project/html.svg";
-import css from "../assets/project/css.svg";
+// import html from "../assets/project/html.svg";
+// import css from "../assets/project/css.svg";
 import javascript from "../assets/project/javascript.svg";
-import jquery from "../assets/project/jquery.svg";
-import node from "../assets/project/node.svg";
-import express from "../assets/project/express.svg";
+// import jquery from "../assets/project/jquery.svg";
+// import node from "../assets/project/node.svg";
+// import express from "../assets/project/express.svg";
 import mysql from "../assets/project/mysql.svg";
-import handlebars from "../assets/project/handlebars.svg";
-import mongodb from "../assets/project/mongodb.svg";
+import aws from "../assets/project/aws.svg";
+import atlassian from "../assets/project/atlassian.svg";
+// import mongodb from "../assets/project/mongodb.svg";
 import react from "../assets/project/react.svg";
-import graphql from "../assets/project/graphql.svg";
+// import graphql from "../assets/project/graphql.svg";
 import python from "../assets/project/python.svg";
+import docker from '../assets/project/docker.svg';
 import SkillCards from "../components/SkillCards";
 import Footer from "../components/Footer";
 import "../SkillCards.css";
@@ -68,23 +70,35 @@ function Proficiencies() {
       description: "Scripting, data processing, and automation with clarity.",
     },
     {
-      src: html,
-      alt: "HTML",
-      title: "HTML",
-      description: "The foundation of web structure using semantic markup.",
+      src: mysql,
+      alt: "MySQL",
+      title: "MySQL",
+      description: "Relational database with structured queries and joins.",
     },
     {
-      src: css,
-      alt: "CSS",
-      title: "CSS",
-      description: "Styling with flexbox, grid, animations, and media queries.",
+      src: aws,
+      alt: "AWS",
+      title: "AWS",
+      description: "Cloud platform offering scalable compute, storage, and services.",
     },
     {
-      src: react,
-      alt: "React",
-      title: "React",
-      description: "Component-based UI development with virtual DOM.",
+      src: docker,
+      alt: "Docker",
+      title: "Docker",
+      description: "Platform for building, shipping, and running containers at scale."
     },
+    {
+      src: atlassian,
+      alt: "Atlassian",
+      title: "Atlassian",
+      description: "Collaboration tools for code, projects, and team productivity.",
+    },
+        // {
+    //   src: react,
+    //   alt: "React",
+    //   title: "React",
+    //   description: "Component-based UI development with virtual DOM.",
+    // },
     // {
     //   src: jquery,
     //   alt: "jQuery",
@@ -103,23 +117,11 @@ function Proficiencies() {
     //   title: "Express.js",
     //   description: "Minimalist web framework for Node.js APIs and routing.",
     // },
-    {
-      src: mysql,
-      alt: "MySQL",
-      title: "MySQL",
-      description: "Relational database with structured queries and joins.",
-    },
     // {
     //   src: graphql,
     //   alt: "GraphQL",
     //   title: "GraphQL",
     //   description: "Query language for flexible APIs and data fetching.",
-    // },
-    // {
-    //   src: handlebars,
-    //   alt: "Handlebars",
-    //   title: "Handlebars",
-    //   description: "Logic-less templating for dynamic HTML content.",
     // },
     // {
     //   src: mongodb,

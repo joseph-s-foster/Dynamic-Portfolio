@@ -76,7 +76,7 @@
   left: 0;
   right: 0;
   padding: 12px;
-  background-color: #121212;
+  background-color: #1212127f;
   border-radius: 0 0 5px 5px;
   display: flex;
   flex-direction: column;
@@ -88,16 +88,19 @@
   /* margin-top: 100%; */
   color: #dddddd;
   font-size: 1rem;
+  font-weight: bold;
 }
 
 .project-description {
   color: #dddddd;
   font-size: .75rem;
+  font-weight: bold;
 }
 
 .project-language {
   color: #dddddd;
   font-size: .75rem;
+  font-weight: bold;
 }
 
 .project-link {
@@ -116,12 +119,12 @@
   font-size: 2rem;
 }
 
-@media screen and (max-width: 1200px) {
-  /* .tile {
+/* @media screen and (max-width: 1200px) {
+  .tile {
     flex-basis: calc(50% - 16px);
     padding-bottom: calc(50%);
-  } */
-}
+  }
+} */
 
 @media screen and (max-width: 900px) {
   .tile {
