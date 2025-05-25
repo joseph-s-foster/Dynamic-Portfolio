@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import useScrollReveal from "../hooks/reveal.js";
 import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
-import background from "../assets/project/background.png";
+import background2 from "../assets/project/background2.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Project from "../components/Project";
 import Footer from "../components/Footer";
@@ -63,13 +63,13 @@ const Component = ({ projectsGroup1 }) => {
             alignItems: "center",
             justifyContent: "center",
             height: "100svh",
-            backgroundImage: `url(${background})`,
+            backgroundImage: `url(${background2})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center bottom",
           }}
         >
           <div className="interact2">
-            <h1 style={{ fontSize: "3rem" }}>Projects</h1>
+            <h1 style={{ fontSize: "4rem" }}>Projects</h1>
           </div>
           <a className="caret" href="#api" onClick={handleScroll}>
             <ChevronDownIcon className="w-8" aria-hidden="true" />
@@ -98,7 +98,7 @@ const Component = ({ projectsGroup1 }) => {
                 style={{
                   padding: "12px",
                   fontSize: "1rem",
-                  border: "solid #dddddd 2px",
+                  border: "solid #eeeeee 2px",
                   borderRadius: "4px",
                   cursor: "pointer",
                 }}

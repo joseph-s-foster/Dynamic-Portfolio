@@ -36,11 +36,11 @@
 
 .explore {
   transition: background-color 0.33s ease-in-out, color 0.33s ease-in-out;
-  color: #dddddd;
+  color: #eeeeee;
 }
 
 .explore:hover {
-  background-color: #dddddd;
+  background-color: #eeeeee;
   color: #000;
 }
 

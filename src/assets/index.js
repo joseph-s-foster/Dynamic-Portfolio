@@ -4,6 +4,7 @@ export { default as pulse } from "./project/pulse.png";
 export { default as coffee } from "./project/coffee.png";
 export { default as blog } from "./project/blog.png";
 export { default as background } from "./project/background.png";
+export { default as background2 } from "./project/background2.png";
 // export {default as html} from './project/html.svg'
 // export {default as css} from './project/css.svg'
 export { default as javascript } from "./project/javascript.svg";

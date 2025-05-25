@@ -14,7 +14,7 @@ function Home() {
 
   const tag1 = "UX-Driven";
   const tag2 = "Mobile-Friendly";
-  const tag3 = "Full Stack Web Developer";
+  const tag3 = "Full-Stack Cloud Developer";
 
   const location = useLocation();
 
@@ -130,14 +130,14 @@ function Home() {
             height: "100svh",
             backgroundImage: `url(${background})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center bottom",
           }}
         >
           <div className="interact1">
-            <h1 style={{ fontSize: "3rem", paddingBottom: "4px" }}>
+            <h1 style={{ fontSize: "4rem", paddingBottom: "4px" }}>
               Joseph Foster
             </h1>
-            <h2 style={{ fontSize: "1.5rem" }}>
+            <h2 style={{ fontSize: "2rem" }}>
               {typedText}
               <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
             </h2>
@@ -174,7 +174,7 @@ function Home() {
                 style={{
                   padding: "12px",
                   fontSize: "1rem",
-                  border: "solid #dddddd 2px",
+                  border: "solid #eeeeee 2px",
                   borderRadius: "4px",
                   cursor: "pointer",
                 }}
