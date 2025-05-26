@@ -13,7 +13,7 @@ import mysql from "../assets/project/mysql.svg";
 import aws from "../assets/project/aws.svg";
 import atlassian from "../assets/project/atlassian.svg";
 // import mongodb from "../assets/project/mongodb.svg";
-import react from "../assets/project/react.svg";
+// import react from "../assets/project/react.svg";
 // import graphql from "../assets/project/graphql.svg";
 import python from "../assets/project/python.svg";
 import docker from '../assets/project/docker.svg';
