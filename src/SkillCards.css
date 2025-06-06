@@ -1,6 +1,6 @@
 .icons {
   justify-content: space-between;
-  margin: 52px 11% 16px 11%;
+  margin: 32px 11% 0 11%;
   flex: 1;
   display: flex;
   flex-wrap: wrap;
@@ -16,7 +16,7 @@
   background-color: #121212;
   border-radius: 12px;
   padding: 16px;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
   color: #eeeeee;
   text-align: right;
   transition: transform 0.2s ease-in-out;

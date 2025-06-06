@@ -2,7 +2,7 @@ import { useState, useEffect, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
-import background2 from "../assets/project/background2.png";
+import background3 from "../assets/project/background3.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 // import html from "../assets/project/html.svg";
 // import css from "../assets/project/css.svg";
@@ -217,7 +217,7 @@ function Proficiencies() {
             alignItems: "center",
             justifyContent: "center",
             height: "100svh",
-            backgroundImage: `url(${background2})`,
+            backgroundImage: `url(${background3})`,
             backgroundSize: "cover",
             backgroundPosition: "center bottom",
           }}

@@ -59,24 +59,8 @@ body.no-scroll {
 }
 
 .interact1 h2 {
-  color: grey;
   text-align: center;
 }
-
-/* .interact1 h1::before,
-.interact2::before {
-  content: "";
-  position: absolute;
-  width: 320px;
-  height: 32px;
-  background: radial-gradient(ellipse at center, #00ffd9cd, transparent 70%);
-  filter: blur(30px);
-  border-radius: 50%;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
 
 .caret {
   position: absolute;

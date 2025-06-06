@@ -164,7 +164,7 @@ const Component = ({ projectsGroup1 }) => {
             <h3 style={{ marginBottom: "8px" }}>Hooks and Local Storage</h3>
             <p className="para">
               Each tile is animated using a custom React hook and features a
-              call to action for exploring each project. Local storage is used
+              call to action for project exploration. Local storage is used
               to detect first-time visits and adjust the loader delay for a
               smoother user experience.
             </p>
@@ -185,7 +185,6 @@ const Component = ({ projectsGroup1 }) => {
             </div>
           </div>
         </div>
-        <div style={{ paddingBottom: "1%" }}></div>
         <Footer />
       </div>
     </>
