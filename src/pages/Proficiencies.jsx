@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
+import { useLocation } from "react-router-dom";
 import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
 import background2 from "../assets/project/background2.png";
@@ -16,13 +17,25 @@ import atlassian from "../assets/project/atlassian.svg";
 // import react from "../assets/project/react.svg";
 // import graphql from "../assets/project/graphql.svg";
 import python from "../assets/project/python.svg";
-import docker from '../assets/project/docker.svg';
+import docker from "../assets/project/docker.svg";
 import SkillCards from "../components/SkillCards";
 import Footer from "../components/Footer";
 import "../SkillCards.css";
 
 function Proficiencies() {
+  const [typedText, setTypedText] = useState("");
+  const [showCursor, setShowCursor] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
+
+  const tag1 = "Collaborative";
+  const tag2 = "Agile";
+  const tag3 = "Adaptive";
+
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   useEffect(() => {
     if (isLoading) {
@@ -32,12 +45,11 @@ function Proficiencies() {
     }
   }, [isLoading]);
 
-  useEffect(() => {
-    const hasVisitedBefore = localStorage.getItem(
-      "hasVisitedProficienciesPageBefore"
-    );
+  useLayoutEffect(() => {
+    const hasVisitedBefore = localStorage.getItem("hasVisitedHomePageBefore");
+
     if (!hasVisitedBefore) {
-      localStorage.setItem("hasVisitedProficienciesPageBefore", "true");
+      localStorage.setItem("hasVisitedHomePageBefore", "true");
       setTimeout(() => {
         setIsLoading(false);
       }, 2000);
@@ -47,6 +59,63 @@ function Proficiencies() {
       }, 1000);
     }
   }, []);
+
+  useEffect(() => {
+    const typeAndBackspace = async () => {
+      const cursorFlashInterval = setInterval(() => {
+        setShowCursor((prev) => !prev);
+      }, 500);
+
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      for (let i = 0; i < tag1.length; i++) {
+        setTypedText((prevText) => prevText + tag1[i]);
+        await new Promise((resolve) => setTimeout(resolve, 100));
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      for (let i = tag1.length; i >= 0; i--) {
+        setTypedText((prevText) => prevText.slice(0, -1));
+        await new Promise((resolve) => setTimeout(resolve, 100));
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      for (let i = 0; i < tag2.length; i++) {
+        setTypedText((prevText) => prevText + tag2[i]);
+        await new Promise((resolve) => setTimeout(resolve, 100));
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      for (let i = tag2.length; i >= 0; i--) {
+        setTypedText((prevText) => prevText.slice(0, -1));
+        await new Promise((resolve) => setTimeout(resolve, 100));
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      for (let i = 0; i < tag3.length; i++) {
+        setTypedText((prevText) => prevText + tag3[i]);
+        await new Promise((resolve) => setTimeout(resolve, 100));
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      for (let i = tag3.length; i >= 0; i--) {
+        setTypedText((prevText) => prevText.slice(0, -1));
+        await new Promise((resolve) => setTimeout(resolve, 100));
+      }
+
+      clearInterval(cursorFlashInterval);
+
+      // Repeat the process
+      typeAndBackspace();
+    };
+
+    typeAndBackspace();
+  }, [tag1]);
 
   const handleScroll = (event) => {
     event.preventDefault();
@@ -79,21 +148,24 @@ function Proficiencies() {
       src: aws,
       alt: "AWS",
       title: "AWS",
-      description: "Cloud platform offering scalable compute, storage, and services.",
+      description:
+        "Cloud platform offering scalable compute, storage, and services.",
     },
     {
       src: docker,
       alt: "Docker",
       title: "Docker",
-      description: "Platform for building, shipping, and running containers at scale."
+      description:
+        "Platform for building, shipping, and running containers at scale.",
     },
     {
       src: atlassian,
       alt: "Atlassian",
       title: "Atlassian",
-      description: "Collaboration tools for code, projects, and team productivity.",
+      description:
+        "Collaboration tools for code, projects, and team productivity.",
     },
-        // {
+    // {
     //   src: react,
     //   alt: "React",
     //   title: "React",
@@ -150,8 +222,12 @@ function Proficiencies() {
             backgroundPosition: "center bottom",
           }}
         >
-          <div className="interact2">
-            <h1 style={{ fontSize: "4rem" }}>Proficiencies</h1>
+          <div className="interact1">
+            <h1 style={{ fontSize: "4rem", paddingBottom: "4px" }}>Proficiencies</h1>
+            <h2 style={{ fontSize: "2rem" }}>
+              {typedText}
+              <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+            </h2>
           </div>
           <a className="caret" href="#api" onClick={handleScroll}>
             <ChevronDownIcon className="w-8" aria-hidden="true" />
@@ -160,7 +236,13 @@ function Proficiencies() {
         <div id="proficiencies"></div>
         <div id="proficiencies" className="icons">
           {proficiencies.map((item) => (
-            <SkillCards key={item.alt} src={item.src} alt={item.alt} title={item.title} description={item.description} />
+            <SkillCards
+              key={item.alt}
+              src={item.src}
+              alt={item.alt}
+              title={item.title}
+              description={item.description}
+            />
           ))}
         </div>
         <Footer />

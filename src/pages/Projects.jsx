@@ -15,9 +15,9 @@ const Component = ({ projectsGroup1 }) => {
   const [showCursor, setShowCursor] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
 
-  const tag1 = "Collaborative";
-  const tag2 = "Agile";
-  const tag3 = "Adaptive";
+  const tag1 = "Scalable";
+  const tag2 = "Modular";
+  const tag3 = "Interactive";
 
   const location = useLocation();
 
@@ -137,9 +137,7 @@ const Component = ({ projectsGroup1 }) => {
           }}
         >
           <div className="interact1">
-            <h1 style={{ fontSize: "4rem", paddingBottom: "4px" }}>
-              Projects
-            </h1>
+            <h1 style={{ fontSize: "4rem", paddingBottom: "4px" }}>Projects</h1>
             <h2 style={{ fontSize: "2rem" }}>
               {typedText}
               <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
