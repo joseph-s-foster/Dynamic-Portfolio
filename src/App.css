@@ -96,20 +96,29 @@ body.no-scroll {
   margin-left: 11%;
   margin-right: 11%;
   margin-top: 24px;
-  margin-bottom: 56px;
+  margin-bottom: 32px;
   font-size: 2rem;
 }
 
+.para {
+  color: grey;
+  font-size: 1rem;
+  padding-bottom: 16px;
+}
+
 .explore {
-  padding: "12px";
-  font-size: "1rem";
-  border: "solid #eeeeee 2px";
-  border-radius: "6px";
-  cursor: "pointer";
+  transition: background-color 0.33s ease-in-out, color 0.33s ease-in-out;
+  color: #eeeeee;
+}
+
+.explore:hover {
+  background-color: #eeeeee;
+  color: #000;
 }
 
 @media screen and (max-width: 480px) {
-  .interact1 h1, .interact2 h1 {
+  .interact1 h1,
+  .interact2 h1 {
     font-size: 3rem !important;
   }
 

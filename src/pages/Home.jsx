@@ -28,7 +28,7 @@ function Home() {
     } else {
       document.body.classList.remove("no-scroll");
     }
-  }, [isLoading]);  
+  }, [isLoading]);
 
   useLayoutEffect(() => {
     const hasVisitedBefore = localStorage.getItem("hasVisitedHomePageBefore");
@@ -165,9 +165,13 @@ function Home() {
           <Trending />
 
           <div className="apidesc2">
-            <h3 style={{ marginBottom: "8px" }}>
-              APIs and algorithms display trending articles.
-            </h3>
+            <h3 style={{ marginBottom: "8px" }}>APIs and Algorithms</h3>
+            <p className="para">
+              The top 10 trending articles are fetched daily via the
+              Wikimedia API and ranked by pageview count. Eeach article is paired
+              with an icon indicating whether its rank has improved, declined,
+              or held since the previous day.
+            </p>
             <div>
               <span
                 onClick={handleViewProjectsClick}
