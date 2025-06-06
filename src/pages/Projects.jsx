@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
+import { useLocation } from "react-router-dom";
 import useScrollReveal from "../hooks/reveal.js";
 import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
@@ -10,7 +11,19 @@ import Footer from "../components/Footer";
 const Component = ({ projectsGroup1 }) => {
   useScrollReveal();
 
+  const [typedText, setTypedText] = useState("");
+  const [showCursor, setShowCursor] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
+
+  const tag1 = "Collaborative";
+  const tag2 = "Agile";
+  const tag3 = "Adaptive";
+
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   useEffect(() => {
     if (isLoading) {
@@ -20,13 +33,11 @@ const Component = ({ projectsGroup1 }) => {
     }
   }, [isLoading]);
 
-  useEffect(() => {
-    const hasVisitedBefore = localStorage.getItem(
-      "hasVisitedProjectsPageBefore"
-    );
+  useLayoutEffect(() => {
+    const hasVisitedBefore = localStorage.getItem("hasVisitedHomePageBefore");
 
     if (!hasVisitedBefore) {
-      localStorage.setItem("hasVisitedProjectsPageBefore", "true");
+      localStorage.setItem("hasVisitedHomePageBefore", "true");
       setTimeout(() => {
         setIsLoading(false);
       }, 2000);
@@ -36,6 +47,63 @@ const Component = ({ projectsGroup1 }) => {
       }, 1000);
     }
   }, []);
+
+  useEffect(() => {
+    const typeAndBackspace = async () => {
+      const cursorFlashInterval = setInterval(() => {
+        setShowCursor((prev) => !prev);
+      }, 500);
+
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      for (let i = 0; i < tag1.length; i++) {
+        setTypedText((prevText) => prevText + tag1[i]);
+        await new Promise((resolve) => setTimeout(resolve, 100));
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      for (let i = tag1.length; i >= 0; i--) {
+        setTypedText((prevText) => prevText.slice(0, -1));
+        await new Promise((resolve) => setTimeout(resolve, 100));
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      for (let i = 0; i < tag2.length; i++) {
+        setTypedText((prevText) => prevText + tag2[i]);
+        await new Promise((resolve) => setTimeout(resolve, 100));
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      for (let i = tag2.length; i >= 0; i--) {
+        setTypedText((prevText) => prevText.slice(0, -1));
+        await new Promise((resolve) => setTimeout(resolve, 100));
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      for (let i = 0; i < tag3.length; i++) {
+        setTypedText((prevText) => prevText + tag3[i]);
+        await new Promise((resolve) => setTimeout(resolve, 100));
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      for (let i = tag3.length; i >= 0; i--) {
+        setTypedText((prevText) => prevText.slice(0, -1));
+        await new Promise((resolve) => setTimeout(resolve, 100));
+      }
+
+      clearInterval(cursorFlashInterval);
+
+      // Repeat the process
+      typeAndBackspace();
+    };
+
+    typeAndBackspace();
+  }, [tag1]);
 
   const handleScroll = (event) => {
     event.preventDefault();
@@ -68,8 +136,14 @@ const Component = ({ projectsGroup1 }) => {
             backgroundPosition: "center bottom",
           }}
         >
-          <div className="interact2">
-            <h1 style={{ fontSize: "4rem" }}>Projects</h1>
+          <div className="interact1">
+            <h1 style={{ fontSize: "4rem", paddingBottom: "4px" }}>
+              Projects
+            </h1>
+            <h2 style={{ fontSize: "2rem" }}>
+              {typedText}
+              <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+            </h2>
           </div>
           <a className="caret" href="#api" onClick={handleScroll}>
             <ChevronDownIcon className="w-8" aria-hidden="true" />
@@ -88,10 +162,14 @@ const Component = ({ projectsGroup1 }) => {
               </div>
             ))}
           </div>
-          <div className="profdesc">
-            <h3 style={{ marginBottom: "8px" }}>
-              Skills in multiple languages.
-            </h3>
+          <div className="apidesc2">
+            <h3 style={{ marginBottom: "8px" }}>Hooks and Local Storage</h3>
+            <p className="para">
+              Each tile is animated using a custom React hook and features a
+              call to action for exploring each project. Local storage is used
+              to detect first-time visits and adjust the loader delay for a
+              smoother user experience.
+            </p>
             <div>
               <span
                 onClick={handleViewProficienciesClick}

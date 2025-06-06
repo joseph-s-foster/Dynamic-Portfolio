@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
