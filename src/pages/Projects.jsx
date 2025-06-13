@@ -21,7 +21,7 @@ const Component = ({ projectsGroup1 }) => {
 
   const location = useLocation();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 

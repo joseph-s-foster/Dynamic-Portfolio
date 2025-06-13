@@ -18,7 +18,7 @@ function Home() {
 
   const location = useLocation();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
