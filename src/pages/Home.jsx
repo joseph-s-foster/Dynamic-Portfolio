@@ -160,23 +160,13 @@ function Home() {
           <div className="apidesc2">
             <h3 style={{ marginBottom: "8px" }}>APIs and Algorithms</h3>
             <p className="para">
-              The top 10 trending articles are fetched daily using the
-              Wikimedia API and ranked by pageview count. Each article is paired
-              with an icon indicating whether its rank has improved, declined,
-              or held since the previous day.
+              The top 10 trending articles are fetched daily using the Wikimedia
+              API and ranked by pageview count. Each article is paired with an
+              icon indicating whether its rank has improved, declined, or held
+              since the previous day.
             </p>
             <div>
-              <span
-                onClick={handleViewProjectsClick}
-                style={{
-                  padding: "12px",
-                  fontSize: "1rem",
-                  border: "solid #eeeeee 2px",
-                  borderRadius: "4px",
-                  cursor: "pointer",
-                }}
-                className="explore"
-              >
+              <span onClick={handleViewProjectsClick} className="explore">
                 View more projects
               </span>
             </div>

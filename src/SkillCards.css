@@ -36,12 +36,12 @@
 }
 
 .skill-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .skill-description {
+  font-weight: lighter;
   font-size: 1rem;
-  color: grey;
 }
 
 /* .icons img {
@@ -92,5 +92,6 @@
   
   .skill-description {
     font-size: 1rem;
+    font-weight: lighter;
   }
 }

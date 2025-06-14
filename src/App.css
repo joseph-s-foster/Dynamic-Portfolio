@@ -85,14 +85,19 @@ body.no-scroll {
 }
 
 .para {
-  color: grey;
   font-size: 1rem;
+  font-weight: lighter;
   padding-bottom: 16px;
 }
 
 .explore {
   transition: background-color 0.33s ease-in-out, color 0.33s ease-in-out;
   color: #eeeeee;
+  padding: 12px;
+  font-size: 1rem;
+  border: solid #eeeeee 2px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .explore:hover {
@@ -113,5 +118,14 @@ body.no-scroll {
   .apidesc2 {
     margin-left: 16px;
     margin-right: 16px;
+  }
+
+  .explore {
+    /* color: #000;
+    background-color: #eeeeee; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
   }
 }

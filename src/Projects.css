@@ -37,16 +37,6 @@
   background-image: url("./assets/project/blog.svg");
 }
 
-/* .explore {
-  transition: background-color 0.33s ease-in-out, color 0.33s ease-in-out;
-  color: #eeeeee;
-}
-
-.explore:hover {
-  background-color: #eeeeee;
-  color: #000;
-} */
-
 .tags {
   text-align: left;
   margin-top: 48px;
