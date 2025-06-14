@@ -44,9 +44,9 @@ body.no-scroll {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
   z-index: 1;
 }
 

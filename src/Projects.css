@@ -13,7 +13,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-size: 100%;
+  background-color: rgba(128, 128, 128, 0.27);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 80%;
   opacity: 0.9;
   transition: transform 0.3s ease-in-out;
 }
@@ -23,15 +26,15 @@
 }
 
 #project-pulse::before {
-  background-image: url("./assets/project/pulse.png");
+  background-image: url("./assets/project/pulse.svg");
 }
 
 #project-wyr::before {
-  background-image: url("./assets/project/wyr.png");
+  background-image: url("./assets/project/wyr.svg");
 }
 
 #project-blog::before {
-  background-image: url("./assets/project/blog.png");
+  background-image: url("./assets/project/blog.svg");
 }
 
 /* .explore {
@@ -76,7 +79,7 @@
   left: 0;
   right: 0;
   padding: 12px;
-  background-color: #121212c1;
+  background-color: #121212;
   border-radius: 0 0 5px 5px;
   display: flex;
   flex-direction: column;

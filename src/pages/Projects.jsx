@@ -2,7 +2,7 @@ import { useState, useEffect, useLayoutEffect } from "react";
 import useScrollReveal from "../hooks/reveal.js";
 import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
-import background2 from "../assets/project/background2.png";
+import background from "../assets/project/background.png";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Project from "../components/Project";
 import Footer from "../components/Footer";
@@ -124,7 +124,7 @@ const Component = ({ projectsGroup1 }) => {
             alignItems: "center",
             justifyContent: "center",
             height: "100svh",
-            backgroundImage: `url(${background2})`,
+            backgroundImage: `url(${background})`,
             backgroundSize: "cover",
             backgroundPosition: "center bottom",
           }}
@@ -157,8 +157,8 @@ const Component = ({ projectsGroup1 }) => {
             <h3 style={{ marginBottom: "8px" }}>Hooks and Local Storage</h3>
             <p className="para">
               Each tile is animated using a custom React hook and features a
-              call to action for project exploration. Local storage is used
-              to detect first-time visits and adjust the loader delay for a
+              call to action for project exploration. Local storage
+              detects first-time visits and adjust the loader delay for a
               smoother user experience.
             </p>
             <div>
