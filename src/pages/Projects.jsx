@@ -1,5 +1,4 @@
 import { useState, useEffect, useLayoutEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import useScrollReveal from "../hooks/reveal.js";
 import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
@@ -107,9 +106,8 @@ const Component = ({ projectsGroup1 }) => {
     }
   };
 
-  const navigate = useNavigate();
   const handleViewProficienciesClick = () => {
-    navigate("/proficiencies");
+    window.location.href = "/proficiencies";
   };
 
   return (

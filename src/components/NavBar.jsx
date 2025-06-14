@@ -26,12 +26,12 @@ export default function Navigation() {
   };
 
   return (
-    <Disclosure as="nav">
+    <Disclosure as="nav" className="bg-transparent">
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-2 lg:px-2">
             <div className="relative flex items-center justify-between">
-              <div className="absolute top-0 left-0 flex items-center">
+              <div className="absolute inset-y-7 left-0 flex items-center">
                 <Disclosure.Button
                   id="menu"
                   className="relative inline-flex items-center justify-center rounded-md p-1"
@@ -39,9 +39,9 @@ export default function Navigation() {
                   aria-label={open ? "Close menu" : "Open menu"}
                 >
                   {open ? (
-                    <XMarkIcon className="block h-10 w-7" aria-hidden="true" />
+                    <XMarkIcon className="block h-7 w-7" aria-hidden="true" />
                   ) : (
-                    <Bars2Icon className="block h-10 w-7" aria-hidden="true" />
+                    <Bars2Icon className="block h-7 w-7" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
@@ -71,7 +71,6 @@ export default function Navigation() {
                       "hover:underline"
                     )}
                     onClick={closeMobileMenu}
-                    // style={{ outline: "none", width: "1%" }}
                     aria-label={`Go to ${item.name}`}
                   >
                     {item.name}
@@ -85,4 +84,3 @@ export default function Navigation() {
     </Disclosure>
   );
 }
-

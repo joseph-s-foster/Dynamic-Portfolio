@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "../Footer.css";
 
 function Footer() {
@@ -66,7 +65,7 @@ function Footer() {
             <p style={{ fontSize: "1rem", marginTop: "16px" }}>USEFUL LINKS</p>
           </li>
           <li className="footer-links">
-            <Link to="/">Home</Link>
+            <a href="./">Home</a>
           </li>
           <li className="footer-links">
             <a href="#top" onClick={handleScroll}>
