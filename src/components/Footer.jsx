@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../Footer.css";
 
 function Footer() {
@@ -67,7 +66,7 @@ function Footer() {
             <p style={{ fontSize: "1rem", marginTop: "16px" }}>USEFUL LINKS</p>
           </li>
           <li className="footer-links">
-            <a href="./">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className="footer-links">
             <a href="#top" onClick={handleScroll}>

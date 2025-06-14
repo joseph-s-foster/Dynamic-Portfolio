@@ -1,5 +1,5 @@
 import { useState, useEffect, useLayoutEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
 import background from "../assets/project/background.png";
@@ -104,8 +104,9 @@ function Home() {
     }
   };
 
+  const navigate = useNavigate();
   const handleViewProjectsClick = () => {
-    window.location.href = "/projects";
+    navigate("/projects");
   };
 
   return (
