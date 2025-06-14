@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import "../Footer.css";
 
 function Footer() {
-  const location = useLocation();
 
   const handleScroll = (event) => {
     event.preventDefault();

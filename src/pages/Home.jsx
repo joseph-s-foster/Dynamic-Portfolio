@@ -16,12 +16,6 @@ function Home() {
   const tag2 = "Mobile-Friendly";
   const tag3 = "Full-Stack Cloud Developer";
 
-  const location = useLocation();
-
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [location]);
-
   useEffect(() => {
     if (isLoading) {
       document.body.classList.add("no-scroll");

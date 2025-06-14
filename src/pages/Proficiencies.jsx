@@ -31,12 +31,6 @@ function Proficiencies() {
   const tag2 = "Agile";
   const tag3 = "Adaptive";
 
-  const location = useLocation();
-
-  // useLayoutEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [location]);
-
   useEffect(() => {
     if (isLoading) {
       document.body.classList.add("no-scroll");

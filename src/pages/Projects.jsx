@@ -19,12 +19,6 @@ const Component = ({ projectsGroup1 }) => {
   const tag2 = "Modular";
   const tag3 = "Interactive";
 
-  const location = useLocation();
-
-  // useLayoutEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, [location]);
-
   useEffect(() => {
     if (isLoading) {
       document.body.classList.add("no-scroll");
