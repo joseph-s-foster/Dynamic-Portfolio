@@ -7,11 +7,11 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     if (navigationType === "PUSH") {
-      // Delay to allow layout to stabilize on mobile Safari
+      // Overkill to guarantee pixel-perfect scroll reset
       requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-        });
+        window.scrollTo(0, 0); // no smooth, no options object
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
       });
     }
   }, [pathname, navigationType]);
