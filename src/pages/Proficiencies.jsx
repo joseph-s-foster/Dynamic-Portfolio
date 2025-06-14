@@ -33,9 +33,9 @@ function Proficiencies() {
 
   const location = useLocation();
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
+  // useLayoutEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [location]);
 
   useEffect(() => {
     if (isLoading) {
