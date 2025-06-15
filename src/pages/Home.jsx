@@ -1,8 +1,7 @@
 import { useState, useEffect, useLayoutEffect } from "react";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
-import background from "../assets/project/background.png";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Trending from "../components/Trending";
 import Footer from "../components/Footer";
 
@@ -113,67 +112,54 @@ function Home() {
         <Nav />
       </div>
       {isLoading && <LoadingSpinner />}
-      <div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            height: "100svh",
-            backgroundImage: `url(${background})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center bottom",
-          }}
-        >
-          <div className="interact1">
-            <h1 style={{ fontSize: "4rem", paddingBottom: "4px" }}>
-              Joseph Foster
-            </h1>
-            <h2 style={{ fontSize: "2rem" }}>
-              {typedText}
-              <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
-            </h2>
-          </div>
-          <a className="caret" href="#api" onClick={handleScroll}>
-            <ChevronDownIcon className="w-8" aria-hidden="true" />
-          </a>
+      <div className="background">
+        <div className="hero">
+          <h1 style={{ fontSize: "4rem", paddingBottom: "4px" }}>
+            Joseph Foster
+          </h1>
+          <h2 style={{ fontSize: "2rem" }}>
+            {typedText}
+            <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+          </h2>
         </div>
-        <div
-          id="api"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            zIndex: isLoading ? -1 : 1,
-          }}
-        >
-          <div className="api">
-            <div className="apiresults">
-              <div className="apitrend">
-                <h3>Trending Now</h3>
-              </div>
-            </div>
-          </div>
-
-          <Trending />
-
-          <div className="apidesc2">
-            <h3 style={{ marginBottom: "8px" }}>APIs and Algorithms</h3>
-            <p className="para">
-              The top 10 trending articles are fetched daily using the Wikimedia
-              API and ranked by pageview count. Each article link is paired with an
-              icon indicating whether its rank has improved, declined, or held
-              since the previous day.
-            </p>
-            <div>
-              <span onClick={handleViewProjectsClick} className="explore">
-                View more projects
-              </span>
-            </div>
-          </div>
-        </div>
-        <Footer />
+        <a className="caret" href="#api" onClick={handleScroll}>
+          <ChevronDownIcon className="w-8" aria-hidden="true" />
+        </a>
       </div>
+      <div
+        id="api"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          zIndex: isLoading ? -1 : 1,
+        }}
+      >
+        <div className="api">
+          <div className="apiresults">
+            <div className="apitrend">
+              <h3>Trending Now</h3>
+            </div>
+          </div>
+        </div>
+
+        <Trending />
+
+        <div className="summary">
+          <h3>APIs and Algorithms</h3>
+          <p>
+            The top 10 trending articles are fetched daily using the Wikimedia
+            API and ranked by pageview count. Each article link is paired with
+            an icon indicating whether its rank has improved, declined, or held
+            since the previous day.
+          </p>
+          <div>
+            <span onClick={handleViewProjectsClick} className="explore">
+              View more projects
+            </span>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </>
   );
 }

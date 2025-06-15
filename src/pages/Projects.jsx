@@ -1,9 +1,8 @@
 import { useState, useEffect, useLayoutEffect } from "react";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import useScrollReveal from "../hooks/reveal.js";
 import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
-import background from "../assets/project/background.png";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Project from "../components/Project";
 import Footer from "../components/Footer";
 
@@ -116,59 +115,45 @@ const Component = ({ projectsGroup1 }) => {
         <Nav />
       </div>
       {isLoading && <LoadingSpinner />}
-      <div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            height: "100svh",
-            backgroundImage: `url(${background})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center bottom",
-          }}
-        >
-          <div className="interact1">
-            <h1 style={{ fontSize: "4rem", paddingBottom: "4px" }}>Projects</h1>
-            <h2 style={{ fontSize: "2rem" }}>
-              {typedText}
-              <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
-            </h2>
-          </div>
-          <a className="caret" href="#api" onClick={handleScroll}>
-            <ChevronDownIcon className="w-8" aria-hidden="true" />
-          </a>
+      <div className="background">
+        <div className="hero">
+          <h1 style={{ fontSize: "4rem", paddingBottom: "4px" }}>Projects</h1>
+          <h2 style={{ fontSize: "2rem" }}>
+            {typedText}
+            <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+          </h2>
         </div>
-        <div id="projects">
-          <div className="tiles">
-            {projectsGroup1.map((project) => (
-              <div
-                key={"project-" + project.name}
-                id={"project-" + project.image}
-                className="tile reveal"
-              >
-                <Project project={project} />
-              </div>
-            ))}
-          </div>
-          <div className="apidesc2">
-            <h3 style={{ marginBottom: "8px" }}>Hooks and Local Storage</h3>
-            <p className="para">
-              Each tile is animated using a custom React hook and features a
-              call to action for project exploration. Local storage detects
-              first-time visits and adjust the loader delay for a smoother user
-              experience.
-            </p>
-            <div>
-              <span onClick={handleViewProficienciesClick} className="explore">
-                View proficiencies
-              </span>
-            </div>
-          </div>
-        </div>
-        <Footer />
+        <a className="caret" href="#api" onClick={handleScroll}>
+          <ChevronDownIcon className="w-8" aria-hidden="true" />
+        </a>
       </div>
+      <div id="projects">
+        <div className="tiles">
+          {projectsGroup1.map((project) => (
+            <div
+              key={"project-" + project.name}
+              id={"project-" + project.image}
+              className="tile reveal"
+            >
+              <Project project={project} />
+            </div>
+          ))}
+        </div>
+        <div className="summary">
+          <h3>Hooks and Local Storage</h3>
+          <p>
+            Each tile is animated using a custom React hook and features a call
+            to action for project exploration. Local storage detects first-time
+            visits and adjust the loader delay for a smoother user experience.
+          </p>
+          <div>
+            <span onClick={handleViewProficienciesClick} className="explore">
+              View proficiencies
+            </span>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </>
   );
 };

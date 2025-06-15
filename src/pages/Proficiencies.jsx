@@ -1,23 +1,14 @@
 import { useState, useEffect, useLayoutEffect } from "react";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
-import background from "../assets/project/background.png";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
-// import html from "../assets/project/html.svg";
-// import css from "../assets/project/css.svg";
+import SkillCards from "../components/SkillCards";
 import javascript from "../assets/project/javascript.svg";
-// import jquery from "../assets/project/jquery.svg";
-// import node from "../assets/project/node.svg";
-// import express from "../assets/project/express.svg";
 import mysql from "../assets/project/mysql.svg";
 import aws from "../assets/project/aws.svg";
 import atlassian from "../assets/project/atlassian.svg";
-// import mongodb from "../assets/project/mongodb.svg";
-// import react from "../assets/project/react.svg";
-// import graphql from "../assets/project/graphql.svg";
 import python from "../assets/project/python.svg";
 import docker from "../assets/project/docker.svg";
-import SkillCards from "../components/SkillCards";
 import Footer from "../components/Footer";
 import "../SkillCards.css";
 
@@ -158,42 +149,6 @@ function Proficiencies() {
       description:
         "Collaboration tools for code, projects, and team productivity.",
     },
-    // {
-    //   src: react,
-    //   alt: "React",
-    //   title: "React",
-    //   description: "Component-based UI development with virtual DOM.",
-    // },
-    // {
-    //   src: jquery,
-    //   alt: "jQuery",
-    //   title: "jQuery",
-    //   description: "Simplified DOM manipulation and AJAX requests.",
-    // },
-    // {
-    //   src: node,
-    //   alt: "Node.js",
-    //   title: "Node.js",
-    //   description: "Server-side JavaScript with event-driven architecture.",
-    // },
-    // {
-    //   src: express,
-    //   alt: "Express.js",
-    //   title: "Express.js",
-    //   description: "Minimalist web framework for Node.js APIs and routing.",
-    // },
-    // {
-    //   src: graphql,
-    //   alt: "GraphQL",
-    //   title: "GraphQL",
-    //   description: "Query language for flexible APIs and data fetching.",
-    // },
-    // {
-    //   src: mongodb,
-    //   alt: "MongoDB",
-    //   title: "MongoDB",
-    //   description: "NoSQL database using flexible document schemas.",
-    // }
   ];
 
   const handleViewProjectsClick = () => {
@@ -206,56 +161,45 @@ function Proficiencies() {
         <Nav />
       </div>
       {isLoading && <LoadingSpinner />}
-      <div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            height: "100svh",
-            backgroundImage: `url(${background})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center bottom",
-          }}
-        >
-          <div className="interact1">
-            <h1 style={{ fontSize: "4rem", paddingBottom: "4px" }}>
-              Proficiencies
-            </h1>
-            <h2 style={{ fontSize: "2rem" }}>
-              {typedText}
-              <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
-            </h2>
-          </div>
-          <a className="caret" href="#api" onClick={handleScroll}>
-            <ChevronDownIcon className="w-8" aria-hidden="true" />
-          </a>
+      <div className="background">
+        <div className="hero">
+          <h1 style={{ fontSize: "4rem", paddingBottom: "4px" }}>
+            Proficiencies
+          </h1>
+          <h2 style={{ fontSize: "2rem" }}>
+            {typedText}
+            <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+          </h2>
         </div>
-        <div id="proficiencies" className="icons">
-          {proficiencies.map((item) => (
-            <SkillCards
-              key={item.alt}
-              src={item.src}
-              alt={item.alt}
-              title={item.title}
-              description={item.description}
-            />
-          ))}
-        </div>
-        <div className="apidesc2">
-          <h3 style={{ marginBottom: "8px" }}>Core Technologies</h3>
-          <p className="para">
-            Versatility across front-end, back-end, and cloud environments — from scripting and application design to containerized deployments and agile team workflows.
-          </p>
-          <div>
-            <span onClick={handleViewProjectsClick} className="explore">
-              Homepage
-            </span>
-          </div>
-        </div>
-        <Footer />
+        <a className="caret" href="#api" onClick={handleScroll}>
+          <ChevronDownIcon className="w-8" aria-hidden="true" />
+        </a>
       </div>
+      <div id="proficiencies" className="icons">
+        {proficiencies.map((item) => (
+          <SkillCards
+            key={item.alt}
+            src={item.src}
+            alt={item.alt}
+            title={item.title}
+            description={item.description}
+          />
+        ))}
+      </div>
+      <div className="summary">
+        <h3>Core Technologies</h3>
+        <p>
+          Versatility across front-end, back-end, and cloud environments — from
+          scripting and application design to containerized deployments and
+          agile team workflows.
+        </p>
+        <div>
+          <span onClick={handleViewProjectsClick} className="explore">
+            Homepage
+          </span>
+        </div>
+      </div>
+      <Footer />
     </>
   );
 }
