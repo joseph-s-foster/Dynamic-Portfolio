@@ -1,7 +1,6 @@
 import "../Footer.css";
 
 function Footer() {
-
   const handleScroll = (event) => {
     event.preventDefault();
 
@@ -16,7 +15,7 @@ function Footer() {
       <nav>
         <ul>
           <li className="footer-links" style={{ textDecoration: "none" }}>
-            <p style={{ fontSize: "1rem"}}>CONNECT</p>
+            <p>CONNECT</p>
           </li>
           <li className="footer-links">
             <a
@@ -39,16 +38,7 @@ function Footer() {
         </ul>
         <ul>
           <li className="footer-links" style={{ textDecoration: "none" }}>
-            <p style={{ fontSize: "1rem", marginTop: "16px" }}>RESOURCES</p>
-          </li>
-          <li className="footer-links">
-            <a
-              href="https://the-winter.github.io/codingjs/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              CodingJS
-            </a>
+            <p style={{ marginTop: "16px" }}>RESOURCES</p>
           </li>
           <li className="footer-links">
             <a
@@ -59,10 +49,19 @@ function Footer() {
               W3
             </a>
           </li>
+          <li className="footer-links">
+            <a
+              href="https://www.svgrepo.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              SVG Repo
+            </a>
+          </li>
         </ul>
         <ul>
           <li className="footer-links" style={{ textDecoration: "none" }}>
-            <p style={{ fontSize: "1rem", marginTop: "16px" }}>USEFUL LINKS</p>
+            <p style={{ marginTop: "16px" }}>USEFUL LINKS</p>
           </li>
           <li className="footer-links">
             <a href="./">Home</a>
@@ -82,7 +81,7 @@ function Footer() {
             paddingBottom: "16px",
           }}
         >
-          &copy; {new Date().getFullYear()} Joseph Foster
+          Joseph Foster &copy; {new Date().getFullYear()}
         </p>
       </div>
     </footer>

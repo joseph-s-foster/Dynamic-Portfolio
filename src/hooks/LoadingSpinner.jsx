@@ -28,7 +28,7 @@ const LoadingSpinner = () => {
   // centers the loader on all viewports
   return (
     <div className="loader">
-      <BarLoader size={48} color={"#eeeeee"} loading={true} />
+      <BarLoader size={48} color={"#fff"} loading={true} />
     </div>
   );
 };

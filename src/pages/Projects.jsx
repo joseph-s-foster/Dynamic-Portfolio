@@ -140,8 +140,7 @@ const Component = ({ projectsGroup1 }) => {
             <ChevronDownIcon className="w-8" aria-hidden="true" />
           </a>
         </div>
-        <div id="projects"></div>
-        <div>
+        <div id="projects">
           <div className="tiles">
             {projectsGroup1.map((project) => (
               <div
@@ -157,22 +156,12 @@ const Component = ({ projectsGroup1 }) => {
             <h3 style={{ marginBottom: "8px" }}>Hooks and Local Storage</h3>
             <p className="para">
               Each tile is animated using a custom React hook and features a
-              call to action for project exploration. Local storage
-              detects first-time visits and adjust the loader delay for a
-              smoother user experience.
+              call to action for project exploration. Local storage detects
+              first-time visits and adjust the loader delay for a smoother user
+              experience.
             </p>
             <div>
-              <span
-                onClick={handleViewProficienciesClick}
-                style={{
-                  padding: "12px",
-                  fontSize: "1rem",
-                  border: "solid #eeeeee 2px",
-                  borderRadius: "4px",
-                  cursor: "pointer",
-                }}
-                className="explore"
-              >
+              <span onClick={handleViewProficienciesClick} className="explore">
                 View proficiencies
               </span>
             </div>

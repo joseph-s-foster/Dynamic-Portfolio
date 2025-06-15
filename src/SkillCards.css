@@ -17,7 +17,7 @@
   border-radius: 12px;
   padding: 16px;
   margin-bottom: 32px;
-  color: #eeeeee;
+  color: #fff;
   text-align: right;
   transition: transform 0.2s ease-in-out;
 }
@@ -65,7 +65,7 @@
 
 @media screen and (max-width: 900px) {
   .icons {
-    margin: 16px;
+    margin: 0 10% 0 10%;
     justify-content: center;
     align-items: center;
   }
@@ -76,10 +76,10 @@
     flex-basis: calc(100%);
     aspect-ratio: 16 / 9;
   }
-  
+
   .skill-icon {
     width: 160px;
-    height: 160px;  
+    height: 160px;
   }
 
   .skill-text {
@@ -89,9 +89,15 @@
   .skill-title {
     font-size: 1.5rem;
   }
-  
+
   .skill-description {
     font-size: 1rem;
     font-weight: lighter;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .icons {
+    margin: 0 16px 48px 16px;
   }
 }

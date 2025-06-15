@@ -161,7 +161,7 @@ function Home() {
             <h3 style={{ marginBottom: "8px" }}>APIs and Algorithms</h3>
             <p className="para">
               The top 10 trending articles are fetched daily using the Wikimedia
-              API and ranked by pageview count. Each article is paired with an
+              API and ranked by pageview count. Each article link is paired with an
               icon indicating whether its rank has improved, declined, or held
               since the previous day.
             </p>

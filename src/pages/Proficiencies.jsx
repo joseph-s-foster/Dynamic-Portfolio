@@ -196,6 +196,10 @@ function Proficiencies() {
     // }
   ];
 
+  const handleViewProjectsClick = () => {
+    window.location.href = "/";
+  };
+
   return (
     <>
       <div>
@@ -216,7 +220,9 @@ function Proficiencies() {
           }}
         >
           <div className="interact1">
-            <h1 style={{ fontSize: "4rem", paddingBottom: "4px" }}>Proficiencies</h1>
+            <h1 style={{ fontSize: "4rem", paddingBottom: "4px" }}>
+              Proficiencies
+            </h1>
             <h2 style={{ fontSize: "2rem" }}>
               {typedText}
               <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
@@ -226,7 +232,6 @@ function Proficiencies() {
             <ChevronDownIcon className="w-8" aria-hidden="true" />
           </a>
         </div>
-        <div id="proficiencies"></div>
         <div id="proficiencies" className="icons">
           {proficiencies.map((item) => (
             <SkillCards
@@ -237,6 +242,17 @@ function Proficiencies() {
               description={item.description}
             />
           ))}
+        </div>
+        <div className="apidesc2">
+          <h3 style={{ marginBottom: "8px" }}>Core Technologies</h3>
+          <p className="para">
+            Versatility across front-end, back-end, and cloud environments — from scripting and application design to containerized deployments and agile team workflows.
+          </p>
+          <div>
+            <span onClick={handleViewProjectsClick} className="explore">
+              Homepage
+            </span>
+          </div>
         </div>
         <Footer />
       </div>
