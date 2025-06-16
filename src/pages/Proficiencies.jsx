@@ -111,44 +111,47 @@ function Proficiencies() {
 
   const proficiencies = [
     {
+      link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", 
       src: javascript,
       alt: "JavaScript",
       title: "JavaScript",
-      description: "Interactivity and behavior on client and server sides.",
+      description: "Interactivity and behavior on client and server sides."
     },
     {
+      link: "https://www.python.org/",
       src: python,
       alt: "Python",
       title: "Python",
-      description: "Scripting, data processing, and automation with clarity.",
+      description: "Scripting, data processing, and automation with clarity."
     },
     {
+      link: "https://www.mysql.com/",
       src: mysql,
       alt: "MySQL",
       title: "MySQL",
-      description: "Relational database with structured queries and joins.",
+      description: "Relational database with structured queries and joins."
     },
     {
+      link: "https://aws.amazon.com/",
       src: aws,
       alt: "AWS",
       title: "AWS",
-      description:
-        "Cloud platform offering scalable compute, storage, and services.",
+      description: "Cloud platform offering scalable compute, storage, and services."
     },
     {
+      link: "https://www.docker.com/",
       src: docker,
       alt: "Docker",
       title: "Docker",
-      description:
-        "Platform for building, shipping, and running containers at scale.",
+      description: "Platform for building, shipping, and running containers at scale."
     },
     {
+      link: "https://www.docker.com/",
       src: atlassian,
       alt: "Atlassian",
       title: "Atlassian",
-      description:
-        "Collaboration tools for code, projects, and team productivity.",
-    },
+      description: "Collaboration tools for code, projects, and team productivity.",
+    }
   ];
 
   const handleViewHomeClick = () => {
@@ -180,6 +183,7 @@ function Proficiencies() {
         {proficiencies.map((item) => (
           <SkillCards
             key={item.alt}
+            link={item.link}
             src={item.src}
             alt={item.alt}
             title={item.title}

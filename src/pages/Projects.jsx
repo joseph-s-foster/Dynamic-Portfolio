@@ -9,7 +9,6 @@ import news from "../assets/project/news.svg";
 import Footer from "../components/Footer";
 import "../ProjectCards.css";
 
-
 function Projects() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
@@ -109,28 +108,28 @@ function Projects() {
 
   const projects = [
     {
+      link: "https://joseph-s-foster.github.io/Classic-Snake/",
       src: snake,
       alt: "Snake",
       title: "Classic Snake",
       description: "Gaming nostaliga",
-      language: ".js",
-      link: "https://joseph-s-foster.github.io/Classic-Snake/"
+      language: ".js"
     },
     {
+      link: "https://wyr-3b5b304bab70.herokuapp.com/",
       src: brain,
       alt: "Brain",
       title: "WYR",
       description: "MERN stack polling",
-      language: ".jsx",
-      link: "https://wyr-3b5b304bab70.herokuapp.com/"
+      language: ".jsx"
     },
     {
+      link: "https://python-pulse-a33bae0b4181.herokuapp.com/",
       src: news,
       alt: "Newspaper",
       title: "Python Pulse",
       description: "CRUD ops newsfeed",
-      language: ".py",
-      link: "https://python-pulse-a33bae0b4181.herokuapp.com/"
+      language: ".py"
     },
   ];
 

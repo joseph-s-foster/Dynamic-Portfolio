@@ -65,7 +65,7 @@
 
 @media screen and (max-width: 1400px) {
   .skill-card {
-    flex-basis: calc(48%);
+    flex-basis: calc(50% - 16px);
     aspect-ratio: 16 / 9;
     margin-bottom: 4%;
   }
