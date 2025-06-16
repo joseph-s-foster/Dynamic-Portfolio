@@ -1,4 +1,3 @@
-import React from "react";
 import useScrollReveal from "../hooks/reveal.js";
 import "../SkillCards.css";
 

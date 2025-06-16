@@ -1,14 +1,16 @@
 import { useState, useEffect, useLayoutEffect } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import useScrollReveal from "../hooks/reveal.js";
 import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
-import Project from "../components/Project";
+import ProjectCards from "../components/ProjectCards";
+import snake from "../assets/project/snake.svg";
+import brain from "../assets/project/brain.svg";
+import news from "../assets/project/news.svg";
 import Footer from "../components/Footer";
+import "../ProjectCards.css";
 
-const Component = ({ projectsGroup1 }) => {
-  useScrollReveal();
 
+function Projects() {
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
@@ -105,6 +107,33 @@ const Component = ({ projectsGroup1 }) => {
     }
   };
 
+  const projects = [
+    {
+      src: snake,
+      alt: "Snake",
+      title: "Classic Snake",
+      description: "Gaming nostaliga",
+      language: ".js",
+      link: "https://joseph-s-foster.github.io/Classic-Snake/"
+    },
+    {
+      src: brain,
+      alt: "Brain",
+      title: "WYR",
+      description: "MERN stack polling",
+      language: ".jsx",
+      link: "https://wyr-3b5b304bab70.herokuapp.com/"
+    },
+    {
+      src: news,
+      alt: "Newspaper",
+      title: "Python Pulse",
+      description: "CRUD ops newsfeed",
+      language: ".py",
+      link: "https://python-pulse-a33bae0b4181.herokuapp.com/"
+    },
+  ];
+
   const handleViewProficienciesClick = () => {
     window.location.href = "/proficiencies";
   };
@@ -127,70 +156,36 @@ const Component = ({ projectsGroup1 }) => {
           <ChevronDownIcon className="w-8" aria-hidden="true" />
         </a>
       </div>
-      <div id="projects">
-        <div className="tiles">
-          {projectsGroup1.map((project) => (
-            <div
-              key={"project-" + project.name}
-              id={"project-" + project.image}
-              className="tile reveal"
-            >
-              <Project project={project} />
-            </div>
-          ))}
-        </div>
-        <div className="summary">
-          <h3>Hooks and Local Storage</h3>
-          <p>
-            Each tile is animated using a custom React hook and features a call
-            to action for project exploration. Local storage detects first-time
-            visits and adjust the loader delay for a smoother user experience.
-          </p>
-          <div>
-            <span onClick={handleViewProficienciesClick} className="explore">
-              View proficiencies
-            </span>
-          </div>
+      <div id="projects" />
+      <div className="projects">
+        {projects.map((item) => (
+          <ProjectCards
+            key={item.alt}
+            src={item.src}
+            alt={item.alt}
+            title={item.title}
+            description={item.description}
+            language={item.language}
+            link={item.link}
+          />
+        ))}
+      </div>
+      <div className="summary">
+        <h3>Hooks and Local Storage</h3>
+        <p>
+          Each tile is animated using a custom React hook and features a call to
+          action for project exploration. Local storage detects first-time
+          visits and adjust the loader delay for a smoother user experience.
+        </p>
+        <div>
+          <span onClick={handleViewProficienciesClick} className="explore">
+            View proficiencies
+          </span>
         </div>
       </div>
       <Footer />
     </>
   );
-};
-
-function Projects() {
-  const projectsGroup1 = [
-    {
-      name: "CLASSIC SNAKE",
-      description: "Mobile gaming nostalgia",
-      language: ".js",
-      link: "https://joseph-s-foster.github.io/Classic-Snake/",
-      image: "snake",
-    },
-    {
-      name: "WYR",
-      description: "MERN stack polling",
-      language: ".jsx",
-      link: "https://wyr-3b5b304bab70.herokuapp.com/",
-      image: "brain",
-    },
-    {
-      name: "PYTHON PULSE",
-      description: "CRUD ops newsfeed",
-      language: ".py",
-      link: "https://python-pulse-a33bae0b4181.herokuapp.com/",
-      image: "news",
-    },
-    // {
-    //   name: "SALIENT SOLUTIONS",
-    //   description: "ID Generator",
-    //   language: ".cs",
-    //   link: "https://github.com/joseph-s-foster/CSharp-Badge-Maker",
-    //   image: "coffee",
-    // },
-  ];
-
-  return <Component projectsGroup1={projectsGroup1} />;
 }
 
 export default Projects;

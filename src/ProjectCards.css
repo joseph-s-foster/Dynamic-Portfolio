@@ -1,0 +1,145 @@
+.projects {
+  justify-content: space-between;
+  margin: 32px 11% 0 11%;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-basis: calc(33% - 16px);
+  aspect-ratio: 16 / 9;
+  background-color: #121212;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+  overflow: hidden;
+  padding: 0;
+}
+
+.project-icon,
+.project-text {
+  flex: 1;
+  min-width: 0;
+  max-width: 50%;
+  overflow: hidden;
+}
+
+
+.project-icon {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-icon img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.project-text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.project-title {
+  font-size: 1.5rem;
+}
+
+.project-description,
+.project-language {
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .project-title {
+    font-size: 1.25rem;
+  }
+
+  .project-description,
+  .project-language {
+    font-size: .75rem;
+    font-weight: lighter;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .project-title {
+    font-size: 1rem;
+  }
+}
+
+@media (hover: hover) and (min-width: 900px) {
+  .project-card:hover {
+    scale: 1.03;
+    background-color: #212121;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .projects {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-card {
+    margin: 16px 0 0 0;
+    flex-basis: calc(100%);
+    aspect-ratio: 16 / 9;
+  }
+
+  .project-title {
+    font-size: 2.5rem;
+  }
+
+  .project-description,
+  .project-language {
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .project-description,
+  .project-language {
+    font-size: 1.25rem;
+    font-weight: lighter;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-description,
+  .project-language {
+    font-size: 1rem;
+    font-weight: lighter;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projects {
+    margin: 0 16px 48px 16px;
+  }
+}

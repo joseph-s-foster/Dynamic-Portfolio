@@ -151,7 +151,7 @@ function Proficiencies() {
     },
   ];
 
-  const handleViewProjectsClick = () => {
+  const handleViewHomeClick = () => {
     window.location.href = "/";
   };
 
@@ -175,7 +175,8 @@ function Proficiencies() {
           <ChevronDownIcon className="w-8" aria-hidden="true" />
         </a>
       </div>
-      <div id="proficiencies" className="icons">
+      <div id="proficiencies" />
+      <div className="icons">
         {proficiencies.map((item) => (
           <SkillCards
             key={item.alt}
@@ -194,7 +195,7 @@ function Proficiencies() {
           agile team workflows.
         </p>
         <div>
-          <span onClick={handleViewProjectsClick} className="explore">
+          <span onClick={handleViewHomeClick} className="explore">
             Homepage
           </span>
         </div>
