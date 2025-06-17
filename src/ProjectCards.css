@@ -92,6 +92,7 @@
   .projects {
     justify-content: center;
     align-items: center;
+    padding-bottom: 16px;
   }
 
   .project-card {
@@ -139,6 +140,6 @@
 
 @media screen and (max-width: 480px) {
   .projects {
-    margin: 0 16px 64px 16px;
+    margin: 0 16px 80px 16px;
   }
 }
