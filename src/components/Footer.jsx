@@ -1,12 +1,18 @@
 import "../Footer.css";
 
 function Footer() {
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
   const handleScroll = (event) => {
     event.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    if (isIOS) {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "auto" });
+      }, 500);
+    }
   };
 
   return (
