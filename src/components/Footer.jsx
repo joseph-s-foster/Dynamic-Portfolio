@@ -1,18 +1,22 @@
 import "../Footer.css";
 
 function Footer() {
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-
   const handleScroll = (event) => {
     event.preventDefault();
 
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // First scroll triggers UI changes (like Safari showing address bar)
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
 
-    if (isIOS) {
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: "auto" });
-      }, 500);
-    }
+    // Second scroll ensures final position once UI settles
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "auto", // instant correction
+      });
+    }, 500); // Tweak this based on your testing (400–600ms tends to work well)
   };
 
   return (
@@ -73,7 +77,7 @@ function Footer() {
           </li>
           <li className="footer-links">
             <a href="#top" onClick={handleScroll}>
-              Back to Top
+              Back to Top - test
             </a>
           </li>
         </ul>
