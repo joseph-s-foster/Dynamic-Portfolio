@@ -48,9 +48,10 @@ body.no-scroll {
 }
 
 .hero h1 {
-  font-weight: bolder;
   position: relative;
   z-index: 1;
+  font-size: 4rem;
+  padding-bottom: 4px;
 }
 
 .hero {
@@ -58,28 +59,17 @@ body.no-scroll {
 }
 
 .hero h2 {
+  font-size: 2rem;
   text-align: center;
 }
 
-.caret {
+.chevron-down {
   position: absolute;
   bottom: 16px;
 }
 
-.api {
-  display: flex;
-}
-
-.apiresults {
-  flex: 1;
-}
-
 .summary {
-  flex: 1;
-  margin-left: 11%;
-  margin-right: 11%;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin: 32px 11%;
   font-size: 2rem;
 }
 
@@ -90,22 +80,21 @@ body.no-scroll {
 .summary p {
   font-weight: lighter;
   font-size: 1rem;
-  padding-bottom: 16px;
+  padding-bottom: 8px;
 }
 
 .explore {
-  transition: background-color 0.33s ease-in-out, color 0.33s ease-in-out;
-  color: #fff;
-  padding: 12px;
   font-size: 1rem;
-  border: solid #fff 2px;
-  border-radius: 4px;
+  font-weight: 600;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
 }
 
-.explore:hover {
-  background-color: #fff;
-  color: #000;
+.chevron-right {
+  width: 1rem;
+  margin: 3px 0 0 4px;
+  stroke-width: 3;
 }
 
 @media screen and (max-width: 480px) {
@@ -118,7 +107,6 @@ body.no-scroll {
   }
 
   .summary {
-    margin-left: 16px;
-    margin-right: 16px;
+    margin: 32px 16px;
   }
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect, useLayoutEffect } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
 import SkillCards from "../components/SkillCards";
@@ -111,47 +111,50 @@ function Proficiencies() {
 
   const proficiencies = [
     {
-      link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", 
+      link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       src: javascript,
       alt: "JavaScript",
       title: "JavaScript",
-      description: "Interactivity and behavior on client and server sides."
+      description: "Interactivity and behavior on client and server sides.",
     },
     {
       link: "https://www.python.org/",
       src: python,
       alt: "Python",
       title: "Python",
-      description: "Scripting, data processing, and automation with clarity."
+      description: "Scripting, data processing, and automation with clarity.",
     },
     {
       link: "https://www.mysql.com/",
       src: mysql,
       alt: "MySQL",
       title: "MySQL",
-      description: "Relational database with structured queries and joins."
+      description: "Relational database with structured queries and joins.",
     },
     {
       link: "https://aws.amazon.com/",
       src: aws,
       alt: "AWS",
       title: "AWS",
-      description: "Cloud platform offering scalable compute, storage, and services."
+      description:
+        "Cloud platform offering scalable compute, storage, and services.",
     },
     {
       link: "https://www.docker.com/",
       src: docker,
       alt: "Docker",
       title: "Docker",
-      description: "Platform for building, shipping, and running containers at scale."
+      description:
+        "Platform for building, shipping, and running containers at scale.",
     },
     {
       link: "https://www.docker.com/",
       src: atlassian,
       alt: "Atlassian",
       title: "Atlassian",
-      description: "Collaboration tools for code, projects, and team productivity.",
-    }
+      description:
+        "Collaboration tools for code, projects, and team productivity.",
+    },
   ];
 
   const handleViewHomeClick = () => {
@@ -166,20 +169,20 @@ function Proficiencies() {
       {isLoading && <LoadingSpinner />}
       <div className="background">
         <div className="hero">
-          <h1 style={{ fontSize: "4rem", paddingBottom: "4px" }}>
+          <h1>
             Proficiencies
           </h1>
-          <h2 style={{ fontSize: "2rem" }}>
+          <h2>
             {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
           </h2>
         </div>
-        <a className="caret" href="#api" onClick={handleScroll}>
+        <a className="chevron-down" href="#api" onClick={handleScroll}>
           <ChevronDownIcon className="w-8" aria-hidden="true" />
         </a>
       </div>
       <div id="proficiencies" />
-      <div className="icons">
+      <div className="skills">
         {proficiencies.map((item) => (
           <SkillCards
             key={item.alt}
@@ -199,9 +202,9 @@ function Proficiencies() {
           agile team workflows.
         </p>
         <div>
-          <span onClick={handleViewHomeClick} className="explore">
-            Homepage
-          </span>
+          <a onClick={handleViewHomeClick} className="explore">
+            Homepage <ChevronRightIcon className="chevron-right" />
+          </a>
         </div>
       </div>
       <Footer />

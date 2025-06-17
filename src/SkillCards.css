@@ -1,6 +1,6 @@
-.icons {
+.skills {
   justify-content: space-between;
-  margin: 32px 11% 0 11%;
+  margin: 32px 11%;
   flex: 1;
   display: flex;
   flex-wrap: wrap;
@@ -64,23 +64,22 @@
 }
 
 @media screen and (max-width: 1400px) {
-  .skill-card {
-    flex-basis: calc(50% - 16px);
-    aspect-ratio: 16 / 9;
-    margin-bottom: 4%;
-  }
-
   .skill-title {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 
   .skill-description {
-    font-size: 1.25rem;
+    font-size: .75rem;
     font-weight: lighter;
   }
 }
 
 @media screen and (max-width: 1200px) {
+  .skill-card {
+    flex-basis: calc(50% - 16px);
+    aspect-ratio: 16 / 9;
+  }
+
   .skill-title {
     font-size: 1.5rem;
   }
@@ -92,7 +91,18 @@
   }
 }
 
-@media (hover: hover) and (min-width: 900px) {
+@media screen and (max-width: 900px) {
+  .skill-title {
+    font-size: 1.25rem;
+  }
+
+  .skill-description {
+    font-size: 0.75rem;
+    font-weight: lighter;
+  }
+}
+
+@media (hover: hover) and (min-width: 700px) {
   .skill-card:hover {
     scale: 1.03;
     background-color: #212121;
@@ -100,29 +110,16 @@
   }
 }
 
-@media screen and (max-width: 900px) {
-  .icons {
-    justify-content: center;
-    align-items: center;
+@media screen and (max-width: 700px) {
+  .skills {
+    margin: 32px 11%;
   }
 
   .skill-card {
-    margin: 16px 0 0 0;
     flex-basis: calc(100%);
     aspect-ratio: 16 / 9;
   }
 
-  .skill-title {
-    font-size: 2.5rem;
-  }
-
-  .skill-description {
-    font-size: 1.5rem;
-    font-weight: lighter;
-  }
-}
-
-@media screen and (max-width: 700px) {
   .skill-title {
     font-size: 2rem;
   }
@@ -147,7 +144,11 @@
 }
 
 @media screen and (max-width: 480px) {
-  .icons {
-    margin: 0 16px 48px 16px;
+  .skills {
+    margin: 16px 16px 48px 16px;
+  }
+
+  .skill-card {
+    margin-bottom: 16px;
   }
 }

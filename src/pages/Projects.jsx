@@ -1,5 +1,5 @@
 import { useState, useEffect, useLayoutEffect } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
 import ProjectCards from "../components/ProjectCards";
@@ -113,7 +113,7 @@ function Projects() {
       alt: "Snake",
       title: "Classic Snake",
       description: "Gaming nostaliga",
-      language: ".js"
+      language: ".js",
     },
     {
       link: "https://wyr-3b5b304bab70.herokuapp.com/",
@@ -121,7 +121,7 @@ function Projects() {
       alt: "Brain",
       title: "WYR",
       description: "MERN stack polling",
-      language: ".jsx"
+      language: ".jsx",
     },
     {
       link: "https://python-pulse-a33bae0b4181.herokuapp.com/",
@@ -129,7 +129,7 @@ function Projects() {
       alt: "Newspaper",
       title: "Python Pulse",
       description: "CRUD ops newsfeed",
-      language: ".py"
+      language: ".py",
     },
   ];
 
@@ -145,13 +145,13 @@ function Projects() {
       {isLoading && <LoadingSpinner />}
       <div className="background">
         <div className="hero">
-          <h1 style={{ fontSize: "4rem", paddingBottom: "4px" }}>Projects</h1>
-          <h2 style={{ fontSize: "2rem" }}>
+          <h1>Projects</h1>
+          <h2>
             {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
           </h2>
         </div>
-        <a className="caret" href="#api" onClick={handleScroll}>
+        <a className="chevron-down" href="#projects" onClick={handleScroll}>
           <ChevronDownIcon className="w-8" aria-hidden="true" />
         </a>
       </div>
@@ -177,9 +177,9 @@ function Projects() {
           visits and adjust the loader delay for a smoother user experience.
         </p>
         <div>
-          <span onClick={handleViewProficienciesClick} className="explore">
-            View proficiencies
-          </span>
+          <a onClick={handleViewProficienciesClick} className="explore">
+            View proficiencies <ChevronRightIcon className="chevron-right" />
+          </a>
         </div>
       </div>
       <Footer />

@@ -1,5 +1,5 @@
 import { useState, useEffect, useLayoutEffect } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import LoadingSpinner from "../hooks/LoadingSpinner";
 import Nav from "../components/NavBar";
 import Trending from "../components/Trending";
@@ -114,23 +114,19 @@ function Home() {
       {isLoading && <LoadingSpinner />}
       <div className="background">
         <div className="hero">
-          <h1 style={{ fontSize: "4rem", paddingBottom: "4px" }}>
-            Joseph Foster
-          </h1>
-          <h2 style={{ fontSize: "2rem" }}>
+          <h1>Joseph Foster</h1>
+          <h2>
             {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
           </h2>
         </div>
-        <a className="caret" href="#api" onClick={handleScroll}>
+        <a className="chevron-down" href="#api" onClick={handleScroll}>
           <ChevronDownIcon className="w-8" aria-hidden="true" />
         </a>
       </div>
       <div
         id="api"
         style={{
-          display: "flex",
-          flexDirection: "column",
           zIndex: isLoading ? -1 : 1,
         }}
       >
@@ -153,9 +149,9 @@ function Home() {
             since the previous day.
           </p>
           <div>
-            <span onClick={handleViewProjectsClick} className="explore">
-              View more projects
-            </span>
+            <a onClick={handleViewProjectsClick} className="explore">
+              View more projects <ChevronRightIcon className="chevron-right" />
+            </a>
           </div>
         </div>
       </div>

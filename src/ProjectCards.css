@@ -1,6 +1,6 @@
 .projects {
   justify-content: space-between;
-  margin: 32px 11% 0 11%;
+  margin: 32px 11%;
   flex: 1;
   display: flex;
   flex-wrap: wrap;
@@ -29,7 +29,6 @@
   max-width: 50%;
   overflow: hidden;
 }
-
 
 .project-icon {
   height: 100%;
@@ -140,6 +139,6 @@
 
 @media screen and (max-width: 480px) {
   .projects {
-    margin: 0 16px 48px 16px;
+    margin: 0 16px 64px 16px;
   }
 }

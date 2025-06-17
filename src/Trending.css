@@ -1,18 +1,16 @@
-.articles:hover {
-  text-decoration: underline;
+.api {
+  display: flex;
+  flex-direction: column;
 }
 
 .apitrend {
-  margin-top: 36px;
-  margin-bottom: 36px;
-  margin-left: 11%;
+  margin: 32px 11%;
   font-size: 2rem;
 }
 
 .apiarticles {
   align-items: center;
-  margin-left: 11%;
-  margin-right: 11%;
+  margin: 0 11%;
 }
 
 .apiarticles li {
@@ -26,6 +24,10 @@
   font-size: 1rem;
 }
 
+.articles:hover {
+  text-decoration: underline;
+}
+
 .trend-icon {
   right: 11%;
   width: 16px;
@@ -37,21 +39,21 @@
 }
 
 .trend-icon.up {
-  color: #4CAF50;
+  color: #4caf50;
 }
 
 .trend-icon.down {
   transform: rotate(180deg);
-  color: #F44336;
+  color: #f44336;
 }
 
 @media screen and (max-width: 480px) {
   .apitrend {
-    margin: 36px 16px 36px 16px;
+    margin: 32px 16px;
   }
 
   .apiarticles {
-    margin: 0 16px 0 16px;
+    margin: 0 16px;
   }
 
   .trend-icon {
