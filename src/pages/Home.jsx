@@ -148,11 +148,9 @@ function Home() {
             an icon indicating whether its rank has improved, declined, or held
             since the previous day.
           </p>
-          <div>
-            <a onClick={handleViewProjectsClick} className="explore">
-              View more projects <ChevronRightIcon className="chevron-right" />
-            </a>
-          </div>
+          <a onClick={handleViewProjectsClick} className="explore">
+            View more projects <ChevronRightIcon className="chevron-right" />
+          </a>
         </div>
       </div>
       <Footer />

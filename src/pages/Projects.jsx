@@ -176,11 +176,9 @@ function Projects() {
           action for project exploration. Local storage detects first-time
           visits and adjust the loader delay for a smoother user experience.
         </p>
-        <div>
-          <a onClick={handleViewProficienciesClick} className="explore">
-            View proficiencies <ChevronRightIcon className="chevron-right" />
-          </a>
-        </div>
+        <a onClick={handleViewProficienciesClick} className="explore">
+          View proficiencies <ChevronRightIcon className="chevron-right" />
+        </a>
       </div>
       <Footer />
     </>

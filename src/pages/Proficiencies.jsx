@@ -169,9 +169,7 @@ function Proficiencies() {
       {isLoading && <LoadingSpinner />}
       <div className="background">
         <div className="hero">
-          <h1>
-            Proficiencies
-          </h1>
+          <h1>Proficiencies</h1>
           <h2>
             {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
@@ -201,11 +199,9 @@ function Proficiencies() {
           scripting and application design to containerized deployments and
           agile team workflows.
         </p>
-        <div>
-          <a onClick={handleViewHomeClick} className="explore">
-            Homepage <ChevronRightIcon className="chevron-right" />
-          </a>
-        </div>
+        <a onClick={handleViewHomeClick} className="explore">
+          Homepage <ChevronRightIcon className="chevron-right" />
+        </a>
       </div>
       <Footer />
     </>
