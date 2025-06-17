@@ -3,11 +3,10 @@ import "../Footer.css";
 function Footer() {
   const handleScroll = (event) => {
     event.preventDefault();
-
-    const topContainer = document.getElementById("top");
-    if (topContainer) {
-      topContainer.scrollIntoView({ behavior: "smooth" });
-    }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
