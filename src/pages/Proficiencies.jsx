@@ -148,7 +148,7 @@ function Proficiencies() {
         "Platform for building, shipping, and running containers at scale.",
     },
     {
-      link: "https://www.docker.com/",
+      link: "https://www.atlassian.com/",
       src: atlassian,
       alt: "Atlassian",
       title: "Atlassian",
