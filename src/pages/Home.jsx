@@ -7,7 +7,7 @@ import Trending from "../components/Trending";
 import Footer from "../components/Footer";
 
 function Home() {
-  const isLoading = useInitialPageLoad();
+  const isLoading = useInitialPageLoad("home");
   const tag1 = "UX-Driven";
   const tag2 = "Mobile-Friendly";
   const tag3 = "Full-Stack Developer";

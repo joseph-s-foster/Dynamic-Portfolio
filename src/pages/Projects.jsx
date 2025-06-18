@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 import "../ProjectCards.css";
 
 function Projects() {
-  const isLoading = useInitialPageLoad();
+  const isLoading = useInitialPageLoad("projects");
   const tag1 = "Scalable";
   const tag2 = "Modular";
   const tag3 = "Interactive";

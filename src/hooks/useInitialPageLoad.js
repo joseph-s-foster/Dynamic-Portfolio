@@ -1,7 +1,12 @@
 import { useEffect, useLayoutEffect, useState } from "react";
 
-export default function useInitialPageLoad(firstVisitDelay = 2000, revisitDelay = 1000) {
+export default function useInitialPageLoad(
+  key = "page",
+  firstVisitDelay = 2000,
+  revisitDelay = 1000
+) {
   const [isLoading, setIsLoading] = useState(true);
+  const storageKey = `hasVisited_${key}`;
 
   useEffect(() => {
     if (isLoading) {
@@ -12,12 +17,11 @@ export default function useInitialPageLoad(firstVisitDelay = 2000, revisitDelay 
   }, [isLoading]);
 
   useLayoutEffect(() => {
-    const hasVisitedBefore = localStorage.getItem("hasVisitedHomePageBefore");
-
+    const hasVisitedBefore = localStorage.getItem(storageKey);
     const delay = hasVisitedBefore ? revisitDelay : firstVisitDelay;
 
     if (!hasVisitedBefore) {
-      localStorage.setItem("hasVisitedHomePageBefore", "true");
+      localStorage.setItem(storageKey, "true");
     }
 
     const timer = setTimeout(() => {
@@ -25,7 +29,7 @@ export default function useInitialPageLoad(firstVisitDelay = 2000, revisitDelay 
     }, delay);
 
     return () => clearTimeout(timer);
-  }, [firstVisitDelay, revisitDelay]);
+  }, [storageKey, firstVisitDelay, revisitDelay]);
 
   return isLoading;
 }

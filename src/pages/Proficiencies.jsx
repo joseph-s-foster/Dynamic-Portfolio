@@ -14,7 +14,7 @@ import Footer from "../components/Footer";
 import "../SkillCards.css";
 
 function Proficiencies() {
-  const isLoading = useInitialPageLoad();
+  const isLoading = useInitialPageLoad("proficiencies");
   const tag1 = "Collaborative";
   const tag2 = "Agile";
   const tag3 = "Adaptive";
