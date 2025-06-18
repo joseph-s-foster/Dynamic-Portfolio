@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useState } from "react";
 
 export default function useInitialPageLoad(
   key = "page",
-  firstVisitDelay = 2000,
+  firstVisitDelay = 1000,
   revisitDelay = 0
 ) {
   const [isLoading, setIsLoading] = useState(true);
