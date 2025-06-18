@@ -19,7 +19,7 @@ body,
 
 body.no-scroll {
   overflow: hidden;
-  height: 100svh;
+  height: 100vh;
 }
 
 .loader {
@@ -27,7 +27,7 @@ body.no-scroll {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100svh;
+  height: 100%;
   z-index: 1000;
   display: flex;
   flex-direction: column;
