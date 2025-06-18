@@ -1,6 +1,6 @@
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import useInitialPageLoad from "../hooks/useInitialPageLoad";
-import Loader from "../hooks/Loader";
+// import useInitialPageLoad from "../hooks/useInitialPageLoad";
+// import Loader from "../hooks/Loader";
 import useTypewriterLoop from "../hooks/useTypewriterLoop";
 import Nav from "../components/NavBar";
 import ProjectCards from "../components/ProjectCards";
@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 import "../ProjectCards.css";
 
 function Projects() {
-  const isLoading = useInitialPageLoad("projects");
+  // const isLoading = useInitialPageLoad("projects");
   const tag1 = "Scalable";
   const tag2 = "Modular";
   const tag3 = "Interactive";
@@ -59,7 +59,7 @@ function Projects() {
       <div>
         <Nav />
       </div>
-      {isLoading && <Loader />}
+      {/* {isLoading && <Loader />} */}
       <div className="background">
         <div className="hero">
           <h1>Projects</h1>
