@@ -1,4 +1,4 @@
-import useScrollReveal from "../hooks/reveal.js";
+import useScrollReveal from "../hooks/useScrollReveal";
 import "../ProjectCards.css";
 
 function ProjectCards({ link, src, alt, title, description, language }) {

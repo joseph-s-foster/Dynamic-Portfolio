@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { BarLoader } from "react-spinners";
 
-const LoadingSpinner = () => {
+const Loader = () => {
   useEffect(() => {
     // disables overflow on small screens and mobile devices
     const handleResize = () => {
@@ -33,4 +33,4 @@ const LoadingSpinner = () => {
   );
 };
 
-export default LoadingSpinner;
+export default Loader;

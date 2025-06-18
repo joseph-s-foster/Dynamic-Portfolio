@@ -1,4 +1,4 @@
-import useScrollReveal from "../hooks/reveal.js";
+import useScrollReveal from "../hooks/useScrollReveal";
 import "../SkillCards.css";
 
 function SkillCards({ link, src, alt, title, description }) {

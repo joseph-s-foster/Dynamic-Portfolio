@@ -59,7 +59,7 @@ body.no-scroll {
 }
 
 .hero h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   text-align: center;
 }
 
@@ -101,11 +101,11 @@ body.no-scroll {
 
 @media screen and (max-width: 480px) {
   .hero h1 {
-    font-size: 3rem !important;
+    font-size: 3rem;
   }
 
   .hero h2 {
-    font-size: 1.5rem !important;
+    font-size: 1.5rem;
   }
 
   .summary {
