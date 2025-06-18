@@ -1,3 +1,7 @@
+.reveal {
+  visibility: hidden;
+}
+
 .skills {
   justify-content: space-between;
   margin: 0 11%;

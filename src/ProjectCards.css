@@ -1,3 +1,7 @@
+.reveal {
+  visibility: hidden;
+}
+
 .projects {
   justify-content: space-between;
   margin: 0 11%;
