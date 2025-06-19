@@ -60,10 +60,10 @@ function Home() {
         <div className="summary">
           <h3>APIs and Algorithms</h3>
           <p>
-            The top 10 trending articles are fetched daily using the Wikimedia
-            API and ranked by pageview count. Each article's link is paired with
-            an icon indicating whether its rank has improved, declined, or held
-            since the previous day.
+            Daily article data is retrieved from Wikimedia and sorted by
+            pageview metrics to generate the top 10 results. Each article's link
+            is paired with an icon indicating whether its rank has improved,
+            declined, or held since the previous day.
           </p>
           <a onClick={handleViewProjectsClick} className="explore">
             View more projects <ChevronRightIcon className="chevron-right" />
