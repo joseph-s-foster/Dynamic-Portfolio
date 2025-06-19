@@ -87,11 +87,11 @@ function Projects() {
         ))}
       </div>
       <div className="summary">
-        <h3>Hooks and Local Storage</h3>
+        <h3>Dynamic Interactions</h3>
         <p>
-          Each tile is animated using a custom React hook and features a call to
-          action for project exploration. Local storage detects first-time
-          visits and adjust the loader delay for a smoother user experience.
+          Custom React hooks are abstracted into reusable functions that enable
+          seamless animations and streamline event handling, delivering an
+          intuitive interface across devices.
         </p>
         <a onClick={handleViewProficienciesClick} className="explore">
           View proficiencies <ChevronRightIcon className="chevron-right" />
