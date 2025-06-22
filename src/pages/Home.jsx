@@ -37,8 +37,8 @@ function Home() {
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
           </h2>
         </div>
-        <a className="chevron-down" href="#api" onClick={handleScroll}>
-          <ChevronDownIcon className="w-8" aria-hidden="true" />
+        <a className="anchor" href="#api" onClick={handleScroll}>
+          <ChevronDownIcon className="w-8 chevron-down" aria-hidden="true" />
         </a>
       </div>
       <div
@@ -60,7 +60,7 @@ function Home() {
         <div className="summary">
           <h3>APIs and Algorithms</h3>
           <p>
-            Article data is retrieved from Wikimedia and sorted by daily pageview
+            Article data is retrieved from Wikimedia, then sorted by daily pageview
             metrics to generate the top 10 results. Each article's link is
             paired with an icon indicating whether its rank has improved,
             declined, or held since the previous day.

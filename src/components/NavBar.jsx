@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import { Disclosure, Transition } from "@headlessui/react";
 import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const navigation = [
   { name: "Home", to: "/", current: false },
@@ -39,9 +39,9 @@ export default function Navigation() {
                   aria-label={open ? "Close menu" : "Open menu"}
                 >
                   {open ? (
-                    <XMarkIcon className="block h-7 w-7" aria-hidden="true" />
+                    <XMarkIcon className="block h-7 w-7" strokeWidth={2} aria-hidden="true" />
                   ) : (
-                    <Bars2Icon className="block h-7 w-7" aria-hidden="true" />
+                    <Bars2Icon className="block h-7 w-7" strokeWidth={2} aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
@@ -67,8 +67,9 @@ export default function Navigation() {
                     as={Link}
                     to={item.to}
                     className={classNames(
-                      "block ml-3 py-2 text-lg",
-                      "hover:underline"
+                      "block ml-3 py-2 text-base",
+                      "font-semibold",
+                      "hover:[color:#999999]"
                     )}
                     onClick={closeMobileMenu}
                     aria-label={`Go to ${item.name}`}

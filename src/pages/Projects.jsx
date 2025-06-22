@@ -68,8 +68,8 @@ function Projects() {
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
           </h2>
         </div>
-        <a className="chevron-down" href="#projects" onClick={handleScroll}>
-          <ChevronDownIcon className="w-8" aria-hidden="true" />
+        <a className="anchor" href="#projects" onClick={handleScroll}>
+          <ChevronDownIcon className="w-8 chevron-down" aria-hidden="true" />
         </a>
       </div>
       <div id="projects" />

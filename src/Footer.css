@@ -4,12 +4,11 @@
   align-items: left;
   position: relative;
   background: linear-gradient(to bottom, black, #121212);
-  color: #fff;
   font-size: 1rem;
+  font-weight: 600;
   width: 100%;
   bottom: 0;
   left: 0;
-  /* padding-top: 32px; */
   padding-bottom: 24px;
   box-sizing: border-box;
   margin-top: auto;
@@ -24,14 +23,14 @@
 }
 
 .footer-links a:hover {
-  text-decoration: underline;
+  color: #999999;
 }
 
 .divider {
   margin-left: 11%;
   margin-right: 11%;
   margin-top: 16px;
-  border-top: solid #fff 1px;
+  border-top: solid #eeeeee 1px;
 }
 
 @media screen and (max-width: 480px) {

@@ -20,12 +20,13 @@
   align-items: center;
   padding-top: 16px;
   padding-bottom: 16px;
-  border-top: solid 1px #dddddd;
+  border-top: solid 1px #eeeeee;
+  font-weight: 600;
   font-size: 1rem;
 }
 
 .articles:hover {
-  text-decoration: underline;
+  color: #999999;
 }
 
 .trend-icon {

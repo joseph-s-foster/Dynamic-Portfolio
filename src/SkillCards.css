@@ -17,7 +17,7 @@
   align-items: center;
   flex-basis: calc(33% - 16px);
   aspect-ratio: 16 / 9;
-  background-color: #121212;
+  background-color: #1f1f1f;
   border-radius: 12px;
   color: #fff;
   text-decoration: none;
@@ -110,7 +110,7 @@
 @media (hover: hover) and (min-width: 700px) {
   .skill-card:hover {
     scale: 1.03;
-    background-color: #212121;
+    background-color: #2f2f2f;
     cursor: pointer;
   }
 }
