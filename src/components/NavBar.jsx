@@ -9,12 +9,7 @@ const navigation = [
   { name: "Proficiencies", to: "/proficiencies", current: false },
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function Navigation() {
-  // const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleMobileMenuToggle = () => {
@@ -39,9 +34,17 @@ export default function Navigation() {
                   aria-label={open ? "Close menu" : "Open menu"}
                 >
                   {open ? (
-                    <XMarkIcon className="block h-7 w-7" strokeWidth={2} aria-hidden="true" />
+                    <XMarkIcon
+                      className="block h-7 w-7"
+                      strokeWidth={2}
+                      aria-hidden="true"
+                    />
                   ) : (
-                    <Bars2Icon className="block h-7 w-7" strokeWidth={2} aria-hidden="true" />
+                    <Bars2Icon
+                      className="block h-7 w-7"
+                      strokeWidth={2}
+                      aria-hidden="true"
+                    />
                   )}
                 </Disclosure.Button>
               </div>
@@ -59,23 +62,20 @@ export default function Navigation() {
             leaveTo="opacity-0 scale-100"
           >
             <Disclosure.Panel className="absolute top-12 inset-x-0 z-10">
-              <div className="space-y-1 mt-1 px-1">
+              <div className="flex flex-col items-start space-y-1 mt-1 px-1">
                 {navigation.map((item) => (
-                  <Disclosure.Button
-                    id="menu"
-                    key={item.name}
-                    as={Link}
-                    to={item.to}
-                    className={classNames(
-                      "block ml-3 py-2 text-base",
-                      "font-semibold",
-                      "hover:[color:#999999]"
-                    )}
-                    onClick={closeMobileMenu}
-                    aria-label={`Go to ${item.name}`}
-                  >
-                    {item.name}
-                  </Disclosure.Button>
+                  <div className="ml-3 py-2">
+                    <Disclosure.Button
+                      key={item.name}
+                      as={Link}
+                      to={item.to}
+                      className="inline text-base hover:[color:#999999]"
+                      onClick={closeMobileMenu}
+                      aria-label={`Go to ${item.name}`}
+                    >
+                      {item.name}
+                    </Disclosure.Button>
+                  </div>
                 ))}
               </div>
             </Disclosure.Panel>

@@ -12,7 +12,7 @@ function Footer() {
       <nav>
         <ul>
           <li className="footer-links" style={{ textDecoration: "none" }}>
-            <p>CONNECT</p>
+            <p className="footer-group" style={{marginTop: 0}}>Connect</p>
           </li>
           <li className="footer-links">
             <a
@@ -35,7 +35,7 @@ function Footer() {
         </ul>
         <ul>
           <li className="footer-links" style={{ textDecoration: "none" }}>
-            <p style={{ marginTop: "16px" }}>RESOURCES</p>
+            <p className="footer-group">Resources</p>
           </li>
           <li className="footer-links">
             <a
@@ -58,7 +58,7 @@ function Footer() {
         </ul>
         <ul>
           <li className="footer-links" style={{ textDecoration: "none" }}>
-            <p style={{ marginTop: "16px" }}>USEFUL LINKS</p>
+            <p className="footer-group">Useful Links</p>
           </li>
           <li className="footer-links">
             <a href="./">Home</a>
