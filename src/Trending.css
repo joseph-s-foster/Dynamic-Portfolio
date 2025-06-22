@@ -21,13 +21,23 @@
   padding-top: 16px;
   padding-bottom: 16px;
   border-top: solid 1px #eeeeee;
-  /* font-weight: 600; */
   font-size: 1rem;
+}
+
+.articles {
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .articles:hover {
   color: #999999;
+  cursor: pointer;
 }
+
+.articles:active {
+  color: inherit;
+}
+
 
 .trend-icon {
   right: 11%;

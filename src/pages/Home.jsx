@@ -1,13 +1,10 @@
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import useInitialPageLoad from "../hooks/useInitialPageLoad";
-import Loader from "../hooks/Loader";
 import useTypewriterLoop from "../hooks/useTypewriterLoop";
 import Nav from "../components/NavBar";
 import Trending from "../components/Trending";
 import Footer from "../components/Footer";
 
 function Home() {
-  const isLoading = useInitialPageLoad("home");
   const tag1 = "UX-Driven";
   const tag2 = "Mobile-Friendly";
   const tag3 = "Full-Stack Developer";
@@ -28,7 +25,6 @@ function Home() {
       <div>
         <Nav />
       </div>
-      {isLoading && <Loader />}
       <div className="background">
         <div className="hero">
           <h1>Joseph Foster</h1>
@@ -41,12 +37,7 @@ function Home() {
           <ChevronDownIcon className="w-8 chevron-down" aria-hidden="true" />
         </a>
       </div>
-      <div
-        id="api"
-        style={{
-          zIndex: isLoading ? -1 : 1,
-        }}
-      >
+      <div id="api">
         <div className="api">
           <div className="apiresults">
             <div className="apitrend">
@@ -60,9 +51,9 @@ function Home() {
         <div className="summary">
           <h3>APIs and Algorithms</h3>
           <p>
-            Article data is retrieved from Wikimedia, then sorted by daily pageview
-            metrics to generate the top 10 results. Each article's link is
-            paired with an icon indicating whether its rank has improved,
+            Article data is retrieved from Wikimedia, then sorted by daily
+            pageview metrics to generate the top 10 results. Each article's link
+            is paired with an icon indicating whether its rank has improved,
             declined, or held since the previous day.
           </p>
           <a onClick={handleViewProjectsClick} className="explore">

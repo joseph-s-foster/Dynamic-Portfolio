@@ -11,20 +11,20 @@ function Footer() {
     <footer className="footer">
       <nav>
         <ul>
-          <li className="footer-links" style={{ textDecoration: "none" }}>
-            <p className="footer-group" style={{marginTop: 0}}>Connect</p>
-          </li>
-          <li className="footer-links">
+          <li className="footer-group">Connect</li>
+          <li>
             <a
-              href="https://github.com/joseph-s-foster"
+              className="footer-link"
+              href="https://github.com/joseph-s-foster/"
               target="_blank"
               rel="noopener noreferrer"
             >
               GitHub
             </a>
           </li>
-          <li className="footer-links">
+          <li>
             <a
+              className="footer-link"
               href="https://www.linkedin.com/in/joseph-foster/"
               target="_blank"
               rel="noopener noreferrer"
@@ -34,50 +34,67 @@ function Footer() {
           </li>
         </ul>
         <ul>
-          <li className="footer-links" style={{ textDecoration: "none" }}>
-            <p className="footer-group">Resources</p>
-          </li>
-          <li className="footer-links">
+          <li className="footer-group">Powered by</li>
+          <li>
             <a
-              href="https://www.w3schools.com/"
+              className="footer-link"
+              href="https://www.heroku.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              W3
+              Heroku
             </a>
           </li>
-          <li className="footer-links">
+          <li>
             <a
-              href="https://www.svgrepo.com/"
+              className="footer-link"
+              href="https://www.netlify.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              SVG Repo
+              Netlify
             </a>
           </li>
         </ul>
         <ul>
-          <li className="footer-links" style={{ textDecoration: "none" }}>
-            <p className="footer-group">Useful Links</p>
+          <li className="footer-group">Resources</li>
+          <li>
+            <a
+              className="footer-link"
+              href="https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Analytics API
+            </a>
           </li>
-          <li className="footer-links">
-            <a href="./">Home</a>
+          <li>
+            <a
+              className="footer-link"
+              href="https://www.svgrepo.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Graphics
+            </a>
           </li>
-          <li className="footer-links">
-            <a href="#top" onClick={handleScroll}>
-              Back to Top
+        </ul>
+        <ul>
+          <li className="footer-group">Useful links</li>
+          <li>
+            <a className="footer-link" href="/">
+              Home
+            </a>
+          </li>
+          <li>
+            <a className="footer-link" href="#top" onClick={handleScroll}>
+              Back to top
             </a>
           </li>
         </ul>
       </nav>
       <div>
-        <p
-          className="divider footer-links text-center"
-          style={{
-            paddingTop: "32px",
-            paddingBottom: "16px",
-          }}
-        >
+        <p className="divider">
           Joseph Foster &copy; {new Date().getFullYear()}
         </p>
       </div>

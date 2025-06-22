@@ -19,12 +19,25 @@
   aspect-ratio: 16 / 9;
   background-color: #1f1f1f;
   border-radius: 12px;
-  color: #fff;
   text-decoration: none;
   transition: transform 0.2s ease-in-out;
   overflow: hidden;
   margin-top: 32px;
   padding: 0;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (hover: hover) {
+  .skill-card:hover {
+    scale: 1.03;
+    background-color: #2f2f2f;
+    cursor: pointer;
+  }
+}
+
+.skill-card:active {
+  color: inherit;
 }
 
 .skill-icon,
@@ -74,7 +87,7 @@
   }
 
   .skill-description {
-    font-size: .75rem;
+    font-size: 0.75rem;
     font-weight: lighter;
   }
 }
@@ -104,14 +117,6 @@
   .skill-description {
     font-size: 0.75rem;
     font-weight: lighter;
-  }
-}
-
-@media (hover: hover) and (min-width: 700px) {
-  .skill-card:hover {
-    scale: 1.03;
-    background-color: #2f2f2f;
-    cursor: pointer;
   }
 }
 

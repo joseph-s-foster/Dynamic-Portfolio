@@ -1,7 +1,8 @@
-import { Fragment, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import { Disclosure, Transition } from "@headlessui/react";
 import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
+import useClickOutside from "../hooks/useClickOutside";
 
 const navigation = [
   { name: "Home", to: "/", current: false },
@@ -20,6 +21,13 @@ export default function Navigation() {
     setMobileMenuOpen(false);
   };
 
+  const menuRef = useRef();
+  const toggleRef = useRef();
+
+  useClickOutside([menuRef, toggleRef], () => {
+    toggleRef.current?.click();
+  });
+
   return (
     <Disclosure as="nav" className="bg-transparent">
       {({ open }) => (
@@ -29,6 +37,7 @@ export default function Navigation() {
               <div className="absolute inset-y-7 left-0 flex items-center">
                 <Disclosure.Button
                   id="menu"
+                  ref={toggleRef}
                   className="relative inline-flex items-center justify-center rounded-md p-1"
                   onClick={handleMobileMenuToggle}
                   aria-label={open ? "Close menu" : "Open menu"}
@@ -61,15 +70,17 @@ export default function Navigation() {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-100"
           >
-            <Disclosure.Panel className="absolute top-12 inset-x-0 z-10">
+            <Disclosure.Panel
+              ref={menuRef}
+              className="absolute top-12 w-max inset-x-0 z-10"
+            >
               <div className="flex flex-col items-start space-y-1 mt-1 px-1">
                 {navigation.map((item) => (
-                  <div className="ml-3 py-2">
+                  <div key={item.name} className="ml-3 py-2">
                     <Disclosure.Button
-                      key={item.name}
                       as={Link}
                       to={item.to}
-                      className="inline text-base hover:[color:#999999]"
+                      className="inline text-base text-inherit hover:[color:#999999] active:text-inherit cursor-pointer [tap-highlight-color:transparent]"
                       onClick={closeMobileMenu}
                       aria-label={`Go to ${item.name}`}
                     >

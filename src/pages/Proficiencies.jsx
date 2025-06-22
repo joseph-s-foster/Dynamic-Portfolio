@@ -1,6 +1,4 @@
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-// import useInitialPageLoad from "../hooks/useInitialPageLoad";
-// import Loader from "../hooks/Loader";
 import useTypewriterLoop from "../hooks/useTypewriterLoop";
 import Nav from "../components/NavBar";
 import SkillCards from "../components/SkillCards";
@@ -14,7 +12,6 @@ import Footer from "../components/Footer";
 import "../SkillCards.css";
 
 function Proficiencies() {
-  // const isLoading = useInitialPageLoad("proficiencies");
   const tag1 = "Collaborative";
   const tag2 = "Agile";
   const tag3 = "Adaptive";
@@ -83,7 +80,6 @@ function Proficiencies() {
       <div>
         <Nav />
       </div>
-      {/* {isLoading && <Loader />} */}
       <div className="background">
         <div className="hero">
           <h1>Proficiencies</h1>
