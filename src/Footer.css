@@ -35,13 +35,10 @@
 }
 
 @media (hover: hover) {
-  .footer-link:hover {
+  .footer-link:hover,
+  .footer-link:active {
     color: #999999;
   }
-}
-
-.footer-link:active {
-  color: inherit;
 }
 
 .divider {

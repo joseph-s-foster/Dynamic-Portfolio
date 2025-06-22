@@ -30,14 +30,11 @@
 }
 
 @media (hover: hover) {
-  .articles:hover {
+  .articles:hover,
+  .articles:active {
     color: #999999;
     cursor: pointer;
   }
-}
-
-.articles:active {
-  color: inherit;
 }
 
 .trend-icon {

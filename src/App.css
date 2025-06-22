@@ -82,21 +82,16 @@ body.no-scroll {
   display: inline-flex;
   vertical-align: top;
   font-size: 1rem;
-  color: #fff;
-  text-decoration: none;
   cursor: pointer;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
 }
 
 @media (hover: hover) {
-  .explore:hover {
+  .explore:hover,
+  .explore:active {
     color: #999999;
   }
-}
-
-.explore:active {
-  color: inherit;
 }
 
 .chevron-right {
