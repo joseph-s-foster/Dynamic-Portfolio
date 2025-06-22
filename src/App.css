@@ -89,8 +89,10 @@ body.no-scroll {
   -webkit-tap-highlight-color: transparent;
 }
 
-.explore:hover {
-  color: #999999;
+@media (hover: hover) {
+  .explore:hover {
+    color: #999999;
+  }
 }
 
 .explore:active {

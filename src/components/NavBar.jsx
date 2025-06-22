@@ -80,7 +80,7 @@ export default function Navigation() {
                     <Disclosure.Button
                       as={Link}
                       to={item.to}
-                      className="inline text-base text-inherit hover:[color:#999999] active:text-inherit cursor-pointer [tap-highlight-color:transparent]"
+                      className="inline text-base text-inherit active:text-inherit cursor-pointer [tap-highlight-color:transparent] [@media(hover:hover)]:hover:[color:#999999]"
                       onClick={closeMobileMenu}
                       aria-label={`Go to ${item.name}`}
                     >

@@ -34,8 +34,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.footer-link:hover {
-  color: #999999;
+@media (hover: hover) {
+  .footer-link:hover {
+    color: #999999;
+  }
 }
 
 .footer-link:active {

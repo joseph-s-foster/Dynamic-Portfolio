@@ -29,15 +29,16 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.articles:hover {
-  color: #999999;
-  cursor: pointer;
+@media (hover: hover) {
+  .articles:hover {
+    color: #999999;
+    cursor: pointer;
+  }
 }
 
 .articles:active {
   color: inherit;
 }
-
 
 .trend-icon {
   right: 11%;
