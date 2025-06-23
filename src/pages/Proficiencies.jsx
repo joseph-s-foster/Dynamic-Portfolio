@@ -3,7 +3,7 @@ import useTypewriterLoop from "../hooks/useTypewriterLoop";
 import Nav from "../components/NavBar";
 import SkillCards from "../components/SkillCards";
 import javascript from "../assets/project/javascript.svg";
-import mysql from "../assets/project/mysql.svg";
+import postgresql from "../assets/project/postgresql.svg";
 import aws from "../assets/project/aws.svg";
 import atlassian from "../assets/project/atlassian.svg";
 import python from "../assets/project/python.svg";
@@ -36,14 +36,7 @@ function Proficiencies() {
       src: python,
       alt: "Python",
       title: "Python",
-      description: "Scripting, data processing, and automation with clarity.",
-    },
-    {
-      link: "https://www.mysql.com/",
-      src: mysql,
-      alt: "MySQL",
-      title: "MySQL",
-      description: "Relational database with structured queries and joins.",
+      description: "Scripting, data processing, and automation.",
     },
     {
       link: "https://aws.amazon.com/",
@@ -51,7 +44,15 @@ function Proficiencies() {
       alt: "AWS",
       title: "AWS",
       description:
-        "Cloud platform offering scalable compute, storage, and services.",
+        "Cloud platform offering scalable computing services.",
+    },
+    {
+      link: "https://www.postgresql.org/",
+      src: postgresql,
+      alt: "PostgreSQL",
+      title: "PostgreSQL",
+      description:
+        "Open-source database with robust SQL support.",
     },
     {
       link: "https://www.docker.com/",
@@ -59,7 +60,7 @@ function Proficiencies() {
       alt: "Docker",
       title: "Docker",
       description:
-        "Platform for building, shipping, and running containers at scale.",
+        "Platform for building and running containers.",
     },
     {
       link: "https://www.atlassian.com/",
@@ -67,7 +68,7 @@ function Proficiencies() {
       alt: "Atlassian",
       title: "Atlassian",
       description:
-        "Collaboration tools for code, projects, and team productivity.",
+        "Collaboration tools for code and team productivity.",
     },
   ];
 

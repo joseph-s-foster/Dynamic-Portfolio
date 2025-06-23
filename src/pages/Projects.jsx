@@ -25,7 +25,7 @@ function Projects() {
       link: "https://joseph-s-foster.github.io/Classic-Snake/",
       src: snake,
       alt: "Snake",
-      title: "Classic Snake",
+      title: "Snake",
       description: "Gaming nostaliga",
       language: ".js",
     },
