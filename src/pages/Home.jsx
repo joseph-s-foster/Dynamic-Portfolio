@@ -51,10 +51,10 @@ function Home() {
         <div className="summary">
           <h3>APIs and Algorithms</h3>
           <p>
-            Article data is retrieved from Wikimedia, then sorted by daily
-            pageview metrics to generate the top 10 results. Each article's link
-            is paired with an icon indicating whether its rank has improved,
-            declined, or held since the previous day.
+            Wikimedia pageview metrics are retrieved and sorted to
+            generate the top 10 results. Each link is paired with an
+            icon indicating whether its rank changed or held
+            since the previous day.
           </p>
           <a onClick={handleViewProjectsClick} className="explore">
             View more projects <ChevronRightIcon className="chevron-right" />
