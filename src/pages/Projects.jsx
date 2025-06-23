@@ -34,7 +34,7 @@ function Projects() {
       src: brain,
       alt: "Brain",
       title: "WYR",
-      description: "MERN stack polling",
+      description: "MERN polling",
       language: ".jsx",
     },
     {
@@ -42,7 +42,7 @@ function Projects() {
       src: news,
       alt: "Newspaper",
       title: "Python Pulse",
-      description: "CRUD ops newsfeed",
+      description: "CRUD newsfeed",
       language: ".py",
     },
   ];

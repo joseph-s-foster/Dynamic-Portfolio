@@ -44,7 +44,7 @@ function Proficiencies() {
       alt: "AWS",
       title: "AWS",
       description:
-        "Cloud platform offering scalable computing services.",
+        "Cloud platform for scalable computing services.",
     },
     {
       link: "https://www.postgresql.org/",
@@ -52,7 +52,7 @@ function Proficiencies() {
       alt: "PostgreSQL",
       title: "PostgreSQL",
       description:
-        "Open-source database with robust SQL support.",
+        "Open-source database with SQL support.",
     },
     {
       link: "https://www.docker.com/",
