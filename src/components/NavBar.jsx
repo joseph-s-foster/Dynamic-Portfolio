@@ -7,7 +7,7 @@ import useClickOutside from "../hooks/useClickOutside";
 const navigation = [
   { name: "Home", to: "/", current: false },
   { name: "Projects", to: "/projects", current: false },
-  { name: "Proficiencies", to: "/proficiencies", current: false },
+  { name: "Skills", to: "/skills", current: false },
 ];
 
 export default function Navigation() {

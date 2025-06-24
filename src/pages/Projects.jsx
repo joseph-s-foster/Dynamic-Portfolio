@@ -41,14 +41,14 @@ function Projects() {
       link: "https://python-pulse-a33bae0b4181.herokuapp.com/",
       src: news,
       alt: "Newspaper",
-      title: "Python Pulse",
+      title: "Pulse",
       description: "CRUD newsfeed",
       language: ".py",
     },
   ];
 
-  const handleViewProficienciesClick = () => {
-    window.location.href = "/proficiencies";
+  const handleViewSkillsClick = () => {
+    window.location.href = "/skills";
   };
 
   return (
@@ -59,6 +59,8 @@ function Projects() {
       <div className="background">
         <div className="hero">
           <h1>Projects</h1>
+        </div>
+        <div className="tags">
           <h2>
             {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
@@ -89,8 +91,8 @@ function Projects() {
           seamless animations and streamline event handling, delivering an
           intuitive interface across devices.
         </p>
-        <a onClick={handleViewProficienciesClick} className="explore">
-          View proficiencies <ChevronRightIcon className="chevron-right" />
+        <a onClick={handleViewSkillsClick} className="explore">
+          Explore skills <ChevronRightIcon className="chevron-right" />
         </a>
       </div>
       <Footer />

@@ -11,7 +11,7 @@ import docker from "../assets/project/docker.svg";
 import Footer from "../components/Footer";
 import "../SkillCards.css";
 
-function Proficiencies() {
+function Skills() {
   const tag1 = "Collaborative";
   const tag2 = "Agile";
   const tag3 = "Adaptive";
@@ -19,11 +19,11 @@ function Proficiencies() {
 
   const handleScroll = (event) => {
     event.preventDefault();
-    const projectsContainer = document.getElementById("proficiencies");
+    const projectsContainer = document.getElementById("skills");
     projectsContainer.scrollIntoView({ behavior: "smooth" });
   };
 
-  const proficiencies = [
+  const skills = [
     {
       link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       src: javascript,
@@ -43,32 +43,28 @@ function Proficiencies() {
       src: aws,
       alt: "AWS",
       title: "AWS",
-      description:
-        "Cloud platform for scalable computing services.",
+      description: "Cloud platform for scalable computing services.",
     },
     {
       link: "https://www.postgresql.org/",
       src: postgresql,
       alt: "PostgreSQL",
       title: "PostgreSQL",
-      description:
-        "Open-source database with SQL support.",
+      description: "Open-source database with SQL support.",
     },
     {
       link: "https://www.docker.com/",
       src: docker,
       alt: "Docker",
       title: "Docker",
-      description:
-        "Platform for building and running containers.",
+      description: "Platform for building and running containers.",
     },
     {
       link: "https://www.atlassian.com/",
       src: atlassian,
       alt: "Atlassian",
       title: "Atlassian",
-      description:
-        "Collaboration tools for code and team productivity.",
+      description: "Collaboration tools for code and team productivity.",
     },
   ];
 
@@ -83,7 +79,9 @@ function Proficiencies() {
       </div>
       <div className="background">
         <div className="hero">
-          <h1>Proficiencies</h1>
+          <h1>Skills</h1>
+        </div>
+        <div className="tags">
           <h2>
             {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
@@ -93,9 +91,9 @@ function Proficiencies() {
           <ChevronDownIcon className="w-8 chevron-down" aria-hidden="true" />
         </a>
       </div>
-      <div id="proficiencies" />
+      <div id="skills" />
       <div className="skills">
-        {proficiencies.map((item) => (
+        {skills.map((item) => (
           <SkillCards
             key={item.alt}
             link={item.link}
@@ -122,4 +120,4 @@ function Proficiencies() {
   );
 }
 
-export default Proficiencies;
+export default Skills;

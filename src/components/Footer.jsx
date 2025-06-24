@@ -45,6 +45,16 @@ function Footer() {
               Heroku
             </a>
           </li>
+           <li>
+            <a
+              className="footer-link"
+              href="https://www.mongodb.com/atlas"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Atlas
+            </a>
+          </li>
           <li>
             <a
               className="footer-link"
@@ -76,6 +86,16 @@ function Footer() {
               rel="noopener noreferrer"
             >
               Graphics
+            </a>
+          </li>
+          <li>
+            <a
+              className="footer-link"
+              href="https://heroicons.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Icons
             </a>
           </li>
         </ul>

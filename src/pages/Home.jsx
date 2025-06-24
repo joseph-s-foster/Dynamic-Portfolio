@@ -28,6 +28,8 @@ function Home() {
       <div className="background">
         <div className="hero">
           <h1>Joseph Foster</h1>
+        </div>
+        <div className="tags">
           <h2>
             {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
@@ -51,10 +53,9 @@ function Home() {
         <div className="summary">
           <h3>APIs and Algorithms</h3>
           <p>
-            Wikimedia pageview metrics are retrieved and sorted to
-            generate the top 10 results. Each link is paired with an
-            icon indicating whether its rank changed or held
-            since the previous day.
+            Wikimedia pageview metrics are retrieved and sorted to generate the
+            top 10 results. Each link is then paired with an icon indicating whether
+            its rank has changed or held since the previous day.
           </p>
           <a onClick={handleViewProjectsClick} className="explore">
             View more projects <ChevronRightIcon className="chevron-right" />
