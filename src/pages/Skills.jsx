@@ -2,12 +2,12 @@ import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import useTypewriterLoop from "../hooks/useTypewriterLoop";
 import Nav from "../components/NavBar";
 import SkillCards from "../components/SkillCards";
-import javascript from "../assets/project/javascript.svg";
-import postgresql from "../assets/project/postgresql.svg";
-import aws from "../assets/project/aws.svg";
-import atlassian from "../assets/project/atlassian.svg";
-import python from "../assets/project/python.svg";
-import docker from "../assets/project/docker.svg";
+import javascript from "../assets/javascript.svg";
+import postgresql from "../assets/postgresql.svg";
+import aws from "../assets/aws.svg";
+import atlassian from "../assets/atlassian.svg";
+import python from "../assets/python.svg";
+import docker from "../assets/docker.svg";
 import Footer from "../components/Footer";
 import "../SkillCards.css";
 

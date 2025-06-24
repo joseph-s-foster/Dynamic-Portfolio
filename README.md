@@ -19,7 +19,7 @@
 
 ## Screenshot
 
-![screenshot of webpage](./src/assets/project/ss.png)
+![screenshot of webpage](./src/assets/ss.png)
 
 ## Acknowledgments
 

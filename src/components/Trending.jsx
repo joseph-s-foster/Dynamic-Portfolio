@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { MinusIcon } from "@heroicons/react/24/outline";
 import dayjs from "dayjs";
-import green from "../assets/project/green.svg";
-import red from "../assets/project/red.svg";
+import green from "../assets/green.svg";
+import red from "../assets/red.svg";
 import "../Trending.css";
 
 const BASE_URL =
