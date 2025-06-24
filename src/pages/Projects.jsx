@@ -3,8 +3,8 @@ import useTypewriterLoop from "../hooks/useTypewriterLoop";
 import Nav from "../components/NavBar";
 import ProjectCards from "../components/ProjectCards";
 import snake from "../assets/snake.svg";
-import brain from "../assets/brain.svg";
-import news from "../assets/news.svg";
+import wyr from "../assets/wyr.svg";
+import pulse from "../assets/pulse.svg";
 import Footer from "../components/Footer";
 import "../ProjectCards.css";
 
@@ -24,14 +24,14 @@ function Projects() {
     {
       link: "https://joseph-s-foster.github.io/Classic-Snake/",
       src: snake,
-      alt: "Snake",
+      alt: "Console",
       title: "Snake",
       description: "Gaming nostaliga",
       language: ".js",
     },
     {
       link: "https://wyr-3b5b304bab70.herokuapp.com/",
-      src: brain,
+      src: wyr,
       alt: "Brain",
       title: "WYR",
       description: "MERN polling",
@@ -39,7 +39,7 @@ function Projects() {
     },
     {
       link: "https://python-pulse-a33bae0b4181.herokuapp.com/",
-      src: news,
+      src: pulse,
       alt: "Newspaper",
       title: "Pulse",
       description: "CRUD newsfeed",
