@@ -50,7 +50,7 @@ function Skills() {
       src: postgresql,
       alt: "PostgreSQL",
       title: "PostgreSQL",
-      description: "Open-source database with SQL support.",
+      description: "Open-source database with robust SQL support.",
     },
     {
       link: "https://www.docker.com/",

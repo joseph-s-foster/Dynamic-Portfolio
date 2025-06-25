@@ -2,9 +2,9 @@ import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import useTypewriterLoop from "../hooks/useTypewriterLoop";
 import Nav from "../components/NavBar";
 import ProjectCards from "../components/ProjectCards";
-import snake from "../assets/snake.svg";
-import wyr from "../assets/wyr.svg";
-import pulse from "../assets/pulse.svg";
+import snake from "../assets/snake.png";
+import wyr from "../assets/wyr.png";
+import pulse from "../assets/pulse.png";
 import Footer from "../components/Footer";
 import "../ProjectCards.css";
 
