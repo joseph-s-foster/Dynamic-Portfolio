@@ -1,10 +1,11 @@
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import useTypewriterLoop from "../hooks/useTypewriterLoop";
+import usePreloadImages from "../hooks/usePreloadImages";
 import Nav from "../components/NavBar";
 import ProjectCards from "../components/ProjectCards";
-import snake from "../assets/snake.png";
-import wyr from "../assets/wyr.png";
-import pulse from "../assets/pulse.png";
+import snake from "../assets/snake.webp";
+import wyr from "../assets/wyr.webp";
+import pulse from "../assets/pulse.webp";
 import Footer from "../components/Footer";
 import "../ProjectCards.css";
 
@@ -19,6 +20,8 @@ function Projects() {
     const projectsContainer = document.getElementById("projects");
     projectsContainer.scrollIntoView({ behavior: "smooth" });
   };
+
+  usePreloadImages([snake, wyr, pulse]);
 
   const projects = [
     {
