@@ -1,4 +1,5 @@
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 import useTypewriterLoop from "../hooks/useTypewriterLoop";
 import usePreloadImages from "../hooks/usePreloadImages";
 import Nav from "../components/NavBar";
@@ -94,9 +95,9 @@ function Projects() {
           seamless animations and streamline event handling, delivering an
           intuitive interface across devices.
         </p>
-        <a onClick={handleViewSkillsClick} className="explore">
+        <Link to="/skills" className="explore">
           Explore skills <ChevronRightIcon className="chevron-right" />
-        </a>
+        </Link>
       </div>
       <Footer />
     </>

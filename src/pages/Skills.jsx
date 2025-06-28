@@ -1,4 +1,5 @@
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 import useTypewriterLoop from "../hooks/useTypewriterLoop";
 import Nav from "../components/NavBar";
 import SkillCards from "../components/SkillCards";
@@ -111,9 +112,12 @@ function Skills() {
           scripting and application design to containerized deployments and
           agile team workflows.
         </p>
-        <a onClick={handleViewHomeClick} className="explore">
+        {/* <a onClick={handleViewHomeClick} className="explore">
           Homepage <ChevronRightIcon className="chevron-right" />
-        </a>
+        </a> */}
+        <Link to="/" className="explore">
+          Homepage <ChevronRightIcon className="chevron-right" />
+        </Link>
       </div>
       <Footer />
     </>

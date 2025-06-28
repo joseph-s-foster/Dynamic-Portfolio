@@ -1,4 +1,5 @@
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 import useTypewriterLoop from "../hooks/useTypewriterLoop";
 import Nav from "../components/NavBar";
 import Trending from "../components/Trending";
@@ -16,9 +17,9 @@ function Home() {
     projectsContainer.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleViewProjectsClick = () => {
-    window.location.href = "/projects";
-  };
+  // const handleViewProjectsClick = () => {
+  //   window.location.href = "/projects";
+  // };
 
   return (
     <>
@@ -54,12 +55,12 @@ function Home() {
           <h3>APIs and Algorithms</h3>
           <p>
             Wikimedia pageview metrics are retrieved and sorted to generate the
-            top 10 results. Each link is then paired with an icon indicating whether
-            its rank has changed or held since the previous day.
+            top 10 results. Each link is then paired with an icon indicating
+            whether its rank has changed or held since the previous day.
           </p>
-          <a onClick={handleViewProjectsClick} className="explore">
+          <Link to="/projects" className="explore">
             View more projects <ChevronRightIcon className="chevron-right" />
-          </a>
+          </Link>
         </div>
       </div>
       <Footer />
