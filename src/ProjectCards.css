@@ -17,8 +17,6 @@
   align-items: center;
   flex-basis: calc(33% - 16px);
   aspect-ratio: 2 / 1;
-  background-color: #1f1f1f;
-  border-radius: 12px;
   text-decoration: none;
   transition: transform 0.2s ease-in-out;
   overflow: hidden;
@@ -28,11 +26,28 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+.project-icon-wrapper {
+  width: 50%;
+  height: 100%;
+  border-radius: 5%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.project-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.33s ease-in-out;
+  transform: scale(1);
+}
+
 @media (hover: hover) {
-  .project-card:hover {
-    scale: 1.01;
-    background-color: #2c2c2c;
-    cursor: pointer;
+  .project-card:hover .project-icon {
+    transform: scale(1.03);
   }
 }
 
@@ -40,56 +55,30 @@
   color: inherit;
 }
 
-.project-icon {
-  display: flex;
-  padding: 3%;
-  border-radius: 10%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.project-icon img {
-  object-fit: contain;
-}
-
 .project-text {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;  
+  justify-content: center;
   align-items: left;
   box-sizing: border-box;
-  padding: 3%;
+  padding: 16px;
 }
 
 .project-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .project-description,
 .project-language {
-  color: #ccc;
   font-size: 1rem;
-  line-height: 1.4
+  line-height: 1.4;
 }
 
-@media screen and (max-width: 1400px) {
-  .project-title {
-    font-size: 1.25rem;
-  }
-
-  .project-description,
-  .project-language {
-    font-size: 0.75rem;
-  }
+.project-language {
+  color: grey;
 }
 
-@media screen and (max-width: 1200px) {
-  .project-title {
-    font-size: 1rem;
-  }
-}
 
 @media screen and (max-width: 900px) {
   .projects {
@@ -100,37 +89,6 @@
   .project-card {
     margin: 16px 0 0 0;
     flex-basis: calc(100%);
-  }
-
-  .project-title {
-    font-size: 2.5rem;
-  }
-
-  .project-description,
-  .project-language {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .project-title {
-    font-size: 2rem;
-  }
-
-  .project-description,
-  .project-language {
-    font-size: 1.25rem;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .project-title {
-    font-size: 1.5rem;
-  }
-
-  .project-description,
-  .project-language {
-    font-size: 1rem;
   }
 }
 

@@ -7,9 +7,11 @@ function ProjectCards({ link, src, alt, title, description, language }) {
 
   return (
     <a href={link} target="_blank" rel="noopener noreferrer" className="project-card reveal">
+      <div className="project-icon-wrapper">
       <img className="project-icon" src={src} alt={alt} />
+      </div>
       <div className="project-text">
-        <p className="project-title">{title}</p> 
+        <p className="project-title">{title}</p>
         <p className="project-description">{description}</p>
         <p className="project-language">{language}</p>
       </div>

@@ -100,7 +100,7 @@ function Footer() {
           </li>
         </ul>
         <ul>
-          <li className="footer-group">Useful links</li>
+          <li className="footer-group">Quick links</li>
           <li>
             <a className="footer-link" href="/">
               Home
