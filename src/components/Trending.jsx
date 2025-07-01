@@ -87,10 +87,10 @@ const sortTopHits = async () => {
   };
 
   // Try the primary date range
-  let articles = await getArticlesForDateRange([1, 2]);
+  let articles = await getArticlesForDateRange([0, 1]);
   if (!articles || articles.length === 0) {
     // Fallback to the secondary date range if primary fails
-    articles = await getArticlesForDateRange([3, 4]);
+    articles = await getArticlesForDateRange([2, 3]);
   }
 
   return articles || [];
