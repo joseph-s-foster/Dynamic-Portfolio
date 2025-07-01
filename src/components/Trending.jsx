@@ -77,7 +77,8 @@ const sortTopHits = async () => {
             ".xxx",
             "XNXX",
             "wiki.phtml",
-            "Module:Wd"
+            "Module:Wd",
+            "File:Icons8_flat_missed_call.svg"
           ].includes(article)
       )
       .sort((a, b) => a.rank - b.rank)
