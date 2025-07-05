@@ -25,7 +25,7 @@ function Projects() {
 
   const projects = [
     {
-      link: "https://joseph-s-foster.github.io/Classic-Snake/",
+      link: "https://github.com",
       src: snake,
       alt: "Console",
       title: "Snake",
@@ -33,7 +33,7 @@ function Projects() {
       language: ".js",
     },
     {
-      link: "https://wyr-3b5b304bab70.herokuapp.com/",
+      link: "https://heroku.com",
       src: wyr,
       alt: "Brain",
       title: "WYR",
@@ -41,7 +41,7 @@ function Projects() {
       language: ".jsx",
     },
     {
-      link: "https://python-pulse-a33bae0b4181.herokuapp.com/",
+      link: "https://heroku.com",
       src: pulse,
       alt: "Newspaper",
       title: "Pulse",

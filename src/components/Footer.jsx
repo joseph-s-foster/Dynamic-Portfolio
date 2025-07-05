@@ -15,7 +15,7 @@ function Footer() {
           <li>
             <a
               className="footer-link"
-              href="https://github.com/joseph-s-foster/"
+              href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -25,7 +25,7 @@ function Footer() {
           <li>
             <a
               className="footer-link"
-              href="https://www.linkedin.com/in/joseph-foster/"
+              href="https://www.linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
             >
