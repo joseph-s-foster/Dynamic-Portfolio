@@ -32,7 +32,7 @@
 @media (hover: hover) {
   .articles:hover,
   .articles:active {
-    color: #b1b1b1;
+    color: #999999;
     cursor: pointer;
   }
 }

@@ -15,7 +15,7 @@
 
 .footer-group {
   margin-top: 16px;
-  color: #b1b1b1;
+  color: #999999;
 }
 
 .footer-group,
@@ -37,7 +37,7 @@
 @media (hover: hover) {
   .footer-link:hover,
   .footer-link:active {
-    color: #b1b1b1;
+    color: #999999;
   }
 }
 
