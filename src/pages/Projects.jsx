@@ -62,8 +62,6 @@ function Projects() {
       <div className="background">
         <div className="hero">
           <h1>Projects</h1>
-        </div>
-        <div className="tags">
           <h2>
             {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>

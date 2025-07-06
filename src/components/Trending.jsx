@@ -15,7 +15,7 @@ const fetchTopHitsForDate = async (date) => {
     const response = await fetch(url);
     if (!response.ok) {
       if (response.status === 404) {
-        console.warn(`Data unavailable for ${date.format("YYYY-MM-DD")}. Displaying data for ${date.subtract(2, 'day').format("YYYY-MM-DD")}.`);
+        console.warn(`Data unavailable for ${date.format("YYYY-MM-DD")}. Displaying data for ${date.subtract(1, 'day').format("YYYY-MM-DD")}.`);
         return null;
       } else {
         throw new Error(`Error fetching data: ${response.statusText}`);
@@ -88,7 +88,7 @@ const sortTopHits = async () => {
   };
 
   // Try the primary date range
-  let articles = await getArticlesForDateRange([0, 1]);
+  let articles = await getArticlesForDateRange([1, 2]);
   if (!articles || articles.length === 0) {
     // Fallback to the secondary date range if primary fails
     articles = await getArticlesForDateRange([2, 3]);

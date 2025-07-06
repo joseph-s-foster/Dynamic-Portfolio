@@ -80,8 +80,6 @@ function Skills() {
       <div className="background">
         <div className="hero">
           <h1>Skills</h1>
-        </div>
-        <div className="tags">
           <h2>
             {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>

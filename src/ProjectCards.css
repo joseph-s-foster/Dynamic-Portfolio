@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  flex-basis: calc(33% - 16px);
+  flex-basis: calc(33%);
   aspect-ratio: 2 / 1;
   text-decoration: none;
   transition: transform 0.2s ease-in-out;
@@ -30,6 +30,7 @@
   width: 50%;
   height: 100%;
   border-radius: 5%;
+  opacity: .8;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -56,6 +57,7 @@
 }
 
 .project-text {
+  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -79,7 +81,6 @@
 .project-language {
   color: grey;
 }
-
 
 @media screen and (max-width: 900px) {
   .projects {

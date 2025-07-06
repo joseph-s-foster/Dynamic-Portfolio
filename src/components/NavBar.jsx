@@ -29,7 +29,7 @@ export default function Navigation() {
   });
 
   return (
-    <Disclosure as="nav" className="bg-transparent">
+    <Disclosure as="nav">
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-2 lg:px-2">

@@ -12,7 +12,7 @@ const useScrollReveal = () => {
         origin: "left",
         interval: 375,
         opacity: 0,
-        viewFactor: 0.125,
+        viewFactor: 0.25,
         mobile: true,
         reset: false,
         beforeReveal: (el) => {
