@@ -49,7 +49,7 @@ function Skills() {
       link: "https://www.postgresql.org/",
       src: postgresql,
       alt: "PostgreSQL",
-      title: "Postgres",
+      title: "PostgreSQL",
       description: "Open-source database with robust SQL support.",
     },
     {

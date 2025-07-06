@@ -152,21 +152,26 @@
   }
 
   .skill-card {
+    aspect-ratio: 2.5 / 1;
     background-color: black;
   }
 
   .skill-icon {
-    margin: 0 16px 0 0;
-    height: 90%;
-  }
-
-  .skill-title {
-    font-size: 2rem;
+    max-width: 35%;
+    margin: 0;
+    height: 100%;
   }
 
   .skill-text {
+    max-width: 65%;
     margin-left: 16px;
     padding-right: 0;
+  }
+
+  .skill-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-bottom: .25em;
   }
 
   .skill-description {
