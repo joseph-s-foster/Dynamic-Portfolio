@@ -20,7 +20,7 @@
   align-items: center;
   padding-top: 16px;
   padding-bottom: 16px;
-  border-top: solid 1px #fff;
+  border-top: solid 1px #EEE;
   font-size: 1rem;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .trend-icon.hold {
-  color: grey;
+  color: #FFFFFF70;
 }
 
 .trend-icon.up {

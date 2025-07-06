@@ -38,8 +38,8 @@
 
 @media screen and (max-width: 480px) {
   .skill-card:hover {
-    scale: 1; /* Reset scale */
-    background-color: inherit; /* Reset background */
+    scale: 1;
+    background-color: inherit;
   }
 }
 
@@ -56,11 +56,11 @@
 }
 
 .skill-icon {
-  margin-right: 16px;
+  margin: 0 16px;
+  height: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4%;
 }
 
 .skill-icon img {
@@ -82,7 +82,7 @@
 }
 
 .skill-description {
-  color: #ccc;
+  color: #B3B3B3;
   font-size: 1rem;
   line-height: 1.4
 }
@@ -156,7 +156,8 @@
   }
 
   .skill-icon {
-    padding: 0 16px 0 0;
+    margin: 0 16px 0 0;
+    height: 90%;
   }
 
   .skill-title {
@@ -164,11 +165,12 @@
   }
 
   .skill-text {
-    padding: 0;
+    margin-left: 16px;
+    padding-right: 0;
   }
 
   .skill-description {
-    color: #999999;
+    color: #FFF;
   }
 }
 

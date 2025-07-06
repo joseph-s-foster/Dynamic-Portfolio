@@ -15,7 +15,7 @@
 
 .footer-group {
   margin-top: 16px;
-  color: #999999;
+  color: #FFFFFF70;
 }
 
 .footer-group,
@@ -28,9 +28,9 @@
 }
 
 .footer-link {
+  color: #FFF;
   display: inline-block;
   cursor: pointer;
-  color: inherit;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -47,7 +47,7 @@
   margin-left: 11%;
   margin-right: 11%;
   margin-top: 16px;
-  border-top: solid #fff 1px;
+  border-top: solid 1px #EEE;
 }
 
 @media screen and (max-width: 480px) {
