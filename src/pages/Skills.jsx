@@ -41,8 +41,8 @@ function Skills() {
     {
       link: "https://aws.amazon.com/",
       src: aws,
-      alt: "AWS",
-      title: "AWS",
+      alt: "Amazon Web Service",
+      title: "Amazon Web Service",
       description: "Cloud ecosystem offering scalable deployments, serverless architecture, object storage, relational databases, and more.",
     },
     {
