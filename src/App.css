@@ -93,7 +93,7 @@ body.no-scroll {
 @media (hover: hover) {
   .explore:hover,
   .explore:active {
-    color: #999999;
+    color: #b1b1b1;
   }
 }
 

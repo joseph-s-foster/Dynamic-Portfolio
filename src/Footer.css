@@ -15,7 +15,7 @@
 
 .footer-group {
   margin-top: 16px;
-  color: grey;
+  color: #b1b1b1;
 }
 
 .footer-group,
@@ -37,7 +37,7 @@
 @media (hover: hover) {
   .footer-link:hover,
   .footer-link:active {
-    color: #999999;
+    color: #b1b1b1;
   }
 }
 
@@ -47,7 +47,7 @@
   margin-left: 11%;
   margin-right: 11%;
   margin-top: 16px;
-  border-top: solid #eeeeee 1px;
+  border-top: solid #fff 1px;
 }
 
 @media screen and (max-width: 480px) {
