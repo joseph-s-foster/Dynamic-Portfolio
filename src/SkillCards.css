@@ -20,22 +20,22 @@
 }
 
 .skill-icon {
-  height: 3em;
-  max-width: 3em;
-  margin-bottom: 1em;
+  height: 3rem;
+  max-width: 3rem;
+  margin-bottom: 1rem;
 }
 
 .skill-title {
   font-size: 1.25rem;
   font-weight: 500;
-  margin-bottom: .5em;
+  margin-bottom: .5rem;
 }
 
 .skill-description {
   font-size: 1rem;
-  line-height: 1.5em;
-  padding-right: 2em;
-  margin-bottom: 1.5em;
+  line-height: 1.5rem;
+  padding-right: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 1080px) {
