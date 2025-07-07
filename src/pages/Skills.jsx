@@ -36,7 +36,7 @@ function Skills() {
       src: python,
       alt: "Python",
       title: "Python",
-      description: "Scripting, data processing, and automation suporting object-oriented principles with readable syntax.",
+      description: "Scripting, data processing, and automation supporting object-oriented principles with readable syntax.",
     },
     {
       link: "https://aws.amazon.com/",
