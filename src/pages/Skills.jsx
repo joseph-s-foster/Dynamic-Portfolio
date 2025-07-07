@@ -3,11 +3,11 @@ import useTypewriterLoop from "../hooks/useTypewriterLoop";
 import Nav from "../components/NavBar";
 import SkillCards from "../components/SkillCards";
 import javascript from "../assets/javascript.svg";
-import postgresql from "../assets/postgresql.svg";
-import aws from "../assets/aws.svg";
-import atlassian from "../assets/atlassian.svg";
+import react from "../assets/react.svg";
 import python from "../assets/python.svg";
+import aws from "../assets/aws.svg";
 import docker from "../assets/docker.svg";
+import atlassian from "../assets/atlassian.svg";
 import Footer from "../components/Footer";
 import "../SkillCards.css";
 
@@ -29,42 +29,48 @@ function Skills() {
       src: javascript,
       alt: "JavaScript",
       title: "JavaScript",
-      description: "Powering dynamic interactivity on client and server sides with frameworks like React and Node.js.",
+      description:
+        "Powering dynamic interactivity on client and server sides with frameworks like React and Node.js.",
+    },
+    {
+      link: "https://react.dev/",
+      src: react,
+      alt: "React",
+      title: "React",
+      description:
+        "Simplifiying responsive user interfaces through modular UI pieces that manage their own state and render via virtual DOM.",
     },
     {
       link: "https://www.python.org/",
       src: python,
       alt: "Python",
       title: "Python",
-      description: "Scripting, data processing, and automation supporting object-oriented principles with readable syntax.",
+      description:
+        "Data processing and automation, supporting object-oriented principles with readable syntax.",
     },
     {
       link: "https://aws.amazon.com/",
       src: aws,
       alt: "Amazon Web Service",
       title: "Amazon Web Service",
-      description: "Cloud ecosystem offering scalable deployments, serverless architecture, object storage, relational databases, and more.",
-    },
-    {
-      link: "https://www.postgresql.org/",
-      src: postgresql,
-      alt: "PostgreSQL",
-      title: "PostgreSQL",
-      description: "Feature-rich, open-source relational database system with advanced querying capabilities, ideal for complex data modeling.",
+      description:
+        "Cloud ecosystem offering scalable deployments, serverless architecture, object storage, relational databases, and more.",
     },
     {
       link: "https://www.docker.com/",
       src: docker,
       alt: "Docker",
       title: "Docker",
-      description: "Containerization platform used to package applications, enabling consistent development, testing, and deployment.",
+      description:
+        "Containerization platform used to package applications, enabling consistent development, testing, and deployment.",
     },
     {
       link: "https://www.atlassian.com/",
       src: atlassian,
       alt: "Atlassian",
       title: "Atlassian",
-      description: "Suite of tools that streamline version control, documentation, and cross-team collaboration in development environments.",
+      description:
+        "Suite of tools that streamline version control, documentation, and cross-team collaboration in development environments.",
     },
   ];
 
