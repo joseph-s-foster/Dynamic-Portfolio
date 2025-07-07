@@ -37,7 +37,7 @@ function Projects() {
       src: wyr,
       alt: "WYR",
       title: "WYR",
-      description: "MERN polling - fuel the fued",
+      description: "MERN polling - fuel the feud",
       language: ".jsx",
     },
     {
