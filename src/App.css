@@ -53,13 +53,13 @@ body.no-scroll {
 }
 
 .hero h2 {
-  padding-top: 4px;
+  padding-top: .25rem;
   font-size: 2rem;
 }
 
 .anchor {
   position: absolute;
-  bottom: 16px;
+  bottom: 1rem;
 }
 
 .chevron-down {
@@ -67,18 +67,17 @@ body.no-scroll {
 }
 
 .summary {
-  padding: 64px 11%;
+  padding: 4rem 11%;
   font-size: 2rem;
 }
 
 .summary h3 {
-  padding-bottom: 8px;
+  padding-bottom: .5rem;
 }
 
 .summary p {
   font-size: 1rem;
-  line-height: 1.4;
-  padding-bottom: 8px;
+  padding-bottom: .5rem;
 }
 
 .explore {
@@ -110,7 +109,7 @@ body.no-scroll {
   }
 
   .hero {
-    left: 16px;
+    left: 1rem;
     bottom: 25%;
   }
 
@@ -123,6 +122,6 @@ body.no-scroll {
   }
 
   .summary {
-    padding: 64px 16px;
+    padding: 4rem 1rem;
   }
 }

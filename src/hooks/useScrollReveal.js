@@ -6,7 +6,7 @@ const useScrollReveal = () => {
     const applyScrollReveal = () => {
       ScrollReveal().reveal(".reveal", {
         delay: 125,
-        distance: "48px",
+        distance: "2rem",
         duration: 750,
         easing: "ease-in-out",
         origin: "left",

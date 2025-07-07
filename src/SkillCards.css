@@ -13,9 +13,9 @@
 .skill-card {
   display: flex;
   flex-direction: column;
-  flex-basis: calc(33% - 16px);
+  flex-basis: calc(33% - 1rem);
   aspect-ratio: 2 / 1;
-  margin-top: 32px;
+  margin-top: 2rem;
   padding: 0;
 }
 
@@ -40,19 +40,19 @@
 
 @media screen and (max-width: 1080px) {
   .skill-card {
-    flex-basis: calc(50% - 16px);
+    flex-basis: calc(50% - 1rem);
   }
 }
 
 @media screen and (max-width: 720px) {
   .skill-card {
-    margin: 16px 0 0 0;
+    margin: 1rem 0 0 0;
     flex-basis: calc(100%);
   }
 }
 
 @media screen and (max-width: 480px) {
    .skills {
-    margin: 0 16px;
+    margin: 0 1rem;
   }
 }
