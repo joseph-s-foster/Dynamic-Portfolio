@@ -5,7 +5,6 @@
 .skills {
   justify-content: space-between;
   margin: 0 11%;
-  padding-bottom: .5em;
   flex: 1;
   display: flex;
   flex-wrap: wrap;
@@ -36,76 +35,24 @@
   font-size: 1rem;
   line-height: 1.5em;
   padding-right: 2em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
-@media screen and (max-width: 1400px) {
-  .skill-title {
-    font-size: 1.25rem;
-  }
-
-  .skill-description {
-    font-size: 0.75rem;
-  }
-}
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1080px) {
   .skill-card {
     flex-basis: calc(50% - 16px);
   }
-
-  .skill-title {
-    font-size: 1.5rem;
-  }
-
-  .skill-description {
-    font-size: 1rem;
-  }
 }
 
-@media screen and (max-width: 900px) {
-  .skill-title {
-    font-size: 1.25rem;
-  }
-
-  .skill-description {
-    font-size: 0.75rem;
-  }
-}
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
   .skill-card {
     margin: 16px 0 0 0;
     flex-basis: calc(100%);
-  }
-
-  .skill-title {
-    font-size: 2rem;
-  }
-
-  .skill-description {
-    font-size: 1.25rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .skill-title {
-    font-size: 1.5rem;
-  }
-
-  .skill-description {
-    font-size: 1rem;
   }
 }
 
 @media screen and (max-width: 480px) {
    .skills {
     margin: 0 16px;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  .skill-title {
-    font-size: 1.5rem;
   }
 }
