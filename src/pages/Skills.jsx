@@ -85,9 +85,9 @@ function Skills() {
       </div>
       <div className="background">
         <div className="hero">
-          <h1>jsfoster@dev: ~/skills</h1>
+          <h1>[jsfoster@dev skills]</h1>
           <h2>
-            &gt; {typedText}
+            $ {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
           </h2>
         </div>

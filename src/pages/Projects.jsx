@@ -64,9 +64,9 @@ function Projects() {
       </div>
       <div className="background">
         <div className="hero">
-          <h1>jsfoster@dev: ~/projects</h1>
+          <h1>[jsfoster@dev projects]</h1>
           <h2>
-            &gt; {typedText}
+            $ {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
           </h2>
         </div>
