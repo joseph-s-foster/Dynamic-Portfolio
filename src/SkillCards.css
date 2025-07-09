@@ -22,6 +22,7 @@
 .skill-icon {
   height: 3rem;
   max-width: 3rem;
+  opacity: .75;
   margin-bottom: .75rem;
 }
 
