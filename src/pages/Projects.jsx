@@ -39,7 +39,7 @@ function Projects() {
       alt: "WYR",
       title: "WYR",
       description:
-        "MERN stack polling for age-old rivalries like Apple vs Android, Coke vs Pepsi, and more.",
+        "MERN stack polling for age-old rivalries like Apple vs Android, Nike vs Adidas, and more.",
       language: ".jsx",
     },
     {
