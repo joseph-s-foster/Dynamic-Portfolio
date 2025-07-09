@@ -66,8 +66,11 @@ margin: 1rem 0;
 
 .project-description,
 .project-language {
-  color: #FFFFFF70;
   font-size: 1rem;
+}
+
+.project-language {
+  color: #FFFFFF70;
 }
 
 @media screen and (max-width: 780px) {

@@ -29,7 +29,8 @@ function Projects() {
       src: snake,
       alt: "Snake",
       title: "Snake",
-      description: "Gaming nostaliga with no-lift d-pad",
+      description:
+        "Gaming nostaliga at your fingertips with no-lift d-pad on mobile devices and arrow key navigation for keyboards.",
       language: ".js",
     },
     {
@@ -37,7 +38,8 @@ function Projects() {
       src: wyr,
       alt: "WYR",
       title: "WYR",
-      description: "MERN polling - fuel the feud",
+      description:
+        "MERN stack polling for age-old rivalries like Apple vs Android, Coke vs Pepsi, and more.",
       language: ".jsx",
     },
     {
@@ -45,7 +47,8 @@ function Projects() {
       src: pulse,
       alt: "Pulse",
       title: "Pulse",
-      description: "Post and comment in this CRUD newsfeed",
+      description:
+        "CRUD ops newsfeed giving users the ability to post, comment, and upvote trending online articles.",
       language: ".py",
     },
   ];
