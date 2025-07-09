@@ -17,6 +17,7 @@ body,
   min-height: 100vh;
   overflow-x: hidden;
   box-sizing: border-box;
+  cursor: default;
 }
 
 body.no-scroll {
@@ -50,12 +51,8 @@ body.no-scroll {
 }
 
 .hero h1 {
-  font-size: 1rem;
-}
-
-.hero h2 {
-  padding-top: 1rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 .anchor {
@@ -111,11 +108,7 @@ body.no-scroll {
 
   .hero h1 {
     font-size: 1rem;
-  }
-
-  .hero h2 {
-    padding-top: 1rem;
-    font-size: 1rem;
+    font-weight: 400;
   }
 
   .summary {

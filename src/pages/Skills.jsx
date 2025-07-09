@@ -25,7 +25,6 @@ function Skills() {
 
   const skills = [
     {
-      link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       src: javascript,
       alt: "JavaScript",
       title: "JavaScript",
@@ -33,7 +32,6 @@ function Skills() {
         "Powering dynamic interactivity on client and server sides with frameworks like React and Node.js.",
     },
     {
-      link: "https://react.dev/",
       src: react,
       alt: "React",
       title: "React",
@@ -41,7 +39,6 @@ function Skills() {
         "Simplifiying responsive user interfaces through modular UI pieces that manage their own state and render via virtual DOM.",
     },
     {
-      link: "https://www.python.org/",
       src: python,
       alt: "Python",
       title: "Python",
@@ -49,7 +46,6 @@ function Skills() {
         "Data processing and automation, supporting object-oriented principles with readable syntax.",
     },
     {
-      link: "https://aws.amazon.com/",
       src: aws,
       alt: "Amazon Web Service",
       title: "Amazon Web Service",
@@ -57,7 +53,6 @@ function Skills() {
         "Cloud ecosystem offering scalable deployments, serverless architecture, object storage, relational databases, and more.",
     },
     {
-      link: "https://www.docker.com/",
       src: docker,
       alt: "Docker",
       title: "Docker",
@@ -65,7 +60,6 @@ function Skills() {
         "Containerization platform used to package applications, enabling consistent development, testing, and deployment.",
     },
     {
-      link: "https://www.atlassian.com/",
       src: atlassian,
       alt: "Atlassian",
       title: "Atlassian",
@@ -85,11 +79,10 @@ function Skills() {
       </div>
       <div className="background">
         <div className="hero">
-          <h1>[jsfoster@dev skills]</h1>
-          <h2>
-            $ {typedText}
+          <h1>
+            [jsfoster@dev skills]$ {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
-          </h2>
+          </h1>
         </div>
         <a className="anchor" href="#api" onClick={handleScroll}>
           <ChevronDownIcon className="w-8 chevron-down" aria-hidden="true" />
@@ -100,7 +93,6 @@ function Skills() {
         {skills.map((item) => (
           <SkillCards
             key={item.alt}
-            link={item.link}
             src={item.src}
             alt={item.alt}
             title={item.title}
