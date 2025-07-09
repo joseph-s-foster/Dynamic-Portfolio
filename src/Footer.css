@@ -46,7 +46,7 @@
   margin-left: 11%;
   margin-right: 11%;
   margin-top: 1rem;
-  border-top: solid 1px;
+  border-top: solid 1px #D4D4D4;
 }
 
 @media screen and (max-width: 480px) {
