@@ -4,8 +4,7 @@
 
 .projects {
   justify-content: space-between;
-  margin: 2rem 11%;
-  padding-bottom: 1.5rem;
+  margin: 2rem 11% 1rem 11%;
   flex: 1;
   display: flex;
   flex-wrap: wrap;
@@ -78,10 +77,11 @@ margin: 1rem 0;
   .projects {
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
   }
 
   .project-card {
-    margin: 1rem 0 0 0;
+    margin: 1rem 0;
     flex-basis: calc(100%);
   }
 }
@@ -92,6 +92,6 @@ margin: 1rem 0;
   }
 
   .project-card {
-    margin: 2rem 0 0 0;
+    margin: 1rem 0;
   }
 }
