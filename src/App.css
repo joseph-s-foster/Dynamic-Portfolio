@@ -9,11 +9,11 @@
 body,
 #root {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    sans-serif;
+    sans-serif;  
   margin: 0;
   padding: 0;
   background-color: black;
-  color: #FFF;
+  color: #D4D4D4;
   min-height: 100vh;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -35,8 +35,7 @@ body.no-scroll {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to top, black, transparent),
-    url("./assets/desktop.webp") center / cover no-repeat;
+  background-color: black;
   background-size: cover;
   z-index: 0;
   height: 100svh;
@@ -46,15 +45,17 @@ body.no-scroll {
   position: absolute;
   left: 11%;
   bottom: 22%;
+  font-family: monospace;
+  color: #4EC9B0;
 }
 
 .hero h1 {
-  font-size: 5rem;
+  font-size: 1rem;
 }
 
 .hero h2 {
-  padding-top: .25rem;
-  font-size: 2rem;
+  padding-top: 1rem;
+  font-size: 1rem;
 }
 
 .anchor {
@@ -92,7 +93,7 @@ body.no-scroll {
 @media (hover: hover) {
   .explore:hover,
   .explore:active {
-    color: #999999;
+    color: #FFFFFF70;
   }
 }
 
@@ -103,22 +104,18 @@ body.no-scroll {
 }
 
 @media screen and (max-width: 480px) {
-  .background {
-    background: linear-gradient(to top, #000000E0, transparent),
-      url("./assets/mobile.webp") center / cover no-repeat;
-  }
-
   .hero {
     left: 1rem;
     bottom: 25%;
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: 1rem;
   }
 
   .hero h2 {
-    font-size: 1.5rem;
+    padding-top: 1rem;
+    font-size: 1rem;
   }
 
   .summary {

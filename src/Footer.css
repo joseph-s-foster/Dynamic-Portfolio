@@ -28,7 +28,6 @@
 }
 
 .footer-link {
-  color: #FFF;
   display: inline-block;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -37,7 +36,7 @@
 @media (hover: hover) {
   .footer-link:hover,
   .footer-link:active {
-    color: #999999;
+    color: #FFFFFF70;
   }
 }
 

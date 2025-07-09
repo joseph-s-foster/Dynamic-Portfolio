@@ -5,9 +5,9 @@ import Trending from "../components/Trending";
 import Footer from "../components/Footer";
 
 function Home() {
-  const tag1 = "UX-Driven";
-  const tag2 = "Mobile-Friendly";
-  const tag3 = "Full-Stack Developer";
+  const tag1 = "ux-driven";
+  const tag2 = "mobile-friendly";
+  const tag3 = "full-stack developer";
   const { typedText, showCursor } = useTypewriterLoop(tag1, tag2, tag3);
 
   const handleScroll = (event) => {
@@ -27,9 +27,9 @@ function Home() {
       </div>
       <div className="background">
         <div className="hero">
-          <h1>Joseph Foster</h1>
+          <h1>jsfoster@dev:</h1>
           <h2>
-            {typedText}
+            &gt; {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
           </h2>
         </div>

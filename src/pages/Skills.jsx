@@ -12,9 +12,9 @@ import Footer from "../components/Footer";
 import "../SkillCards.css";
 
 function Skills() {
-  const tag1 = "Collaborative";
-  const tag2 = "Agile";
-  const tag3 = "Adaptive";
+  const tag1 = "collaborative";
+  const tag2 = "agile";
+  const tag3 = "adaptive";
   const { typedText, showCursor } = useTypewriterLoop(tag1, tag2, tag3);
 
   const handleScroll = (event) => {
@@ -85,9 +85,9 @@ function Skills() {
       </div>
       <div className="background">
         <div className="hero">
-          <h1>Skills</h1>
+          <h1>jsfoster@dev: ~/skills</h1>
           <h2>
-            {typedText}
+            &gt; {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
           </h2>
         </div>

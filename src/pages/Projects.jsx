@@ -3,16 +3,16 @@ import useTypewriterLoop from "../hooks/useTypewriterLoop";
 import usePreloadImages from "../hooks/usePreloadImages";
 import Nav from "../components/NavBar";
 import ProjectCards from "../components/ProjectCards";
-import snake from "../assets/snake.webp";
-import wyr from "../assets/wyr.webp";
-import pulse from "../assets/pulse.webp";
+import snake from "../assets/snake.png";
+import wyr from "../assets/wyr.png";
+import pulse from "../assets/pulse.png";
 import Footer from "../components/Footer";
 import "../ProjectCards.css";
 
 function Projects() {
-  const tag1 = "Scalable";
-  const tag2 = "Modular";
-  const tag3 = "Interactive";
+  const tag1 = "scalable";
+  const tag2 = "modular";
+  const tag3 = "interactive";
   const { typedText, showCursor } = useTypewriterLoop(tag1, tag2, tag3);
 
   const handleScroll = (event) => {
@@ -61,9 +61,9 @@ function Projects() {
       </div>
       <div className="background">
         <div className="hero">
-          <h1>Projects</h1>
+          <h1>jsfoster@dev: ~/projects</h1>
           <h2>
-            {typedText}
+            &gt; {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
           </h2>
         </div>
