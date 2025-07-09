@@ -48,9 +48,6 @@
   .project-card:hover .project-icon {
     transform: scale(1.02);
   }
-  .project-text:hover {
-    background-color: #1b1b1b;
-  }
 }
 
 .project-card:active {
