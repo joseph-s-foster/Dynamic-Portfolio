@@ -33,8 +33,8 @@
 }
 
 .skill-description {
-  color: #FFFFFF70;
   font-size: 1rem;
+  font-weight: 300;
   line-height: 1.5rem;
   padding-right: 2rem;
   margin-bottom: 1.5rem;
