@@ -65,6 +65,7 @@
 }
 
 .articles {
+  font-weight: 500;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
 }
