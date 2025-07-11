@@ -38,21 +38,31 @@ function Footer() {
           <li>
             <a
               className="footer-link"
-              href="https://www.heroku.com/"
+              href="https://react.dev/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Heroku
+              React
             </a>
           </li>
-           <li>
+          <li>
             <a
               className="footer-link"
-              href="https://www.mongodb.com/atlas"
+              href="https://tailwindcss.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Atlas
+              Tailwind
+            </a>
+          </li>
+          <li>
+            <a
+              className="footer-link"
+              href="https://vite.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Vite
             </a>
           </li>
           <li>
