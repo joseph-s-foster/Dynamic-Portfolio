@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: row;
   margin: 0 11% 1rem 11%;
+  color: #ffffff70;
 }
 
 .api-rank {
@@ -70,13 +71,13 @@
 
 .trend-icon.up {
   position: absolute;
-  bottom: 1.625rem;
+  bottom: 1.5rem;
   color: #4caf50;
 }
 
 .trend-icon.down {
   position: absolute;
-  top: 1.625rem;
+  top: 1.5rem;
   transform: rotate(180deg);
   color: #f44336;
 }
@@ -95,7 +96,6 @@
 .views {
   position: absolute;
   right: 11%;
-  color: #ffffff70;
 }
 
 @media (hover: hover) {
