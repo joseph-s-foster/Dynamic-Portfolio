@@ -201,9 +201,9 @@ function Trending() {
                 >
                   {displayTitle}
                 </a>
-                <span className="views">
-                  {`views ${article.views.toLocaleString()}`}
-                </span>
+                <div className="views">
+                  {article.views.toLocaleString()}
+                </div>
               </div>
             </li>
           );

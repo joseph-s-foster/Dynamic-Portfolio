@@ -1,11 +1,32 @@
-.api {
+.api-headers {
   display: flex;
   flex-direction: column;
 }
 
-.apitrend {
+.api-headers h3 {
   margin: 2rem 11%;
   font-size: 2rem;
+}
+
+.api-legend {
+  display: flex;
+  flex-direction: row;
+  margin: 0 11% 1rem 11%;
+}
+
+.api-rank {
+  width: 1rem;
+  text-align: center;
+}
+
+.api-title {
+  font-size: 1rem;
+  margin: 0 0.75rem;
+}
+
+.api-views {
+  position: absolute;
+  right: 11%;
 }
 
 .apiarticles li {
@@ -13,7 +34,7 @@
   flex-direction: row;
   align-items: center;
   font-size: 1rem;
-  padding: .5rem 0;
+  padding: 1rem 0;
   border-top: solid 1px #222;
 }
 
@@ -30,18 +51,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 .75rem 0 0;
+  margin: 0 0.75rem 0 0;
 }
 
 .rank {
   width: 1rem;
   text-align: center;
-  font-size: 0.75rem;
-  font-weight: 300;
 }
 
 .trend-icon {
-  height: .5rem;
+  height: 0.5rem;
   width: 1rem;
 }
 
@@ -51,20 +70,21 @@
 
 .trend-icon.up {
   position: absolute;
-  bottom: 1.375rem;
+  bottom: 1.625rem;
   color: #4caf50;
 }
 
 .trend-icon.down {
   position: absolute;
-  top: 1.375rem;
+  top: 1.625rem;
   transform: rotate(180deg);
   color: #f44336;
 }
 
 .data {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
 }
 
 .apiarticles {
@@ -73,8 +93,8 @@
 }
 
 .views {
-  font-size: 0.75rem;
-  font-weight: 300;
+  position: absolute;
+  right: 11%;
   color: #ffffff70;
 }
 
@@ -87,8 +107,17 @@
 }
 
 @media screen and (max-width: 480px) {
-  .apitrend {
+  .api-headers h3 {
     margin: 2rem 1rem;
+  }
+
+  .api-legend {
+    margin: 0 1rem 1rem 1rem;
+  }
+
+  .api-views, 
+  .views {
+    right: 1rem;
   }
 
   .apiarticles {

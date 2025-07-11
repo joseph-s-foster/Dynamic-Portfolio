@@ -27,11 +27,9 @@ function Home() {
       </div>
       <div className="background">
         <div className="hero">
-          <h1>
-            [jsfoster@dev ~]
-            </h1>
-            <h2>
-              $ {typedText}
+          <h1>[jsfoster@dev ~]</h1>
+          <h2>
+            $ {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
           </h2>
         </div>
@@ -40,11 +38,12 @@ function Home() {
         </a>
       </div>
       <div id="api">
-        <div className="api">
-          <div className="apiresults">
-            <div className="apitrend">
-              <h3>Trending Now</h3>
-            </div>
+        <div className="api-headers">
+          <h3>Trending Now</h3>
+          <div className="api-legend">
+            <p className="api-rank">#</p>
+            <p className="api-title">Title</p>
+            <p className="api-views">Views</p>
           </div>
         </div>
 
