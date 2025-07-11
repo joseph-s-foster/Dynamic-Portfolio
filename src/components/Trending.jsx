@@ -202,7 +202,7 @@ function Trending() {
                   {displayTitle}
                 </a>
                 <span className="views">
-                  {`views: ${article.views.toLocaleString()}`}
+                  views <span style= {{color:"#FFFFFF70"}}>{`${article.views.toLocaleString()}`}</span>
                 </span>
               </div>
             </li>
