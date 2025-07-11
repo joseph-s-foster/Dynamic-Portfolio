@@ -14,7 +14,7 @@
   align-items: center;
   font-size: 1rem;
   padding: .5rem 0;
-  border-top: solid 1px #2B2B2B;
+  border-top: solid 1px #222;
 }
 
 .articles {
@@ -73,6 +73,7 @@
 .views {
   font-size: 0.75rem;
   font-weight: 300;
+  color: #ffffff70;
 }
 
 @media (hover: hover) {
