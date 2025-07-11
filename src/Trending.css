@@ -18,6 +18,8 @@
 }
 
 .articles {
+  display: inline;
+  width: fit-content;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
 }
@@ -67,7 +69,7 @@
 
 .apiarticles {
   align-items: center;
-  margin: 0 11%;
+  margin: 0 11% 2rem 11%;
 }
 
 .views {
@@ -90,6 +92,6 @@
   }
 
   .apiarticles {
-    margin: 0 1rem 1rem 1rem;
+    margin: 0 1rem 2rem 1rem;
   }
 }
