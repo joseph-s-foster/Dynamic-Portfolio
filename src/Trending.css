@@ -41,7 +41,6 @@
 
 .rank {
   width: 1rem;
-  font-weight: 500;
   text-align: center;
 }
 
@@ -65,7 +64,6 @@
 }
 
 .articles {
-  font-weight: 500;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
 }
