@@ -44,15 +44,14 @@ body.no-scroll {
 
 .hero {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   left: 11%;
+  margin-right: 11%;
   bottom: 22%;
   font-family: monospace;
-  color: #4EC9B0;
-}
-
-.hero h1 {
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 2rem;
+  /* color: #4EC9B0; */
 }
 
 .anchor {
@@ -100,15 +99,17 @@ body.no-scroll {
   stroke-width: 3;
 }
 
+@media screen and (max-width: 600px) {
+  .hero {
+    font-size: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .hero {
+    font-size: 1rem;
     left: 1rem;
     bottom: 25%;
-  }
-
-  .hero h1 {
-    font-size: 1rem;
-    font-weight: 400;
   }
 
   .summary {

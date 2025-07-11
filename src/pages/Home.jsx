@@ -28,9 +28,12 @@ function Home() {
       <div className="background">
         <div className="hero">
           <h1>
-            [jsfoster@dev ~]$ {typedText}
+            [jsfoster@dev ~]
+            </h1>
+            <h2>
+              $ {typedText}
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
-          </h1>
+          </h2>
         </div>
         <a className="anchor" href="#api" onClick={handleScroll}>
           <ChevronDownIcon className="w-8 chevron-down" aria-hidden="true" />
