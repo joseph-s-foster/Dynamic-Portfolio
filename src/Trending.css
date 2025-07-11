@@ -8,6 +8,20 @@
   font-size: 2rem;
 }
 
+.apiarticles li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1rem;
+  padding: .625rem 0;
+  border-top: solid 1px #2B2B2B;
+}
+
+.articles {
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .indicator {
   position: relative;
   display: flex;
@@ -35,13 +49,13 @@
 
 .trend-icon.up {
   position: absolute;
-  bottom: 1.375rem;
+  bottom: 1.25rem;
   color: #4caf50;
 }
 
 .trend-icon.down {
   position: absolute;
-  top: 1.375rem;
+  top: 1.25rem;
   transform: rotate(180deg);
   color: #f44336;
 }
@@ -56,24 +70,10 @@
   margin: 0 11%;
 }
 
-.apiarticles li {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 1rem;
-  padding: .5rem 0;
-  border-top: solid 1px #2B2B2B;
-}
-
-.articles {
-  color: inherit;
-  -webkit-tap-highlight-color: transparent;
-}
-
 .views {
   font-size: 0.75rem;
   font-weight: 300;
-  color: #ffffff70;
+  /* color: #ffffff70; */
 }
 
 @media (hover: hover) {
