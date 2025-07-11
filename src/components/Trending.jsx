@@ -15,7 +15,13 @@ const fetchTopHitsForDate = async (date) => {
     const response = await fetch(url);
     if (!response.ok) {
       if (response.status === 404) {
-        console.warn(`Data unavailable for ${date.format("YYYY-MM-DD")}. Displaying data for ${date.subtract(1, 'day').format("YYYY-MM-DD")}.`);
+        console.warn(
+          `Data unavailable for ${date.format(
+            "YYYY-MM-DD"
+          )}. Displaying data for ${date
+            .subtract(1, "day")
+            .format("YYYY-MM-DD")}.`
+        );
         return null;
       } else {
         throw new Error(`Error fetching data: ${response.statusText}`);
@@ -33,7 +39,7 @@ const fetchTopHitsForDate = async (date) => {
 
 const sortTopHits = async () => {
   const today = dayjs();
-  
+
   // Function to fetch and process data for a date range
   const getArticlesForDateRange = async (range) => {
     const dates = range.map((i) => today.subtract(i, "day"));
@@ -48,8 +54,8 @@ const sortTopHits = async () => {
     const articlesMap = new Map();
 
     if (yesterdayData?.items?.[0]?.articles) {
-      yesterdayData.items[0].articles.forEach(({ article, rank }) => {
-        articlesMap.set(article, { rank, previousRank: null });
+      yesterdayData.items[0].articles.forEach(({ article, views, rank }) => {
+        articlesMap.set(article, { rank, views, previousRank: null });
       });
     }
 
@@ -65,6 +71,7 @@ const sortTopHits = async () => {
       article,
       rank: data.rank,
       previousRank: data.previousRank,
+      views: data.views,
     }))
       .filter(
         ({ article }) =>
@@ -78,7 +85,7 @@ const sortTopHits = async () => {
             "XNXX",
             "wiki.phtml",
             "Module:Wd",
-            "File:Icons8_flat_missed_call.svg"
+            "File:Icons8_flat_missed_call.svg",
           ].includes(article)
       )
       .sort((a, b) => a.rank - b.rank)
@@ -139,9 +146,9 @@ function Trending() {
     }
 
     // show minus if rank remains unchanged between days
-    if ((rank > previousRank && index === 0) || (rank === previousRank)) {
-      return <MinusIcon className="trend-icon hold" aria-hidden="true" />;
-    }
+    // if ((rank > previousRank && index === 0) || rank === previousRank) {
+    //   return <MinusIcon className="trend-icon hold" aria-hidden="true" />;
+    // }
 
     // show down arrow if rank is lower than the day before
     if (rank > previousRank) {
@@ -163,17 +170,40 @@ function Trending() {
 
           return (
             <li key={index}>
-              <a
-                href={`https://en.wikipedia.org/wiki/${encodeURIComponent(
-                  article.article
-                )}`}
-                className="articles"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {displayTitle}
-              </a>
-              <span className="trend-icon">{getTrendIcon(article, index)}</span>
+              <div className="indicator">
+                {article.rank < article.previousRank && (
+                  <img
+                    src={green}
+                    className="trend-icon up"
+                    aria-hidden="true"
+                  />
+                )}
+
+                <div className="rank">{index + 1}</div>
+
+                {article.rank > article.previousRank && (
+                  <img
+                    src={red}
+                    className="trend-icon down"
+                    aria-hidden="true"
+                  />
+                )}
+              </div>
+              <div className="data">
+                <a
+                  href={`https://en.wikipedia.org/wiki/${encodeURIComponent(
+                    article.article
+                  )}`}
+                  className="articles"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {displayTitle}
+                </a>
+                <span className="views">
+                  {`${article.views.toLocaleString()} views`}
+                </span>
+              </div>
             </li>
           );
         })}

@@ -52,7 +52,7 @@ function Home() {
           <p>
             Wikimedia pageview metrics are retrieved and sorted to generate the
             top 10 results. Each link is then paired with an icon indicating
-            whether its rank has changed or held since the previous day.
+            whether its rank has changed since the previous day.
           </p>
           <a onClick={handleViewProjectsClick} className="explore">
             View more projects <ChevronRightIcon className="chevron-right" />
