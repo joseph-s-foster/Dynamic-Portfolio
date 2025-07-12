@@ -42,13 +42,11 @@ function Home() {
           <h3>Trending Now</h3>
           <div className="api-legend">
             <p className="api-rank">#</p>
-            <p className="api-title">Title</p>
+            <p className="api-title">Article</p>
             <p className="api-views">Views</p>
           </div>
         </div>
-
         <Trending />
-
         <div className="summary">
           <h3>APIs and Algorithms</h3>
           <p>
