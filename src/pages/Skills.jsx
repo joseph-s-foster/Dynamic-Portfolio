@@ -68,10 +68,6 @@ function Skills() {
     },
   ];
 
-  const handleViewHomeClick = () => {
-    window.location.href = "/";
-  };
-
   return (
     <>
       <div>
@@ -108,7 +104,7 @@ function Skills() {
           scripting and application design to containerized deployments and
           agile team workflows.
         </p>
-        <a onClick={handleViewHomeClick} className="explore">
+        <a href="/" className="explore">
           Homepage <ChevronRightIcon className="chevron-right" />
         </a>
       </div>
