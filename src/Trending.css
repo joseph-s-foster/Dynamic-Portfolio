@@ -35,13 +35,13 @@
 
 .trend-icon.up {
   position: absolute;
-  bottom: 1.6255rem;
+  bottom: 25px;
   color: #4caf50;
 }
 
 .trend-icon.down {
   position: absolute;
-  top: 1.625rem;
+  top: 25px;
   transform: rotate(180deg);
   color: #f44336;
 }
