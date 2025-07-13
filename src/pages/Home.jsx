@@ -16,9 +16,9 @@ function Home() {
     projectsContainer.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleViewProjectsClick = () => {
-    window.location.href = "/projects";
-  };
+  // const handleViewProjectsClick = () => {
+  //   window.location.href = "/projects";
+  // };
 
   return (
     <>
@@ -54,7 +54,7 @@ function Home() {
             top 10 results. Each link is then paired with an icon indicating
             whether its rank has changed since the previous day.
           </p>
-          <a onClick={handleViewProjectsClick} className="explore">
+          <a href="/projects" className="explore">
             View more projects <ChevronRightIcon className="chevron-right" />
           </a>
         </div>
