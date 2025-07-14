@@ -82,7 +82,7 @@ function Skills() {
           </h2>
         </div>
         <a className="anchor" href="#api" onClick={handleScroll}>
-          <ChevronDownIcon className="w-8 chevron-down" aria-hidden="true" />
+          <ChevronDownIcon className="w-8 chevron-down" aria-label="Scroll to main content" />
         </a>
       </div>
       <div id="skills" />
