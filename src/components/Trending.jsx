@@ -160,7 +160,7 @@ function Trending() {
         {topArticles.map((article, index) => {
           const cleanedTitle = cleanTitle(article.article);
           const displayTitle = isMobile
-            ? truncateTitle(cleanedTitle, 32)
+            ? truncateTitle(cleanedTitle, 30)
             : cleanedTitle;
 
           return (
