@@ -33,7 +33,12 @@ function Home() {
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
           </h2>
         </div>
-        <a className="anchor" href="#api" onClick={handleScroll} aria-label="Scroll to main content">
+        <a
+          className="anchor"
+          href="#api"
+          onClick={handleScroll}
+          aria-label="Scroll to main content"
+        >
           <ChevronDownIcon className="w-8 chevron-down" aria-hidden="true" />
         </a>
       </div>
@@ -51,8 +56,8 @@ function Home() {
           <h3>APIs and Algorithms</h3>
           <p>
             Wikimedia pageview metrics are retrieved and sorted to generate the
-            top 10 results. Each link is then paired with an icon indicating
-            whether its rank has changed since the previous day.
+            top 10 results by view count. Articles are then paired with an indicator
+            if their rank has changed since the previous day.
           </p>
           <a href="/projects" className="explore">
             View more projects <ChevronRightIcon className="chevron-right" />
