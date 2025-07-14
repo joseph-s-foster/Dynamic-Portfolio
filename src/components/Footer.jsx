@@ -11,9 +11,7 @@ function Footer() {
     <footer className="footer">
       <nav>
         <ul>
-          <li>
-            <h3 className="footer-group">Connect</h3>
-          </li>
+          <li className="footer-group">Connect</li>
           <li>
             <a
               className="footer-link"
@@ -36,9 +34,7 @@ function Footer() {
           </li>
         </ul>
         <ul>
-          <li>
-            <h3 className="footer-group">Powered by</h3>
-          </li>
+          <li className="footer-group">Powered by</li>
           <li>
             <a
               className="footer-link"
@@ -81,9 +77,7 @@ function Footer() {
           </li>
         </ul>
         <ul>
-          <li>
-            <h3 className="footer-group">Resources</h3>
-          </li>
+          <li className="footer-group">Resources</li>
           <li>
             <a
               className="footer-link"
@@ -116,9 +110,7 @@ function Footer() {
           </li>
         </ul>
         <ul>
-          <li>
-            <h3 className="footer-group">Quick links</h3>
-          </li>
+          <li className="footer-group">Quick links</li>
           <li>
             <a className="footer-link" href="/">
               Home
