@@ -33,8 +33,8 @@ function Home() {
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
           </h2>
         </div>
-        <a className="anchor" href="#api" onClick={handleScroll}>
-          <ChevronDownIcon className="w-8 chevron-down" aria-label="Scroll to main content" />
+        <a className="anchor" href="#api" onClick={handleScroll} aria-label="Scroll to main content">
+          <ChevronDownIcon className="w-8 chevron-down" aria-hidden="true" />
         </a>
       </div>
       <div id="api">
