@@ -4,153 +4,87 @@ import green from "../assets/green.svg";
 import red from "../assets/red.svg";
 import "../Trending.css";
 
-const BASE_URL =
-  "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/";
+const BASE_URL = "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/";
 
-// Fetch data
+const EXCLUDED_ARTICLES = new Set([
+  "Main_Page",
+  "Special:Search",
+  "Wikipedia:Featured_pictures",
+  "Pornhub",
+  "Porno_y_helado",
+  ".xxx",
+  "XNXX",
+  "wiki.phtml",
+  "Module:Wd",
+  "File:Icons8_flat_missed_call.svg",
+  "Fuck",
+]);
+
 const fetchTopHitsForDate = async (date) => {
   const url = `${BASE_URL}${date.format("YYYY/MM/DD")}`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
-      if (response.status === 404) {
-        console.warn(
-          `Data unavailable for ${date.format(
-            "YYYY-MM-DD"
-          )}. Displaying data for ${date
-            .subtract(1, "day")
-            .format("YYYY-MM-DD")}.`
-        );
-        return null;
-      } else {
-        throw new Error(`Error fetching data: ${response.statusText}`);
-      }
+      if (response.status === 404) return null;
+      throw new Error(`Error fetching data: ${response.statusText}`);
     }
     return await response.json();
   } catch (error) {
-    console.error(
-      `Error fetching Wikipedia data for ${date.format("YYYY-MM-DD")}:`,
-      error
-    );
+    console.error(`Fetch error for ${date.format("YYYY-MM-DD")}:`, error);
     return null;
   }
 };
 
 const sortTopHits = async () => {
   const today = dayjs();
+  const getArticles = async ([a, b]) => {
+    const [yesterday, dayBefore] = await Promise.all([
+      fetchTopHitsForDate(today.subtract(a, "day")),
+      fetchTopHitsForDate(today.subtract(b, "day")),
+    ]);
 
-  // Function to fetch and process data for a date range
-  const getArticlesForDateRange = async (range) => {
-    const dates = range.map((i) => today.subtract(i, "day"));
-    const [yesterdayData, dayBeforeYesterdayData] = await Promise.all(
-      dates.map(fetchTopHitsForDate)
-    );
+    if (!yesterday?.items?.[0]?.articles) return null;
 
-    if (!yesterdayData || !yesterdayData.items?.[0]?.articles) {
-      return null;
-    }
+    const map = new Map();
+    yesterday.items[0].articles.forEach(({ article, views, rank }) => {
+      map.set(article, { views, rank, previousRank: null });
+    });
 
-    const articlesMap = new Map();
+    dayBefore?.items?.[0]?.articles.forEach(({ article, rank }) => {
+      if (map.has(article)) map.get(article).previousRank = rank;
+    });
 
-    if (yesterdayData?.items?.[0]?.articles) {
-      yesterdayData.items[0].articles.forEach(({ article, views, rank }) => {
-        articlesMap.set(article, { rank, views, previousRank: null });
-      });
-    }
-
-    if (dayBeforeYesterdayData?.items?.[0]?.articles) {
-      dayBeforeYesterdayData.items[0].articles.forEach(({ article, rank }) => {
-        if (articlesMap.has(article)) {
-          articlesMap.get(article).previousRank = rank;
-        }
-      });
-    }
-
-    const articlesArray = Array.from(articlesMap, ([article, data]) => ({
-      article,
-      rank: data.rank,
-      previousRank: data.previousRank,
-      views: data.views,
-    }))
-      .filter(
-        ({ article }) =>
-          ![
-            "Main_Page",
-            "Special:Search",
-            "Wikipedia:Featured_pictures",
-            "Pornhub",
-            "Porno_y_helado",
-            ".xxx",
-            "XNXX",
-            "wiki.phtml",
-            "Module:Wd",
-            "File:Icons8_flat_missed_call.svg",
-            "Fuck",
-          ].includes(article)
-      )
+    return Array.from(map)
+      .filter(([title]) => !EXCLUDED_ARTICLES.has(title))
+      .map(([article, data]) => ({ article, ...data }))
       .sort((a, b) => a.rank - b.rank)
       .slice(0, 10);
-
-    return articlesArray;
   };
 
-  // Try the primary date range
-  let articles = await getArticlesForDateRange([1, 2]);
-  if (!articles || articles.length === 0) {
-    // Fallback to the secondary date range if primary fails
-    articles = await getArticlesForDateRange([2, 3]);
-  }
-
-  return articles || [];
+  return (await getArticles([1, 3])) || (await getArticles([2, 4])) || [];
 };
 
-// Helper function to clean titles
-const cleanTitle = (title) => {
-  return title.replace(/\(.*?\)/g, "").replace(/_/g, " ");
-};
+const cleanTitle = (title) => title.replace(/\(.*?\)/g, "").replace(/_/g, " ");
+const truncateTitle = (title, length) => title.length > length ? title.slice(0, length).trimEnd() + "..." : title;
 
-// Helper function to truncate titles
-const truncateTitle = (title, length) => {
-  let truncated = title.slice(0, length).trimEnd();
-  return title.length > length ? `${truncated}...` : title;
-};
-
-// Trending component
 function Trending() {
   const [topArticles, setTopArticles] = useState([]);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
 
   useEffect(() => {
-    const fetchTopArticles = async () => {
-      const articles = await sortTopHits();
-      setTopArticles(articles || []);
-    };
+    const load = async () => setTopArticles(await sortTopHits());
+    load();
 
-    fetchTopArticles();
-
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 600);
-    };
-
+    const handleResize = () => setIsMobile(window.innerWidth < 600);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // trend icon logic
   const getTrendIcon = (article, index) => {
     const { rank, previousRank } = article;
-
-    // show up arrow if rank is higher than the day before
-    if (rank < previousRank || previousRank === null) {
-      return <img src={green} className="trend-icon up" aria-hidden="true" />;
-    }
-
-    // show down arrow if rank is lower than the day before
-    if (rank > previousRank) {
-      return <img src={red} className="trend-icon down" aria-hidden="true" />;
-    }
-
-    // default case
+    if (previousRank == null) return null;
+    if (rank < previousRank) return <img src={green} className="trend-icon up" aria-hidden="true" />;
+    if (rank > previousRank && index !== 0) return <img src={red} className="trend-icon down" aria-hidden="true" />;
     return null;
   };
 
@@ -158,37 +92,18 @@ function Trending() {
     <div className="apiarticles">
       <ul>
         {topArticles.map((article, index) => {
-          const cleanedTitle = cleanTitle(article.article);
-          const displayTitle = isMobile
-            ? truncateTitle(cleanedTitle, 30)
-            : cleanedTitle;
+          const title = cleanTitle(article.article);
+          const displayTitle = isMobile ? truncateTitle(title, 30) : title;
 
           return (
             <li key={index}>
               <div className="indicator">
-                {article.rank < article.previousRank && (
-                  <img
-                    src={green}
-                    className="trend-icon up"
-                    aria-hidden="true"
-                  />
-                )}
-
+                {getTrendIcon(article, index)}
                 <div className="rank">{index + 1}</div>
-
-                {article.rank > article.previousRank && (
-                  <img
-                    src={red}
-                    className="trend-icon down"
-                    aria-hidden="true"
-                  />
-                )}
               </div>
               <div className="data">
                 <a
-                  href={`https://en.wikipedia.org/wiki/${encodeURIComponent(
-                    article.article
-                  )}`}
+                  href={`https://en.wikipedia.org/wiki/${encodeURIComponent(article.article)}`}
                   className="articles"
                   target="_blank"
                   rel="noopener noreferrer"
