@@ -61,7 +61,7 @@ const sortTopHits = async () => {
       .slice(0, 10);
   };
 
-  return (await getArticles([1, 3])) || (await getArticles([2, 4])) || [];
+  return (await getArticles([1, 2])) || (await getArticles([3, 4])) || [];
 };
 
 const cleanTitle = (title) => title.replace(/\(.*?\)/g, "").replace(/_/g, " ");
