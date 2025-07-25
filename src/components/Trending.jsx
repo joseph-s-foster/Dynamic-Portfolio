@@ -82,8 +82,7 @@ function Trending() {
 
   const getTrendIcon = (article, index) => {
     const { rank, previousRank } = article;
-    if (previousRank == null) return null;
-    if (rank < previousRank) return <img src={green} className="trend-icon up" aria-hidden="true" />;
+    if (rank < previousRank || previousRank == null) return <img src={green} className="trend-icon up" aria-hidden="true" />;
     if (rank > previousRank && index !== 0) return <img src={red} className="trend-icon down" aria-hidden="true" />;
     return null;
   };
