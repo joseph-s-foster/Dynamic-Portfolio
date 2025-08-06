@@ -46,7 +46,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* color: #212121; */
   font-weight: 600;
   font-size: 1.25rem;
   white-space: nowrap;
@@ -89,5 +88,9 @@
     margin: 1rem 0 1rem
      0;
     padding: 0 1rem;
+  }
+
+  .score-text {
+    font-size: 1rem;
   }
 }
