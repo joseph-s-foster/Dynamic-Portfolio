@@ -85,7 +85,7 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Analytics API
+              Analytics
             </a>
           </li>
           <li>
@@ -118,7 +118,7 @@ function Footer() {
           </li>
           <li>
             <a className="footer-link" href="#top" onClick={handleScroll}>
-              Back to top
+              Top
             </a>
           </li>
         </ul>
