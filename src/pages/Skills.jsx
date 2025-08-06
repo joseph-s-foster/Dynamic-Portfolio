@@ -1,6 +1,7 @@
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import useTypewriterLoop from "../hooks/useTypewriterLoop";
 import Nav from "../components/NavBar";
+import Report from "../components/Lighthouse";
 import SkillCards from "../components/SkillCards";
 import javascript from "../assets/javascript.svg";
 import react from "../assets/react.svg";
@@ -81,11 +82,28 @@ function Skills() {
             <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
           </h2>
         </div>
-        <a className="anchor" href="#api" onClick={handleScroll} aria-label="Scroll to main content">
+        <a
+          className="anchor"
+          href="#api"
+          onClick={handleScroll}
+          aria-label="Scroll to main content"
+        >
           <ChevronDownIcon className="w-8 chevron-down" aria-hidden="true" />
         </a>
       </div>
       <div id="skills" />
+      <Report />
+      <div className="summary">
+        <h3>Core Technologies</h3>
+        <p>
+          Versatility across front-end, back-end, and cloud environments — from
+          scripting and application design to containerized deployments and
+          agile team workflows.
+        </p>
+        {/* <a href="/" className="explore">
+          Homepage <ChevronRightIcon className="chevron-right" />
+        </a> */}
+      </div>
       <div className="skills">
         {skills.map((item) => (
           <SkillCards
@@ -96,17 +114,6 @@ function Skills() {
             description={item.description}
           />
         ))}
-      </div>
-      <div className="summary">
-        <h3>Core Technologies</h3>
-        <p>
-          Versatility across front-end, back-end, and cloud environments — from
-          scripting and application design to containerized deployments and
-          agile team workflows.
-        </p>
-        <a href="/" className="explore">
-          Homepage <ChevronRightIcon className="chevron-right" />
-        </a>
       </div>
       <Footer />
     </>

@@ -34,6 +34,7 @@ body.no-scroll {
 .background {
   display: flex;
   flex-direction: column;
+  background: linear-gradient(to bottom left, #121212, black);
   align-items: center;
   justify-content: center;
   background-size: cover;

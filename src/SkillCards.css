@@ -4,7 +4,7 @@
 
 .skills {
   justify-content: space-between;
-  margin: 0 10%;
+  margin: 0 10% 4rem;
   flex: 1;
   display: flex;
   flex-wrap: wrap;
@@ -17,12 +17,13 @@
   aspect-ratio: 2 / 1;
   margin-top: 2rem;
   padding: 0;
+  margin-top: 2rem;
+  padding: 0;
 }
 
 .skill-icon {
   height: 3rem;
   max-width: 3rem;
-
   margin-bottom: .75rem;
 }
 
@@ -55,6 +56,6 @@
 
 @media screen and (max-width: 480px) {
    .skills {
-    margin: 0 1rem;
+    margin: 0 1rem 4rem 1rem;
   }
 }
