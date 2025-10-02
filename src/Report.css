@@ -11,7 +11,16 @@
   min-width: 39.5vw;
   max-width: 39.5vw;
   padding-right: 2rem;
+}
+
+.container-description h1 {
   font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.container-description p {
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .category-scores {
@@ -85,12 +94,16 @@
 @media screen and (max-width: 480px) {
   .container {
     min-width: 100%;
-    margin: 1rem 0 1rem
-     0;
+    margin: 1rem 0 1rem 0;
     padding: 0 1rem;
   }
 
-  .score-text {
+  .category h2 {
     font-size: 1rem;
+  }
+
+  .score-text {
+    font-size: 14px;
+    font-weight: 600;
   }
 }

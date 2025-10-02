@@ -65,17 +65,39 @@
 @media (hover: hover) {
   .articles:hover,
   .articles:active {
-    color: #FFFFFF70;
+    color: #ffffff70;
     cursor: pointer;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .views {
-    right: 1rem;
+  .data {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .rank {
+    font-size: 14px;
+    font-weight: 600;
   }
 
   .apiarticles {
     margin: 0 1rem 2rem 1rem;
+  }
+
+  .views {
+    right: 1rem;
+  }
+
+  .trend-icon {
+    width: .75rem;
+  }
+
+  .trend-icon.up {
+    bottom: 23px;
+  }
+
+  .trend-icon.down {
+    top: 23px;
   }
 }

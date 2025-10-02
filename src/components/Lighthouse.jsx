@@ -40,9 +40,11 @@
       <div className="container">
         <div className="container-description">
           <h1>
-            Leveraging audit metrics to deliver performant and compliant user
-            experiences.
+            Audit Metrics
           </h1>
+          <p>
+            Delivering performant, compliant, and accessible user experiences across numerous devices including desktops, mobile devices, tablets, and more.
+          </p>
         </div>
         <div className="category-scores" ref={ref}>
           {Object.entries(categories).map(([key, category]) => {

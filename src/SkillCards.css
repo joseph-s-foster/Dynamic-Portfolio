@@ -24,18 +24,17 @@
 .skill-icon {
   height: 3rem;
   max-width: 3rem;
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
 }
 
 .skill-title {
   font-size: 1.25rem;
-  font-weight: 500;
-  margin-bottom: .5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .skill-description {
   font-size: 1rem;
-  font-weight: 300;
   line-height: 1.5rem;
   padding-right: 2rem;
   margin-bottom: 1.5rem;
@@ -55,7 +54,12 @@
 }
 
 @media screen and (max-width: 480px) {
-   .skills {
+  .skills {
     margin: 0 1rem 4rem 1rem;
   }
+
+  /* .skill-description {
+    font-size: 14px;
+    font-weight: 600;
+  } */
 }
