@@ -18,6 +18,7 @@ const EXCLUDED_ARTICLES = new Set([
   "Module:Wd",
   "File:Icons8_flat_missed_call.svg",
   "Fuck",
+  "Category:Redirects_from_moves",
 ]);
 
 const fetchTopHitsForDate = async (date) => {
