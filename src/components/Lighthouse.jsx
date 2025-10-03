@@ -40,7 +40,7 @@
       <div className="container">
         <div className="container-description">
           <h1>
-            Audit Metrics
+            Audit metrics
           </h1>
           <p>
             Delivering performant, compliant, and accessible user experiences across numerous devices including desktops, mobile devices, tablets, and more.

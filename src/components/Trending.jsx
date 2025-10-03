@@ -92,7 +92,7 @@ function Trending() {
       <ul>
         {topArticles.map((article, index) => {
           const title = cleanTitle(article.article);
-          const displayTitle = isMobile ? truncateTitle(title, 32) : title;
+          const displayTitle = isMobile ? truncateTitle(title, 42) : title;
 
           return (
             <li key={index}>

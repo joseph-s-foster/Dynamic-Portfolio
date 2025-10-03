@@ -85,7 +85,7 @@ function Projects() {
         ))}
       </div>
       <div className="summary">
-        <h3>Dynamic Interactions</h3>
+        <h3>Dynamic interactions</h3>
         <p>
           Custom React hooks are abstracted into reusable functions that enable
           seamless animations and streamline event handling, delivering an

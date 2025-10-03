@@ -94,7 +94,7 @@ function Skills() {
       <div id="skills" />
       <Report />
       <div className="summary">
-        <h3>Core Technologies</h3>
+        <h3>Core technologies</h3>
         <p>
           Versatility across front-end, back-end, and cloud environments — from
           scripting and application design to containerized deployments and

@@ -44,7 +44,7 @@ function Home() {
       </div>
       <div id="api">
         <div className="api-headers">
-          <h3>Trending Now</h3>
+          <h3>Trending now</h3>
           <div className="api-legend">
             <p className="api-rank">#</p>
             <p className="api-title">Article</p>
@@ -53,9 +53,9 @@ function Home() {
         </div>
         <Trending />
         <div className="summary">
-          <h3>APIs and Algorithms</h3>
+          <h3>APIs and algorithms</h3>
           <p>
-            Wikimedia pageview metrics are retrieved and sorted to generate the
+            Wikimedia pageview metrics are retrieved and sorted to generate the daily
             top 10 results. Articles are then paired with an indicator
             if their rank has changed since the previous day.
           </p>

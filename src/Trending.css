@@ -73,20 +73,27 @@
 @media screen and (max-width: 480px) {
   .data {
     font-size: 14px;
-    font-weight: 600;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .rank {
     font-size: 14px;
-    font-weight: 600;
   }
 
   .apiarticles {
     margin: 0 1rem 2rem 1rem;
   }
 
+  .apiarticles li {
+    padding: .5rem 0;
+  }
+
   .views {
-    right: 1rem;
+    position: relative;
+    right: auto;
+    color: #b3b3b3;
+    font-size: .75rem;
   }
 
   .trend-icon {
