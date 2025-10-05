@@ -43,7 +43,7 @@
             Audit metrics
           </h1>
           <p>
-            Delivering performant, compliant, and accessible user experiences across numerous devices including desktops, mobile devices, tablets, and more.
+            Providing performant, compliant, and accessible user experiences across numerous devices including desktops, mobile devices, tablets, and more.
           </p>
         </div>
         <div className="category-scores" ref={ref}>

@@ -96,7 +96,7 @@ function Skills() {
       <div className="summary">
         <h3>Core technologies</h3>
         <p>
-          Versatility across front-end, back-end, and cloud environments — from
+          Versatility with servers, presentation layers, and cloud environments — from
           scripting and application design to containerized deployments and
           agile team workflows.
         </p>

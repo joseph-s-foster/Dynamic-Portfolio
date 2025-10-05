@@ -9,7 +9,7 @@ function SkillCards({ src, alt, title, description }) {
     <div className="skill-card reveal">
       <img className="skill-icon" src={src} alt={alt} />
       <div className="skill-text">
-        <p className="skill-title">{title}</p>
+        <h3 className="skill-title">{title}</h3>
         <p className="skill-description">{description}</p>
       </div>
     </div>
