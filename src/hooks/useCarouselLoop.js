@@ -45,25 +45,25 @@ export default function useVerticalCarousel(tag1, tag2, tag3) {
       let i = 0;
 
       while (mounted) {
-        // ✅ hard pause while hidden
         while (paused.current && mounted) {
           await wait(200);
         }
 
-        await wait(1800);
+        await wait(1500);
 
         setAnimate(true);
         setOffset(-100);
-        await wait(600);
+        await wait(300);
 
         setAnimate(false);
-        setOffset(100);
+        setOffset(60);
         setText(tags[(i + 1) % tags.length]);
-        await wait(50);
+        await wait(5);
+       
 
         setAnimate(true);
         setOffset(0);
-        await wait(600);
+        await wait(500);
 
         i = (i + 1) % tags.length;
       }
