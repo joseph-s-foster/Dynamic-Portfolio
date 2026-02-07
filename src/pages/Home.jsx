@@ -1,4 +1,7 @@
-import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowDownCircleIcon,
+  ChevronRightIcon,
+} from "@heroicons/react/24/outline";
 import useTypewriterLoop from "../hooks/useTypewriterLoop";
 import Nav from "../components/NavBar";
 import Trending from "../components/Trending";
@@ -26,21 +29,23 @@ function Home() {
         <Nav />
       </div>
       <div className="background">
-        <div className="hero">
-          <h1>[jsfoster@dev ~]</h1>
-          <h2>
-            $ {typedText}
-            <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
-          </h2>
+        <div className="splash-wrapper">
+          <h1 className="greeting">Welcome</h1>
+          <div className="hero">
+            <h2>
+              $ {typedText}
+              <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+            </h2>
+            <a
+              className="anchor"
+              href="#api"
+              onClick={handleScroll}
+              aria-label="Scroll to main content"
+            >
+              <ArrowDownCircleIcon className="down-icon" aria-hidden="true" />
+            </a>
+          </div>
         </div>
-        <a
-          className="anchor"
-          href="#api"
-          onClick={handleScroll}
-          aria-label="Scroll to main content"
-        >
-          <ChevronDownIcon className="w-8 chevron-down" aria-hidden="true" />
-        </a>
       </div>
       <div id="api">
         <div className="api-headers">
@@ -55,9 +60,9 @@ function Home() {
         <div className="summary">
           <h3>APIs and algorithms</h3>
           <p>
-            Wikimedia pageview metrics are retrieved and sorted to generate the daily
-            top 10 results. Articles are then paired with an indicator
-            if their rank has changed since the previous day.
+            Wikimedia pageview metrics are retrieved and sorted to generate the
+            daily top 10 results. Articles are then paired with an indicator if
+            their rank has changed since the previous day.
           </p>
           <a href="/projects" className="explore">
             View more projects <ChevronRightIcon className="chevron-right" />

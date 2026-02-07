@@ -1,4 +1,7 @@
-import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowDownCircleIcon,
+  ChevronRightIcon,
+} from "@heroicons/react/24/outline";
 import useTypewriterLoop from "../hooks/useTypewriterLoop";
 import usePreloadImages from "../hooks/usePreloadImages";
 import Nav from "../components/NavBar";
@@ -59,16 +62,23 @@ function Projects() {
         <Nav />
       </div>
       <div className="background">
-        <div className="hero">
-          <h1>[jsfoster@dev projects]</h1>
-          <h2>
-            $ {typedText}
-            <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
-          </h2>
+        <div className="splash-wrapper">
+          <h1 className="greeting">Projects</h1>
+          <div className="hero">
+            <h2>
+              $ {typedText}
+              <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+            </h2>
+            <a
+              className="anchor"
+              href="#api"
+              onClick={handleScroll}
+              aria-label="Scroll to main content"
+            >
+              <ArrowDownCircleIcon className="down-icon" aria-hidden="true" />
+            </a>
+          </div>
         </div>
-        <a className="anchor" href="#projects" onClick={handleScroll} aria-label="Scroll to main content">
-          <ChevronDownIcon className="w-8 chevron-down" aria-hidden="true" />
-        </a>
       </div>
       <div id="projects" />
       <div className="projects">
