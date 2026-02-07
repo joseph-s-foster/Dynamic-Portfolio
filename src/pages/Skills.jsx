@@ -14,10 +14,10 @@ import "../SkillCards.css";
 
 function Skills() {
   const { text, offset, animate } = useVerticalCarousel(
-      "collaborative",
-      "accessible",
-      "agile",
-    );
+    "collaborative",
+    "accessible",
+    "agile",
+  );
 
   const handleScroll = (event) => {
     event.preventDefault();

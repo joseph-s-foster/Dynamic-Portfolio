@@ -67,7 +67,6 @@ body.no-scroll {
   background-color: #ffffff1f;
   color: #ffffff99;
   border-radius: 1rem;
-  font-family: monospace;
   font-size: 1.25rem;
   width: 100%;
   max-width: calc(100% - 20%);
@@ -81,8 +80,24 @@ body.no-scroll {
 }
 
 .carousel-window {
-  height: 1.2em;
+  height: 27px;
   overflow: hidden;
+
+  /* fade top + bottom */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 90%,
+    transparent 100%
+  );
 }
 
 .carousel-item {
@@ -175,15 +190,6 @@ body.no-scroll {
   }
 }
 
-/* @media screen and (max-width: 600px) {
-  .hero {
-    font-size: 1.25rem;
-  }
-  .down-icon {
-    width: 2rem;
-  }
-} */
-
 @media screen and (max-width: 480px) {
   .splash-wrapper {
     margin: 16% 0 0 0;
@@ -197,6 +203,9 @@ body.no-scroll {
     font-size: 1rem;
     max-width: calc(100% - 2rem);
     padding: 0.5rem 0.5rem 0.5rem 1rem;
+  }
+  .carousel-window {
+    height: 21px;
   }
   .summary h3 {
     font-size: 1.5rem;
