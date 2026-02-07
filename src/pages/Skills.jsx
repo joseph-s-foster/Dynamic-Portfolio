@@ -85,7 +85,7 @@ function Skills() {
                   className="carousel-item"
                   style={{
                     transform: `translateY(${offset}%)`,
-                    transition: animate ? "transform 500ms ease" : "none",
+                    transition: animate ? "transform 400ms ease" : "none",
                   }}
                 >
                   {text}

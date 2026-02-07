@@ -49,11 +49,11 @@ export default function useVerticalCarousel(tag1, tag2, tag3) {
           await wait(200);
         }
 
-        await wait(3000);
+        await wait(2000);
 
         setAnimate(true);
         setOffset(-100);
-        await wait(300)
+        await wait(400)
 
         setAnimate(false);
         setOffset(100);
@@ -63,7 +63,7 @@ export default function useVerticalCarousel(tag1, tag2, tag3) {
 
         setAnimate(true);
         setOffset(0);
-        await wait(300);
+        await wait(400);
 
         i = (i + 1) % tags.length;
       }
