@@ -2,16 +2,17 @@ import {
   ArrowDownCircleIcon,
   ChevronRightIcon,
 } from "@heroicons/react/24/outline";
-import useTypewriterLoop from "../hooks/useTypewriterLoop";
+import useVerticalCarousel from "../hooks/useCarouselLoop";
 import Nav from "../components/NavBar";
 import Trending from "../components/Trending";
 import Footer from "../components/Footer";
 
 function Home() {
-  const tag1 = "ux-driven";
-  const tag2 = "mobile-friendly";
-  const tag3 = "full-stack developer";
-  const { typedText, showCursor } = useTypewriterLoop(tag1, tag2, tag3);
+  const { text, offset, animate } = useVerticalCarousel(
+    "ux-driven",
+    "mobile-friendly",
+    "full-stack developer",
+  );
 
   const handleScroll = (event) => {
     event.preventDefault();
@@ -32,9 +33,18 @@ function Home() {
         <div className="splash-wrapper">
           <h1 className="greeting">Welcome</h1>
           <div className="hero">
-            <h2>
-              $ {typedText}
-              <span style={{ opacity: showCursor ? 1 : 0 }}>|</span>
+            <h2 className="carousel">
+              <span className="carousel-window">
+                <span
+                  className="carousel-item"
+                  style={{
+                    transform: `translateY(${offset}%)`,
+                    transition: animate ? "transform 600ms ease" : "none",
+                  }}
+                >
+                  {text}
+                </span>
+              </span>
             </h2>
             <a
               className="anchor"
