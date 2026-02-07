@@ -200,12 +200,12 @@ body.no-scroll {
     margin-bottom: 1rem;
   }
   .hero {
-    font-size: 14px;
+    font-size: 1rem;
     max-width: calc(100% - 2rem);
     padding: 0.5rem 0.5rem 0.5rem 1rem;
   }
   .carousel-window {
-    height: 19px;
+    height: 21px;
   }
   .summary h3 {
     font-size: 1.5rem;
