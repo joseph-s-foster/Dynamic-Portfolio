@@ -39,7 +39,7 @@ function Home() {
                   className="carousel-item"
                   style={{
                     transform: `translateY(${offset}%)`,
-                    transition: animate ? "transform 500ms ease" : "none",
+                    transition: animate ? "transform 300ms ease" : "none",
                   }}
                 >
                   {text}
