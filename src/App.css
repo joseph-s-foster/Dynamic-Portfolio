@@ -51,7 +51,7 @@ body.no-scroll {
   flex-direction: column;
   align-items: center;
   margin-top: 4rem;
-  width: 90%;
+  width: 100%;
 }
 
 .greeting {
@@ -69,7 +69,8 @@ body.no-scroll {
   border-radius: 1rem;
   font-family: monospace;
   font-size: 1.5rem;
-  width: 90%;
+  width: 100%;
+  max-width: calc(100% - 20%);
   padding: 1rem;
 }
 
@@ -168,8 +169,7 @@ body.no-scroll {
 
 @media screen and (max-width: 480px) {
   .splash-wrapper {
-    width: 100%;
-    margin: 16% 1rem 0 1rem;
+    margin: 16% 0 0 0;
   }
   .greeting {
     font-size: 1.5rem;
@@ -178,6 +178,7 @@ body.no-scroll {
   }
   .hero {
     font-size: 1rem;
+    max-width: calc(100% - 2rem);
     padding: .5rem .5rem .5rem 1rem;
   }
   .summary h3 {

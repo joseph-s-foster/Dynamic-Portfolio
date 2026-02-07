@@ -14,8 +14,8 @@ import "../SkillCards.css";
 
 function Skills() {
   const tag1 = "collaborative";
-  const tag2 = "agile";
-  const tag3 = "adaptive";
+  const tag2 = "accessible";
+  const tag3 = "agile";
   const { typedText, showCursor } = useTypewriterLoop(tag1, tag2, tag3);
 
   const handleScroll = (event) => {
