@@ -80,7 +80,7 @@ function Skills() {
       </div>
       <div className="background">
         <div className="splash-wrapper">
-          <h1 className="greeting">Technical Skills</h1>
+          <h1 className="greeting">Skills</h1>
           <div className="hero">
             <h2 className="carousel">
               <span className="carousel-window">

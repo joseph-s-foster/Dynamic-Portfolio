@@ -67,7 +67,7 @@ function Projects() {
       </div>
       <div className="background">
         <div className="splash-wrapper">
-          <h1 className="greeting">Selected Projects</h1>
+          <h1 className="greeting">Projects</h1>
           <div className="hero">
             <h2 className="carousel">
               <span className="carousel-window">
