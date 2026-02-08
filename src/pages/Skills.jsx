@@ -15,11 +15,11 @@ import "../SkillCards.css";
 function Skills() {
   const { text, offset, animate } = useVerticalCarousel(
     "Collaborative",
-    "Accessible",
-    "Agile",
-    "Performant",
-    "Maintainable",
-    "Automated",
+    "Cost oriented",
+    "Environmental parity",
+    "ETL",
+    "CI/CD",
+    "Adaptive",
   );
 
   const handleScroll = (event) => {

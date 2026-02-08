@@ -12,7 +12,7 @@ function Home() {
     "Hello",
     "Bonjour",
     "こんにちは",
-    "Hej",
+    "Hejsan",
     "Hallo",
     "سلام",
   );

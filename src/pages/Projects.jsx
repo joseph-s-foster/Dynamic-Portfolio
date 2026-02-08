@@ -14,12 +14,12 @@ import "../ProjectCards.css";
 
 function Projects() {
   const { text, offset, animate } = useVerticalCarousel(
-    "Versatile",
-    "Scalable",
-    "Modular",
-    "Dynamic",
-    "Intuitive",
-    "Interactive",
+    "Full stack",
+    "Responsive designs",
+    "Scalable architectures",
+    "Modular components",
+    "Intuitive interfaces",
+    "Interactive elements",
   );
 
   const handleScroll = (event) => {
@@ -111,8 +111,8 @@ function Projects() {
         <h3>Dynamic interactions</h3>
         <p>
           Custom React hooks are abstracted into reusable functions that enable
-          seamless animations and streamline event handling, delivering an
-          intuitive interface across devices.
+          seamless animations and streamline event handling, delivering
+          cross-browser compatibility and consistent UI/UX.
         </p>
         <a href="skills" className="explore">
           Explore skills <ChevronRightIcon className="chevron-right" />
