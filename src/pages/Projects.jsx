@@ -14,12 +14,12 @@ import "../ProjectCards.css";
 
 function Projects() {
   const { text, offset, animate } = useVerticalCarousel(
-    "Full stack",
-    "Responsive designs",
-    "Scalable architectures",
-    "Modular components",
-    "Intuitive interfaces",
-    "Interactive elements",
+    "Verastile",
+    "Responsive",
+    "Scalable",
+    "Modular",
+    "Intuitive",
+    "Interactive",
   );
 
   const handleScroll = (event) => {
