@@ -1,6 +1,6 @@
 import { Fragment, useRef, useState } from "react";
 import { Disclosure, Transition } from "@headlessui/react";
-import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import useClickOutside from "../hooks/useClickOutside";
 
@@ -49,7 +49,7 @@ export default function Navigation() {
                       aria-hidden="true"
                     />
                   ) : (
-                    <Bars2Icon
+                    <Bars3BottomLeftIcon
                       className="block h-7 w-7"
                       strokeWidth={2}
                       aria-hidden="true"

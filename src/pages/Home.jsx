@@ -9,9 +9,12 @@ import Footer from "../components/Footer";
 
 function Home() {
   const { text, offset, animate } = useVerticalCarousel(
-    "ux-driven",
-    "mobile-friendly",
-    "full-stack developer",
+    "Hello",
+    "Bonjour",
+    "こんにちは",
+    "Hej",
+    "Hallo",
+    "سلام",
   );
 
   const handleScroll = (event) => {
@@ -31,7 +34,7 @@ function Home() {
       </div>
       <div className="background">
         <div className="splash-wrapper">
-          <h1 className="greeting">Welcome</h1>
+          <h1 className="greeting">Glad you’re here</h1>
           <div className="hero">
             <h2 className="carousel">
               <span className="carousel-window">

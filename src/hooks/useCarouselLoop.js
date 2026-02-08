@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function useVerticalCarousel(tag1, tag2, tag3) {
-  const tags = [tag1, tag2, tag3];
+export default function useVerticalCarousel(tag1, tag2, tag3, tag4, tag5, tag6) {
+  const tags = [tag1, tag2, tag3, tag4, tag5, tag6];
 
   const [text, setText] = useState(tag1);
   const [offset, setOffset] = useState(0);
@@ -59,7 +59,6 @@ export default function useVerticalCarousel(tag1, tag2, tag3) {
         setOffset(100);
         setText(tags[(i + 1) % tags.length]);
         await wait(1);
-       
 
         setAnimate(true);
         setOffset(0);
@@ -73,7 +72,7 @@ export default function useVerticalCarousel(tag1, tag2, tag3) {
     return () => {
       mounted = false;
     };
-  }, [tag1, tag2, tag3]);
+  }, [tag1, tag2, tag3, tag4, tag5, tag6]);
 
   return { text, offset, animate };
 }
