@@ -107,7 +107,7 @@ function Skills() {
         </div>
       </div>
       <div id="skills" />
-      {/* <Report /> */}
+      <Report />
       <div className="summary">
         <h3>Core technologies</h3>
         <p>
