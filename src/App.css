@@ -185,6 +185,9 @@ body.no-scroll {
 }
 
 @media screen and (max-width: 780px) {
+  .greeting {
+    font-size: 2rem;
+  }
   .summary {
     width: 100%;
   }
