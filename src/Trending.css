@@ -77,8 +77,9 @@
     align-items: flex-start;
   }
 
-  .rank {
+  .data, .rank {
     font-size: 14px;
+    font-weight: 600;
   }
 
   .apiarticles {
