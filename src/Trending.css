@@ -70,13 +70,12 @@
 
 @media screen and (max-width: 480px) {
   .data {
-    font-size: 14px;
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .data, .rank {
-    font-size: 14px;
+  .rank, .views {
+    font-size: .75rem;
   }
 
   .apiarticles {
@@ -91,7 +90,6 @@
     position: relative;
     right: auto;
     color: #ffffff99;
-    font-size: .75rem;
   }
 
   .trend-icon {
@@ -99,10 +97,10 @@
   }
 
   .trend-icon.up {
-    bottom: 23px;
+    bottom: 22px;
   }
 
   .trend-icon.down {
-    top: 23px;
+    top: 22px;
   }
 }
