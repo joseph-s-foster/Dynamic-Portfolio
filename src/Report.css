@@ -29,7 +29,7 @@
   padding-left: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .category h2 {
@@ -40,7 +40,7 @@
 
 .score-bar-container {
   position: relative;
-  background-color: #212121;
+  background-color: #ffffff1f;
   border-radius: 0.25rem;
   overflow: hidden;
   height: 2rem;

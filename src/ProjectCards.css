@@ -66,6 +66,7 @@ margin: 1rem 0;
 .project-description,
 .project-language {
   font-size: 1rem;
+  line-height: 1.75em;
 }
 
 .project-language {

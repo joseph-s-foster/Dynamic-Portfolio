@@ -70,7 +70,7 @@ body.no-scroll {
   font-size: 1rem;
   width: 100%;
   max-width: calc(100% - 20%);
-  padding: .5rem .5rem .5rem 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
 
 .carousel {
@@ -147,18 +147,22 @@ body.no-scroll {
   right: 10%;
 }
 
-.summary {
+.summary,
+.skills-summary {
   padding: 4rem 10%;
   font-size: 2rem;
-  width: 75vw;
+  width: 56vw;
 }
 
-.summary h3 {
+.summary h3,
+.skills-summary h3 {
   padding-bottom: 0.5rem;
 }
 
-.summary p {
+.summary p,
+.skills-summary p {
   font-size: 1rem;
+  line-height: 1.75em;
   padding-bottom: 0.5rem;
 }
 
@@ -188,7 +192,8 @@ body.no-scroll {
   .greeting {
     font-size: 2rem;
   }
-  .summary {
+  .summary,
+  .skills-summary {
     width: 100%;
   }
 }
@@ -207,7 +212,8 @@ body.no-scroll {
     max-width: calc(100% - 2rem);
     padding: 0.5rem 0.5rem 0.5rem 1rem;
   }
-  .summary h3 {
+  .summary h3,
+  .skills-summary h3 {
     font-size: 1.5rem;
     font-weight: 600;
   }
@@ -230,5 +236,9 @@ body.no-scroll {
 
   .summary {
     padding: 4rem 1rem;
+  }
+
+  .skills-summary {
+    padding: 1rem 1rem 4rem 1rem;
   }
 }

@@ -29,21 +29,19 @@
 }
 
 .trend-icon {
-  height: 0.5rem;
-  width: 1rem;
+  height: auto;
+  width: .75rem;
 }
 
 .trend-icon.up {
   position: absolute;
   bottom: 25px;
-  color: #4caf50;
 }
 
 .trend-icon.down {
   position: absolute;
   top: 25px;
   transform: rotate(180deg);
-  color: #f44336;
 }
 
 .data {

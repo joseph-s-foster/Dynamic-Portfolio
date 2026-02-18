@@ -107,8 +107,8 @@ function Skills() {
         </div>
       </div>
       <div id="skills" />
-      <Report />
-      <div className="summary">
+      {/* <Report /> */}
+      <div className="skills-summary">
         <h3>Core technologies</h3>
         <p>
           Versatility with servers, presentation layers, and cloud environments
