@@ -74,7 +74,7 @@ function Home() {
           <h3>APIs and algorithms</h3>
           <p>
             Wikimedia pageview metrics are retrieved and sorted to generate the
-            daily top 10 results. Articles are then paired with an indicator if
+            daily top 10 results. Article links are then paired with an indicator if
             their rank has changed since the previous day.
           </p>
           <a href="/projects" className="explore">
