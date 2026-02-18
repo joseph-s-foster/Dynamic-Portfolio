@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import dayjs from "dayjs";
 import green from "../assets/green.svg";
 import red from "../assets/red.svg";
+import blue from "../assets/blue.svg"
 import "../Trending.css";
 
 const BASE_URL = "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/";
@@ -83,7 +84,8 @@ function Trending() {
 
   const getTrendIcon = (article, index) => {
     const { rank, previousRank } = article;
-    if (rank < previousRank || previousRank == null) return <img src={green} className="trend-icon up" aria-hidden="true" />;
+    if (previousRank == null) return <img src={blue} className="trend-icon down" aria-hidden="true" />;
+    if (rank < previousRank) return <img src={green} className="trend-icon up" aria-hidden="true" />;
     if (rank > previousRank && index !== 0) return <img src={red} className="trend-icon down" aria-hidden="true" />;
     return null;
   };
