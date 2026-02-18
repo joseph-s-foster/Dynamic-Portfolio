@@ -77,7 +77,6 @@
 
   .data, .rank {
     font-size: 14px;
-    font-weight: 600;
   }
 
   .apiarticles {
@@ -91,9 +90,8 @@
   .views {
     position: relative;
     right: auto;
-    color: #b3b3b3;
+    color: #ffffff99;
     font-size: .75rem;
-    font-weight: 400;
   }
 
   .trend-icon {
