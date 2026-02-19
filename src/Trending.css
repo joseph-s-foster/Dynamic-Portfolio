@@ -106,14 +106,14 @@
   }
 
   .trend-icon.up {
-    bottom: 22px;
+    bottom: 21px;
   }
 
   .trend-icon.new {
-    top: 21px;
+    top: 20px;
   }
 
   .trend-icon.down {
-    top: 22px;
+    top: 21px;
   }
 }
