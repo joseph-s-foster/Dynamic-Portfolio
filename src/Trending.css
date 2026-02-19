@@ -38,6 +38,11 @@
   bottom: 25px;
 }
 
+.trend-icon.new {
+  position: absolute;
+  top: 25px;
+}
+
 .trend-icon.down {
   position: absolute;
   top: 25px;
@@ -93,7 +98,7 @@
   .views {
     position: relative;
     right: auto;
-    color: #ffffff99;
+    color: #ffffff70;
   }
 
   .trend-icon {
@@ -102,6 +107,10 @@
 
   .trend-icon.up {
     bottom: 22px;
+  }
+
+  .trend-icon.new {
+    top: 21px;
   }
 
   .trend-icon.down {
