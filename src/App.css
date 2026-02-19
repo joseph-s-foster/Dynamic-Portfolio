@@ -80,7 +80,8 @@ body.no-scroll {
 }
 
 .carousel-window {
-  height: 21px;
+  height: 24px;
+  margin-top: 4px;
   overflow: hidden;
 
   /* fade top + bottom */
