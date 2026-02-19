@@ -95,9 +95,13 @@ margin: 1rem 0;
     margin: 1rem 0;
   }
 
+  .project-text {
+    margin-top: .5rem;
+  }
+
   .project-title {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 0;
+    margin-bottom: .25rem;
   }
 }

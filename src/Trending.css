@@ -30,7 +30,7 @@
 
 .trend-icon {
   height: auto;
-  width: .75rem;
+  width: 0.75rem;
 }
 
 .trend-icon.up {
@@ -72,10 +72,14 @@
   .data {
     flex-direction: column;
     align-items: flex-start;
+    font-size: 14px;
+    font-weight: 500;
   }
 
-  .rank, .views {
-    font-size: .75rem;
+  .rank,
+  .views {
+    font-size: 0.75rem;
+    font-weight: 400;
   }
 
   .apiarticles {
@@ -83,17 +87,17 @@
   }
 
   .apiarticles li {
-    padding: .5rem 0;
+    padding: 0.5rem 0;
   }
 
   .views {
     position: relative;
     right: auto;
-    color: #ffffff99;
+    color: #ffffff70;
   }
 
   .trend-icon {
-    width: .75rem;
+    width: 0.75rem;
   }
 
   .trend-icon.up {
