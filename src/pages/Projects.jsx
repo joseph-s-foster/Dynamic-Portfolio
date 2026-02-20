@@ -14,7 +14,7 @@ import "../ProjectCards.css";
 
 function Projects() {
   const { text, offset, animate } = useVerticalCarousel(
-    "Verastile",
+    "Versatile",
     "Responsive",
     "Scalable",
     "Modular",
