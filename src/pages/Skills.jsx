@@ -1,7 +1,7 @@
 import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 import useVerticalCarousel from "../hooks/useCarouselLoop";
 import Nav from "../components/NavBar";
-import Report from "../components/Lighthouse";
+// import Report from "../components/Lighthouse";
 import SkillCards from "../components/SkillCards";
 import javascript from "../assets/javascript.svg";
 import react from "../assets/react.svg";
