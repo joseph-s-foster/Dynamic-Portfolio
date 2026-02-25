@@ -124,8 +124,8 @@ function Trending() {
     if (previousDisplayRank == null) {
       return (
         <img
-          src={blue}
-          className="trend-icon new"
+          src={green}
+          className="trend-icon up"
           aria-hidden="true"
         />
       );
