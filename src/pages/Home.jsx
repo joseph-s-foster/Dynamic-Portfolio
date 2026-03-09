@@ -1,7 +1,5 @@
-import {
-  ArrowDownCircleIcon,
-  ChevronRightIcon,
-} from "@heroicons/react/24/outline";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import { ArrowDownCircleIcon } from "@heroicons/react/24/solid";
 import useVerticalCarousel from "../hooks/useCarouselLoop";
 import Nav from "../components/NavBar";
 import Trending from "../components/Trending";
@@ -74,8 +72,8 @@ function Home() {
           <h3>APIs and algorithms</h3>
           <p>
             Wikimedia pageview metrics are retrieved and sorted to generate the
-            daily top 10 results. Article links are then paired with an indicator if
-            their rank has changed since the previous day.
+            daily top 10 results. Article links are then paired with an
+            indicator if their rank has changed since the previous day.
           </p>
           <a href="/projects" className="explore">
             View more projects <ChevronRightIcon className="chevron-right" />

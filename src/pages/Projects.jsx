@@ -1,7 +1,5 @@
-import {
-  ArrowDownCircleIcon,
-  ChevronRightIcon,
-} from "@heroicons/react/24/outline";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import { ArrowDownCircleIcon } from "@heroicons/react/20/solid";
 import useVerticalCarousel from "../hooks/useCarouselLoop";
 import usePreloadImages from "../hooks/usePreloadImages";
 import Nav from "../components/NavBar";
