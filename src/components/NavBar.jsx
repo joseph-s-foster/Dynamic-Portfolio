@@ -44,13 +44,13 @@ export default function Navigation() {
                 >
                   {open ? (
                     <XMarkIcon
-                      className="block h-7 w-7"
+                      className="block h-8 w-8"
                       strokeWidth={2}
                       aria-hidden="true"
                     />
                   ) : (
                     <Bars3BottomLeftIcon
-                      className="block h-7 w-7"
+                      className="block h-8 w-8"
                       strokeWidth={2}
                       aria-hidden="true"
                     />
