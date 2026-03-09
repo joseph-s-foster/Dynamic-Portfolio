@@ -1,5 +1,5 @@
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
-import { ArrowDownCircleIcon } from "@heroicons/react/20/solid";
+// import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import { ArrowDownCircleIcon } from "@heroicons/react/24/solid";
 import Nav from "../components/NavBar";
 // import Report from "../components/Lighthouse";
 import SkillCards from "../components/SkillCards";
