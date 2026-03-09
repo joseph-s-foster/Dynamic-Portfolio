@@ -1,5 +1,6 @@
 // import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { ArrowDownCircleIcon } from "@heroicons/react/24/solid";
+import useVerticalCarousel from "../hooks/useCarouselLoop";
 import Nav from "../components/NavBar";
 // import Report from "../components/Lighthouse";
 import SkillCards from "../components/SkillCards";
