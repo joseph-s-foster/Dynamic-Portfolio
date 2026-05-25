@@ -24,7 +24,3 @@
 ## Acknowledgments
 
 This project uses data from Wikimedia's pageviews metrics API. Wikimedia content is available under the [Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)](https://creativecommons.org/licenses/by-sa/3.0/) license.
-
-Image credits
-Source: svgrepo.com
-All rights belong to their respective owners.
