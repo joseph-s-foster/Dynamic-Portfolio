@@ -8,6 +8,8 @@ import "../Trending.css";
 const BASE_URL =
   "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/";
 
+const MAX_LOOKBACK_DAYS = 14;
+
 const EXCLUDED_ARTICLES = new Set([
   "Main_Page",
   "Special:Search",
@@ -16,6 +18,7 @@ const EXCLUDED_ARTICLES = new Set([
   "Porno_y_helado",
   ".xxx",
   "XNXX",
+  ".xyz",
   "wiki.phtml",
   "Module:Wd",
   "File:Icons8_flat_missed_call.svg",
@@ -41,49 +44,48 @@ const fetchTopHitsForDate = async (date) => {
   }
 };
 
+const normalizeArticles = (data) =>
+  data?.items?.[0]?.articles
+    ?.filter((article) => !EXCLUDED_ARTICLES.has(article.article))
+    .slice(0, 10) || [];
+
+const buildArticleComparison = (currentArticles, previousArticles) => {
+  const previousMap = new Map();
+
+  previousArticles.forEach((article, index) => {
+    previousMap.set(article.article, index + 1);
+  });
+
+  return currentArticles.map((article, index) => ({
+    article: article.article,
+    views: article.views,
+    displayRank: index + 1,
+    previousDisplayRank: previousMap.get(article.article) ?? null,
+  }));
+};
+
 const sortTopHits = async () => {
   const today = dayjs();
 
-  const getArticles = async ([a, b]) => {
-    const [todayData, yesterdayData] = await Promise.all([
-      fetchTopHitsForDate(today.subtract(a, "day")),
-      fetchTopHitsForDate(today.subtract(b, "day")),
+  for (let offset = 1; offset <= MAX_LOOKBACK_DAYS; offset++) {
+    const currentDate = today.subtract(offset, "day");
+    const previousDate = today.subtract(offset + 1, "day");
+
+    const [currentData, previousData] = await Promise.all([
+      fetchTopHitsForDate(currentDate),
+      fetchTopHitsForDate(previousDate),
     ]);
 
-    if (!todayData?.items?.[0]?.articles) return null;
+    const currentArticles = normalizeArticles(currentData);
 
-    // Normalize TODAY first (filter → slice → assign display rank)
-    const todayArticles = todayData.items[0].articles
-      .filter((a) => !EXCLUDED_ARTICLES.has(a.article))
-      .slice(0, 10);
+    if (currentArticles.length === 0) continue;
 
-    // Normalize YESTERDAY the same way
-    const yesterdayArticles =
-      yesterdayData?.items?.[0]?.articles
-        ?.filter((a) => !EXCLUDED_ARTICLES.has(a.article))
-        .slice(0, 10) || [];
+    const previousArticles = normalizeArticles(previousData);
 
-    // Build yesterday display-rank lookup
-    const yesterdayMap = new Map();
-    yesterdayArticles.forEach((article, index) => {
-      yesterdayMap.set(article.article, index + 1);
-    });
+    return buildArticleComparison(currentArticles, previousArticles);
+  }
 
-    // Build final comparison dataset
-    return todayArticles.map((article, index) => ({
-      article: article.article,
-      views: article.views,
-      displayRank: index + 1,
-      previousDisplayRank:
-        yesterdayMap.get(article.article) ?? null,
-    }));
-  };
-
-  return (
-    (await getArticles([1, 2])) ||
-    (await getArticles([3, 4])) ||
-    []
-  );
+  return [];
 };
 
 const cleanTitle = (title) =>
@@ -96,9 +98,7 @@ const truncateTitle = (title, length) =>
 
 function Trending() {
   const [topArticles, setTopArticles] = useState([]);
-  const [isMobile, setIsMobile] = useState(
-    window.innerWidth < 600
-  );
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
 
   useEffect(() => {
     const load = async () => {
@@ -108,71 +108,64 @@ function Trending() {
 
     load();
 
-    const handleResize = () =>
-      setIsMobile(window.innerWidth < 600);
+    const handleResize = () => setIsMobile(window.innerWidth < 600);
 
     window.addEventListener("resize", handleResize);
 
-    return () =>
-      window.removeEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const getTrendIcon = (article) => {
     const { displayRank, previousDisplayRank } = article;
 
-    // First time in displayed Top 10
     if (previousDisplayRank == null) {
       return (
         <img
           src={green}
           className="trend-icon up"
           aria-hidden="true"
+          alt=""
         />
       );
     }
 
-    // Improved
     if (displayRank < previousDisplayRank) {
       return (
         <img
           src={green}
           className="trend-icon up"
           aria-hidden="true"
+          alt=""
         />
       );
     }
 
-    // Dropped
     if (displayRank > previousDisplayRank) {
       return (
         <img
           src={red}
           className="trend-icon down"
           aria-hidden="true"
+          alt=""
         />
       );
     }
 
-    // No change
     return null;
   };
 
   return (
     <div className="apiarticles">
       <ul>
-        {topArticles.map((article, index) => {
+        {topArticles.map((article) => {
           const title = cleanTitle(article.article);
-          const displayTitle = isMobile
-            ? truncateTitle(title, 42)
-            : title;
+          const displayTitle = isMobile ? truncateTitle(title, 42) : title;
 
           return (
-            <li key={index}>
+            <li key={article.article}>
               <div className="indicator">
                 {getTrendIcon(article)}
-                <div className="rank">
-                  {article.displayRank}
-                </div>
+                <div className="rank">{article.displayRank}</div>
               </div>
 
               <div className="data">
@@ -187,9 +180,7 @@ function Trending() {
                   {displayTitle}
                 </a>
 
-                <div className="views">
-                  {article.views.toLocaleString()}
-                </div>
+                <div className="views">{article.views.toLocaleString()}</div>
               </div>
             </li>
           );
