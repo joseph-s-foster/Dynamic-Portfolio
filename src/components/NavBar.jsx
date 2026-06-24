@@ -72,9 +72,19 @@ export default function Navigation() {
           >
             <Disclosure.Panel
               ref={menuRef}
-              className="absolute top-12 w-max inset-x-0 z-10"
+              className="absolute top-12 w-max inset-x-0 z-10
+              [@media(max-height:480px)]:top-1
+    [@media(max-height:480px)]:left-10
+    [@media(max-height:480px)]:right-auto"
             >
-              <div className="flex flex-col items-start space-y-1 mt-1 px-1">
+              <div
+                className="flex flex-col items-start space-y-1 mt-1 px-1
+                [@media(max-height:480px)]:flex-row
+                [@media(max-height:480px)]:items-center
+                [@media(max-height:480px)]:space-y-0
+                [@media(max-height:480px)]:space-x-4
+                [@media(max-height:480px)]:mt-0"
+              >
                 {navigation.map((item) => (
                   <div key={item.name} className="ml-3 py-2">
                     <Disclosure.Button
