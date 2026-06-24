@@ -197,6 +197,12 @@ body.no-scroll {
   stroke-width: 3;
 }
 
+@media screen and (max-width: 920px) {
+  .hero {
+    width: 82%;
+  }
+}
+
 @media screen and (max-width: 780px) {
   .greeting {
     font-size: 2rem;
@@ -207,7 +213,8 @@ body.no-scroll {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px), 
+      screen and (max-height: 480px) {
   .greeting {
     font-size: 1.5rem;
     font-weight: 600;
@@ -215,7 +222,7 @@ body.no-scroll {
   }
   .hero {
     font-size: 1rem;
-    max-width: calc(100% - 2rem);
+    width: calc(100% - 1.5rem);
     padding: 0.5rem 0.5rem 0.5rem 1rem;
   }
   .summary h3,

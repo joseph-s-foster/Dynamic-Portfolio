@@ -46,7 +46,8 @@
   border-top: solid 1px #212121;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px),
+      screen and (max-height: 480px) {
   .footer-group,
   .footer-link,
   .divider {

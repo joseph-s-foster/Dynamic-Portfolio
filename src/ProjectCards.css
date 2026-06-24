@@ -86,7 +86,8 @@ margin: 1rem 0;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px),
+      screen and (max-height: 480px) {
   .projects {
     margin: 0 1rem;
   }
