@@ -90,10 +90,12 @@
   .projects {
     justify-content: space-between;
     margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
   }
   .project-card {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: left;
     flex-basis: calc(32% - 2rem);
     text-decoration: none;
@@ -105,19 +107,22 @@
     -webkit-tap-highlight-color: transparent;
   }
   .project-text {
-    margin-top: .25rem;
+    margin: .25rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300%;
   }
   .project-title {
     font-size: 1.5rem;
     font-weight: 600;
     margin: 0;
   }
-  .project-description {
+  /* .project-description {
     display: none;
-  }
+  } */
   .project-language {
     font-size: .75rem;
-    line-height: 1;
   }
 }
 
