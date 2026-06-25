@@ -89,7 +89,7 @@
 @media screen and (max-height: 480px) {
   .projects {
     justify-content: space-between;
-    margin: 1rem;
+    margin: 0 1rem;
   }
   .project-card {
     display: flex;
@@ -99,14 +99,25 @@
     text-decoration: none;
     transition: transform 0.2s ease-in-out;
     overflow: hidden;
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 0;
     color: inherit;
     -webkit-tap-highlight-color: transparent;
   }
-  .project-description,
-  .project-language {
+  .project-text {
+    margin-top: .25rem;
+  }
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  .project-description {
     display: none;
+  }
+  .project-language {
+    font-size: .75rem;
+    line-height: 1;
   }
 }
 
